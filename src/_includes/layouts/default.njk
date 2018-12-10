@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% if title and page.fileSlug != '' %}{{ title }} • {% endif %}{{ site.title }}</title>
+  <meta name="description" content="{% if description %}{{ description | markdownify_inline | strip_html }}{% else %}{{ site.bio }}{% endif %}">
+  <meta name="keywords" content="{{ site.keywords }}">
+  <meta name="author" content="{{ site.title }}">
+  <meta name="application-name" content="{{ site.title }}">
+  <meta name="theme-color" content="#3454D1">
+  <!-- facebook/open graph -->
+  <meta property="og:title" content="{% if title and page.fileSlug != '' %}{{ title }} • {% endif %}{{ site.title }}">
+  <meta property="og:description" content="{% if description %}{{ description }}{% else %}{{ site.bottomHeadline }}{% endif %}">
+  <meta property="og:url" content="{{ site.url }}{{ page.url | permalink }}">
+  <meta property="og:site_name" content="{{ site.title }}">
+  <meta property="og:image" content="{{ site.url }}/assets/images/og-image.png">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="{{site.language}}">
+  <!-- twitter -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="{% if title and page.fileSlug != '' %}{{ title }} • {% endif %}{{ site.title }}">
+  <meta name="twitter:description" content="{% if description %}{{ description }}{% else %}{{ site.bottomHeadline }}{% endif %}">
+  <meta name="twitter:site" content="@{{ site.twitter }}">
+  <meta name="twitter:image" content="{{ site.url }}/assets/images/og-image.png">
+  <meta name="twitter:creator" content="@{{ site.twitter }}">
+  <!-- icons -->
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/apple-touch-icon.png" type="image/png">
+  <link rel="icon" sizes="96x96" href="/assets/images/favicon-96x96.png" type="image/png">
+  <link rel="icon" sizes="32x32" href="/assets/images/favicon-32x32.png" type="image/png">
+  <link rel="icon" sizes="16x16" href="/assets/images/favicon-16x16.png" type="image/png">
+  <link rel="mask-icon" href="/assets/images/favicon-96x96.png" color="#181818" type="image/png">
+  <!-- prefetch fonts -->
+  <link rel="preload" href="/assets/fonts/OpenSansCondensed-Bold.woff2" type="font/woff2" crossorigin="anonymous" as="font">
+  <link rel="preload" href="/assets/fonts/Lora-Regular.woff2" type="font/woff2" crossorigin="anonymous" as="font">
+  <!-- robots -->
+  <meta name="robots" content="index,follow">
+  <!-- social media -->
+  <link rel="me" href="https://github.com/cezaraugusto" type="text/html">
+  <link rel="me" href="https://twitter.com/cezaraugusto" type="text/html">
+  <link rel="me" href="https://https://www.quora.com/profile/Cezar-Augusto-1" type="text/html">
+  <!-- rss -->
+  <link rel="alternate" href="/feed.xml" type="application/rss+xml" title="RSS">
+  <!-- license -->
+  <link rel="license" href="https://creativecommons.org/licenses/by/4.0/">
+  <!-- website ownership -->
+  <meta name="google-site-verification" content="1fnKj4QPudeZ0eb7vkdW8zbc1PwwMocSKpQRGcxREgY">
+  <meta name="msvalidate.01" content="E718A8AA0D4E3ED605BFF1BA1C0E46A7">
+  <meta name="yandex-verification" content="0dd50ab9279c1413">
+  <!-- inlined css -->
+  {% set css %}
+    {% include "assets/css/defaults.css" %}
+    {% include "assets/css/navigation.css" %}
+    {% include "assets/css/header.css" %}
+    {% include "assets/css/structure.css" %}
+    {% include "assets/css/content.css" %}
+    {% include "assets/css/footer.css" %}
+    {% include "assets/css/features.css" %}
+    {% include "assets/css/keyframes.css" %}
+  {% endset %}
+  <style>{{ css | cssmin | safe }}</style>
+  <link rel="preload stylesheet" href="/assets/css/prism.css" type="text/css" as="style">
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-141381934-1"></script>
+  <script>
+    {% set gtag %}{% include "assets/js/analytics.js" %}{% endset %}
+    {{ gtag | jsmin | safe }}
+  </script>
+</head>
+<body>
+  <div class="container">
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+    {% include "components/navigation.njk" %}
+    <main id="main-content" tabindex="-1">
+      {% block pageTop %}{% endblock %}
+      {% block main %}{% endblock %}
+    </main>
+    {% include "components/footer.njk" %}
+  </div>
+  <script>
+    {% set corejs %}{% include "assets/js/app.js" %}{% endset %}
+    {{ corejs | jsmin | safe }}
+  </script>
+  <script src="/sw.js"></script>
+  <script type="application/ld+json">
+    {% include "assets/js/schema.json" %}
+  </script>
+</body>
+</html>

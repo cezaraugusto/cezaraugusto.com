@@ -1,0 +1,16 @@
+{
+  "featured": [
+    {
+      "title": "Writing this blog",
+      "link": ""
+    },
+    {
+      "title": "Helping build the core of best browser in the world.",
+      "link": "https://github.com/brave/brave-core"
+    },
+    {
+      "title": "Building for the builders",
+      "link": "https://https//npmjs.com/~cezaraugusto"
+    }
+  ]
+}

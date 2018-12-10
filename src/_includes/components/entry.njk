@@ -1,0 +1,6 @@
+<article>
+  <h2 class="title-like-text"><a href="{{ entry.url | permalink }}">{{ entry.data.title }}</a></h2>
+  {% if entry.data.tags %}
+    <span>{% for tag in entry.data.tags %}<a class="post-tag" href="/posts/tagged/{{ tag }}/">{{ tag }}</a>{% if not loop.last %}, {% endif %}{% endfor %}</span>
+  {% endif %}
+</article>

@@ -1,0 +1,139 @@
+::-moz-selection {
+  background: var(--color-primary);
+  color: var(--background-default);
+}
+
+::selection {
+  background: var(--color-primary);
+  color: var(--background-default);
+}
+
+:root {
+  --font-family-heading: "Open Sans Condensed", sans-serif;
+  --font-family-body: "Lora", Georgia, sans-serif;
+  --font-family-code: Menlo, Monaco, "Courier New", monospace;
+  --color-heading: #0C1D32;
+  --color-text: #0C1D32;
+  --color-gold: #916635;
+  --color-red: #D62729;
+  --color-primary: var(--color-gold);
+  --color-highlight: var(--color-red);
+  --color-gray-opacity: rgba(39,39,39,0.04);
+  --color-box-shadow: 0rem 1rem 2rem 0rem rgba(0,0,0,.24);
+  --background-default: #FAFAFA;
+  --border-radius-default: 5px;
+  --transition-duration: 0.2s;
+}
+
+@font-face {
+  font-family: Lora;
+  src: local("Lora"), url("../../../assets/fonts/Lora-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-display: swap;
+  unicode-range: U+000-5FF; /* Only latin glyphs */
+}
+
+@font-face {
+  font-family: "Open Sans Condensed";
+  src: local("Open Sans Condensed Bold"), url("../../../assets/fonts/OpenSansCondensed-Bold.woff2") format("woff2");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+  unicode-range: U+000-5FF; /* Only latin glyphs */
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline-color: var(--color-primary);
+}
+
+html {
+  background: var(--background-default);
+}
+
+@media (max-width: 465px) {
+  html {
+    font-size: 85%;
+  }
+}
+
+html, body {
+  height: 100%;
+  min-height: 100%;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  padding: 3rem 1.5rem 1.5rem;
+  font-family: var(--font-family-body);
+  font-size: 1.2rem;
+  line-height: 1.5;
+  color: var(--color-text);
+  background-color: var(--background-default);
+  height: auto;
+}
+
+[tabindex="-1"] {
+  outline: 0;
+}
+
+iframe {
+  border: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-family-heading);
+  color: var(--color-heading);
+  font-style: normal;
+  text-transform: uppercase;
+  line-height: 1.2;
+  font-weight: 700;
+}
+
+a {
+  color: inherit;
+  text-decoration-color: var(--color-primary);
+  color: var(--color-primary);
+  transition: color ease-in-out var(--transition-duration);
+}
+
+a:hover:not(.skip-link),
+a:focus:not(.skip-link) {
+  color: var(--color-heading);
+  text-decoration-color: var(--color-primary);
+}
+
+ul {
+  list-style-type: square;
+}
+
+strong, b {
+  font-weight: 600;
+}
+
+time {
+  display: block;
+  color: var(--color-gray-70);
+  font-size: 0.9rem;
+}
+
+abbr[title], acronym[title] {
+  text-decoration: overline;
+  background: var(--color-gray-opacity);
+  border: 1px solid var(--color-gray-opacity);
+  cursor: help;
+}
+
+img, svg {
+  vertical-align: middle;
+}
+
+figcaption {
+  padding-top: 0.5rem;
+  text-align: center;
+  font-style: italic;
+  font-size: 0.875rem;
+}

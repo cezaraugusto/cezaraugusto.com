@@ -1,0 +1,21 @@
+.pagination {
+  display: flex;
+  align-items: center;
+  padding-top: 2rem;
+}
+
+.pagination a[rel='prev']::before {
+  display: inline-block;
+  font-weight: normal;
+  content: '\2190\2009';
+}
+
+.pagination a[rel='next'] {
+  margin-left: auto;
+}
+
+.pagination a[rel='next']::after {
+  display: inline-block;
+  font-weight: normal;
+  content: '\2009\2192';
+}

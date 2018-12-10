@@ -1,0 +1,59 @@
+---
+heading: true
+permalink: /index.html
+---
+{% extends 'layouts/default.njk' %}
+
+{% block pageTop %}
+  <header class="header">
+    <div class="header-grid">
+      <img class="header-avatar" src="/assets/images/original.png" alt="Construction worker cartoon">
+      <h1 class="header-title">
+        {{ site.topHeadline }}<br>
+        {{ site.bottomHeadline }}
+      </h1>
+    </div>
+    <p class="header-description">
+      {{ site.intro | markdownify_inline | safe }}
+      {{ site.social | markdownify_inline | safe }}
+    </p>
+  <hr>
+  </header>
+{% endblock %}
+
+{% block main %}
+  <section>
+    <div class="post post-simple">
+      <div>
+        <h2>Blog</h2>
+      </div>
+      <ul>
+        {% for entry in collections.latestPosts %}
+        <li>
+          <a href="{{ entry.url | permalink }}">{{ entry.data.title }}</a>
+        </li>
+        {% endfor %}
+      </ul>
+    </div>
+  </section>
+  <hr>
+  <section>
+    <div class="post">
+    <div>
+      <h2>Current Projects 🐎</h2>
+    </div>
+      <ul>
+      {% for project in projects.featured %}
+        <li>
+          {% if project.link %}
+            <a href="{{ project.link }}" target="_blank">{{ project.title }}</a>
+          {% else %}
+            {{ project.title }}
+          {% endif %}
+        </li>
+      {% endfor %}
+      </ul>
+    </div>
+  </section>
+  <hr>
+{% endblock %}

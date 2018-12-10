@@ -1,0 +1,17 @@
+---
+title: You are lost
+permalink: /404.html
+description: <mark>This page doesn't exist.</mark> If you think this is a mistake, please send me a message via <code class="email">window.atob('Ym9zc0BjZXphcmF1Z3VzdG8ubmV0')</code> xox.
+excludeFromSitemap: true
+---
+{% extends 'layouts/page.njk' %}
+
+{% set content %}
+{% endset %}
+
+{% block main %}
+  {% Figure { src: '/assets/images/uh.gif' } %}
+  <div class="post">
+    {{ content | markdownify | safe }}
+  </div>
+{% endblock %}

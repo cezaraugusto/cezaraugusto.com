@@ -1,0 +1,22 @@
+---
+title: Articles
+pagination:
+  data: collections.posts
+  size: 10
+permalink: /posts/{% if pagination.pageNumber > 0 %}page/{{ pagination.pageNumber }}/{% endif %}index.html
+---
+{% extends 'layouts/page.njk' %}
+
+{% block main %}
+  <div class="post">
+    <ul>
+      {% for entry in pagination.items %}
+      <li>
+        {% include "components/entry.njk" %}
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+
+  {% include "components/pagination.njk" %}
+{% endblock %}

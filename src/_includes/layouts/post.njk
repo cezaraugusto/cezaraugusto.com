@@ -1,0 +1,43 @@
+{% extends 'layouts/default.njk' %}
+
+{% block main %}
+  <article>
+    <header class="header">
+    <figure>
+      <img
+        class="portrait"
+        src="{{ image }}"
+        alt="{{ alt }}"
+        onerror="this.src='/assets/images/fallback-img.png'"
+      />
+      {% if caption -%}
+        <figcaption>{{caption}}</figcaption>
+      {%- endif %}
+    </figure>
+      <div class="post-date">{{ date | date_formatted }}</div>
+      <h1 class="header-title">
+        {% if link -%}
+          <a rel="external" href="{{ link | safe }}">{{ title }}</a>
+        {%- else -%}
+          {{ title }}
+        {%- endif %}
+      </h1>
+      {% if description -%}
+        <p class="post-description">
+          <span class="post-description-verbar">&Verbar;</span>
+          {{ description }}
+        </a>
+      {%- endif -%}
+    </header>
+    <div class="post">
+      {{ content | safe }}
+      {% if link -%}
+        <hr>
+        <a rel="external" href="{{ link | safe }}">View Link</a>
+      {%- endif %}
+    </div>
+    {% include "components/share.njk" %}
+    <hr>
+    {% include "components/bio.njk" %}
+  </article>
+{% endblock %}

@@ -1,0 +1,12 @@
+{% extends 'layouts/default.njk' %}
+
+{% block pageTop %}
+  <header class="header">
+    <h1 class="header-title-page">{{ title }}</h1>
+    {% if description %}
+      <p class="header-description">{{ description | markdownify_inline | safe }}</p>
+    {% endif %}
+  </header>
+{% endblock %}
+
+{% block main %}{% endblock %}

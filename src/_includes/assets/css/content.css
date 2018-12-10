@@ -1,0 +1,65 @@
+.post li:not(:last-of-type) {
+  margin-bottom: .5rem;
+}
+
+.post > *:not(:last-child) {
+  margin-bottom: 2rem;
+}
+
+.post *:not(hr) + h2:not(.title-like-text),
+.post *:not(hr) + h3 {
+  padding-top: 1rem;
+}
+
+.post ul,
+.post ol {
+  padding-left: 1.2rem;
+}
+
+.post-simple li:not(:last-of-type) {
+  margin-bottom: 0.5rem;
+}
+
+.post-tag {
+  display: inline-block;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-style: normal;
+  font-family: var(--font-family-heading);
+  font-weight: 600;
+  color: var(--color-highlight);
+  font-size: 0.8rem;
+  letter-spacing: 0.16rem;
+}
+
+.post-date {
+  margin-top: 2rem;
+}
+
+.post-description {
+  margin: 6px 0;
+  display: flex;
+  align-items: center;
+}
+
+.post-description-verbar {
+  color: var(--color-primary);
+  font-size: 2rem;
+  margin-right: 0.4rem;
+}
+
+@media (max-width: 715px) {
+  .post-description-verbar {
+    display: none;
+  }
+}
+
+.title-like-text {
+  font-family: var(--font-family-body);
+  font-size: 1.2rem;
+  line-height: 1.5;
+  color: var(--color-text);
+  padding: 0;
+  font-weight: 500;
+  text-transform: none;
+}
