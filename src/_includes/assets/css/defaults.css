@@ -19,14 +19,14 @@
   --color-primary: var(--color-gold);
   --color-highlight: var(--color-red);
   --color-gray-opacity: rgba(39,39,39,0.04);
-  --color-box-shadow: 0rem 1rem 2rem 0rem rgba(0,0,0,.24);
+  --color-box-shadow: 0 1rem 2rem 0 rgba(0, 0, 0, 0.24);
   --background-default: #FAFAFA;
   --border-radius-default: 5px;
   --transition-duration: 0.2s;
 }
 
 @font-face {
-  font-family: Lora;
+  font-family: "Lora";
   src: local("Lora"), url("../../../assets/fonts/Lora-Regular.woff2") format("woff2");
   font-weight: 400;
   font-display: swap;
@@ -94,7 +94,6 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 a {
-  color: inherit;
   text-decoration-color: var(--color-primary);
   color: var(--color-primary);
   transition: color ease-in-out var(--transition-duration);
