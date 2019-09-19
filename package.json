@@ -31,7 +31,7 @@
     "luxon": "^1.17.1",
     "markdown-it": "^9.0.0",
     "markdown-it-anchor": "^5.2.4",
-    "standard": "^13.1.0",
+    "standard": "^14.3.1",
     "stylelint": "^10.1.0",
     "uglify-es": "^3.3.9"
   }
