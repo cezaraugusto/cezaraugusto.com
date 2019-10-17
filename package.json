@@ -30,7 +30,7 @@
     "html-minifier": "^4.0.0",
     "luxon": "^1.17.1",
     "markdown-it": "^9.0.0",
-    "markdown-it-anchor": "^5.2.4",
+    "markdown-it-anchor": "^5.2.5",
     "standard": "^13.1.0",
     "stylelint": "^10.1.0",
     "uglify-es": "^3.3.9"
