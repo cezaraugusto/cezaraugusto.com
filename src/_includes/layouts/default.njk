@@ -63,8 +63,10 @@
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-141381934-1"></script>
   <script>
-    {% set gtag %}{% include "assets/js/analytics.js" %}{% endset %}
-    {{ gtag | jsmin | safe }}
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'UA-141381934-1');
   </script>
 </head>
 <body>
