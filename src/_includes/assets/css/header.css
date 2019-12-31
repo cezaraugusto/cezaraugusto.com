@@ -8,9 +8,9 @@
   align-items: center;
   grid-template-columns: auto 1fr;
   grid-template-rows: 1fr;
-  width: calc(100% + 8.5rem);
-  min-height: 5.5rem;
-  margin-left: -8.5rem;
+  width: calc(100% + var(--avatar-size) + 3rem);
+  min-height: var(--avatar-size);
+  margin-left: calc(-3rem - var(--avatar-size));
 }
 
 .header-title {
@@ -37,7 +37,7 @@
 
 .header-avatar {
   display: block;
-  width: 5.5rem;
+  width: var(--avatar-size);
   border-radius: var(--border-radius-default);
   box-shadow: var(--color-box-shadow);
   opacity: 0;
