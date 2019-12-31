@@ -97,6 +97,7 @@ a {
   text-decoration-color: var(--color-primary);
   color: var(--color-primary);
   transition: color ease-in-out var(--transition-duration);
+  word-break: break-word;
 }
 
 a:hover:not(.skip-link),

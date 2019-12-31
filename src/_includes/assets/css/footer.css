@@ -17,6 +17,10 @@
   margin: 0 0 2rem;
 }
 
+.footer-bio .no-breaks br {
+  display: none;
+}
+
 @media (max-width: 998px) {
   .footer-bio {
     grid-template-columns: 1fr;

@@ -9,12 +9,12 @@ permalink: /index.html
     <div class="header-grid">
       <img class="header-avatar" src="/assets/images/original.png" alt="Construction worker cartoon">
       <h1 class="header-title">
-        {{ site.topHeadline }}<br>
-        {{ site.bottomHeadline }}
+        {{ site.topHeadline | markdownify_inline | safe }}<br>
+        {{ site.bottomHeadline | markdownify_inline | safe }}
       </h1>
     </div>
     <p class="header-description">
-      {{ site.intro | markdownify_inline | safe }}
+      {{ site.intro | markdownify_inline | safe }}<br>
       {{ site.social | markdownify_inline | safe }}
     </p>
   <hr>
