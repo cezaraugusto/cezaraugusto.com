@@ -87,6 +87,7 @@ iframe {
 
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-family-heading);
+  letter-spacing: -0.03rem;
   color: var(--color-heading);
   font-style: normal;
   text-transform: uppercase;
@@ -94,8 +95,55 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 700;
 }
 
+/**
+FIXTURES
+*/
+
+h3, h4, h5, h6 {
+  font-family: var(--font-family-body);
+  letter-spacing: 0.03rem;
+}
+
+h3 {
+  font-size: 1.36rem;
+}
+
+/* h5 is just h4 with a different color */
+h4, h5 {
+  color: var(--color-primary);
+  font-size: 1.2rem;
+}
+
+/* h6 is default text with inherited bold weight */
+h6 {
+  color: var(--color-text);
+  font-size: 1.2rem;
+}
+
+h2 + h3,
+h3 + h4,
+h4 + h5,
+h5 + h6 {
+  margin-top: -0.9rem;
+}
+
+h3, h4, h5, h6 {
+  font-family: var(--font-family-body);
+  text-transform: unset;
+  letter-spacing: 0;
+}
+
+p + code[class*=language-],
+p + pre[class*=language-] {
+  margin-top: -0.6rem;
+}
+
+p + ul, p + li {
+  margin-top: -0.9rem;
+}
+
 a {
-  text-decoration-color: var(--color-primary);
+  /* text-decoration-color: var(--color-text); */
   color: var(--color-primary);
   transition: color ease-in-out var(--transition-duration);
   word-break: break-word;
@@ -105,6 +153,19 @@ a:hover:not(.skip-link),
 a:focus:not(.skip-link) {
   color: var(--color-heading);
   text-decoration-color: var(--color-primary);
+}
+
+/* highlight social media links */
+a[href^="https://github.com"] {
+  text-decoration-color: #24292e;
+}
+
+a[href^="https://twitter.com"] {
+  text-decoration-color: #55acee;
+}
+
+a[href^="https://linkedin.com"] {
+  text-decoration-color: #0077b5;
 }
 
 ul {

@@ -3,7 +3,7 @@
 }
 
 .post > *:not(:last-child) {
-  margin-bottom: 2rem;
+  margin-bottom: 1.8rem;
 }
 
 .post *:not(hr) + h2:not(.title-like-text),
