@@ -3,10 +3,12 @@
   "version": "1.0.0",
   "description": "Interwebs presence of Cezar Augusto",
   "scripts": {
-    "build": "eleventy --config=config/eleventy.config.js",
-    "start": "eleventy --config=config/eleventy.config.js --serve",
+    "11ty": "eleventy --config=config/eleventy.config.js",
+    "start": "cross-env NODE_ENV=staging eleventy --config=config/eleventy.config.js --serve",
     "lint:js": "standard",
-    "lint:css": "stylelint --config='config/.stylelintrc.json' 'src/_includes/assets/css/*.css'"
+    "lint:css": "stylelint --config='config/.stylelintrc.json' 'src/_includes/assets/css/*.css'",
+    "build:staging": "cross-env NODE_ENV=staging npm run 11ty",
+    "build:production": "cross-env NODE_ENV=production npm run 11ty"
   },
   "repository": {
     "type": "git",
@@ -23,16 +25,17 @@
   },
   "homepage": "https://github.com/cezaraugusto/cezaraugusto.net",
   "devDependencies": {
-    "@11ty/eleventy": "^0.8.3",
-    "@11ty/eleventy-plugin-rss": "^1.0.6",
-    "@11ty/eleventy-plugin-syntaxhighlight": "^2.0.3",
-    "clean-css": "^4.2.1",
+    "@11ty/eleventy": "^0.10.0",
+    "@11ty/eleventy-plugin-rss": "^1.0.7",
+    "@11ty/eleventy-plugin-syntaxhighlight": "^3.0.1",
+    "clean-css": "^4.2.3",
+    "cross-env": "^7.0.0",
     "html-minifier": "^4.0.0",
-    "luxon": "^1.17.1",
-    "markdown-it": "^9.0.0",
-    "markdown-it-anchor": "^5.2.4",
-    "standard": "^13.1.0",
-    "stylelint": "^10.1.0",
+    "luxon": "^1.22.0",
+    "markdown-it": "^10.0.0",
+    "markdown-it-anchor": "^5.2.5",
+    "standard": "^14.3.1",
+    "stylelint": "^13.2.0",
     "uglify-es": "^3.3.9"
   }
 }

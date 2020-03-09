@@ -6,6 +6,7 @@ const pluginRss = require('@11ty/eleventy-plugin-rss')
 const syntaxHighlight = require('@11ty/eleventy-plugin-syntaxhighlight')
 const Figure = require('../src/_includes/components/Figure.js')
 const Youtube = require('../src/_includes/components/Youtube.js')
+const GenerateRobotsTXTRules = require('../src/_includes/components/GenerateRobotsTXTRules.js')
 const markdown = require('markdown-it')({
   html: true,
   breaks: true,
@@ -40,7 +41,7 @@ module.exports = eleventyConfig => {
   )
 
   eleventyConfig.addFilter('jsmin', (code) => {
-    let minified = UglifyJS.minify(code)
+    const minified = UglifyJS.minify(code)
     if (minified.error) {
       console.error('UglifyJS error: ', minified.error)
       return code
@@ -51,7 +52,7 @@ module.exports = eleventyConfig => {
   // Minify HTML output
   eleventyConfig.addTransform('htmlmin', function (content, outputPath) {
     if (outputPath.indexOf('.html') > -1) {
-      let minified = htmlmin.minify(content, {
+      const minified = htmlmin.minify(content, {
         useShortDoctype: true,
         removeComments: true,
         collapseWhitespace: true
@@ -111,12 +112,17 @@ module.exports = eleventyConfig => {
   // Shortcodes
   eleventyConfig.addShortcode('Figure', Figure)
   eleventyConfig.addShortcode('Youtube', Youtube)
+  eleventyConfig.addShortcode('GenerateRobotsTXTRules', GenerateRobotsTXTRules)
 
   // Copy all content we want published
   // that are not part of the build process
+  const generateRobotsTXTFile = process.env.NODE_ENV === 'staging'
+    ? 'src/robots_staging.txt'
+    : 'src/robots_production.txt'
+
   eleventyConfig
     .addPassthroughCopy('src/assets')
-    .addPassthroughCopy('src/robots.txt')
+    .addPassthroughCopy({ [generateRobotsTXTFile]: 'robots.txt' })
     .addPassthroughCopy('src/keybase.txt')
     .addPassthroughCopy('src/crossdomain.xml')
 
