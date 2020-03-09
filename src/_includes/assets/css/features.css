@@ -2,7 +2,8 @@ code {
   font-family: var(--font-family-code);
   color: var(--color-red);
   font-style: normal;
-  font-size: 1rem;
+  font-weight: 600;
+  font-size: 0.9rem;
 }
 
 blockquote:not([class]) {
@@ -25,9 +26,9 @@ mark {
 }
 
 hr {
-  margin: 2rem 0;
+  margin: 2rem auto;
   border: 0;
-  width: 100%;
+  width: 10rem;
   height: 1px;
   background-color: var(--color-gray-opacity);
 }
@@ -147,4 +148,24 @@ hr {
   background: inherit;
   right: -15px;
   top: 0;
+}
+
+/* Clarendon. Grabbed from https://www.cssfilters.co/ */
+.picture-filter {
+  position: relative;
+  -webkit-filter: contrast(120%) saturate(125%);
+  filter: contrast(120%) saturate(125%);
+}
+
+.picture-filter::before {
+  content: "";
+  display: block;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  position: absolute;
+  pointer-events: none;
+  mix-blend-mode: darken;
+  background: rgba(127, 187, 227, 0.2);
 }

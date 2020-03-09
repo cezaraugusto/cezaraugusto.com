@@ -5,7 +5,7 @@ permalink: /index.html
 {% extends 'layouts/default.njk' %}
 
 {% block pageTop %}
-  <header class="header">
+  <header class="header-index">
     <div class="header-grid">
       <img class="header-avatar" src="/assets/images/avatar.png" alt="Picture of Cezar Augusto">
       <h1 class="header-title">
@@ -17,31 +17,27 @@ permalink: /index.html
       {{ site.intro | markdownify_inline | safe }}<br>
       {{ site.social | markdownify_inline | safe }}
     </p>
-  <hr>
   </header>
 {% endblock %}
 
 {% block main %}
   <section>
     <div class="post post-simple">
-      <div>
-        <h2>Blog</h2>
-      </div>
+      <h2>Blog</h2>
       <ul>
         {% for entry in collections.latestPosts %}
         <li>
           <a href="{{ entry.url | permalink }}">{{ entry.data.title }}</a>
+          on
+          <time>{{ entry.date | date_formatted }}</date>
         </li>
         {% endfor %}
       </ul>
     </div>
   </section>
-  <hr>
   <section>
     <div class="post">
-    <div>
       <h2>Current Projects 🐎</h2>
-    </div>
       <ul>
       {% for project in projects.featured %}
         <li>
@@ -55,5 +51,4 @@ permalink: /index.html
       </ul>
     </div>
   </section>
-  <hr>
 {% endblock %}

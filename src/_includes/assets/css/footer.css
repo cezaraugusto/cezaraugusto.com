@@ -17,6 +17,11 @@
   margin: 0 0 2rem;
 }
 
+.footer-bio h4 {
+  color: var(--color-text);
+  font-weight: normal;
+}
+
 .footer-bio .no-breaks br {
   display: none;
 }

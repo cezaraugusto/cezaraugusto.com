@@ -18,11 +18,11 @@
   --color-red: #D62729;
   --color-primary: var(--color-gold);
   --color-highlight: var(--color-red);
-  --color-gray-opacity: rgba(39,39,39,0.04);
+  --color-gray-opacity: rgba(39,39,39,0.18);
   --color-box-shadow: 0 1rem 1rem 0 rgba(0, 0, 0, 0.24);
   --background-default: #FAFAFA;
   --border-radius-default: 5px;
-  --transition-duration: 0.2s;
+  --transition-duration: 0.25s;
   --avatar-size: 5.5rem;
 }
 
@@ -133,20 +133,18 @@ h3, h4, h5, h6 {
   letter-spacing: 0;
 }
 
+p + ul,
 p + code[class*=language-],
 p + pre[class*=language-] {
   margin-top: -0.6rem;
 }
 
-p + ul, p + li {
-  margin-top: -0.9rem;
-}
-
 a {
   /* text-decoration-color: var(--color-text); */
   color: var(--color-primary);
-  transition: color ease-in-out var(--transition-duration);
-  word-break: break-word;
+  transition: all ease-out var(--transition-duration);
+  word-break: break-all;
+  font-style: normal;
 }
 
 a:hover:not(.skip-link),
@@ -156,15 +154,15 @@ a:focus:not(.skip-link) {
 }
 
 /* highlight social media links */
-a[href^="https://github.com"] {
+a[href="https://github.com"]:hover {
   text-decoration-color: #24292e;
 }
 
-a[href^="https://twitter.com"] {
+a[href^="https://twitter.com"]:hover {
   text-decoration-color: #55acee;
 }
 
-a[href^="https://linkedin.com"] {
+a[href^="https://linkedin.com"]:hover {
   text-decoration-color: #0077b5;
 }
 
@@ -177,7 +175,7 @@ strong, b {
 }
 
 time {
-  display: block;
+  display: inline-block;
   color: var(--color-gray-70);
   font-size: 0.9rem;
 }

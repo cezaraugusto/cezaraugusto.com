@@ -1,3 +1,7 @@
+.post {
+  margin-bottom: 3rem;
+}
+
 .post li:not(:last-of-type) {
   margin-bottom: 0.5rem;
 }
@@ -14,6 +18,10 @@
 .post ul,
 .post ol {
   padding-left: 1.2rem;
+}
+
+.post time {
+  font-size: inherit;
 }
 
 .post-simple li:not(:last-of-type) {
