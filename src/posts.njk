@@ -8,7 +8,7 @@ permalink: /posts/{% if pagination.pageNumber > 0 %}page/{{ pagination.pageNumbe
 {% extends 'layouts/page.njk' %}
 
 {% block main %}
-  <div class="post">
+  <div class="content">
     <ul>
       {% for entry in pagination.items %}
       <li>

@@ -1,0 +1,161 @@
+/** Page defaults
+********************/
+
+@media (max-width: 465px) {
+  html {
+    font-size: 85%;
+  }
+}
+
+html, body {
+  height: 100%;
+  min-height: 100%;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  padding: 3rem 1.5rem 1.5rem;
+  height: auto;
+}
+
+[tabindex="-1"] {
+  outline: 0;
+}
+
+iframe {
+  border: none;
+}
+
+section + section {
+  padding-top: 2rem;
+}
+
+.container {
+  max-width: 41.2rem;
+  margin-right: auto;
+  margin-left: auto;
+  display: grid;
+  grid-template-rows: auto auto 1fr;
+  height: 100%;
+  min-height: calc(100vh - 7rem);
+}
+
+/** Navigation links
+********************/
+.navigator {
+  margin: 0.6rem 0 1.2rem;
+}
+
+.navigator ul {
+  list-style: none;
+  display: flex;
+  font-size: 1rem;
+  padding-left: 0;
+}
+
+.navigator ul li:not(:last-of-type) {
+  margin-right: 1rem;
+}
+
+/** Posts list pagination
+********************/
+.pagination {
+  display: flex;
+  align-items: center;
+  padding-top: 2rem;
+}
+
+.pagination a[rel='prev']::before {
+  display: inline-block;
+  font-weight: normal;
+  content: '\2190\2009';
+}
+
+.pagination a[rel='next'] {
+  margin-left: auto;
+}
+
+.pagination a[rel='next']::after {
+  display: inline-block;
+  font-weight: normal;
+  content: '\2009\2192';
+}
+
+/** Front page presentation
+********************/
+.presentation {
+  margin-bottom: 4rem;
+  display: grid;
+  grid-gap: 3rem;
+  grid-template-columns: auto 1fr;
+  grid-template-rows: 1fr;
+  width: calc(100% + var(--avatar-size) + 3rem);
+  min-height: var(--avatar-size);
+  margin-left: calc(-3rem - var(--avatar-size));
+}
+
+@media (max-width: 998px) {
+  .presentation {
+    grid-template-columns: auto;
+    margin-left: 0;
+    width: 100%;
+  }
+}
+
+@media (max-width: 465px) {
+  .presentation h1 {
+    font-size: 2rem;
+  }
+}
+
+.presentation figure {
+  display: block;
+  width: var(--avatar-size);
+  height: fit-content;
+  border-radius: var(--border-radius-size);
+  box-shadow: var(--box-shadow-props);
+  opacity: 0;
+  animation-name: fadeIn;
+  animation-delay: 0.2s;
+  animation-duration: 0.6s;
+  animation-fill-mode: forwards;
+  margin-top: 0.6rem;
+}
+
+@media (max-width: 998px) {
+  .presentation figure {
+    display: none;
+  }
+}
+
+.presentation p {
+  padding-top: 0.6rem;
+  font-size: 1.27rem;
+}
+
+/** Header for internal pages
+********************/
+.header--page h1 {
+  font-size: 3rem;
+  margin-bottom: 2rem;
+}
+
+@media (max-width: 465px) {
+  .header--page h1 {
+    font-size: 2rem;
+  }
+}
+
+/** Footer
+********************/
+.footer {
+  padding-top: 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.footer p {
+  font-size: 0.8rem;
+}

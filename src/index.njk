@@ -5,24 +5,27 @@ permalink: /index.html
 {% extends 'layouts/default.njk' %}
 
 {% block pageTop %}
-  <header class="header-index">
-    <div class="header-grid">
-      <img class="header-avatar" src="/assets/images/avatar.png" alt="Picture of Cezar Augusto">
-      <h1 class="header-title">
+  <header class="presentation">
+    {% Figure {
+      src: '/assets/images/avatar.png',
+      alt: 'Picture of Cezar Augusto'
+    } %}
+    <div>
+      <h1>
         {{ site.topHeadline | markdownify_inline | safe }}<br>
         {{ site.bottomHeadline | markdownify_inline | safe }}
       </h1>
+      <p>
+        {{ site.intro | markdownify_inline | safe }}<br>
+        {{ site.social | markdownify_inline | safe }}
+      </p>
     </div>
-    <p class="header-description">
-      {{ site.intro | markdownify_inline | safe }}<br>
-      {{ site.social | markdownify_inline | safe }}
-    </p>
   </header>
 {% endblock %}
 
 {% block main %}
   <section>
-    <div class="post post-simple">
+    <div class="content">
       <h2>Blog</h2>
       <ul>
         {% for entry in collections.latestPosts %}
@@ -36,7 +39,7 @@ permalink: /index.html
     </div>
   </section>
   <section>
-    <div class="post">
+    <div class="content">
       <h2>Current Projects 🐎</h2>
       <ul>
       {% for project in projects.featured %}

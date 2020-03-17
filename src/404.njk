@@ -10,8 +10,11 @@ excludeFromSitemap: true
 {% endset %}
 
 {% block main %}
-  {% Figure { src: '/assets/images/uh.gif' } %}
-  <div class="post">
+  {% Figure {
+    src: '/assets/images/uh.gif',
+    alt: 'Psychedelic picture of two astronauts'
+  } %}
+  <div class="content">
     {{ content | markdownify | safe }}
   </div>
 {% endblock %}

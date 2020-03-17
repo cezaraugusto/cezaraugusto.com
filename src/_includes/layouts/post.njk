@@ -1,20 +1,20 @@
 {% extends 'layouts/default.njk' %}
 
 {% block main %}
-  <article>
+  <article class="content">
     <header class="header">
+    {% if image -%}
     <figure>
       <img
-        class="portrait"
         src="{{ image }}"
         alt="{{ alt }}"
-        onerror="this.src='/assets/images/fallback-img.png'"
       />
       {% if caption -%}
         <figcaption>{{caption}}</figcaption>
       {%- endif %}
     </figure>
-      <time class="post-date">{{ date | date_formatted }}</time>
+    {%- endif %}
+      <time class="date">{{ date | date_formatted }}</time>
       <h1 class="header-title">
         {% if link -%}
           <a rel="external" href="{{ link | safe }}">{{ title }}</a>
@@ -23,19 +23,15 @@
         {%- endif %}
       </h1>
       {% if description -%}
-        <p class="post-description">
-          {{ description }}
-        </p>
+        <p class="description">{{ description }}</p>
       {%- endif -%}
       <hr>
     </header>
-    <div class="post">
-      {{ content | safe }}
-      {% if link -%}
-        <hr>
-        <a rel="external" href="{{ link | safe }}">View Link</a>
-      {%- endif %}
-    </div>
+    {{ content | safe }}
+    {% if link -%}
+      <hr>
+      <a rel="external" href="{{ link | safe }}">View Link</a>
+    {%- endif %}
     {% include "components/bio.njk" %}
     {% include "components/share.njk" %}
   </article>

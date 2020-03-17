@@ -1,10 +1,12 @@
-<footer class="footer-bio">
-  <img src="/assets/images/avatar-small.png" alt="Photo of Cezar Augusto">
+<footer class="bio">
+  {% Figure {
+    src: '/assets/images/avatar-small.png',
+    alt: 'Picture of Cezar Augusto'
+  } %}
   <h4>
-    <span class="no-breaks">
     {{ site.topHeadline | markdownify_inline | safe }}
     {{ site.bottomHeadline | markdownify_inline | safe }}
-    </span><br>
-    <span class="no-breaks">{{ site.social | markdownify_inline | safe }}</span>
+    <br>
+    {{ site.social | markdownify_inline | safe }}
   </h4>
 </footer>

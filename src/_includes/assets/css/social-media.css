@@ -1,0 +1,27 @@
+:root {
+  --color-twitter: #55acee;
+  --color-github: #24292e;
+  --color-linkedin: #0077b5;
+}
+
+/* highlight social media links */
+a[href^="https://github.com"]:hover {
+  text-decoration-color: var(--color-github);
+}
+
+a[href^="https://twitter.com"]:hover {
+  text-decoration-color: var(--color-twitter);
+}
+
+a[href^="https://linkedin.com"]:hover {
+  text-decoration-color: var(--color-linkedin);
+}
+
+.twitter {
+  fill: var(--color-twitter);
+  margin-right: 0.8rem;
+}
+
+.email {
+  word-break: break-word;
+}

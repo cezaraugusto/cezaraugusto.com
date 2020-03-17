@@ -1,0 +1,150 @@
+:root {
+  /* fonts */
+  --font-family-heading: "Open Sans Condensed", sans-serif;
+  --font-family-body: "Lora", Georgia, sans-serif;
+  --font-family-code: Menlo, Monaco, "Courier New", monospace;
+
+  /* neutral colors */
+  --color-neutral: rgb(39,39,39);
+  --color-neutral-opacity: rgba(39,39,39,0.18);
+  --box-shadow-props: 0 1rem 1rem 0 rgba(0, 0, 0, 0.24);
+
+  /* branding colors */
+  --color-light: #fafafa;
+  --color-dark: #101935;
+  --color-pink: #DD1A5E;
+  --color-dark-blue: #0F017C;
+  --color-blue: #06AED5;
+
+  /* page variables */
+  --color-page-background: var(--color-light);
+  --color-text: var(--color-dark);
+  --color-link: var(--color-primary);
+  --color-highlight: var(--color-blue);
+  --color-primary: var(--color-pink);
+  --color-secondary: var(--color-blue);
+  --color-tertiary: var(--color-dark-blue);
+
+  /* sizing */
+  --avatar-size: 5.5rem;
+  --border-radius-size: 4px;
+}
+
+::-moz-selection {
+  background: var(--color-secondary);
+  color: var(--color-page-background);
+}
+
+::selection {
+  background: var(--color-secondary);
+  color: var(--color-page-background);
+}
+
+@font-face {
+  font-family: "Lora";
+  src: local("Lora"), url("../../../assets/fonts/Lora-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-display: swap;
+  unicode-range: U+000-5FF; /* Only latin glyphs */
+}
+
+@font-face {
+  font-family: "Open Sans Condensed";
+  src: local("Open Sans Condensed Bold"), url("../../../assets/fonts/OpenSansCondensed-Bold.woff2") format("woff2");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+  unicode-range: U+000-5FF; /* Only latin glyphs */
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline-color: var(--color-secondary);
+  outline-offset: 3px;
+}
+
+html {
+  background: var(--color-page-background);
+}
+
+h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
+  font-family: var(--font-family-heading);
+  letter-spacing: -0.09rem;
+  color: var(--color-text);
+  font-style: normal;
+  text-transform: uppercase;
+  line-height: 1.2;
+  font-weight: 700;
+}
+
+h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
+  font-family: var(--font-family-body);
+  letter-spacing: 0.09rem;
+}
+
+h1, .h1 {
+  font-size: 2.7rem;
+}
+
+h2, .h2 {
+  font-size: 2.1rem;
+}
+
+h3, .h3 {
+  font-size: 1.36rem;
+}
+
+h4, .h4, h5, .h5 {
+  font-size: 1.2rem;
+}
+
+h5, .h5 {
+  color: var(--color-gray);
+  font-size: 0.9rem;
+  font-weight: normal;
+}
+
+/* h6 is default text with inherited bold weight */
+h6, .h6 {
+  color: var(--color-text);
+  font-size: 1.2rem;
+}
+
+h2 + h3, .h2 + h3, h2 + .h3, .h2 + .h3,
+h3 + h4, .h3 + h4, h3 + .h4, .h3 + .h4,
+h4 + h5, .h4 + h5, h4 + .h5, .h4 + .h5,
+h5 + h6, .h5 + h6, h5 + .h6, .h5 + .h6 {
+  margin-top: -0.9rem;
+}
+
+h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
+  font-family: var(--font-family-body);
+  text-transform: unset;
+  letter-spacing: 0;
+}
+
+a {
+  /* text-decoration-color: var(--color-text); */
+  color: var(--color-link);
+  transition: all ease-out 0.15s;
+  font-style: normal;
+}
+
+a:hover:not(.button),
+a:focus:not(.button) {
+  color: var(--color-text);
+  text-decoration-color: var(--color-link);
+}
+
+body, .text {
+  font-family: var(--font-family-body);
+  font-size: 1.2rem;
+  line-height: 1.5;
+  color: var(--color-text);
+  background-color: var(--color-page-background);
+  text-transform: none;
+  font-weight: normal;
+  letter-spacing: -0.015rem;
+}

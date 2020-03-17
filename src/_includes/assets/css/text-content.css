@@ -1,0 +1,68 @@
+p + ul,
+p + code[class*=language-],
+p + pre[class*=language-] {
+  margin-top: -0.6rem;
+}
+
+ul, ol {
+  padding-left: 1.5rem;
+}
+
+ul {
+  list-style-type: square;
+}
+
+li:not(:last-of-type) {
+  margin-bottom: 0.5rem;
+}
+
+strong, b {
+  font-weight: 600;
+}
+
+time {
+  display: inline-block;
+  color: var(--color-neutral);
+}
+
+abbr[title], acronym[title] {
+  text-decoration: overline;
+  background: var(--color-neutral-opacity);
+  border: 1px solid var(--color-neutral-opacity);
+  cursor: help;
+}
+
+code {
+  color: var(--color-secondary);
+  font-family: var(--font-family-code);
+  font-style: normal;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+blockquote:not([class]) {
+  padding-left: 1rem;
+  margin-left: -1rem;
+  border-left: 2px solid var(--color-primary);
+  color: var(--color-neutral);
+  font-style: italic;
+}
+
+code[class*=language-],
+pre[class*=language-] {
+  font-size: 0.8rem;
+  font-style: normal;
+}
+
+mark {
+  color: var(--color-highlight);
+  background-color: transparent;
+}
+
+hr {
+  margin: 2rem auto;
+  border: 0;
+  width: 10rem;
+  height: 1px;
+  background-color: var(--color-neutral-opacity);
+}

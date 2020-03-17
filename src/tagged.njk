@@ -9,13 +9,13 @@ permalink: /posts/tagged/{{ tag }}/index.html
 {% extends 'layouts/default.njk' %}
 
 {% block pageTop %}
-  <header class="header">
-    <h1 class="header-title-page">Articles tagged “{{ tag }}”</h1>
+  <header class="header--page">
+    <h1>Articles tagged “{{ tag }}”</h1>
   </header>
 {% endblock %}
 
 {% block main %}
-<div class="post">
+<div class="content">
   <ul>
     {% set taglist = collections[ tag ] %}
     {% for entry in taglist | reverse %}

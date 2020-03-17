@@ -49,14 +49,15 @@
   <meta name="yandex-verification" content="0dd50ab9279c1413">
   <!-- inlined css -->
   {% set css %}
-    {% include "assets/css/defaults.css" %}
-    {% include "assets/css/navigation.css" %}
-    {% include "assets/css/header.css" %}
-    {% include "assets/css/structure.css" %}
-    {% include "assets/css/content.css" %}
-    {% include "assets/css/footer.css" %}
-    {% include "assets/css/features.css" %}
+    {% include "assets/css/branding.css" %}
+    {% include "assets/css/components.css" %}
+    {% include "assets/css/forms.css" %}
     {% include "assets/css/keyframes.css" %}
+    {% include "assets/css/media.css" %}
+    {% include "assets/css/page-structure.css" %}
+    {% include "assets/css/post-structure.css" %}
+    {% include "assets/css/social-media.css" %}
+    {% include "assets/css/text-content.css" %}
   {% endset %}
   <style>{{ css | cssmin | safe }}</style>
   <link rel="preload stylesheet" href="/assets/css/prism.css" type="text/css" as="style">
@@ -71,7 +72,12 @@
 </head>
 <body>
   <div class="container">
-    <a class="skip-link" href="#main-content">Skip to main content</a>
+    <a class="button--skip-link" href="#main-content">
+      <div class="button button--glare">
+        <div class="glare-effect"></div>
+          Skip to main content
+      </div>
+    </a>
     {% include "components/navigation.njk" %}
     <main id="main-content" tabindex="-1">
       {% block pageTop %}{% endblock %}

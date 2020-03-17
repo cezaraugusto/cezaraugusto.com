@@ -1,0 +1,66 @@
+button,
+.button {
+  padding: 0.5rem 1rem;
+  background-color: var(--color-tertiary);
+  color: var(--color-page-background);
+  text-decoration: none;
+  font-size: inherit;
+  line-height: inherit;
+  border: none;
+  border-radius: var(--border-radius-size);
+  cursor: pointer;
+}
+
+button:active,
+.button:active {
+  bottom: -2px;
+}
+
+.button--skip-link {
+  position: absolute;
+  text-decoration: none;
+  top: 9px;
+  right: 6px;
+  transform: translateY(calc(-100% - 9px));
+}
+
+.button--skip-link:focus {
+  transform: none;
+}
+
+.button--glare {
+  position: relative;
+  overflow: hidden;
+}
+
+.button--glare:hover .glare-effect,
+.button--glare:focus .glare-effect {
+  right: -35%;
+  transition: all 0.4s ease-out;
+  color: var(--color-page-background);
+}
+
+.glare-effect:active {
+  opacity: 0.95;
+}
+
+.glare-effect {
+  position: absolute;
+  width: 45px;
+  height: 200%;
+  transform: rotate(25deg);
+  background-color: rgba(255,255,255,0.3);
+  top: -50%;
+  right: 120%;
+}
+
+.glare-effect:after {
+  content: '';
+  display: none;
+  position: absolute;
+  width: 20px;
+  height: 100%;
+  background: inherit;
+  right: -15px;
+  top: 0;
+}

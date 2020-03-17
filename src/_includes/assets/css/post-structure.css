@@ -1,0 +1,53 @@
+/* structure that goes inside the post but not textual
+********************/
+
+.content {
+  margin-bottom: 3rem;
+}
+
+.content > *:not(:last-child) {
+  margin-bottom: 1.8rem;
+}
+
+.content *:not(hr) + h2:not(.tag),
+.content *:not(hr) + h3 {
+  padding-top: 1rem;
+}
+
+.content .description {
+  margin: 6px 0;
+}
+
+/* bio that appears at the bottom of every post
+********************/
+.bio {
+  display: grid;
+  grid-gap: 1rem;
+  grid-template-columns: auto 1fr;
+  grid-template-rows: 1fr;
+  margin: 3rem 0 2rem;
+}
+
+.bio h4 {
+  color: var(--color-text);
+  font-weight: normal;
+}
+
+@media (max-width: 998px) {
+  .bio {
+    grid-template-columns: 1fr;
+  }
+}
+
+.bio img {
+  border-radius: var(--border-radius-size);
+  width: 2.7rem;
+  box-shadow: var(--box-shadow-props);
+  display: block;
+}
+
+@media (max-width: 998px) {
+  .bio img {
+    display: none;
+  }
+}

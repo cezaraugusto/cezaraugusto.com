@@ -1,0 +1,43 @@
+img, svg {
+  vertical-align: middle;
+}
+
+img,
+.image {
+  display: block;
+  max-width: 100%;
+  width: 100%;
+  box-shadow: var(--box-shadow-props);
+  border-radius: var(--border-radius-size);
+}
+
+figure + time {
+  font-size: 0.9rem;
+  margin-top: 2rem;
+}
+
+.image--filter {
+  /* Clarendon. Grabbed from https://www.cssfilters.co/ */
+  position: relative;
+  filter: contrast(120%) saturate(125%);
+}
+
+.image--filter::before {
+  content: "";
+  display: block;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  position: absolute;
+  pointer-events: none;
+  mix-blend-mode: multiply;
+  background: rgba(127, 187, 227, 0.2);
+}
+
+figcaption {
+  padding-top: 0.5rem;
+  text-align: center;
+  font-style: italic;
+  font-size: 0.875rem;
+}
