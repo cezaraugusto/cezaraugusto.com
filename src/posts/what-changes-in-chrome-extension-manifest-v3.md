@@ -174,7 +174,7 @@ Extensions will be able to dynamically add, remove, enable, and disable content 
 
 ## Conclusions
 
-There are many changes. Moving background scripts to a Service Worker is a big move, both for the platform and for authors. Another high point is the API moving to be promise-based, making the development of WebExtensions similar to Firefox's Add-On API. After Manifest V3, all major browsers will share the same API. Considering there are no standards for Extensions, this is great for authors looking to ease the process of writing cross-platform extensions.
+There are many changes. Moving background scripts to a Service Worker is a big move, both for the platform and for authors. Another high point is the API moving to be promise-based, making the development of WebExtensions similar to Firefox's Add-On API. Considering there are no standards for Extensions, this is great for authors looking to ease the process of writing cross-platform extensions, considering that in theory, other Chromium-based browsers will not object in following changes that don't affect the output (such as API _promisification_).
 
 Still talking about the code standardization, my bet is that other browsers will follow most of the Manifest V3 changes, despite some divergences. See [Firefox's Manifest V3 FAQ](https://blog.mozilla.org/addons/2019/09/03/mozillas-manifest-v3-faq/) and [Opera, Brave, and Vivaldi's opinions](https://www.zdnet.com/article/opera-brave-vivaldi-to-ignore-chromes-anti-ad-blocker-changes-despite-shared-codebase/) for more. 
 
