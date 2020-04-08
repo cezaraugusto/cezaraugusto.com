@@ -3,6 +3,24 @@
 {% block main %}
   <article class="content">
     <header class="header">
+      <time class="date">{{ date | date_formatted }}</time>
+      <h1>
+        {% if link -%}
+          <a rel="external" href="{{ link | safe }}">{{ title }}</a>
+        {%- else -%}
+          {{ title }}
+        {%- endif %}
+      </h1>
+      <aside class="share-on">
+        <span>Share on</span>
+        <a href="https://twitter.com/intent/tweet?text={{ title | space_safe }}&url={{ site.url }}/posts/{{ page.fileSlug }}&via={{ site.owner | space_safe }}" target="_blank" class="twitter">Twitter</a> &#9642; 
+        <a id="copyLink" href="{{ slug | safe }}">Copy this post's link</a>
+        <span class="clipboard tooltip">Copied!</span>
+      </aside>
+      <hr>
+      {% if description -%}
+        <p class="description">{{ description }}</p>
+      {%- endif -%}
     {% if image -%}
     <figure>
       <img
@@ -14,18 +32,6 @@
       {%- endif %}
     </figure>
     {%- endif %}
-      <time class="date">{{ date | date_formatted }}</time>
-      <h1 class="header-title">
-        {% if link -%}
-          <a rel="external" href="{{ link | safe }}">{{ title }}</a>
-        {%- else -%}
-          {{ title }}
-        {%- endif %}
-      </h1>
-      {% if description -%}
-        <p class="description">{{ description }}</p>
-      {%- endif -%}
-      <hr>
     </header>
     {{ content | safe }}
     {% if link -%}

@@ -2,6 +2,7 @@
   --color-twitter: #55acee;
   --color-github: #24292e;
   --color-linkedin: #0077b5;
+  --color-facebook: #4267B2;
 }
 
 /* highlight social media links */
@@ -17,9 +18,20 @@ a[href^="https://linkedin.com"]:hover {
   text-decoration-color: var(--color-linkedin);
 }
 
-.twitter {
+a[href^="https://facebook.com"]:hover {
+  text-decoration-color: var(--color-facebook);
+}
+
+svg.facebook {
+  fill: var(--color-facebook);
+}
+
+svg.twitter {
   fill: var(--color-twitter);
-  margin-right: 0.8rem;
+}
+
+svg.github {
+  fill: var(--color-github);
 }
 
 .email {
