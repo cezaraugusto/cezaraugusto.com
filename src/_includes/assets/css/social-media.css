@@ -26,6 +26,25 @@ svg.facebook {
   fill: var(--color-facebook);
 }
 
+.twitter-tweet {
+  box-shadow: var(--box-shadow-props);
+  border-radius: 14px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 1rem !important;
+  margin-bottom: 2rem !important;
+}
+
+@media (max-width: 500px) {
+  .twitter-tweet {
+    display: none !important;
+  }
+}
+
+.twitter-tweet * {
+  border: 0;
+}
+
 svg.twitter {
   fill: var(--color-twitter);
 }

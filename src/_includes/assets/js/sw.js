@@ -8,7 +8,9 @@
     '/assets/fonts/Lora-Regular.woff2',
     '/assets/fonts/OpenSansCondensed-Bold.woff2',
     '/assets/images/fallback-img.png',
-    '/assets/css/prism.css'
+    '/assets/css/prism.css',
+    // Cache twitter widget
+    '/assets/js/twitter-widget.js'
   ]
 
   // install cacheable resources
