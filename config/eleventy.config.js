@@ -6,6 +6,7 @@ const pluginRss = require('@11ty/eleventy-plugin-rss')
 const syntaxHighlight = require('@11ty/eleventy-plugin-syntaxhighlight')
 const Figure = require('../src/_includes/components/Figure.js')
 const Youtube = require('../src/_includes/components/Youtube.js')
+const FluidText = require('../src/_includes/components/FluidText.js')
 const GenerateRobotsTXTRules = require('../src/_includes/components/GenerateRobotsTXTRules.js')
 const markdown = require('markdown-it')({
   html: true,
@@ -112,6 +113,7 @@ module.exports = eleventyConfig => {
   // Shortcodes
   eleventyConfig.addShortcode('Figure', Figure)
   eleventyConfig.addShortcode('Youtube', Youtube)
+  eleventyConfig.addShortcode('FluidText', FluidText)
   eleventyConfig.addShortcode('GenerateRobotsTXTRules', GenerateRobotsTXTRules)
 
   // Copy all content we want published

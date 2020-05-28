@@ -11,9 +11,30 @@ img,
   border-radius: var(--border-radius-size);
 }
 
+.fluid-text {
+  min-height: 0vw;
+  line-height: 0.8;
+  font-family: var(--font-family-heading);
+}
+
+.image {
+  min-height: 150px;
+  object-fit: cover;
+  object-position: left;
+}
+
+.youtube {
+  margin: auto;
+  width: fit-content;
+}
+
 figure + time {
   font-size: 0.9rem;
   margin-top: 2rem;
+}
+
+iframe {
+  display: block;
 }
 
 .image--filter {
