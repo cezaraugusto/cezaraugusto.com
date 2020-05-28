@@ -1,16 +1,12 @@
 {
   "featured": [
     {
-      "title": "Writing a book about WebExtensions",
-      "link": "https://github.com/cezaraugusto/web-extensions-for-the-builders"
+      "title": "Writing a book about Browser Bxtensions",
+      "link": "https://github.com/cezaraugusto/browser-extensions-book"
     },
     {
       "title": "Writing this blog",
       "link": ""
-    },
-    {
-      "title": "Helping build the core of best browser in the world",
-      "link": "https://github.com/brave/brave-core"
     },
     {
       "title": "Starting a channel about software development in 🇧🇷 Portuguese",
