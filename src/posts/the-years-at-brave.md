@@ -31,7 +31,7 @@ Social media has this magic power. This retweet made me feel good and validated,
 
 At the time, Brave had less than 10 engineers working on their desktop browser, but their pile of issues was increasing fast. To this day, **I've never seemed a project with so many issues reported** (massive 11,978 issues, of which [11,310 somehow tag my username](https://github.com/brave/browser-laptop/issues?q=is%3Aissue+is%3Aclosed+%40cezaraugusto)). So I thought it would be wise to start with bug triaging until I could figure out how the project works.
 
-After a few weeks reporting bugs and hacking around, on June 2, 2016, I [sent my first pull-request](https://github.com/brave/browser-laptop/pull/1907). I still remember the feeling of opening the packaged software, installing, and seeing the feature I added live in the release channel, for everybody to download. I think I asked around five people to they could try out my proud contribution.
+After a few weeks reporting bugs and hacking around, on June 2, 2016, I [sent my first pull-request](https://github.com/brave/browser-laptop/pull/1907). I still remember the feeling of opening the packaged software, installing it, and seeing the feature I added live in the release channel, for everybody to download. I think I asked around five people to download BRave too, so they could try out my proud contribution.
 
 {% Figure {
   src: '/assets/images/posts/post-004/001.jpg'
