@@ -155,7 +155,7 @@ Bye 2019.
 
 ## 2020
 
-The year started with me finally managing to work on my dream issue, [a long-needed refactor of new tab page's top sites](https://github.com/brave/brave-core/pull/4325), along with some other features and bugs. This task was my short movie version of ([_The Last Dance_](https://en.wikipedia.org/wiki/The_Last_Dance_(2020_TV_series))). Me and Brave shaked hands formally for the last time a few months after this change landed.
+The year started with me finally managing to work on my dream issue, [a long-needed refactor of new tab page's top sites](https://github.com/brave/brave-core/pull/4325), along with some other features and bugs. This task was my short movie version of [_The Last Dance_](https://en.wikipedia.org/wiki/The_Last_Dance_(2020_TV_series)). Me and Brave shaked hands formally for the last time a few months after this change landed.
 
 At Brave, I got to know a lot of talented people, helped shape the desktop software as it is known today, spoke the good news about the company for a large audience, mentored peers, interviewed people, managed people, had fun.
 
