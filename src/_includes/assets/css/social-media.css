@@ -35,12 +35,6 @@ svg.facebook {
   margin-bottom: 2rem !important;
 }
 
-@media (max-width: 500px) {
-  .twitter-tweet {
-    display: none !important;
-  }
-}
-
 .twitter-tweet * {
   border: 0;
 }
