@@ -1,7 +1,7 @@
 ---
 title: The years at Brave
 date: 2020-05-28
-image: /assets/images/posts/post-004/thumbnail.png
+image: /assets/images/posts/post-004/thumbnail.jpg
 caption: An identifier sticker I got from the last all hands event, now beautifully decorating my coffee machine.
 tags:
   - work
