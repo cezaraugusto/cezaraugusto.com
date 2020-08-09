@@ -1,11 +1,11 @@
 p + ul,
 p + code[class*=language-],
 p + pre[class*=language-] {
-  margin-top: -0.6rem;
+  margin-top: -0.6em;
 }
 
 ul, ol {
-  padding-left: 1.5rem;
+  padding-left: 1.5em;
 }
 
 ul {
@@ -13,7 +13,7 @@ ul {
 }
 
 li:not(:last-of-type) {
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.5em;
 }
 
 strong, b {
@@ -37,12 +37,12 @@ code {
   font-family: var(--font-family-code);
   font-style: normal;
   font-weight: 600;
-  font-size: 0.9rem;
+  font-size: 0.9em;
 }
 
 blockquote:not([class]) {
-  padding-left: 1rem;
-  margin-left: -1rem;
+  padding-left: 1em;
+  margin-left: -1em;
   border-left: 2px solid var(--color-primary);
   color: var(--color-neutral);
   font-style: italic;
@@ -50,7 +50,7 @@ blockquote:not([class]) {
 
 code[class*=language-],
 pre[class*=language-] {
-  font-size: 0.8rem;
+  font-size: 0.8em;
   font-style: normal;
 }
 
@@ -60,9 +60,9 @@ mark {
 }
 
 hr {
-  margin: 3rem auto;
+  margin: 3em auto;
   border: 0;
-  width: 10rem;
+  width: 10em;
   height: 1px;
   background-color: var(--color-neutral-opacity);
 }

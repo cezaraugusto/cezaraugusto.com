@@ -2,21 +2,21 @@
 ********************/
 
 .content {
-  margin: 3rem 0;
+  margin: 3em 0;
 }
 
 .content > *:not(:last-child) {
-  margin-bottom: 1.8rem;
+  margin-bottom: 1.8em;
 }
 
 .content *:not(hr) + h2:not(.tag),
 .content *:not(hr) + h3 {
-  padding-top: 1rem;
+  padding-top: 1em;
 }
 
 .content .description {
-  margin: 0 0 3rem;
-  font-size: 1.39rem;
+  margin: 0 0 3em;
+  font-size: 1.39em;
 }
 
 .content .date {
@@ -25,20 +25,20 @@
 }
 
 .content h1 {
-  font-size: 3.9rem;
+  font-size: 3.9em;
   line-height: 1.12;
 }
 
 .share-on {
   font-size: 80%;
-  margin-top: 1.6rem;
+  margin-top: 1.6em;
 }
 
 .tooltip {
   opacity: 0;
   background: var(--color-text);
   color: var(--color-page-background);
-  padding: 0.3rem;
+  padding: 0.3em;
   font-weight: bold;
   border-radius: var(--border-radius-size);
 }
@@ -52,10 +52,10 @@
 ********************/
 .bio {
   display: grid;
-  grid-gap: 1rem;
+  grid-gap: 1em;
   grid-template-columns: auto 1fr;
   grid-template-rows: 1fr;
-  margin: 3rem 0 2rem;
+  margin: 3em 0 2em;
 }
 
 .bio h4 {
@@ -71,7 +71,7 @@
 
 .bio img {
   border-radius: var(--border-radius-size);
-  width: 2.7rem;
+  width: 2.7em;
   box-shadow: var(--box-shadow-props);
   display: block;
 }
