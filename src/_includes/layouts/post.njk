@@ -1,26 +1,24 @@
 {% extends 'layouts/default.njk' %}
 
 {% block main %}
-  <article class="content">
-    <header class="header">
-      <time class="date">{{ date | date_formatted }}</time>
-      <h1>
-        {% if link -%}
-          <a rel="external" href="{{ link | safe }}">{{ title }}</a>
-        {%- else -%}
-          {{ title }}
-        {%- endif %}
+<main id="main-content" tabindex="-1">
+  <article>
+    <header class="content-meta">
+      <!-- Show dates only for posts -->
+      <div class="share">
+        <time class="date">{{ date | date_formatted }}</time> | 
+        <span>
+          Share on 
+          <a href="https://twitter.com/intent/tweet?text={{ title | space_safe }}&url={{ site.url }}/posts/{{ page.fileSlug }}&via={{ site.owner | space_safe }}" target="_blank" class="twitter">Twitter</a> &#9642; 
+          <a id="copyLink" href="{{ slug | safe }}">
+            Copy this post's link
+            <span class="clipboard tooltip">Copied!</span>
+          </a>
+        </span>
+      </div>
+      <h1 id="title">
+        {{ title }}
       </h1>
-      <aside class="share-on">
-        <span>Share on</span>
-        <a href="https://twitter.com/intent/tweet?text={{ title | space_safe }}&url={{ site.url }}/posts/{{ page.fileSlug }}&via={{ site.owner | space_safe }}" target="_blank" class="twitter">Twitter</a> &#9642; 
-        <a id="copyLink" href="{{ slug | safe }}">Copy this post's link</a>
-        <span class="clipboard tooltip">Copied!</span>
-      </aside>
-      <hr>
-      {% if description -%}
-        <p class="description">{{ description }}</p>
-      {%- endif -%}
     {% if image -%}
     <figure>
       <img
@@ -33,14 +31,11 @@
     </figure>
     {%- endif %}
     </header>
-    {{ content | safe }}
-    {% if link -%}
-      <hr>
-      <a rel="external" href="{{ link | safe }}">View Link</a>
-    {%- endif %}
-    {% include "components/bio.njk" %}
-    {% include "components/share.njk" %}
+    <div class="content">
+      {{ content | safe }}
+    </div>
   </article>
-  <!-- this resource is cached with SW -->
-  <script async src="/assets/js/twitter-widget.js" charset="utf-8"></script>
+</main>
+<!-- this resource is cached with SW -->
+<script async src="/assets/js/twitter-widget.js" charset="utf-8"></script>
 {% endblock %}

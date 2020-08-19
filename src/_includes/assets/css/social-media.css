@@ -2,7 +2,11 @@
   --color-twitter: #55acee;
   --color-github: #24292e;
   --color-linkedin: #0077b5;
-  --color-facebook: #4267B2;
+}
+
+.share {
+  text-align: center;
+  margin-bottom: 1.1rem;
 }
 
 /* highlight social media links */
@@ -18,35 +22,14 @@ a[href^="https://linkedin.com"]:hover {
   text-decoration-color: var(--color-linkedin);
 }
 
-a[href^="https://facebook.com"]:hover {
-  text-decoration-color: var(--color-facebook);
-}
-
-svg.facebook {
-  fill: var(--color-facebook);
-}
-
 .twitter-tweet {
-  box-shadow: var(--box-shadow-props);
-  border-radius: 14px;
+  border-radius: 0x;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 1em !important;
-  margin-bottom: 2em !important;
+  margin-top: var(--margin-clamp-1x) !important;
+  margin-bottom: var(--margin-clamp-1x) !important;
 }
 
 .twitter-tweet * {
   border: 0;
-}
-
-svg.twitter {
-  fill: var(--color-twitter);
-}
-
-svg.github {
-  fill: var(--color-github);
-}
-
-.email {
-  word-break: break-word;
 }

@@ -1,12 +1,19 @@
 {% extends 'layouts/default.njk' %}
 
-{% block pageTop %}
-  <header class="header--page">
-    <h1>{{ title }}</h1>
-    {% if description %}
-      <p>{{ description | markdownify_inline | safe }}</p>
-    {% endif %}
-  </header>
+{% block main %}
+<main id="main-content" tabindex="-1">
+  <article>
+    <header class="content-meta">
+      <h1 id="title">{{ title }}</h1>
+      {% if description %}<p>{{ description | markdownify_inline | safe }}</p>{% endif %}
+      {% if image -%}
+      <figure>
+        {% if image -%}<img src="{{ image }}" alt="{{ alt }}" />{%- endif %}
+        {% if caption -%}<figcaption>{{caption}}</figcaption>{%- endif %}
+      </figure>
+      {%- endif %}
+    </header>
+    <div class="content">{{ content | markdownify | safe }}</div>
+  </article>
+</main>
 {% endblock %}
-
-{% block main %}{% endblock %}

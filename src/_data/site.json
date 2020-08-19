@@ -1,14 +1,15 @@
 
 {
   "title": "Cezar Augusto",
+  "description": "Personal blog of Cezar Augusto, an application engineer, book author, and content creator. Blogs about software development, entrepreneurship, and open-source initiatives.",
   "owner": "cezaraugusto",
   "url": "https://cezaraugusto.net",
-  "topHeadline": "Building for the builders™",
-  "bottomHeadline": "A blog written by Cezar Augusto.",
-  "keywords": "developer, engineer, builder, front-end, web, software, blog, performance, standards, tooling, browser",
-  "intro": "Hello from an unquiet mind. This space is where my best ideas go first.",
-  "social": "Other ideas and code available on [GitHub](https://github.com/cezaraugusto), [Twitter](https://twitter.com/cezaraugusto), and [LinkedIn](https://linkedin.com/in/cezar-augusto/).",
-  "bio": "Cezar Augusto is a software engineer at Brave Software working on desktop browser.",
+  "topHeadline": "Cezar Augusto<br>This is my blog",
+  "bottomHeadline": "and these are<br>my best ideas.",
+  "keywords": "cezar augusto, developer, engineer, builder, web, software, blog, performance, standards, tooling, browser, front-end, back-end, fullstack, youtube, github, twitter",
+  "intro": "I work with internet apps and produce content about it. First-time? [Get to know me](/about).",
+  "social": "More on [YouTube](https://www.youtube.com/channel/UCjwnVRxoPilVaicoxktqVjg) (🇧🇷) • See also [The Extensions book](https://github.com/cezaraugusto/browser-extensions-book) • [GitHub](https://github.com/cezaraugusto) • [Twitter](https://twitter.com/cezaraugusto) • [LinkedIn](https://linkedin.com/in/cezar-augusto/)",
+  "bio": "Cezar Augusto is an application engineer, and open-source contributor.",
   "language": "en_US",
   "github": "cezaraugusto",
   "twitter": "cezaraugusto"
