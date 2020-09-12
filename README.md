@@ -5,7 +5,7 @@
 
 > Interwebs presence of yours truly. [See it live](https://cezaraugusto.net).
 
-Hey there! This is my personal website and blog. It's super fast and built with [11ty](http://11ty.io). Interested in client-side development? [Follow me](https://twitter.com/cezaraugusto) on Twitter.
+Hey there! This is my personal website and blog. It's super fast and built with [11ty](http://11ty.io). Interested in web development? [Follow me](https://twitter.com/cezaraugusto) on Twitter.
 <br/><br/><br/><br/>
 
 ## Blog includes
@@ -19,12 +19,6 @@ Hey there! This is my personal website and blog. It's super fast and built with 
 
 * Standard for JS linting
 * Stylelint for CSS linting
-
-## Performance
-
-This blog is minimal on purpose. Mostly because it's beautiful but turns out in Web Development, _less means fast_.
-
-<img src="./lighthouse.png" align="center">
 
 ## Installing
 
