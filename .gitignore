@@ -4,3 +4,4 @@ _site
 robots.txt
 robots_production.txt
 robots_staging.txt
+package-lock.json
