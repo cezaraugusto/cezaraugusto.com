@@ -1,6 +1,6 @@
 button,
 .button {
-  padding: 0.5em 1em;
+  padding: 0.5rem 1rem;
   background-color: var(--color-tertiary);
   color: var(--color-page-background);
   text-decoration: none;
