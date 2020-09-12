@@ -1,6 +1,6 @@
 module.exports = ({ src, alt = '', caption = '' }) => `
   <figure>
-    <div class="image--filter">
+    <div>
       <img src="${src}" alt="${alt}" />
     </div>
     ${caption ? `<figcaption>${caption}</figcaption>` : ''}

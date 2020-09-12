@@ -1,12 +1,12 @@
 /* global self, caches, fetch */
 (function () {
   const identityName = 'cezaraugustonet'
-  const identityVersion = '0.0.1'
+  const identityVersion = '1.0.0'
   const identityCache = identityName + identityVersion
 
   const identityFiles = [
     '/assets/fonts/Lora-Regular.woff2',
-    '/assets/fonts/OpenSansCondensed-Bold.woff2',
+    '/assets/fonts/gta.woff2',
     '/assets/images/fallback-img.png',
     '/assets/css/prism.css',
     // Cache twitter widget

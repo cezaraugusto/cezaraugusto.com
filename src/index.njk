@@ -6,52 +6,39 @@ permalink: /index.html
 
 {% block pageTop %}
   <header class="presentation">
-    {% Figure {
-      src: '/assets/images/avatar.png',
-      alt: 'Picture of Cezar Augusto'
-    } %}
-    <div>
-      <h1>
-        {{ site.topHeadline | markdownify_inline | safe }}<br>
-        {{ site.bottomHeadline | markdownify_inline | safe }}
-      </h1>
-      <p>
-        {{ site.intro | markdownify_inline | safe }}<br>
-        {{ site.social | markdownify_inline | safe }}
-      </p>
-    </div>
+    <img src='/assets/images/avatar.png' alt='Picture of Cezar Augusto'>
+    <h1>
+      {{ site.topHeadline | markdownify_inline | safe }}<br>
+      {{ site.bottomHeadline | markdownify_inline | safe }}
+    </h1>
+    <p>
+      {{ site.intro | markdownify_inline | safe }}<br>
+      {{ site.social | markdownify_inline | safe }}
+    </p>
   </header>
 {% endblock %}
 
 {% block main %}
-  <section>
-    <div class="content">
-      <h2>Blog</h2>
-      <ul>
-        {% for entry in collections.latestPosts %}
-        <li>
-          <a href="{{ entry.url | permalink }}">{{ entry.data.title }}</a>
-          on
-          <time>{{ entry.date | date_formatted }}</date>
-        </li>
-        {% endfor %}
-      </ul>
-    </div>
-  </section>
-  <section>
-    <div class="content">
-      <h2>Current Projects 🐎</h2>
-      <ul>
-      {% for project in projects.featured %}
-        <li>
-          {% if project.link %}
-            <a href="{{ project.link }}" target="_blank">{{ project.title }}</a>
-          {% else %}
-            {{ project.title }}
-          {% endif %}
-        </li>
+  <main id="main-content" tabindex="-1">
+    <h2>Blog</h2>
+    <ul class="big-links">
+      {% for entry in collections.latestPosts %}
+      <li>
+        <a href="{{ entry.url | permalink }}">{{ entry.data.title }}</a>
+        <p>on <time>{{ entry.date | date_formatted }}</time></p>
+      </li>
       {% endfor %}
-      </ul>
-    </div>
-  </section>
+    </ul>
+  </main>
+{% endblock %}
+
+{% block footer %}
+<footer class="footer">
+  <p class="footer__phrase">
+    © 2018-Present <a href="/about/">Cezar Augusto</a>.<br>
+    Content in this blog is licensed under 
+    <a href="https://creativecommons.org/licenses/by/4.0/" rel="noopener noreferrer" target="_blank">CC BY 4.0</a>.
+  </p>
+  <p class="footer__phrase">This blog has an <a href="/feed.xml">RSS</a> which is cool.</p>
+</footer>
 {% endblock %}

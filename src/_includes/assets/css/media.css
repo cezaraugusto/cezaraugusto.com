@@ -2,63 +2,30 @@ img, svg {
   vertical-align: middle;
 }
 
-img,
-.image {
+img {
   display: block;
   max-width: 100%;
   width: 100%;
-  box-shadow: var(--box-shadow-props);
   border-radius: var(--border-radius-size);
 }
 
 .fluid-text {
-  min-height: 0vw;
   line-height: 0.8;
   font-family: var(--font-family-heading);
+  text-align: center;
 }
 
-.image {
-  min-height: 150px;
-  object-fit: cover;
-  object-position: left;
-}
-
-.youtube {
-  margin: auto;
-  width: fit-content;
-}
-
-figure + time {
-  font-size: 0.9em;
-  margin-top: 2em;
+.fluid-text + .fluid-text {
+  margin-bottom: var(--margin-clamp-2x) !important;
 }
 
 iframe {
   display: block;
 }
 
-.image--filter {
-  /* Clarendon. Grabbed from https://www.cssfilters.co/ */
-  position: relative;
-  filter: contrast(120%) saturate(125%);
-}
-
-.image--filter::before {
-  content: "";
-  display: block;
-  height: 100%;
-  width: 100%;
-  top: 0;
-  left: 0;
-  position: absolute;
-  pointer-events: none;
-  mix-blend-mode: multiply;
-  background: rgba(127, 187, 227, 0.2);
-}
-
 figcaption {
-  padding-top: 0.5em;
+  padding-top: 1rem;
   text-align: center;
-  font-style: italic;
-  font-size: 0.875em;
+  line-height: 150%;
+  font-size: clamp(12px,2vw,14px);
 }

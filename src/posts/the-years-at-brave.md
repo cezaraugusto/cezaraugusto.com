@@ -76,9 +76,7 @@ At the time, the desktop browser was having several performance issues, so the t
 There, I also had the chance to be featured live, representing Brave, for the first time. It was a chat we had with the fine folks of [Brave Indonesia](https://twitter.com/IndoBrave/).
 
 <figure>
-  <div class="image--filter">
-    <img src="/assets/images/posts/post-004/005.jpeg">
-  </div>
+  <img src="/assets/images/posts/post-004/005.jpeg">
   <figcaption>
   {{ "I'm the person sitting in the middle inside the video, along with [Brian R. Bondy](twitter.com/brianbondy) and [Brian Clifton](https://twitter.com/_brianclifton).<br>  Photo extracted from [@IndoBrave](https://twitter.com/IndoBrave/status/893320436397645824)" | markdownify_inline | safe }}
 </figcaption>
@@ -110,11 +108,8 @@ This year I started working full-time on the port of the desktop codebase. I was
 The new browser was great. I was excited to work on top of Chromium. My work started with me [porting](https://github.com/brave/brave-core/pull/105) the private new tab, [and later](https://github.com/brave/brave-core/pull/256) the brand new welcome page. Later, Sync V2 [eventually featured](https://github.com/brave/brave-core/pull/1019) in the Chromium version.
 
 <figure>
-  <img
-    src="/assets/images/posts/post-004/007.jpg"
-    style="box-shadow: none;"
-  >
-  <figcaption style="padding: 0;">
+  <img src="/assets/images/posts/post-004/007.jpg">
+  <figcaption>
     This is how the welcome page looked like back in the days.
   </figcaption>
 </figure>
@@ -159,14 +154,12 @@ The year started with me finally managing to work on my dream issue, [a long-nee
 
 At Brave, I got to know a lot of talented people, helped shape the desktop software as it is known today, spoke the good news about the company for a large audience, mentored peers, interviewed people, managed people, had fun.
 
-<div>
-{% FluidText { min: '4.2rem', scaler: '17.9vw', max: '8.8rem',
+{% FluidText { min: '57px', scaler: '17vw', max: '141px',
   text: 'I HAD A LOT'
 } %}
-{% FluidText { min: '6.8rem', scaler: '29.1vw', max: '14.4rem',
+{% FluidText { min: '68px', scaler: '28vw', max: '236px',
   text: 'OF FUN'
 } %}
-</div>
 
 Saying goodbye is never easy, but as I finish this blog post, I'm thankful to say that the only memories I have at my time on Brave are happy.
 
@@ -176,16 +169,11 @@ Brave is making history, and I'm proud to say I'm part of it.
 
 Onwards!
 
-<hr>
-
 Dear Brave Software,
 
-<div>
-{% FluidText { min: '7.3rem', scaler: '31vw', max: '15.2rem',
+{% FluidText { min: '93px', scaler: '28vw', max: '224px',
   text: 'THANK'
 } %}
-{% FluidText { min: '12.8rem', scaler: '52.7vw', max: '25.8rem',
+{% FluidText { min: '152px', scaler: '47vw', max: '390px',
   text: 'YOU'
 } %}
-</div>
-<hr>

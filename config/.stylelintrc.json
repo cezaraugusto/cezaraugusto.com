@@ -13,7 +13,6 @@
     "declaration-block-no-duplicate-properties": true,
     "declaration-block-no-shorthand-property-overrides": true,
     "media-feature-name-no-unknown": true,
-    "declaration-no-important": true,
     "font-family-name-quotes": "always-unless-keyword",
     "number-leading-zero": "always",
     "length-zero-no-unit": true,

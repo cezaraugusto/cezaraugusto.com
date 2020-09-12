@@ -89,7 +89,7 @@ In Manifest V3, a new manifest key `"host_permissions"` was added to host permis
 
 Exceptional cases in extensions that require broad permissions such as `*://*/*` and `<all_urls>` are rare, but often abused by developers. With Manifest V3, Chrome plans to prevent it by dropping support for `<all_urls>` and start asking permissions at runtime, using an [activeTab](https://developer.chrome.com/extensions/activeTab)-style host permission by default, with extra options such as to always run on a specific site. In Manifest V3 public design document, using the [`chrome.permission`](https://developer.chrome.com/apps/permissions) API is also under consideration.
 
-> `activeTab` allows temporary access to an extension in the active tab after user invocation (such as clicking a browser action). If a user clicks an extension on a website, there is an implicit understanding that they are allowing the extension to see its contents.
+`activeTab` allows temporary access to an extension in the active tab after user invocation (such as clicking a browser action). If a user clicks an extension on a website, there is an implicit understanding that they are allowing the extension to see its contents.
 
 It's recommended that while developing your extension, try to target interactions around temporary host permissions (see `activeTab` itself).
 

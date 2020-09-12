@@ -1,7 +1,7 @@
 button,
 .button {
-  padding: 0.5em 1em;
-  background-color: var(--color-tertiary);
+  padding: var(--default-margin) 1.1rem;
+  background-color: var(--color-primary);
   color: var(--color-page-background);
   text-decoration: none;
   font-size: inherit;
@@ -18,10 +18,11 @@ button:active,
 
 .button--skip-link {
   position: absolute;
+  z-index: 11;
   text-decoration: none;
-  top: 9px;
-  right: 6px;
-  transform: translateY(calc(-100% - 9px));
+  top: 0.5rem;
+  right: 0.5rem;
+  transform: translateY(calc(-100% - 0.5rem));
 }
 
 .button--skip-link:focus {
@@ -38,6 +39,7 @@ button:active,
   right: -35%;
   transition: all 0.4s ease-out;
   color: var(--color-page-background);
+  text-decoration: none;
 }
 
 .glare-effect:active {
@@ -46,7 +48,7 @@ button:active,
 
 .glare-effect {
   position: absolute;
-  width: 45px;
+  width: 2.5rem;
   height: 200%;
   transform: rotate(25deg);
   background-color: rgba(255,255,255,0.3);
@@ -58,9 +60,9 @@ button:active,
   content: '';
   display: none;
   position: absolute;
-  width: 20px;
+  width: 1.1rem;
   height: 100%;
   background: inherit;
-  right: -15px;
+  right: -0.9rem;
   top: 0;
 }
