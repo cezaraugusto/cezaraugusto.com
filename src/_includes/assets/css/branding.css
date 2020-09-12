@@ -7,7 +7,7 @@
   /* neutral colors */
   --color-neutral: rgb(39,39,39);
   --color-neutral-opacity: rgba(39,39,39,0.18);
-  --box-shadow-props: 0 1rem 1rem 0 rgba(0, 0, 0, 0.24);
+  --box-shadow-props: 0 1em 1em 0 rgba(0, 0, 0, 0.24);
 
   /* branding colors */
   --color-light: #fafafa;
@@ -26,7 +26,7 @@
   --color-tertiary: var(--color-dark-blue);
 
   /* sizing */
-  --avatar-size: 5.5rem;
+  --avatar-size: 5.5em;
   --border-radius-size: 4px;
 }
 
@@ -71,7 +71,7 @@ html {
 
 h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
   font-family: var(--font-family-heading);
-  letter-spacing: -0.09rem;
+  letter-spacing: -0.09em;
   color: var(--color-text);
   font-style: normal;
   text-transform: uppercase;
@@ -81,42 +81,42 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
 
 h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
   font-family: var(--font-family-body);
-  letter-spacing: 0.09rem;
+  letter-spacing: 0.09em;
 }
 
 h1, .h1 {
-  font-size: 2.7rem;
+  font-size: 2.7em;
 }
 
 h2, .h2 {
-  font-size: 2.1rem;
+  font-size: 2.1em;
 }
 
 h3, .h3 {
-  font-size: 1.36rem;
+  font-size: 1.36em;
 }
 
 h4, .h4, h5, .h5 {
-  font-size: 1.2rem;
+  font-size: 1.2em;
 }
 
 h5, .h5 {
   color: var(--color-gray);
-  font-size: 0.9rem;
+  font-size: 0.9em;
   font-weight: normal;
 }
 
 /* h6 is default text with inherited bold weight */
 h6, .h6 {
   color: var(--color-text);
-  font-size: 1.2rem;
+  font-size: 1.2em;
 }
 
 h2 + h3, .h2 + h3, h2 + .h3, .h2 + .h3,
 h3 + h4, .h3 + h4, h3 + .h4, .h3 + .h4,
 h4 + h5, .h4 + h5, h4 + .h5, .h4 + .h5,
 h5 + h6, .h5 + h6, h5 + .h6, .h5 + .h6 {
-  margin-top: -0.9rem;
+  margin-top: -0.9em;
 }
 
 h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
@@ -140,11 +140,11 @@ a:focus:not(.button) {
 
 body, .text {
   font-family: var(--font-family-body);
-  font-size: 1.2rem;
+  font-size: 1.2em;
   line-height: 1.5;
   color: var(--color-text);
   background-color: var(--color-page-background);
   text-transform: none;
   font-weight: normal;
-  letter-spacing: -0.015rem;
+  letter-spacing: -0.015em;
 }

@@ -1,5 +1,5 @@
 .note {
-  padding: 1rem;
+  padding: 1em;
   display: flex;
   align-items: center;
   background: var(--color-dark);
@@ -8,14 +8,14 @@
 }
 
 .note h3 {
-  font-size: 1rem;
+  font-size: 1em;
   line-height: 1.6;
   padding: 0;
   margin: 0;
 }
 
 .note p {
-  font-size: 1rem;
+  font-size: 1em;
   line-height: 1.6;
   padding: 0;
   margin: 0;
@@ -24,8 +24,8 @@
 .note--share {
   display: grid;
   grid-template-columns: auto 1fr;
-  grid-gap: 0.8rem;
-  margin: 4rem 0 1rem;
+  grid-gap: 0.8em;
+  margin: 4em 0 1em;
 }
 
 .note--share a {

@@ -29,8 +29,8 @@ img,
 }
 
 figure + time {
-  font-size: 0.9rem;
-  margin-top: 2rem;
+  font-size: 0.9em;
+  margin-top: 2em;
 }
 
 iframe {
@@ -57,8 +57,8 @@ iframe {
 }
 
 figcaption {
-  padding-top: 0.5rem;
+  padding-top: 0.5em;
   text-align: center;
   font-style: italic;
-  font-size: 0.875rem;
+  font-size: 0.875em;
 }

@@ -1,6 +1,10 @@
 /** Page defaults
 ********************/
 
+html {
+  font-size: 62.5%;
+}
+
 @media (max-width: 465px) {
   html {
     font-size: 85%;
@@ -15,7 +19,7 @@ html, body {
 body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  padding: 3rem 1.5rem 1.5rem;
+  padding: 3em 1.5em 1.5em;
   height: auto;
 }
 
@@ -28,34 +32,34 @@ iframe {
 }
 
 section + section {
-  padding-top: 2rem;
+  padding-top: 2em;
 }
 
 .container {
-  max-width: 41.2rem;
+  max-width: 41.2em;
   margin-right: auto;
   margin-left: auto;
   display: grid;
   grid-template-rows: auto auto 1fr;
   height: 100%;
-  min-height: calc(100vh - 7rem);
+  min-height: calc(100vh - 7em);
 }
 
 /** Navigation links
 ********************/
 .navigator {
-  margin: 0.6rem 0 1.2rem;
+  margin: 0.6em 0 1.2em;
 }
 
 .navigator ul {
   list-style: none;
   display: flex;
-  font-size: 1rem;
+  font-size: 1em;
   padding-left: 0;
 }
 
 .navigator ul li:not(:last-of-type) {
-  margin-right: 1rem;
+  margin-right: 1em;
 }
 
 /** Posts list pagination
@@ -63,7 +67,7 @@ section + section {
 .pagination {
   display: flex;
   align-items: center;
-  padding-top: 2rem;
+  padding-top: 2em;
 }
 
 .pagination a[rel='prev']::before {
@@ -85,14 +89,14 @@ section + section {
 /** Front page presentation
 ********************/
 .presentation {
-  margin-bottom: 4rem;
+  margin-bottom: 4em;
   display: grid;
-  grid-gap: 3rem;
+  grid-gap: 3em;
   grid-template-columns: auto 1fr;
   grid-template-rows: 1fr;
-  width: calc(100% + var(--avatar-size) + 3rem);
+  width: calc(100% + var(--avatar-size) + 3em);
   min-height: var(--avatar-size);
-  margin-left: calc(-3rem - var(--avatar-size));
+  margin-left: calc(-3em - var(--avatar-size));
 }
 
 @media (max-width: 998px) {
@@ -105,7 +109,7 @@ section + section {
 
 @media (max-width: 465px) {
   .presentation h1 {
-    font-size: 2rem;
+    font-size: 2em;
   }
 }
 
@@ -120,7 +124,7 @@ section + section {
   animation-delay: 0.2s;
   animation-duration: 0.6s;
   animation-fill-mode: forwards;
-  margin-top: 0.6rem;
+  margin-top: 0.6em;
 }
 
 @media (max-width: 998px) {
@@ -130,39 +134,39 @@ section + section {
 }
 
 h1 + p {
-  margin-top: 0.6rem;
-  font-size: 1.27rem;
+  margin-top: 0.6em;
+  font-size: 1.27em;
 }
 
 /** Header for internal pages
 ********************/
 .header--page {
-  margin-bottom: 2rem;
+  margin-bottom: 2em;
 }
 
 .header--page h1 {
-  font-size: 3rem;
+  font-size: 3em;
 }
 
 .header--page h1 + p {
-  margin-bottom: 3rem;
+  margin-bottom: 3em;
 }
 
 @media (max-width: 465px) {
   .header--page h1 {
-    font-size: 2rem;
+    font-size: 2em;
   }
 }
 
 /** Footer
 ********************/
 .footer {
-  padding-top: 3rem;
+  padding-top: 3em;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
 }
 
 .footer p {
-  font-size: 0.8rem;
+  font-size: 0.8em;
 }
