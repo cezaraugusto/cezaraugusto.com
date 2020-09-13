@@ -19,17 +19,18 @@
       <h1 id="title">
         {{ title }}
       </h1>
-    {% if image -%}
-    <figure>
-      <img
-        src="{{ image }}"
-        alt="{{ alt }}"
-      />
-      {% if caption -%}
-        <figcaption>{{caption}}</figcaption>
+      {% if description %}<p>{{ description | markdownify_inline | safe }}</p>{% endif %}
+      {% if image -%}
+      <figure>
+        <img
+          src="{{ image }}"
+          alt="{{ alt }}"
+        />
+        {% if caption -%}
+          <figcaption>{{caption}}</figcaption>
+        {%- endif %}
+      </figure>
       {%- endif %}
-    </figure>
-    {%- endif %}
     </header>
     <div class="content">
       {{ content | safe }}
