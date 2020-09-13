@@ -21,3 +21,12 @@
     opacity: 0;
   }
 }
+
+.elementFadeIn {
+  opacity: 0;
+  animation-name: fadeIn;
+  animation-delay: 0.25s;
+  animation-duration: 0.5s;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
+}

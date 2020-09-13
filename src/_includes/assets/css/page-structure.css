@@ -27,6 +27,7 @@
 .navigation .back {
   transition: background-color 250ms linear;
   border-radius: 50%;
+  animation-delay: 0.6s;
 }
 
 @media (max-width:960px) {
@@ -69,16 +70,12 @@
 ********************/
 
 .presentation {
-  opacity: 0;
-  animation-name: fadeIn;
-  animation-delay: 0.2s;
-  animation-duration: 0.6s;
-  animation-fill-mode: forwards;
   margin: 0 var(--default-margin) var(--margin-clamp-4x);
 }
 
 .presentation img {
   width: var(--avatar-size);
+  height: var(--avatar-size);
   border-radius: 50%;
   margin: 0 auto var(--margin-clamp-1x);
 }

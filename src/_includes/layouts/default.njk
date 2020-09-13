@@ -51,7 +51,7 @@
   {% set css %}
     {% include "assets/css/branding.css" %}
     {% include "assets/css/forms.css" %}
-    {% include "assets/css/keyframes.css" %}
+    {% include "assets/css/animations.css" %}
     {% include "assets/css/media.css" %}
     {% include "assets/css/page-structure.css" %}
     {% include "assets/css/social-media.css" %}
@@ -76,7 +76,7 @@
   </a>
   <nav class="navigation">
     {% if page.url != '/' %}
-    <a class="back" href="/">
+    <a class="back elementFadeIn" href="/">
       <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 20 20">
         <g fill="none" fill-rule="evenodd" stroke="#000000" stroke-linecap="round" stroke-linejoin="round">
           <path d="M7.5 6.497l-4 4.002 4 4M16.5 10.5h-13"/>
