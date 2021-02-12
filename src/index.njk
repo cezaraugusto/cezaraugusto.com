@@ -6,7 +6,7 @@ permalink: /index.html
 
 {% block pageTop %}
   <header class="presentation">
-    <img class="elementFadeIn" src='/assets/images/avatar.png' alt='Picture of Cezar Augusto'>
+    <img src='/assets/images/avatar.png' alt='Picture of Cezar Augusto'>
     <p>{{ site.topHeadline | markdownify_inline | safe }}</p>
     <h1>
       {{ site.bottomHeadline | markdownify_inline | safe }}
@@ -15,6 +15,7 @@ permalink: /index.html
       {{ site.intro | markdownify_inline | safe }}<br>
       {{ site.social | markdownify_inline | safe }}
     </p>
+    <div class="glare"></div>
   </header>
 {% endblock %}
 
