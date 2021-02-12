@@ -7,8 +7,8 @@ permalink: /index.html
 {% block pageTop %}
   <header class="presentation">
     <img class="elementFadeIn" src='/assets/images/avatar.png' alt='Picture of Cezar Augusto'>
+    <p>{{ site.topHeadline | markdownify_inline | safe }}</p>
     <h1>
-      {{ site.topHeadline | markdownify_inline | safe }}<br>
       {{ site.bottomHeadline | markdownify_inline | safe }}
     </h1>
     <p>
