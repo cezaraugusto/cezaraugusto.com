@@ -111,6 +111,9 @@ body *
 
 main {
   padding: 1rem var(--default-margin) var(--margin-clamp-1x);
+}
+
+main > section {
   margin-top: var(--margin-clamp-4x);
 }
 

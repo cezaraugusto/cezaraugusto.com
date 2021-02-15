@@ -29,25 +29,25 @@ permalink: /index.html
     scrolling="no">
   </iframe>
   <main id="main-content" tabindex="-1">
-    <h2>Blog</h2>
-    <ul class="big-links">
-      {% for entry in collections.latestPosts %}
-      <li>
-        <a href="{{ entry.url | permalink }}">{{ entry.data.title }}</a>
-        <p>on <time>{{ entry.date | date_formatted }}</time></p>
-      </li>
-      {% endfor %}
-    </ul>
+    <section>
+      <h2>Blog</h2>
+      <ul class="big-links">
+        {% for entry in collections.latestPosts %}
+        <li>
+          <a href="{{ entry.url | permalink }}">{{ entry.data.title }}</a>
+          <p>on <time>{{ entry.date | date_formatted }}</time></p>
+        </li>
+        {% endfor %}
+      </ul>
+    </section>
+    <section>
+      <h2>Projects</h2>
+      <ol id="projects" class="big-links">
+        <p class="center">(Loading...)</p>
+      </ol>
+    </section>
   </main>
 {% endblock %}
 
 {% block footer %}
-<footer class="footer">
-  <p class="footer__phrase">
-    © 2018-Present <a href="/about/">Cezar Augusto</a>.<br>
-    Content in this blog is licensed under 
-    <a href="https://creativecommons.org/licenses/by/4.0/" rel="noopener noreferrer" target="_blank">CC BY 4.0</a>.
-  </p>
-  <p class="footer__phrase">This blog has an <a href="/feed.xml">RSS</a> which is cool.</p>
-</footer>
 {% endblock %}

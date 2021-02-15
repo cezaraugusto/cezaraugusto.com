@@ -106,6 +106,10 @@
     {{ corejs | jsmin | safe }}
   </script>
   <script src="/sw.js"></script>
+  <script>
+    {% set projectjs %}{% include "assets/js/projects.js" %}{% endset %}
+    {{ projectjs | jsmin | safe }}
+  </script>
   <script type="application/ld+json">
     {% include "assets/js/schema.json" %}
   </script>
