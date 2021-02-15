@@ -1,7 +1,7 @@
 /* global self, caches, fetch */
 (function () {
   const identityName = 'cezaraugustonet'
-  const identityVersion = '1.0.1'
+  const identityVersion = '1.1.0'
   const identityCache = identityName + identityVersion
 
   const identityFiles = [
