@@ -6,7 +6,7 @@ permalink: /index.html
 
 {% block pageTop %}
   <header class="presentation">
-    <img src='/assets/images/avatar.png' alt='Picture of Cezar Augusto'>
+    <img src='/assets/images/avatar.jpeg' alt='Picture of Cezar Augusto'>
     <h1>
       <mark>{{ site.topHeadline | markdownify_inline | safe }}</mark><br>
       {{ site.bottomHeadline | markdownify_inline | safe }}
@@ -36,6 +36,17 @@ permalink: /index.html
         <li>
           <a href="{{ entry.url | permalink }}">{{ entry.data.title }}</a>
           <p>on <time>{{ entry.date | date_formatted }}</time></p>
+        </li>
+        {% endfor %}
+      </ul>
+    </section>
+    <section>
+      <h2>Things I'm proud and I'd like you to know</h2>
+      <ul class="big-links">
+        {% for entry in personal.projects %}
+        <li>
+          <a href="{{ entry.url | permalink }}">{{ entry.project }}</a>
+          <p>{{ entry.role }}</p>
         </li>
         {% endfor %}
       </ul>

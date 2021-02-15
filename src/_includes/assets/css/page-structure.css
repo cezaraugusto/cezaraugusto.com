@@ -153,6 +153,11 @@
   margin-bottom: var(--default-margin);
 }
 
+.content > iframe.youtube {
+  width: 100%;
+  height: 518px;
+}
+
 .tooltip {
   opacity: 0;
   background: var(--color-text);
