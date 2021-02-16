@@ -47,13 +47,8 @@ function rederProjects (projects) {
     const a = document.createElement('a')
     const p = document.createElement('p')
 
-    console.log('arhhhh', repo)
     a.href = repo.url
-    a.class = repo.archived ? 'archived' : ''
-    a.innerHTML = (
-      repo.name +
-      (repo.archived ? ' <sup>Archived!</sup>' : '')
-    )
+    a.innerText = repo.name
     p.innerText = repo.description
 
     ol.appendChild(li)

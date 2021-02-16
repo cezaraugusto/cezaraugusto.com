@@ -41,17 +41,6 @@ permalink: /index.html
       </ul>
     </section>
     <section>
-      <h2>Things I'm proud and I'd like you to know</h2>
-      <ul class="big-links">
-        {% for entry in personal.projects %}
-        <li>
-          <a href="{{ entry.url | permalink }}">{{ entry.project }}</a>
-          <p>{{ entry.role }}</p>
-        </li>
-        {% endfor %}
-      </ul>
-    </section>
-    <section>
       <h2>Projects</h2>
       <ol id="projects" class="big-links">
         <p class="center">(Loading...)</p>
