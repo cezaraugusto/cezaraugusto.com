@@ -8,14 +8,13 @@ permalink: /index.html
   <header class="presentation">
     <img src='/assets/images/avatar.jpeg' alt='Picture of Cezar Augusto'>
     <h1>
-      <mark>{{ site.topHeadline | markdownify_inline | safe }}</mark><br>
-      {{ site.bottomHeadline | markdownify_inline | safe }}
+      {{ site.topHeadline | markdownify_inline | safe }}<br>
+      <mark>{{ site.bottomHeadline | markdownify_inline | safe }}</mark>
     </h1>
     <p>
       {{ site.intro | markdownify_inline | safe }}<br>
       {{ site.social | markdownify_inline | safe }}
     </p>
-    <div class="glare"></div>
   </header>
 {% endblock %}
 
@@ -23,8 +22,8 @@ permalink: /index.html
   <iframe
     src="https://cezaraugusto.substack.com/embed"
     width="480"
-    height="320"
-    style="border:1px solid #EEE; background:white;"
+    height="250"
+    style="border-radius: 4px;"
     frameborder="0"
     scrolling="no">
   </iframe>
@@ -43,7 +42,7 @@ permalink: /index.html
     <section>
       <h2>Projects</h2>
       <ol id="projects" class="big-links">
-        <p class="center">(Loading...)</p>
+        <p>Loading...</p>
       </ol>
     </section>
   </main>

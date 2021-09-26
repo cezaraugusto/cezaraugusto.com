@@ -5,23 +5,28 @@ window.addEventListener('load', () => {
   }
 })
 
-if (document.querySelector('#copyLink')) {
-  document.querySelector('#copyLink')
-    .addEventListener('click', (event) => {
-      event.preventDefault()
-      writeToClipboard(event.target.href)
-      document.querySelector('.clipboard').classList.toggle('fadeInOut')
-    })
-}
+// Adapted from https://codepen.io/rajatkantinandi/pen/VOJMGm
+// JS only to store user settings
+// let globalDarkMode = false;
+// let isDarkModeUser = false;
 
-if (document.querySelector('#title')) {
-  document.querySelector('.nav-title').innerText = document.querySelector('#title').textContent
-}
+// if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+//   // Set sytem dark mode setting
+//   globalDarkMode = true;
+// }
+// // When browser window loads, check User setting of dark mode
+// window.onload = () => {
+//   isDarkModeUser = window.localStorage.getItem("isDarkMode") === "true";
 
-function writeToClipboard (text) {
-  navigator.clipboard.writeText(text)
-    .then(
-      () => console.log('Copied to clipboard!'),
-      reason => console.error('Could not copy to clipboard:', reason)
-    )
-}
+//   if (isDarkModeUser ^ globalDarkMode) {
+//     document.getElementById("toggle").checked = true;
+//   }
+// }
+
+// function toggle () {
+//   if (isDarkModeUser) {
+//     window.localStorage.setItem("isDarkMode", "false");
+//   } else {
+//     window.localStorage.setItem("isDarkMode", "true");
+//   }
+// }

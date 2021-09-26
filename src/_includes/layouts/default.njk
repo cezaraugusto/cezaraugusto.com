@@ -31,8 +31,9 @@
   <link rel="icon" sizes="16x16" href="/assets/images/favicon-16x16.png" type="image/png">
   <link rel="mask-icon" href="/assets/images/favicon-96x96.png" color="#181818" type="image/png">
   <!-- prefetch fonts -->
-  <link rel="preload" href="/assets/fonts/GT-America-Condensed-Black.woff2" type="font/woff2" crossorigin="anonymous" as="font">
-  <link rel="preload" href="/assets/fonts/Lora-Regular.woff2" type="font/woff2" crossorigin="anonymous" as="font">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Arvo:ital,wght@1,700&display=swap" rel="stylesheet">
   <!-- robots -->
   <meta name="robots" content="{% GenerateRobotsTXTRules %}">
   <!-- social media -->
@@ -49,13 +50,11 @@
   <meta name="yandex-verification" content="0dd50ab9279c1413">
   <!-- inlined css -->
   {% set css %}
-    {% include "assets/css/branding.css" %}
+    {% include "assets/css/base.css" %}
     {% include "assets/css/forms.css" %}
-    {% include "assets/css/animations.css" %}
     {% include "assets/css/media.css" %}
+    {% include "assets/css/toggle.css" %}
     {% include "assets/css/page-structure.css" %}
-    {% include "assets/css/social-media.css" %}
-    {% include "assets/css/text-highlight.css" %}
   {% endset %}
   <style>{{ css | cssmin | safe }}</style>
   <link rel="preload stylesheet" href="/assets/css/prism.css" type="text/css" as="style">
@@ -77,7 +76,7 @@
   </a>
   <nav class="navigation">
     {% if page.url != '/' %}
-    <a class="back elementFadeIn" href="/">
+    <a class="back" href="/">
       <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 20 20">
         <g fill="none" fill-rule="evenodd" stroke="#000000" stroke-linecap="round" stroke-linejoin="round">
           <path d="M7.5 6.497l-4 4.002 4 4M16.5 10.5h-13"/>
@@ -85,19 +84,10 @@
       </svg>
     </a>
     {% endif %}
-    {% if page.url.includes('/posts/') %}
-    <p class="now-reading">
-      Now reading: <span class="nav-title"></span> | 
-      <span>
-        Share on 
-        <a href="https://twitter.com/intent/tweet?text={{ title | space_safe }}&url={{ site.url }}/posts/{{ page.fileSlug }}&via={{ site.owner | space_safe }}" target="_blank" class="twitter">Twitter</a> &#9642; 
-        <a id="copyLinkAlt" href="#"><!-- {{ slug | safe }} -->
-          Copy this post's link
-          <span class="clipboardAlt tooltip">Copied!</span>
-        </a>
-      </span>
-    </p>
-    {% endif %}
+    {# <div class="toggle">
+      <input type="checkbox" id="toggle" onclick="toggle()"/>
+      <label for="toggle" class="switch"></label>
+    </div> #}
   </nav>
   {% block pageTop %}{% endblock %}
   {% block main %}{% endblock %}

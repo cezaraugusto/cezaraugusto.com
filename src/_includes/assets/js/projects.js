@@ -22,6 +22,8 @@ async function loadProjects () {
     if (repo.archived) continue
     // Ignore this own website
     if (repo.name === 'cezaraugusto.net') continue
+    // Ignore GH sponsor files
+    if (repo.name === '.github') continue
 
     ownPublicRepos.push({
       name: repo.name,
@@ -45,15 +47,15 @@ function rederProjects (projects) {
   projects.forEach((repo) => {
     const li = document.createElement('li')
     const a = document.createElement('a')
-    const p = document.createElement('p')
+    const span = document.createElement('span')
 
     a.href = repo.url
     a.innerText = repo.name
-    p.innerText = repo.description
+    span.innerText = repo.description
 
     ol.appendChild(li)
     li.appendChild(a)
-    li.appendChild(p)
+    li.appendChild(span)
   })
 }
 

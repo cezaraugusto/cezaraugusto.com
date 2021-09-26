@@ -9,12 +9,14 @@ excludeFromSitemap: true
 {% set content %}
 {% endset %}
 
+
 {% block main %}
-  {% Figure {
-    src: '/assets/images/uh.gif',
-    alt: 'Psychedelic picture of two astronauts'
-  } %}
-  <div class="content">
+  <div class="content not-found">
+  <h1>This page is wrong <a href="/">Back to main</a></h1>
+    {% Figure {
+      src: '/assets/images/uh.gif',
+      alt: 'Psychedelic picture of two astronauts'
+    } %}
     {{ content | markdownify | safe }}
   </div>
 {% endblock %}

@@ -7,7 +7,6 @@ button,
   font-size: inherit;
   line-height: inherit;
   border: none;
-  border-radius: var(--border-radius-size);
   cursor: pointer;
 }
 
@@ -27,42 +26,4 @@ button:active,
 
 .button--skip-link:focus {
   transform: none;
-}
-
-.button--glare {
-  position: relative;
-  overflow: hidden;
-}
-
-.button--glare:hover .glare-effect,
-.button--glare:focus .glare-effect {
-  right: -35%;
-  transition: all 0.4s ease-out;
-  color: var(--color-page-background);
-  text-decoration: none;
-}
-
-.glare-effect:active {
-  opacity: 0.95;
-}
-
-.glare-effect {
-  position: absolute;
-  width: 2.5rem;
-  height: 200%;
-  transform: rotate(25deg);
-  background-color: rgba(255,255,255,0.3);
-  top: -50%;
-  right: 120%;
-}
-
-.glare-effect:after {
-  content: '';
-  display: none;
-  position: absolute;
-  width: 1.1rem;
-  height: 100%;
-  background: inherit;
-  right: -0.9rem;
-  top: 0;
 }

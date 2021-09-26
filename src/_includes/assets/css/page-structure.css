@@ -2,7 +2,7 @@
 ********************/
 
 .container {
-  max-width: 963px;
+  max-width: 1000px;
   margin-right: auto;
   margin-left: auto;
 }
@@ -15,8 +15,6 @@
   padding: 0.9rem;
   min-height: 4rem;
   z-index: 10;
-  /* TODO */
-  background: linear-gradient(to bottom, rgba(0,0,0,0.05), transparent);
 }
 
 .navigation a {
@@ -25,7 +23,7 @@
 }
 
 .navigation .back {
-  transition: background-color 250ms linear;
+  background-color: var(--color-secondary);
   border-radius: 50%;
   animation-delay: 0.6s;
 }
@@ -55,10 +53,6 @@
   height: 1.8rem;
 }
 
-.navigation .back:hover {
-  background-color: var(--color-black-4);
-}
-
 .navigation .now-reading {
   display: none;
   /* TODO */
@@ -73,12 +67,19 @@
   margin: 0 var(--default-margin) var(--margin-clamp-4x);
 }
 
+.presentation h1 {
+  font-size: 12ch;
+  margin: var(--margin-clamp-2x) auto;
+  line-height: 0.9;
+}
+
 .presentation img {
   width: var(--avatar-size);
   height: var(--avatar-size);
   border-radius: 50%;
   margin: 0 auto var(--margin-clamp-1x);
 }
+
 
 /** Page-specific
 ********************/
@@ -88,7 +89,7 @@
   margin: var(--margin-clamp-2x) auto 0;
   padding: 0;
   text-align: center;
-  max-width: 690px;
+  max-width: var(--text-max-width);
 }
 
 .big-links li {
@@ -100,15 +101,18 @@
   font-size: var(--margin-clamp-1x);
   line-height: 150%;
   display: block;
+  line-height: 150%;
 }
 
 .big-links li a {
-  display: inline-block;
-  position: relative;
+  display: inline;
+  margin-right: 1ch;
+  /* position: relative; */
 }
 
-.big-links li p {
-  text-align: center;
+.big-links li span {
+  display: block;
+  font-size: 18px;
 }
 
 /** Footer
@@ -125,12 +129,16 @@
   font-size: 0.9rem;
 }
 
-/* structure that goes inside the post but not textual
+/* Structure that goes inside the post but not textual
 ********************/
 
 .content-meta {
   margin-top: 0.9rem;
   margin-bottom: var(--margin-clamp-2x);
+}
+
+.content-meta img {
+  max-width: 600px;
 }
 
 .content > *:not(:last-child) {
@@ -164,7 +172,6 @@
   color: var(--color-page-background);
   padding: 0 var(--margin-clamp-1x);
   font-weight: bold;
-  border-radius: var(--border-radius-size);
   position: absolute;
   margin-left: 0.9rem;
   top: -0.6rem;
@@ -177,4 +184,9 @@
 .clipboard.fadeInOut {
   animation: fadeInOut 1s;
   animation-fill-mode: forwards;
+}
+
+.not-found {
+  max-width: 600px;
+  margin: auto;
 }
