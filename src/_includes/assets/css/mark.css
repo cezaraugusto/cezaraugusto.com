@@ -1,0 +1,15 @@
+mark {
+  color: var(--color-page-background);
+  margin: auto -0.4em;
+  padding: 0.1em 0.4em;
+  border-radius: 0.8em 0.3em;
+  background: transparent;
+  background-image: linear-gradient(
+    to right,
+    rgba(242, 183, 5, 0.1),
+    rgba(242, 183, 5, 0.7) 10%,
+    rgba(242, 183, 5, 0.3)
+  );
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+}

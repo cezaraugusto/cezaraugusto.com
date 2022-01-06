@@ -50,11 +50,22 @@
   <meta name="yandex-verification" content="0dd50ab9279c1413">
   <!-- inlined css -->
   {% set css %}
+    {% include "assets/css/abbr.css" %}
     {% include "assets/css/base.css" %}
-    {% include "assets/css/forms.css" %}
+    {% include "assets/css/blockquote.css" %}
+    {% include "assets/css/button.css" %}
+    {% include "assets/css/code.css" %}
+    {% include "assets/css/footer.css" %}
+    {% include "assets/css/header.css" %}
+    {% include "assets/css/headings.css" %}
+    {% include "assets/css/list.css" %}
+    {% include "assets/css/mark.css" %}
     {% include "assets/css/media.css" %}
-    {% include "assets/css/toggle.css" %}
-    {% include "assets/css/page-structure.css" %}
+    {% include "assets/css/navigation.css" %}
+    {% include "assets/css/page-body.css" %}
+    {% include "assets/css/post-body.css" %}
+    {% include "assets/css/share.css" %}
+    {% include "assets/css/text.css" %}
   {% endset %}
   <style>{{ css | cssmin | safe }}</style>
   <link rel="preload stylesheet" href="/assets/css/prism.css" type="text/css" as="style">
@@ -68,12 +79,6 @@
   </script>
 </head>
 <body>
-  <a class="button--skip-link" href="#main-content" tabindex="1">
-    <div class="button button--glare">
-      <div class="glare-effect"></div>
-        Skip to main content
-    </div>
-  </a>
   <nav class="navigation">
     {% if page.url != '/' %}
     <a class="back" href="/">
@@ -84,10 +89,6 @@
       </svg>
     </a>
     {% endif %}
-    {# <div class="toggle">
-      <input type="checkbox" id="toggle" onclick="toggle()"/>
-      <label for="toggle" class="switch"></label>
-    </div> #}
   </nav>
   {% block pageTop %}{% endblock %}
   {% block main %}{% endblock %}

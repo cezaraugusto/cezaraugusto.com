@@ -39,8 +39,10 @@ function cacheProjects (projects) {
   window.localStorage.setItem('projects', JSON.stringify(projects))
 }
 
-function rederProjects (projects) {
+function renderProjects (projects) {
   const ol = document.getElementById('projects')
+
+  if (!ol) return
 
   ol.removeChild(ol.firstElementChild)
 
@@ -63,11 +65,11 @@ async function renderToPage () {
   const cachedData = window.localStorage.getItem('projects')
 
   if (cachedData) {
-    rederProjects(JSON.parse(cachedData))
+    renderProjects(JSON.parse(cachedData))
   } else {
     const projects = await loadProjects()
 
-    rederProjects(projects)
+    renderProjects(projects)
     cacheProjects(projects)
   }
 }

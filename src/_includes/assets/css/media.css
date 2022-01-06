@@ -1,3 +1,25 @@
+iframe {
+  display: block;
+  border: none;
+}
+
+img,
+pre,
+figure,
+video,
+iframe {
+  margin: auto;
+  width: var(--block-max-width);
+  max-width: 96%;
+}
+
+img,
+video,
+iframe,
+.twitter-tweet {
+  box-shadow: var(--box-shadow-color);
+}
+
 img, svg {
   vertical-align: middle;
 }
@@ -6,6 +28,15 @@ img {
   display: block;
   max-width: 100%;
   width: 100%;
+}
+
+figcaption {
+  font-family: var(--font-family-code);
+  text-transform: uppercase;
+  padding-top: 1rem;
+  text-align: center;
+  line-height: 150%;
+  font-size: clamp(12px,2vw,12px);
 }
 
 .fluid-text {
@@ -18,13 +49,20 @@ img {
   margin-bottom: var(--margin-clamp-2x) !important;
 }
 
-iframe {
-  display: block;
+@media (max-width:580px) {
+  .fluid-text {
+    font-size: 4rem !important;
+  }
 }
 
-figcaption {
-  padding-top: 1rem;
-  text-align: center;
-  line-height: 150%;
-  font-size: clamp(12px,2vw,14px);
+.twitter-tweet {
+  border-radius: 0x;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: var(--margin-clamp-1x) !important;
+  margin-bottom: var(--margin-clamp-1x) !important;
+}
+
+.twitter-tweet * {
+  border: 0;
 }

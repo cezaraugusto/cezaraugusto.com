@@ -13,6 +13,8 @@
 
   // install cacheable resources
   self.addEventListener('install', event => {
+    if (!caches) return
+
     event.waitUntil(
       caches.open(identityCache).then(cache => cache.addAll(identityFiles))
     )
@@ -42,6 +44,7 @@
             if (!cacheWhitelist.includes(cacheName)) {
               return caches.delete(cacheName)
             }
+            return cacheName
           })
         )
       })

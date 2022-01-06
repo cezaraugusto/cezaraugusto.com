@@ -1,0 +1,6 @@
+abbr[title], acronym[title] {
+  text-decoration: overline;
+  background: var(--color-black-2);
+  border: 1px solid var(--color-black-2);
+  cursor: help;
+}

@@ -1,0 +1,37 @@
+a {
+  background: var(--color-gradient);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: all ease-out 0.15s;
+  font-weight: bold;
+}
+
+a:hover {
+  text-decoration: underline;
+  text-decoration-color: var(--color-primary);
+}
+
+p + ul,
+p + code[class*=language-],
+p + pre[class*=language-] {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 2rem;
+}
+
+strong, b {
+  font-weight: 600;
+}
+
+time {
+  display: inline-block;
+}
+
+hr {
+  margin-top: var(--margin-clamp-2x);
+  max-width: var(--small-text-max-width);
+  margin-left: auto;
+  margin-right: auto;
+  border-top: 1px solid var(--color-gray);
+}

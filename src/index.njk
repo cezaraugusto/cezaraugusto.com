@@ -6,11 +6,7 @@ permalink: /index.html
 
 {% block pageTop %}
   <header class="presentation">
-    <img src='/assets/images/avatar.jpeg' alt='Picture of Cezar Augusto'>
-    <h1>
-      {{ site.topHeadline | markdownify_inline | safe }}<br>
-      <mark>{{ site.bottomHeadline | markdownify_inline | safe }}</mark>
-    </h1>
+    <h1>{{ site.headline | markdownify_inline | safe }}</h1>
     <p>
       {{ site.intro | markdownify_inline | safe }}<br>
       {{ site.social | markdownify_inline | safe }}
@@ -21,8 +17,7 @@ permalink: /index.html
 {% block main %}
   <iframe
     src="https://cezaraugusto.substack.com/embed"
-    width="480"
-    height="250"
+    height="320"
     style="border-radius: 4px;"
     frameborder="0"
     scrolling="no">
@@ -40,7 +35,7 @@ permalink: /index.html
       </ul>
     </section>
     <section>
-      <h2>Projects</h2>
+      <h2>Open-Source Projects</h2>
       <ol id="projects" class="big-links">
         <p>Loading...</p>
       </ol>

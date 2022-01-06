@@ -76,7 +76,9 @@ When a contract is reached, its code is executed by the node. Once all participa
 
 ## Transactions
 
-When a node reads a contract, it needs to talk to another node looking for consensus about whether or not the operation was valid. When a request to update the block happens, we call it a transaction.
+When we want to make a change to the blockchain, we call it a transaction.
+
+When a node reads a contract, it needs to talk to another node looking for consensus about whether or not the operation was valid. All operations changing the blockchain happen through transactions. Exchanging currencies, minting an NFT, deploying a smart contract, so on.
 
 Transactions are nothing more than data transfers that get permanently recorded and can be accessed for future references at any given point due to the nature of the blockchain.
 

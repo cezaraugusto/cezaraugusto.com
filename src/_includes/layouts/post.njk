@@ -6,20 +6,19 @@
     <header class="content-meta">
       <!-- Show dates only for posts -->
       <div class="share">
-        <time class="date">{{ date | date_formatted }}</time> | 
-        <span>
+        <time class="date">{{ date | date_formatted }}</time>
+        <i>&#9642;</i>
+        {% if title %}
+        <span class="share-actions">
           Share on 
-          <a href="https://twitter.com/intent/tweet?text={{ title | space_safe }}&url={{ site.url }}/posts/{{ page.fileSlug }}&via={{ site.owner | space_safe }}" target="_blank" class="twitter">Twitter</a> &#9642; 
-          <a id="copyLink" href="{{ slug | safe }}">
-            Copy this post's link
-            <span class="clipboard tooltip">Copied!</span>
-          </a>
+          <a href="https://twitter.com/intent/tweet?text={{ title | space_safe }}&amp;url={{ site.url }}/posts/{{ page.fileSlug }}&amp;via={{ site.owner | space_safe }}" target="_blank" class="twitter">Twitter</a>
         </span>
+        {%- endif %}
       </div>
       <h1 id="title">
         {{ title }}
       </h1>
-      {% if description %}<p>{{ description | markdownify_inline | safe }}</p>{% endif %}
+      {% if description %}<p class="content-description">{{ description | markdownify_inline | safe }}</p>{% endif %}
       {% if image -%}
       <figure>
         <img
@@ -31,6 +30,7 @@
         {%- endif %}
       </figure>
       {%- endif %}
+      <hr>
     </header>
     <div class="content">
       {{ content | safe }}

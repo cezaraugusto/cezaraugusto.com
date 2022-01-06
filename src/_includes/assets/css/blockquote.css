@@ -1,0 +1,56 @@
+blockquote {
+  font-weight: 100;
+  font-size: 2rem;
+  max-width: var(--small-text-max-width);
+  position: relative;
+  z-index: 1;
+  padding: 0.5rem;
+  margin: auto;
+  margin-top: var(--margin-clamp-2x);
+  text-align: center;
+}
+
+blockquote:before,
+blockquote:after {
+  position: absolute;
+  z-index: -1;
+  color: #f1efe6;
+  font-size: 8rem;
+  width: 4rem;
+  margin-top: var(--margin-clamp-2x);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+blockquote:before {
+  content: '“';
+  left: -5rem;
+  top: -2rem;
+}
+
+blockquote:after {
+  content: '”';
+  right: -5rem;
+  bottom: 1rem;
+}
+
+@media (max-width: 580px) {
+  blockquote:before {
+    color: rgba(255, 255, 0, 0.8);
+    left: 0;
+  }
+
+  blockquote:after {
+    color: rgba(255, 255, 0, 0.8);
+    right: 0;
+  }
+}
+
+blockquote p {
+  line-height: 140%;
+}
+
+cite {
+  line-height: 3;
+  text-align: left;
+}
