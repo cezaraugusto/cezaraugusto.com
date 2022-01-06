@@ -1,7 +1,7 @@
 <img src="image.png" align="left" width="192" height="192">
 <img align="left" width="0" height="192" hspace="10">
 
-[![cezaraugusto.com](https://img.shields.io/badge/cezaraugusto-net-blue.svg)](https://cezaraugusto.com)
+[![cezaraugusto.com](https://img.shields.io/badge/cezaraugusto-com-blue.svg)](https://cezaraugusto.com)
 
 > Interwebs presence of yours truly. [See it live](https://cezaraugusto.com).
 
