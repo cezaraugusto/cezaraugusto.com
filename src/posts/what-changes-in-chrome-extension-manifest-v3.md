@@ -68,8 +68,8 @@ If your extension falls into one of these cases, take a look at [Migrate to Even
 
 The host permission allows extensions to inject scripts on and intercept network requests from the host. In Manifest V2, extensions can request hosts by:
 
-* **Specificity**, like, `https://cezaraugusto.net.`
-* **Patterns**, like `https://*.cezaraugusto.net.`
+* **Specificity**, like, `https://cezaraugusto.com.`
+* **Patterns**, like `https://*.cezaraugusto.com.`
 * **Special keys**, like `<all_urls>.`
 
 ```diff

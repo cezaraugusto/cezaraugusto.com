@@ -21,7 +21,7 @@ async function loadProjects () {
     // Ignore archived
     if (repo.archived) continue
     // Ignore this own website
-    if (repo.name === 'cezaraugusto.net') continue
+    if (repo.name === 'cezaraugusto.com') continue
     // Ignore GH sponsor files
     if (repo.name === '.github') continue
 

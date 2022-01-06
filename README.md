@@ -1,9 +1,9 @@
 <img src="image.png" align="left" width="192" height="192">
 <img align="left" width="0" height="192" hspace="10">
 
-[![cezaraugusto.net](https://img.shields.io/badge/cezaraugusto-net-blue.svg)](https://cezaraugusto.net)
+[![cezaraugusto.com](https://img.shields.io/badge/cezaraugusto-net-blue.svg)](https://cezaraugusto.com)
 
-> Interwebs presence of yours truly. [See it live](https://cezaraugusto.net).
+> Interwebs presence of yours truly. [See it live](https://cezaraugusto.com).
 
 Hey there! This is my personal website and blog. It's super fast and built with [11ty](http://11ty.io). Interested in web development? [Follow me](https://twitter.com/cezaraugusto) on Twitter.
 <br/><br/><br/><br/>
@@ -23,7 +23,7 @@ Hey there! This is my personal website and blog. It's super fast and built with 
 ## Installing
 
 ```sh
-$ git clone git@github.com:cezaraugusto/cezaraugusto.net.git
+$ git clone git@github.com:cezaraugusto/cezaraugusto.com.git
 $ npm i
 ```
 

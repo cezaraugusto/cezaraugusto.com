@@ -1,5 +1,5 @@
 {
-  "name": "cezaraugusto.net",
+  "name": "cezaraugusto.com",
   "version": "1.0.0",
   "description": "Interwebs presence of Cezar Augusto",
   "scripts": {
@@ -12,18 +12,18 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/cezaraugusto/cezaraugusto.net"
+    "url": "https://github.com/cezaraugusto/cezaraugusto.com"
   },
   "author": {
     "name": "Cezar Augusto",
-    "email": "boss@cezaraugusto.net",
-    "url": "https://cezaraugusto.net/"
+    "email": "boss@cezaraugusto.com",
+    "url": "https://cezaraugusto.com/"
   },
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/cezaraugusto/cezaraugusto.net/issues"
+    "url": "https://github.com/cezaraugusto/cezaraugusto.com/issues"
   },
-  "homepage": "https://github.com/cezaraugusto/cezaraugusto.net",
+  "homepage": "https://github.com/cezaraugusto/cezaraugusto.com",
   "standard": {
     "ignore": [
       "src/assets/**"

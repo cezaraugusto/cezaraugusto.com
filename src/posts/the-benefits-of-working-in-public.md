@@ -58,7 +58,7 @@ All those questions are valid if you have a plan. Turns out if you do have one, 
 
 ## Just Ship it®
 
-I wrote [my blog](https://cezaraugusto.net) on one weekend. It took me months to publish it online, and a few other months to get to write my first "real" blog post. This one, actually. The first blog I created is probably 15 years old. Never got any post written. Around 2 years ago, I started a blog, and the only blog post was an "about me" post. I just couldn't make it.
+I wrote [my blog](https://cezaraugusto.com) on one weekend. It took me months to publish it online, and a few other months to get to write my first "real" blog post. This one, actually. The first blog I created is probably 15 years old. Never got any post written. Around 2 years ago, I started a blog, and the only blog post was an "about me" post. I just couldn't make it.
 
 Until now.
 

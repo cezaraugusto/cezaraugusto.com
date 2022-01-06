@@ -4,7 +4,7 @@ https://keybase.io/cezaraugusto
 
 I hereby claim:
 
-  * I am an admin of https://cezaraugusto.net
+  * I am an admin of https://cezaraugusto.com
   * I am cezaraugusto (https://keybase.io/cezaraugusto) on keybase.
   * I have a public key with fingerprint 684F C83A 5EDD 5FD2 3741  A4D0 6104 DCBB 0892 716B
 
@@ -27,7 +27,7 @@ To do so, I am signing this object:
             ]
         },
         "service": {
-            "hostname": "cezaraugusto.net",
+            "hostname": "cezaraugusto.com",
             "protocol": "https:"
         },
         "type": "web_service_binding",
