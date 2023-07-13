@@ -11,12 +11,17 @@ excludeFromSitemap: true
 
 
 {% block main %}
-  <div class="content not-found">
-  <h1>This page is wrong <a href="/">(🔙)</a></h1>
-    {% Figure {
-      src: '/assets/images/uh.gif',
-      alt: 'Psychedelic picture of two astronauts'
-    } %}
-    {{ content | markdownify | safe }}
+<div class="hero">
+  <div class="hero-content text-center">
+    <div class="max-w-md">
+      <h1 class="text-5xl font-bold mb-6">This page is wrong</h1>
+      {% Figure {
+        src: '/static/images/uh.gif',
+        alt: 'Psychedelic picture of two astronauts',
+        caption: '<a class="link py-3 inline-block" href="/">Go back home</a>'
+      } %}
+      {{ content | markdownify | safe }}
+    </div>
   </div>
+</div>
 {% endblock %}

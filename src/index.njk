@@ -5,43 +5,57 @@ permalink: /index.html
 {% extends 'layouts/default.njk' %}
 
 {% block pageTop %}
-  <header class="presentation">
-    <h1>{{ site.headline | markdownify_inline | safe }}</h1>
-    <p>
-      {{ site.intro | markdownify_inline | safe }}<br>
-      {{ site.social | markdownify_inline | safe }}
-    </p>
+  <header class="hero min-h-80 bg-base-200">
+    <div class="hero-content flex-col lg:flex-row-reverse">
+      <img src="/static/images/avatar.jpg" width="200" alt="ok" className="max-w-sm rounded-lg shadow-2xl" style="border-radius:100%;"/>
+      <div>
+        <h1 class="text-5xl font-bold">{{ site.headline | markdownify_inline | safe }}</h1>
+        <p class="py-6">
+          {{ site.intro | markdownify_inline | safe }}<br>
+          {{ site.social | markdownify_inline | safe }}
+        </p>
+      </div>
+    </div>
   </header>
 {% endblock %}
 
 {% block main %}
-  <iframe
-    src="https://cezaraugusto.substack.com/embed"
-    height="320"
-    style="border-radius: 4px;"
-    frameborder="0"
-    scrolling="no">
-  </iframe>
   <main id="main-content" tabindex="-1">
     <section>
-      <h2>Blog</h2>
-      <ul class="big-links">
+      <div class="p-4 pb-10">
         {% for entry in collections.latestPosts %}
-        <li>
-          <a href="{{ entry.url | permalink }}">{{ entry.data.title }}</a>
-          <p>on <time>{{ entry.date | date_formatted }}</time></p>
-        </li>
+          <div class="py-6 flex flex-row-reverse gap-6 md:gap-10 items-start">
+            {# <a href="{{ entry.url | permalink }}" class="shrink-0">
+              <img
+              src="{{ entry.data.image }}"
+              alt="I baught a chair and here's what I learned"
+              width="80"
+              height="80"
+              class="w-10 h-10 md:w-20 md:h-20 rounded bg-base-200 object-cover"
+            >
+            </a> #}
+            <div class="flex flex-col gap-4 w-full">
+              <h2 class="text-2xl font-bold">
+                <a class="hover:underline" href="{{ entry.url | permalink }}">
+                  {{ entry.data.title }}
+                </a>
+              </h2>
+              <p class="text-sm text-base-content/70">on <time>{{ entry.date | date_formatted }}</time>
+              </p>
+            </div>
+          </div>
         {% endfor %}
-      </ul>
+      </div>
     </section>
-    <section>
+    <section class="prose px-4 pb-10" style="min-width: 100%;">
+      {# <div class="divider"></div> #}
       <h2>Open-Source Projects</h2>
-      <ol id="projects" class="big-links">
+      <div class="divider"></div>
+      <ol id="projects">
         <p>Loading...</p>
       </ol>
     </section>
   </main>
 {% endblock %}
 
-{% block footer %}
-{% endblock %}
+{% block footer %}{% endblock %}

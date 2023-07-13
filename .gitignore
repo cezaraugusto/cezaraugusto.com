@@ -1,7 +1,7 @@
 node_modules
-_site
+# _site
 .DS_Store
 robots.txt
 robots_production.txt
 robots_staging.txt
-package-lock.json
+

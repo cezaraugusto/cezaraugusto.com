@@ -8,14 +8,19 @@ const Figure = require('../src/_includes/components/Figure.js')
 const Youtube = require('../src/_includes/components/Youtube.js')
 const FluidText = require('../src/_includes/components/FluidText.js')
 const GenerateRobotsTXTRules = require('../src/_includes/components/GenerateRobotsTXTRules.js')
-const markdown = require('markdown-it')({
+const postcss = require('postcss');
+const tailwindcss = require('tailwindcss');
+const autoprefixer = require('autoprefixer');
+const anchor = require('markdown-it-anchor')
+const md = require('markdown-it')({
   html: true,
   breaks: true,
   linkify: true,
   typographer: true
-}).use(require('markdown-it-anchor'), {
+})
+const markdown = md.use(anchor, {
   level: [2],
-  permalink: true,
+  permalink: anchor.permalink.headerLink({ safariReaderFix: true }),
   permalinkBefore: true,
   permalinkSymbol: ''
 })
@@ -123,10 +128,21 @@ module.exports = eleventyConfig => {
     : 'src/robots_production.txt'
 
   eleventyConfig
-    .addPassthroughCopy('src/assets')
+    .addPassthroughCopy('src/static')
     .addPassthroughCopy({ [generateRobotsTXTFile]: 'robots.txt' })
     .addPassthroughCopy('src/keybase.txt')
     .addPassthroughCopy('src/crossdomain.xml')
+
+  eleventyConfig.addNunjucksAsyncFilter('postcss', (cssCode, done) => {
+    postcss([tailwindcss(require('../tailwind.config.js')), autoprefixer()])
+      .process(cssCode)
+      .then(
+        (r) => done(null, r.css),
+        (e) => done(e, null)
+      );
+  });
+
+  eleventyConfig.addWatchTarget('src/**/*.css');
 
   return {
     templateFormats: ['njk', 'md', 'html'],

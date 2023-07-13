@@ -1,0 +1,508 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Articles - Cezar Augusto</title>
+  <subtitle>Personal Blog</subtitle>
+  <link href="https://cezaraugusto.com/feed.xml" rel="self"/>
+  <link href="https://cezaraugusto.com/"/>
+  <updated>2021-10-05T00:00:00Z</updated>
+  <id>https://cezaraugusto.com/</id>
+  <author>
+    <name>Cezar Augusto</name>
+    <email>boss@cezaraugusto.com</email>
+  </author>
+  
+  <entry>
+    <title>Web3 technology explained</title>
+    
+      <link href="https://cezaraugusto.com/posts/web3-technology-explained/"/>
+    
+    <updated>2021-10-05T00:00:00Z</updated>
+    <id>https://cezaraugusto.com/posts/web3-technology-explained/</id>
+    <content type="html">&lt;p&gt;At first, websites were just a bunch of static pages linking each other, like a physical document copy but with an option to jump between documents. The internet 1.0 was about information.&lt;/p&gt;
+&lt;p&gt;Once websites got dynamic enough to interact with, they started being called web apps. Web 2.0 arrived and thrived full of dynamic HTML pages (because JavaScript got better?), social media apps, online services, and e-commerces. All sorts of web conveniences.&lt;/p&gt;
+&lt;p&gt;Now we have Web 3.0. Possible thanks to “the blockchain.” A decentralized database model stores information in a single chain of blocks in a permanent, verifiable way. Records can be any piece of information you find interesting.&lt;/p&gt;
+&lt;p&gt;Web 3.0 is about distributed control, and this post is an explanation of the tech behind it.&lt;/p&gt;
+&lt;p&gt;Technically speaking, the web3 allows better governance of institutions, a new option to distribute assets between company working members, auditable public data for governments, the list goes on.&lt;/p&gt;
+&lt;p&gt;You still see a bunch of useless jpegs worth millions, but it’s more than that. That’s because of how the concept of blockchain works.&lt;/p&gt;
+&lt;h2 id=&quot;the-blockchain&quot; tabindex=&quot;-1&quot;&gt;&lt;a class=&quot;header-anchor&quot; href=&quot;https://cezaraugusto.com/posts/web3-technology-explained/#the-blockchain&quot;&gt;&lt;span&gt;The Blockchain&lt;/span&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;The blockchain is a shared database.&lt;/p&gt;
+&lt;p&gt;For everything to work correctly, the database (the blockchain) is shared by a group of computers running the same software to read and update data. The blockchain is a network of computers (servers) running the same software and interacting with it.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.ibm.com/topics/what-is-blockchain&quot;&gt;IBM explains it well:&lt;/a&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;As each transaction occurs, it is recorded as a “block” of data&lt;/li&gt;
+&lt;li&gt;Each block is connected to the ones before and after it&lt;/li&gt;
+&lt;li&gt;Transactions are blocked together in an irreversible chain: a blockchain&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;You say blockchains are decentralized because, for public blockchains, anyone can put their computer to work on it and do not depend on a single server/service.&lt;/p&gt;
+&lt;p&gt;There is no single cloud provider like AWS or GCP. People volunteer to put their machines at work in exchange for some benefit.&lt;/p&gt;
+&lt;p&gt;Let’s talk about these computers.&lt;/p&gt;
+&lt;h2 id=&quot;nodes&quot; tabindex=&quot;-1&quot;&gt;&lt;a class=&quot;header-anchor&quot; href=&quot;https://cezaraugusto.com/posts/web3-technology-explained/#nodes&quot;&gt;&lt;span&gt;Nodes&lt;/span&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;A node is a computer running the &lt;em&gt;blockchain software&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;The blockchain need computers running their software and responding to requests on the network to work. Nodes talk to each other to validate the current state of the blockchain. A computer serving blockchain software is called a &lt;em&gt;server node&lt;/em&gt; or just a &lt;em&gt;node&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;Their function is to validate the data being transacted, and they do so by achieving consensus about the current blockchain state via a consensus protocol, a core mechanism of the blockchain that helps nodes in the network verify the transactions.&lt;/p&gt;
+&lt;p&gt;Once computers involved in the transaction agree with the data update, the new data is pushed on top of the last data block.&lt;/p&gt;
+&lt;p&gt;But what function do these node computers do?&lt;/p&gt;
+&lt;h2 id=&quot;contracts&quot; tabindex=&quot;-1&quot;&gt;&lt;a class=&quot;header-anchor&quot; href=&quot;https://cezaraugusto.com/posts/web3-technology-explained/#contracts&quot;&gt;&lt;span&gt;Contracts&lt;/span&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;Nodes need a program to set and retrieve the current data state. &lt;em&gt;At which block are we right now? Is the current processing block valid?&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;Blockchain data is auditable by all, but for inserting new data (you can’t change them once it’s published), you need a computer program to do so. In most cases, the program is called a &lt;em&gt;contract&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;Contract names can vary. The Ethereum blockchain calls it a &lt;em&gt;smart contract&lt;/em&gt;. Solana calls it &lt;em&gt;program&lt;/em&gt;. On other blockchains &lt;em&gt;contract&lt;/em&gt; seems to be the default name convention.&lt;/p&gt;
+&lt;p&gt;A contract is made of functions and data (its state):&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Functions are used to perform all sorts of data operations related to the contract. It’s the piece of code that will run every time someone requests the contract.&lt;/li&gt;
+&lt;li&gt;State refers to the data after being processed by a contract. The value will be sent to the blockchain once it’s approved by other computers doing the same task.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre class=&quot;language-sol&quot;&gt;&lt;code class=&quot;language-sol&quot;&gt;&lt;span class=&quot;token comment&quot;&gt;// SPDX-License-Identifier: GPL-3.0&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;pragma&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;solidity&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;&gt;=&lt;/span&gt;&lt;span class=&quot;token version number&quot;&gt;0.4.16&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;token version number&quot;&gt;0.9.0&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+
+&lt;span class=&quot;token comment&quot;&gt;// A contract is similar to an OOP class&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;contract&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;SimpleStorage&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;token comment&quot;&gt;// Stores our data state&lt;/span&gt;
+    &lt;span class=&quot;token builtin&quot;&gt;uint&lt;/span&gt; storedData&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+
+    &lt;span class=&quot;token comment&quot;&gt;// Set function that will update&lt;/span&gt;
+    &lt;span class=&quot;token comment&quot;&gt;// the contract state every time&lt;/span&gt;
+    &lt;span class=&quot;token comment&quot;&gt;// the contract is read by the computer&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;set&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token builtin&quot;&gt;uint&lt;/span&gt; x&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+        storedData &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; x&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+
+    &lt;span class=&quot;token comment&quot;&gt;// Retrieve values&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;get&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;view&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;returns&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token builtin&quot;&gt;uint&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; storedData&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;em&gt;In this example, the contract defines the functions set and get that can be used to modify or retrieve the variable’s value. Adapted from &lt;a href=&quot;https://docs.soliditylang.org/en/v0.8.7/introduction-to-smart-contracts.html#simple-smart-contracts&quot;&gt;Solidity docs&lt;/a&gt;.&lt;/em&gt;&lt;/p&gt;
+&lt;h3&gt;A contract is&lt;/h3&gt;
+&lt;p&gt;Take a group of nodes selected randomly by the blockchain to validate the current transaction, and if its valid, update the blockchain with this new block of data. Do it by having a contract to make the updates for each transaction.&lt;/p&gt;
+&lt;p&gt;But what is a transaction?&lt;/p&gt;
+&lt;h2 id=&quot;transactions&quot; tabindex=&quot;-1&quot;&gt;&lt;a class=&quot;header-anchor&quot; href=&quot;https://cezaraugusto.com/posts/web3-technology-explained/#transactions&quot;&gt;&lt;span&gt;Transactions&lt;/span&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;When we want to make a change to the blockchain, we call it a transaction.&lt;/p&gt;
+&lt;p&gt;When a node reads a contract, it needs to talk to another node looking for consensus about whether or not the operation was valid. All operations changing the blockchain happen through transactions. Exchanging currencies, minting an NFT, deploying a contract, everything.&lt;/p&gt;
+&lt;p&gt;Transactions are nothing more than data transfers that get permanently recorded and can be accessed for future references at any given point due to the blockchain’s immutable nature, which allows you to read, write, but not delete or update data.&lt;/p&gt;
+&lt;p&gt;You either fully make a transaction or don’t make it at all. For cryptocurrencies, consensus checks ensure only the person holding the keys to the account can transfer money from it.&lt;/p&gt;
+&lt;p&gt;At least to me, consensus is a new word. What is a consensus protocol?&lt;/p&gt;
+&lt;h2 id=&quot;consensus-protocols&quot; tabindex=&quot;-1&quot;&gt;&lt;a class=&quot;header-anchor&quot; href=&quot;https://cezaraugusto.com/posts/web3-technology-explained/#consensus-protocols&quot;&gt;&lt;span&gt;Consensus protocols&lt;/span&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;Nodes need to agree on whether the transaction is valid for a block to be validated. This agreement is made once all nodes make the same transaction and get the same result. Blockchains rely on mechanisms called “proofs” to validate data changes.&lt;/p&gt;
+&lt;h3&gt;Proof of Work&lt;/h3&gt;
+&lt;p&gt;Bitcoin uses the proof of work (PoW) protocol. The protocol computes the hash values to validate transactions until a given condition is reached. This operation relies heavily on computer performance, which makes the validation time-intensive and costly and doesn’t make Bitcoin a great candidate to develop applications on top of it.&lt;/p&gt;
+&lt;h3&gt;Proof of Stake&lt;/h3&gt;
+&lt;p&gt;Another famous consensus protocol is the proof of stake (PoS), used by Ethereum. It works by assigning a block of data to the node, allocating some of its cryptocurrency resources to start validating the data update and receiving a stake of the data transaction in exchange. This task isn’t as costly and time-intensive as the Proof of Work and allows the development of decentralized applications (dApps) in practical terms.&lt;/p&gt;
+&lt;h2 id=&quot;addresses&quot; tabindex=&quot;-1&quot;&gt;&lt;a class=&quot;header-anchor&quot; href=&quot;https://cezaraugusto.com/posts/web3-technology-explained/#addresses&quot;&gt;&lt;span&gt;Addresses&lt;/span&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;A blockchain address is a unique identifier used to set a virtual location where the cryptocurrency can be sent. People can send cryptocurrency to addresses similar to the way banks transfer fiat currencies through bank accounts. Addresses can host both wallets and contracts.&lt;/p&gt;
+&lt;p&gt;For the sake of knowledge, let’s leverage the addresses of the two most famous blockchain implementations:&lt;/p&gt;
+&lt;h3&gt;Types of Bitcoin Addresses&lt;/h3&gt;
+&lt;p&gt;Bitcoin has three types of addresses. The &lt;strong&gt;P2PKH&lt;/strong&gt; format called Legacy Address Format (addresses starting with “1”), the &lt;strong&gt;P2SH&lt;/strong&gt; format called Compatibility Address Format (addresses starting with “3”), and the &lt;strong&gt;Bech32&lt;/strong&gt; format, also called the Segwit Address Format (addresses starting with “bc1”).&lt;/p&gt;
+&lt;h3&gt;Types of Ethereum Addresses&lt;/h3&gt;
+&lt;p&gt;Ethereum has two types of addresses: the &lt;strong&gt;Externally Owned Address (EOAs)&lt;/strong&gt;, an account of public and private key pair to hold your funds, and the &lt;strong&gt;Contract Address&lt;/strong&gt;, which is the address used by contracts to execute functions.&lt;/p&gt;
+&lt;h3&gt;Addresses are like&lt;/h3&gt;
+&lt;p&gt;Addresses work like email. You have an email address and a password that access your email account with email. Like emails, blockchain addresses also have their private keys. Knowing that gives you access to the data stored in that address, such as cryptocurrencies.&lt;/p&gt;
+&lt;h2 id=&quot;blocks&quot; tabindex=&quot;-1&quot;&gt;&lt;a class=&quot;header-anchor&quot; href=&quot;https://cezaraugusto.com/posts/web3-technology-explained/#blocks&quot;&gt;&lt;span&gt;Blocks&lt;/span&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;The code (contract) that is read by the computer (node) can be sent by any other computer (let’ call them nodes forever) in the network (blockchain). Once the contract is run, multiple nodes execute the function within the program, and once they agree about the result, a transaction happens, and the data resulting from this transaction (block) is sent.&lt;/p&gt;
+&lt;p&gt;The data within the block can be anything. A block consists of its data and a unique hash to identify itself. Since blocks are chained, it also includes the previous block’s hash.&lt;/p&gt;
+  &lt;figure&gt;
+    &lt;div&gt;
+      &lt;img class=&quot;m-auto&quot; src=&quot;https://cezaraugusto.com/assets/images/posts/post-006/001.png&quot; alt=&quot;&quot; /&gt;
+    &lt;/div&gt;
+    &lt;figcaption&gt;A block of bitcoin data consists of &quot;from,&quot; &quot;to,&quot; and &quot;amount.&quot;&lt;/figcaption&gt;
+  &lt;/figure&gt;
+&lt;p&gt;These blocks form a linear sequence in time, where the word “blockchain” derives. Blocks are added to the chain in rather regular intervals. &lt;a href=&quot;https://coinmarketcap.com/alexandria/article/how-long-does-a-bitcoin-transaction-take&quot;&gt;Bitcoin takes about 10 minutes&lt;/a&gt; to confirm a block transaction, and for Ethereum, this time is &lt;a href=&quot;https://docs.soliditylang.org/en/v0.8.7/introduction-to-smart-contracts.html#blocks&quot;&gt;around 17 seconds&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://support.kraken.com/hc/en-us/articles/203325283-Cryptocurrency-deposit-processing-times&quot;&gt;Kraken has an interesting table&lt;/a&gt; about how long a transaction takes on their platform depending on the blockchain you use.&lt;/p&gt;
+&lt;h2 id=&quot;dapps&quot; tabindex=&quot;-1&quot;&gt;&lt;a class=&quot;header-anchor&quot; href=&quot;https://cezaraugusto.com/posts/web3-technology-explained/#dapps&quot;&gt;&lt;span&gt;dApps&lt;/span&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;dApps (decentralized applications) are web applications enabled to access blockchain data. They do so by communicating with contacts to communicate with the blockchain and execute transactions.&lt;/p&gt;
+  &lt;figure&gt;
+    &lt;div&gt;
+      &lt;img class=&quot;m-auto&quot; src=&quot;https://cezaraugusto.com/assets/images/posts/post-006/002.png&quot; alt=&quot;&quot; /&gt;
+    &lt;/div&gt;
+    &lt;figcaption&gt;Sample Ethereum dApps&lt;/figcaption&gt;
+  &lt;/figure&gt;
+&lt;p&gt;A common web app relies on front-end technology (HTML, CSS, JavaScript). It performs database checks, some API (if needed) to connect with it.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;dApps don’t need APIs to connect to databases&lt;/strong&gt; because it uses the blockchain. They use contracts as a middle layer instead of connecting to the blockchain directly.&lt;/p&gt;
+  &lt;figure&gt;
+    &lt;div&gt;
+      &lt;img class=&quot;m-auto&quot; src=&quot;https://cezaraugusto.com/assets/images/posts/post-006/004.png&quot; alt=&quot;&quot; /&gt;
+    &lt;/div&gt;
+    &lt;figcaption&gt;dApp flow to hit the blockchain&lt;/figcaption&gt;
+  &lt;/figure&gt;
+&lt;p&gt;Crypto wallets manage your blockchain address and the keys necessary to identify and authenticate yourself. dApps take advantage of that to build their “back-end” service. The wallet acts as a middle layer between your app and the blockchain. It allows you to perform operations via their API, providing web app developers (dApp developers now) access to the blockchain network.&lt;/p&gt;
+&lt;h2 id=&quot;cryptocurrencies-and-(crypto)-tokens&quot; tabindex=&quot;-1&quot;&gt;&lt;a class=&quot;header-anchor&quot; href=&quot;https://cezaraugusto.com/posts/web3-technology-explained/#cryptocurrencies-and-(crypto)-tokens&quot;&gt;&lt;span&gt;Cryptocurrencies and (Crypto) Tokens&lt;/span&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;A cryptocurrency is the native currency of a blockchain. They are often used to pay other people or transaction costs. Popular cryptocurrencies are Bitcoin and Ether.&lt;/p&gt;
+&lt;p&gt;A crypto token is built on top of cryptocurrencies. The native token for the Ethereum blockchain is Ether, but other tokens also depend on the Ethereum Blockchain, such as $BNB or $BAT.&lt;/p&gt;
+&lt;p&gt;Tokens can hold values and be exchanged like any other cryptocurrency but also offers a way to represent other sorts of assets. For example, some tokens represent art in the form of NFTs.&lt;/p&gt;
+&lt;p&gt;The process of creating tokens and assigning them value is called tokenization. One prominent kind of token is the NFT.&lt;/p&gt;
+&lt;h2 id=&quot;nfts&quot; tabindex=&quot;-1&quot;&gt;&lt;a class=&quot;header-anchor&quot; href=&quot;https://cezaraugusto.com/posts/web3-technology-explained/#nfts&quot;&gt;&lt;span&gt;NFTs&lt;/span&gt;&lt;/a&gt;&lt;/h2&gt;
+  &lt;figure&gt;
+    &lt;div&gt;
+      &lt;img class=&quot;m-auto&quot; src=&quot;https://cezaraugusto.com/assets/images/posts/post-006/003.png&quot; alt=&quot;&quot; /&gt;
+    &lt;/div&gt;
+    &lt;figcaption&gt;CryptoPunks (https://www.larvalabs.com/cryptopunks) are a unique cllective of 10,000 unique characters.&lt;/figcaption&gt;
+  &lt;/figure&gt;
+&lt;p&gt;NFTs are a special token used to represent ownership of unique items. By design, only one owner is allowed to own the token. Due to the immutable nature of blockchains, no one can modify the record of that ownership.&lt;/p&gt;
+&lt;p&gt;The key difference between your usual (fungible) token and NFTs is that NFTs aren’t fungible (NFT stands for Non-Fungible Tokens). You can exchange 1 ETH for $1 because their value defines them.&lt;/p&gt;
+&lt;p&gt;Their unique properties define NFTs. They are helpful to describe unique things such as game characters and represent authorial work such as digital art, namely jpegs worth millions of dollars and music.&lt;/p&gt;
+&lt;h2 id=&quot;welcome-to-the-web3%2C-friends!&quot; tabindex=&quot;-1&quot;&gt;&lt;a class=&quot;header-anchor&quot; href=&quot;https://cezaraugusto.com/posts/web3-technology-explained/#welcome-to-the-web3%2C-friends!&quot;&gt;&lt;span&gt;Welcome to the web3, friends!&lt;/span&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;I hope this post helped you figure out how the web3 works and &lt;strong&gt;welcome to the web3, friends!&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;References and further reading:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=JU3r4WM0-6g&quot;&gt;Chatham House Primer: Blockchain&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.ibm.com/topics/what-is-blockchain&quot;&gt;IBM - What is Blockchain&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=SSo_EIwHSd4&quot;&gt;How does a blockchain work - Simply Explained&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://cryptocurrencyfacts.com/bitcoin-address-formats/&quot;&gt;How the Three Formats of Bitcoin Addresses Work&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://info.etherscan.com/what-is-an-ethereum-address/&quot;&gt;What is an Ethereum Address?&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.section.io/engineering-education/blockchain-consensus-protocols/&quot;&gt;An Overview of Consensus Protocols in Blockchain&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://gadgets.ndtv.com/cryptocurrency/news/cryptocurrency-crypto-token-difference-meaning-explained-bitcoin-ethereum-ether-dai-link-comp-digital-asset-blockchain-2502146&quot;&gt;Cryptocurrency and Crypto Tokens: What’s the difference?&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://docs.soliditylang.org/en/v0.8.7/introduction-to-smart-contracts.html&quot;&gt;Introduction to Smart Contracts&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+  </entry>
+  
+  <entry>
+    <title>Holding myself accountable through blogging</title>
+    
+      <link href="https://cezaraugusto.com/posts/holding-myself-accountable-through-blogging/"/>
+    
+    <updated>2020-09-14T00:00:00Z</updated>
+    <id>https://cezaraugusto.com/posts/holding-myself-accountable-through-blogging/</id>
+    <content type="html">&lt;p&gt;Hey there! Long time since the last post. I have many life and work updates to share but will skip them for now. This is a (re)introductory post. Want to keep it short.&lt;/p&gt;
+&lt;h2 id=&quot;did-you-see-the-new-blog-interface%3F&quot; tabindex=&quot;-1&quot;&gt;&lt;a class=&quot;header-anchor&quot; href=&quot;https://cezaraugusto.com/posts/holding-myself-accountable-through-blogging/#did-you-see-the-new-blog-interface%3F&quot;&gt;&lt;span&gt;Did you see the new blog interface?&lt;/span&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;I’ve been planning a new interface for ~1 year, using that as an excuse for not blogging, but now it’s done. I’m loving it. Thanks to &lt;a href=&quot;https://twitter.com/EdgardKozlowski&quot;&gt;Ed&lt;/a&gt; for the looks.&lt;/p&gt;
+&lt;h2 id=&quot;ok%2C-what-developers-do-after-creating-their-blogs%3F&quot; tabindex=&quot;-1&quot;&gt;&lt;a class=&quot;header-anchor&quot; href=&quot;https://cezaraugusto.com/posts/holding-myself-accountable-through-blogging/#ok%2C-what-developers-do-after-creating-their-blogs%3F&quot;&gt;&lt;span&gt;OK, what developers do after creating their blogs?&lt;/span&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;Per experience, I don’t think it’s blogging :P, but hey, here I am writing a post.&lt;/p&gt;
+&lt;p&gt;The (new) goal of this blog space is to use it as a system to hold myself accountable regarding plans, ideas, side-projects. Ideas are great while inside your head, and planning seems obvious when you read success stories. I’ve been having thoughts and creating plans in my mind (and paper) for a while. But how about execution?&lt;/p&gt;
+&lt;h2 id=&quot;i-needed-a-system&quot; tabindex=&quot;-1&quot;&gt;&lt;a class=&quot;header-anchor&quot; href=&quot;https://cezaraugusto.com/posts/holding-myself-accountable-through-blogging/#i-needed-a-system&quot;&gt;&lt;span&gt;I needed a system&lt;/span&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;A system where I can share plans, strategies, projects, dreams. A system where I can look back and find what worked and whatnot—a system like this blog.&lt;/p&gt;
+&lt;h2 id=&quot;the-plan&quot; tabindex=&quot;-1&quot;&gt;&lt;a class=&quot;header-anchor&quot; href=&quot;https://cezaraugusto.com/posts/holding-myself-accountable-through-blogging/#the-plan&quot;&gt;&lt;span&gt;The plan&lt;/span&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;The plan is to use this blog as a hub for all projects and ideas I have. Here is where experimentation starts. If the idea sounds good or the project is worth it, it will be referenced here. &lt;code&gt;Idea -&amp;gt; Plan -&amp;gt; Post -&amp;gt; Execution&lt;/code&gt;. Ideas and projects can be anything, as long as I find them valuable, they will be typed down. I also plan to have fun during this journey ;)&lt;/p&gt;
+&lt;h2 id=&quot;will-it-work%3F&quot; tabindex=&quot;-1&quot;&gt;&lt;a class=&quot;header-anchor&quot; href=&quot;https://cezaraugusto.com/posts/holding-myself-accountable-through-blogging/#will-it-work%3F&quot;&gt;&lt;span&gt;Will it work?&lt;/span&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;Posts here are meant to share thoughts, reminders, and ideas. The whole plan is around experimentation, planning, and execution.&lt;/p&gt;
+&lt;p&gt;By the way, did you see the new blog interface?&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;Idea -&amp;gt; Plan -&amp;gt; Post -&amp;gt; Execution&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Hello again!&lt;/p&gt;
+</content>
+  </entry>
+  
+  <entry>
+    <title>The years at Brave</title>
+    
+      <link href="https://cezaraugusto.com/posts/the-years-at-brave/"/>
+    
+    <updated>2020-05-28T00:00:00Z</updated>
+    <id>https://cezaraugusto.com/posts/the-years-at-brave/</id>
+    <content type="html">&lt;p&gt;The first moment I saw Brave, I wanted to be associated with it. They were a small team with a vision working on an open-source project &lt;a href=&quot;https://github.com/brave/browser-laptop&quot;&gt;written in JavaScript&lt;/a&gt;. It was 2016.&lt;/p&gt;
+&lt;p&gt;On May 15th, 2020, it was my last day working for Brave.&lt;/p&gt;
+&lt;p&gt;I took my time to reflect on what happened in these last four years. A relationship of four years is something. You can’t hide me from your mother for that long.&lt;/p&gt;
+&lt;p&gt;This blog post is about me, and Brave, and the last four years.&lt;/p&gt;
+&lt;h2 id=&quot;2016&quot; tabindex=&quot;-1&quot;&gt;&lt;a class=&quot;header-anchor&quot; href=&quot;https://cezaraugusto.com/posts/the-years-at-brave/#2016&quot;&gt;&lt;span&gt;2016&lt;/span&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;It all started in 2016. I liked Brave from the start. I saw a tweet, tried it, liked it. The desktop browser was still raw, but I liked the initiative and wanted to help somehow. I thought it would be cool to start by retweeting their updates.&lt;/p&gt;
+&lt;p&gt;I think it started with this tweet.&lt;/p&gt;
+&lt;blockquote class=&quot;twitter-tweet&quot;&gt;&lt;p lang=&quot;en&quot; dir=&quot;ltr&quot;&gt;Windows friends: Looking for a fast, safe, beautiful and way cool browser? Switch to &lt;a href=&quot;https://twitter.com/brave?ref_src=twsrc%5Etfw&quot;&gt;@brave&lt;/a&gt; 🦁👌 &lt;a href=&quot;https://t.co/hiAYYZTjmZ&quot;&gt;https://t.co/hiAYYZTjmZ&lt;/a&gt;&lt;/p&gt;&amp;mdash; Cezar Augusto (@cezaraugusto) &lt;a href=&quot;https://twitter.com/cezaraugusto/status/723541059268173826?ref_src=twsrc%5Etfw&quot;&gt;April 22, 2016&lt;/a&gt;&lt;/blockquote&gt;
+&lt;p&gt;Which Brave later retweeted:&lt;/p&gt;
+&lt;blockquote class=&quot;twitter-tweet&quot;&gt;&lt;p lang=&quot;en&quot; dir=&quot;ltr&quot;&gt;Time to switch! &lt;a href=&quot;https://t.co/GhlmA8tz96&quot;&gt;https://t.co/GhlmA8tz96&lt;/a&gt;&lt;/p&gt;&amp;mdash; Brave Software (@brave) &lt;a href=&quot;https://twitter.com/brave/status/723542469862805506?ref_src=twsrc%5Etfw&quot;&gt;April 22, 2016&lt;/a&gt;&lt;/blockquote&gt;
+&lt;p&gt;Social media has this magic power. This retweet made me feel good and validated, and that action motivated me to keep helping their product somehow.&lt;/p&gt;
+&lt;p&gt;At the time, Brave had less than 10 engineers working on their desktop browser, but their pile of issues was increasing fast. To this day, &lt;strong&gt;I’ve never seemed a project with so many issues reported&lt;/strong&gt; (massive 11,978 issues, of which &lt;a href=&quot;https://github.com/brave/browser-laptop/issues?q=is%3Aissue+is%3Aclosed+%40cezaraugusto&quot;&gt;11,310 somehow tag my username&lt;/a&gt;). So I thought it would be wise to start with bug triaging until I could figure out how the project works.&lt;/p&gt;
+&lt;p&gt;After a few weeks reporting bugs and hacking around, on June 2, 2016, I &lt;a href=&quot;https://github.com/brave/browser-laptop/pull/1907&quot;&gt;sent my first pull-request&lt;/a&gt;. I still remember the feeling of opening the packaged software, installing it, and seeing the feature I added live in the release channel, for everybody to download. I think I asked around five people to download BRave too, so they could try out my proud contribution.&lt;/p&gt;
+  &lt;figure&gt;
+    &lt;div&gt;
+      &lt;img class=&quot;m-auto&quot; src=&quot;https://cezaraugusto.com/assets/images/posts/post-004/001.jpg&quot; alt=&quot;&quot; /&gt;
+    &lt;/div&gt;
+  &lt;/figure&gt;
+&lt;p&gt;You could now print a web page from the context menu.&lt;/p&gt;
+&lt;p&gt;Eight days later, &lt;a href=&quot;https://github.com/brave/browser-laptop/pull/2038&quot;&gt;another pull-request&lt;/a&gt;.&lt;/p&gt;
+  &lt;figure&gt;
+    &lt;div&gt;
+      &lt;img class=&quot;m-auto&quot; src=&quot;https://cezaraugusto.com/assets/images/posts/post-004/002.jpg&quot; alt=&quot;&quot; /&gt;
+    &lt;/div&gt;
+  &lt;/figure&gt;
+&lt;p&gt;&lt;strong&gt;I got engaged.&lt;/strong&gt; I kept contributing. There is this magical feeling of working on open-source initiatives where your code ends up serving several (I guess tens of thousands, at the time) people.&lt;/p&gt;
+&lt;p&gt;Can you believe that &lt;a href=&quot;https://github.com/brave/browser-laptop/pull/2644&quot;&gt;one of my pull-requests&lt;/a&gt; ended up featured in a tweet from Brave’s CTO, &lt;a href=&quot;https://twitter.com/brianbondy&quot;&gt;Brian R. Bondy&lt;/a&gt;? I was just another contributor (Brave had many at the time), but hey, I was being noticed!&lt;/p&gt;
+&lt;blockquote class=&quot;twitter-tweet&quot;&gt;&lt;p lang=&quot;en&quot; dir=&quot;ltr&quot;&gt;Some nice animation polish done by a &lt;a href=&quot;https://twitter.com/cezaraugusto?ref_src=twsrc%5Etfw&quot;&gt;@cezaraugusto&lt;/a&gt; in &lt;a href=&quot;https://twitter.com/brave?ref_src=twsrc%5Etfw&quot;&gt;@brave&lt;/a&gt; 0.11.2 :D Thanks for the contributions! &lt;a href=&quot;https://t.co/XSWvXOxL2f&quot;&gt;pic.twitter.com/XSWvXOxL2f&lt;/a&gt;&lt;/p&gt;&amp;mdash; Brian R. Bondy (@brianbondy) &lt;a href=&quot;https://twitter.com/brianbondy/status/761281701742014464?ref_src=twsrc%5Etfw&quot;&gt;August 4, 2016&lt;/a&gt;&lt;/blockquote&gt;
+&lt;p&gt;I was lucky that Brian found value in my contributions, questionings, and genuine willingness to make the browser software better. After a few months contributing code as an outside collaborator, this happened:&lt;/p&gt;
+&lt;blockquote class=&quot;twitter-tweet&quot;&gt;&lt;p lang=&quot;en&quot; dir=&quot;ltr&quot;&gt;Happiest tweet ever: Starting today, I&amp;#39;m joining the awesome &lt;a href=&quot;https://twitter.com/brave?ref_src=twsrc%5Etfw&quot;&gt;@brave&lt;/a&gt; team. 🦁 🏆&lt;/p&gt;&amp;mdash; Cezar Augusto (@cezaraugusto) &lt;a href=&quot;https://twitter.com/cezaraugusto/status/771351046853627904?ref_src=twsrc%5Etfw&quot;&gt;September 1, 2016&lt;/a&gt;&lt;/blockquote&gt;
+&lt;p&gt;My most significant contribution to Brave at the time also came in around the same time. I was the lucky person responsible for implementing the most visited and iconic page on Brave, the &lt;strong&gt;new tab page&lt;/strong&gt;.&lt;/p&gt;
+  &lt;figure&gt;
+    &lt;div&gt;
+      &lt;img class=&quot;m-auto&quot; src=&quot;https://cezaraugusto.com/assets/images/posts/post-004/003.gif&quot; alt=&quot;&quot; /&gt;
+    &lt;/div&gt;
+    &lt;figcaption&gt;This is what NTP looked like at the time in the prototype I built. Brave used to have 3 rows of top sites.&lt;/figcaption&gt;
+  &lt;/figure&gt;
+&lt;p&gt;And that’s all for 2016. There I was, a proud new member of the Brave crew. Feeling proud, shipping the most visited page a browser has, doing open-source for a living, living the dream. This year was 2016.&lt;/p&gt;
+&lt;h2 id=&quot;2017&quot; tabindex=&quot;-1&quot;&gt;&lt;a class=&quot;header-anchor&quot; href=&quot;https://cezaraugusto.com/posts/the-years-at-brave/#2017&quot;&gt;&lt;span&gt;2017&lt;/span&gt;&lt;/a&gt;&lt;/h2&gt;
+  &lt;figure&gt;
+    &lt;div&gt;
+      &lt;img class=&quot;m-auto&quot; src=&quot;https://cezaraugusto.com/assets/images/posts/post-004/004.jpg&quot; alt=&quot;&quot; /&gt;
+    &lt;/div&gt;
+    &lt;figcaption&gt;This is me at Chicago, where the gathering happened.&lt;/figcaption&gt;
+  &lt;/figure&gt;
+&lt;p&gt;At the time, the desktop browser was having several performance issues, so the team decided to gather together to fix them (we did) in Chicago. There I also had the chance to help to interview a candidate for Brave for the first time. I find job interviews fascinating (still do, at least the principles I try to apply to them) — a positive experience. I would later help with other interviews a few more times.&lt;/p&gt;
+&lt;p&gt;There, I also had the chance to be featured live, representing Brave, for the first time. It was a chat we had with the fine folks of &lt;a href=&quot;https://twitter.com/IndoBrave/&quot;&gt;Brave Indonesia&lt;/a&gt;.&lt;/p&gt;
+&lt;figure&gt;
+  &lt;img src=&quot;https://cezaraugusto.com/assets/images/posts/post-004/005.jpeg&quot; /&gt;
+  &lt;figcaption&gt;
+  I’m the person sitting in the middle inside the video, along with &lt;a href=&quot;https://cezaraugusto.com/posts/the-years-at-brave/twitter.com/brianbondy&quot;&gt;Brian R. Bondy&lt;/a&gt; and &lt;a href=&quot;https://twitter.com/_brianclifton&quot;&gt;Brian Clifton&lt;/a&gt;.&lt;br /&gt;  Photo extracted from &lt;a href=&quot;https://twitter.com/IndoBrave/status/893320436397645824&quot;&gt;@IndoBrave&lt;/a&gt;
+&lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;p&gt;Speaking of representing Brave, and still speaking about first-times, this year I had the chance to &lt;a href=&quot;https://twitter.com/brave/status/903761397154160640&quot;&gt;speak at a conference&lt;/a&gt; to talk about Brave. It was at &lt;a href=&quot;https://web.archive.org/web/20171004170021/https://braziljs.org/conf/&quot;&gt;BrazilJS in 2017&lt;/a&gt;.&lt;/p&gt;
+&lt;blockquote class=&quot;twitter-tweet&quot;&gt;&lt;p lang=&quot;pt&quot; dir=&quot;ltr&quot;&gt;O que a brave pode melhorar a web. &lt;a href=&quot;https://twitter.com/brave?ref_src=twsrc%5Etfw&quot;&gt;@brave&lt;/a&gt; &lt;a href=&quot;https://twitter.com/cezaraugusto?ref_src=twsrc%5Etfw&quot;&gt;@cezaraugusto&lt;/a&gt; &lt;a href=&quot;https://twitter.com/hashtag/braziljs2017?src=hash&amp;amp;ref_src=twsrc%5Etfw&quot;&gt;#braziljs2017&lt;/a&gt; &lt;a href=&quot;https://twitter.com/hashtag/braziljs?src=hash&amp;amp;ref_src=twsrc%5Etfw&quot;&gt;#braziljs&lt;/a&gt; &lt;a href=&quot;https://t.co/hx88o1tc8e&quot;&gt;pic.twitter.com/hx88o1tc8e&lt;/a&gt;&lt;/p&gt;&amp;mdash; Daniel Bastos 🇧🇷 (@danielbastos) &lt;a href=&quot;https://twitter.com/danielbastos/status/904062303875846144?ref_src=twsrc%5Etfw&quot;&gt;September 2, 2017&lt;/a&gt;&lt;/blockquote&gt;
+&lt;p&gt;This year had me working mostly on tab features. Brave used to have tab pages, a set of visible tabs you could accumulate. At the time, you could add up to 20 tabs per tab group. We take tabs in browsers for granted, but tabs are a real complex mechanism. &lt;em&gt;Have you ever thought that tabs need to be responsive?&lt;/em&gt; &lt;a href=&quot;https://github.com/brave/browser-laptop/pull/6900&quot;&gt;I did&lt;/a&gt;, and literally, added support for &lt;a href=&quot;https://github.com/brave/browser-laptop/pull/7695&quot;&gt;a hundred of tabs&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;I was also lucky to be the person to implement two new, important pages. The &lt;a href=&quot;https://github.com/brave/browser-laptop/pull/8074&quot;&gt;private new tab&lt;/a&gt;, and &lt;a href=&quot;https://github.com/brave/browser-laptop/pull/8097d&quot;&gt;the welcome page&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;The year also had me started working in parallel on the desktop browser migration from &lt;a href=&quot;https://github.com/brave/muon&quot;&gt;Muon&lt;/a&gt; (a fork of Electron) to &lt;a href=&quot;https://github.com/brave/brave-browser&quot;&gt;Chromium&lt;/a&gt;. Mainly on the &lt;a href=&quot;https://github.com/brave/brave-extension/&quot;&gt;Brave Shields&lt;/a&gt; port, my favorite part of Brave.&lt;/p&gt;
+&lt;p&gt;During the migration process, I realized this was the ideal time to create a component library that could be reused across products. I wanted to make something new and somehow make the refactoring more fun. Over one weekend, I created a proof-of-concept work and shared it with a few peers who thought it was a good idea. One week later, I &lt;a href=&quot;https://github.com/brave/brave-ui/commit/b1b71393d429349243916e13b34e35edc238161&quot;&gt;pushed the first commit&lt;/a&gt; of what would be called &lt;a href=&quot;https://github.com/brave/brave-ui&quot;&gt;brave-ui&lt;/a&gt;. A set of reusable React components that accomplished the goal of having a shareable interface across Brave products. The project would later inspire the formation of a design system (months before &lt;em&gt;design systems&lt;/em&gt; were cool and somewhat common).&lt;/p&gt;
+&lt;p&gt;Doing performance work, help conducting a job interview, speaking in a great conference about Brave, several fixes for browser tabs, two new browser pages, a component library shared across the company’s product. The year of 2017 was full of accomplishments. I was ready for the next.&lt;/p&gt;
+&lt;h2 id=&quot;2018&quot; tabindex=&quot;-1&quot;&gt;&lt;a class=&quot;header-anchor&quot; href=&quot;https://cezaraugusto.com/posts/the-years-at-brave/#2018&quot;&gt;&lt;span&gt;2018&lt;/span&gt;&lt;/a&gt;&lt;/h2&gt;
+  &lt;figure&gt;
+    &lt;div&gt;
+      &lt;img class=&quot;m-auto&quot; src=&quot;https://cezaraugusto.com/assets/images/posts/post-004/006.jpg&quot; alt=&quot;&quot; /&gt;
+    &lt;/div&gt;
+    &lt;figcaption&gt;The crew at the 2017 all hands event.&lt;/figcaption&gt;
+  &lt;/figure&gt;
+&lt;p&gt;This year I started working full-time on the port of the desktop codebase. I was one of the first engineers to work on this initiative. At the time, I was working on the &lt;a href=&quot;https://github.com/brave/browser-laptop/pull/13197&quot;&gt;V2 version&lt;/a&gt; of Sync, delayed in favor of the Chromium migration.&lt;/p&gt;
+&lt;p&gt;The new browser was great. I was excited to work on top of Chromium. My work started with me &lt;a href=&quot;https://github.com/brave/brave-core/pull/105&quot;&gt;porting&lt;/a&gt; the private new tab, &lt;a href=&quot;https://github.com/brave/brave-core/pull/256&quot;&gt;and later&lt;/a&gt; the brand new welcome page. Later, Sync V2 &lt;a href=&quot;https://github.com/brave/brave-core/pull/1019&quot;&gt;eventually featured&lt;/a&gt; in the Chromium version.&lt;/p&gt;
+&lt;figure&gt;
+  &lt;img src=&quot;https://cezaraugusto.com/assets/images/posts/post-004/007.jpg&quot; /&gt;
+  &lt;figcaption&gt;
+    This is how the welcome page looked like back in the days.
+  &lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;p&gt;Another speaking opportunity came in, and in October, I spoke at &lt;a href=&quot;https://www.conexaokinghost.com.br/&quot;&gt;Conexão KingHost&lt;/a&gt; to talk about Brave, digital ads, and blockchain. The event happened online. If I recall correctly, it had 5k+ subscribers for the edition.&lt;/p&gt;
+&lt;p&gt;The event was a great, funny, joyful experience, where I get the chance to know the dedicated and talented people behind &lt;a href=&quot;https://twitter.com/kinghost&quot;&gt;@kinghost&lt;/a&gt;.&lt;/p&gt;
+&lt;blockquote class=&quot;twitter-tweet&quot;&gt;&lt;p lang=&quot;pt&quot; dir=&quot;ltr&quot;&gt;Ligadaço na &lt;a href=&quot;https://twitter.com/hashtag/ConexaoKingHost?src=hash&amp;amp;ref_src=twsrc%5Etfw&quot;&gt;#ConexaoKingHost&lt;/a&gt; com &lt;a href=&quot;https://twitter.com/cezaraugusto?ref_src=twsrc%5Etfw&quot;&gt;@cezaraugusto&lt;/a&gt; - Resolvendo o problema com serviços e propaganda digital através do blockchain!! &lt;a href=&quot;https://t.co/VqCX2X9L79&quot;&gt;pic.twitter.com/VqCX2X9L79&lt;/a&gt;&lt;/p&gt;&amp;mdash; Wesley Mendes (@wesgtox) &lt;a href=&quot;https://twitter.com/wesgtox/status/1052642641400262665?ref_src=twsrc%5Etfw&quot;&gt;October 17, 2018&lt;/a&gt;&lt;/blockquote&gt;
+&lt;p&gt;At this time, I also had the chance to help to mentor two talented engineering interns. We talked a lot about bugs, tests, life, and I was able to help and see them grow in confidence as they shipped valuable code.&lt;/p&gt;
+&lt;p&gt;Mentoring is one of my favorite things about programming, and I’m happy I had this chance many times at Brave, with both juniors and seniors from other teams. Who in this world never bargained Polymer skills for some C++ guidance?&lt;/p&gt;
+&lt;p&gt;Working full-time on the new desktop version was exciting. Sync V2 took a huge amount of time and effort to land for several reasons, and I felt relieved &lt;a href=&quot;https://github.com/brave/brave-core/pull/1019&quot;&gt;when it landed&lt;/a&gt;. Sync was one of the most wanted features in the new Brave version.&lt;/p&gt;
+&lt;p&gt;Speaking at a conference again gave me a confidence boost that positively reflected in my daily work. The new browser felt great. Users were happy. Could I ask for more?&lt;/p&gt;
+&lt;p&gt;It was 2018.&lt;/p&gt;
+&lt;h2 id=&quot;2019&quot; tabindex=&quot;-1&quot;&gt;&lt;a class=&quot;header-anchor&quot; href=&quot;https://cezaraugusto.com/posts/the-years-at-brave/#2019&quot;&gt;&lt;span&gt;2019&lt;/span&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;blockquote class=&quot;twitter-tweet&quot;&gt;&lt;p lang=&quot;en&quot; dir=&quot;ltr&quot;&gt;merged yesterday in our nightly channel the new interface for Shields in Brave desktop browser. Great stuff is coming up for all of you fighting for a better web! &lt;a href=&quot;https://t.co/IGRIO2yxTK&quot;&gt;pic.twitter.com/IGRIO2yxTK&lt;/a&gt;&lt;/p&gt;&amp;mdash; Cezar Augusto (@cezaraugusto) &lt;a href=&quot;https://twitter.com/cezaraugusto/status/1105975164704116736?ref_src=twsrc%5Etfw&quot;&gt;March 13, 2019&lt;/a&gt;&lt;/blockquote&gt;
+&lt;p&gt;The year started with me working on some Sync bugs. I &lt;a href=&quot;https://github.com/brave/brave-core/pull/2874&quot;&gt;pushed a change&lt;/a&gt; that got Shields a brand new interface. Shields and Sync dictated the rest of the year.&lt;/p&gt;
+&lt;p&gt;This year I got another chance to help interns at Brave, but now taking full ownership of the whole interview process (up to where I’m legally allowed). From picking up a candidate from the list, passing through technical and social interviewing, to job offer. An incredible experience. I was lucky to pick up a talented front-end engineer to mentor. We had fun times and shipped quality software. Mentoring is fun.&lt;/p&gt;
+&lt;p&gt;My only regret is not having a picture to share. I went to San Francisco again to meet them and got to know the new company office. SF is great. I got to eat at the famous Fogo de Chao, took a daily city walk, got lost a couple of times. Fun!&lt;/p&gt;
+&lt;p&gt;In October, I got the chance to work on a cool feature that would ask if you want to load an archived version of an error page — using the Wayback Machine API (where I coined the name &lt;em&gt;Braveback&lt;/em&gt; Machine). &lt;a href=&quot;https://github.com/brave/brave-core/pull/3561&quot;&gt;The work&lt;/a&gt; started as a browser extension, and eventually, my peer &lt;a href=&quot;https://twitter.com/simonhong33&quot;&gt;@simonhong33&lt;/a&gt; ported it to C++, for maximum performance.&lt;/p&gt;
+&lt;blockquote class=&quot;twitter-tweet&quot;&gt;&lt;p lang=&quot;en&quot; dir=&quot;ltr&quot;&gt;Available on &lt;a href=&quot;https://twitter.com/brave?ref_src=twsrc%5Etfw&quot;&gt;@brave&lt;/a&gt; nightly: check if a missing website has an archived version available in &lt;a href=&quot;https://t.co/JQMrtsJ5KA&quot;&gt;https://t.co/JQMrtsJ5KA&lt;/a&gt;. Solid work I got the chance to do with my talented peers &lt;a href=&quot;https://twitter.com/simonhong33?ref_src=twsrc%5Etfw&quot;&gt;@simonhong33&lt;/a&gt;, Karen, and &lt;a href=&quot;https://twitter.com/rebron?ref_src=twsrc%5Etfw&quot;&gt;@rebron&lt;/a&gt;. &lt;a href=&quot;https://t.co/BM5r9aoTxx&quot;&gt;pic.twitter.com/BM5r9aoTxx&lt;/a&gt;&lt;/p&gt;&amp;mdash; Cezar Augusto (@cezaraugusto) &lt;a href=&quot;https://twitter.com/cezaraugusto/status/1207701750960050177?ref_src=twsrc%5Etfw&quot;&gt;December 19, 2019&lt;/a&gt;&lt;/blockquote&gt;
+&lt;p&gt;Sync, Shields, interviewing, management, mentoring, Wayback Machine.&lt;/p&gt;
+&lt;p&gt;Bye 2019.&lt;/p&gt;
+&lt;h2 id=&quot;2020&quot; tabindex=&quot;-1&quot;&gt;&lt;a class=&quot;header-anchor&quot; href=&quot;https://cezaraugusto.com/posts/the-years-at-brave/#2020&quot;&gt;&lt;span&gt;2020&lt;/span&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;The year started with me finally managing to work on my dream issue, &lt;a href=&quot;https://github.com/brave/brave-core/pull/4325&quot;&gt;a long-needed refactor of new tab page’s top sites&lt;/a&gt;, along with some other features and bugs. This task was my short movie version of &lt;a href=&quot;https://en.wikipedia.org/wiki/The_Last_Dance_(2020_TV_series)&quot;&gt;&lt;em&gt;The Last Dance&lt;/em&gt;&lt;/a&gt;. Me and Brave shaked hands formally for the last time a few months after this change landed.&lt;/p&gt;
+&lt;p&gt;At Brave, I got to know a lot of talented people, helped shape the desktop software as it is known today, spoke the good news about the company for a large audience, mentored peers, interviewed people, managed people, had fun.&lt;/p&gt;
+  &lt;div class=&quot;fluid-text&quot; style=&quot;font-size: clamp(57px, 17vw, 141px&quot;&gt;
+    I HAD A LOT
+  &lt;/div&gt;
+  &lt;div class=&quot;fluid-text&quot; style=&quot;font-size: clamp(68px, 28vw, 236px&quot;&gt;
+    OF FUN
+  &lt;/div&gt;
+&lt;p&gt;Saying goodbye is never easy, but as I finish this blog post, I’m thankful to say that the only memories I have at my time on Brave are happy.&lt;/p&gt;
+&lt;p&gt;Some people like to work for big companies. Some people like to work to make companies big. I feel rewarded seeing Brave growing strong every year. With about &lt;a href=&quot;https://brave.com/brave-passes-10m-mau/&quot;&gt;ten million&lt;/a&gt; monthly active users, Brave is not small anymore, by any means. I can’t help but smile and feel thankful that ten million people are every month, seeing, interacting, and using features made with a code I co-created.&lt;/p&gt;
+&lt;p&gt;Brave is making history, and I’m proud to say I’m part of it.&lt;/p&gt;
+&lt;p&gt;Onwards!&lt;/p&gt;
+&lt;p&gt;Dear Brave Software,&lt;/p&gt;
+  &lt;div class=&quot;fluid-text&quot; style=&quot;font-size: clamp(93px, 28vw, 224px&quot;&gt;
+    THANK
+  &lt;/div&gt;
+  &lt;div class=&quot;fluid-text&quot; style=&quot;font-size: clamp(152px, 47vw, 390px&quot;&gt;
+    YOU
+  &lt;/div&gt;
+</content>
+  </entry>
+  
+  <entry>
+    <title>What changes in Chrome Extension Manifest V3</title>
+    
+      <link href="https://cezaraugusto.com/posts/what-changes-in-chrome-extension-manifest-v3/"/>
+    
+    <updated>2020-03-17T00:00:00Z</updated>
+    <id>https://cezaraugusto.com/posts/what-changes-in-chrome-extension-manifest-v3/</id>
+    <content type="html">&lt;p&gt;A few months ago, I announced (a personally ambitious move) on Twitter that I &lt;a href=&quot;https://twitter.com/cezaraugusto/status/1210275097774379009&quot;&gt;started writing&lt;/a&gt; a &lt;a href=&quot;https://github.com/cezaraugusto/web-extensions-for-the-builders&quot;&gt;book about WebExtensions&lt;/a&gt;. It was just about the same time I saw a talk about &lt;a href=&quot;https://www.youtube.com/watch?v=7-ALJiZCI6w&quot;&gt;Chrome extensions and the world of tomorrow&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Being Chrome the browser that championed the Extensions concept, I got interested to know the changes behind &lt;a href=&quot;https://security.googleblog.com/2018/10/trustworthy-chrome-extensions-by-default.html&quot;&gt;their decision&lt;/a&gt; to &lt;a href=&quot;https://bugs.chromium.org/p/chromium/issues/detail?id=896897&amp;amp;desc=2&quot;&gt;roll out&lt;/a&gt; the update. How does it affect the ecosystem? What changes in real-terms? What do extension developers need to know?&lt;/p&gt;
+&lt;p&gt;That was when the idea of this post came into mind. This blog post is the result of personal research, mostly based on the publicly available &lt;a href=&quot;https://docs.google.com/document/d/1nPu6Wy4LWR66EFLeYInl3NzzhHzc-qnk4w4PX-0XMw8/edit#heading=h.eezuzudj00ye&quot;&gt;Chrome’s Manifest V3 design document&lt;/a&gt;. All other resources are linked wherever they are mentioned.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;While Manifest V3 is not finished at the moment of this writing, several fundamental changes are already available in Chrome Canary.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&quot;motivations-behind-the-manifest-v3-update&quot; tabindex=&quot;-1&quot;&gt;&lt;a class=&quot;header-anchor&quot; href=&quot;https://cezaraugusto.com/posts/what-changes-in-chrome-extension-manifest-v3/#motivations-behind-the-manifest-v3-update&quot;&gt;&lt;span&gt;Motivations behind the Manifest V3 update&lt;/span&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;According to the &lt;a href=&quot;https://docs.google.com/document/d/1nPu6Wy4LWR66EFLeYInl3NzzhHzc-qnk4w4PX-0XMw8/edit#heading=h.eezuzudj00ye&quot;&gt;design document (draft)&lt;/a&gt;, the motivations for this update were divided in three core areas:&lt;/p&gt;
+&lt;pre class=&quot;language-diff&quot;&gt;&lt;code class=&quot;language-diff&quot;&gt;&lt;span class=&quot;token deleted-sign deleted&quot;&gt;&lt;span class=&quot;token prefix deleted&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;token line&quot;&gt; &quot;manifest_version&quot;: 2,
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token inserted-sign inserted&quot;&gt;&lt;span class=&quot;token prefix inserted&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;token line&quot;&gt; &quot;manifest_version&quot;: 3,
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Security&lt;/strong&gt;. Improve security guarantees against external attackers and malicious extensions. Increase the end-user trust in what they install.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Privacy&lt;/strong&gt;. Give users more control over what an extension can run/access. Encourage developers to use in-context permission requests and temporary permission grants, namely &lt;code&gt;activeTab.&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Performance&lt;/strong&gt;. Reduce the number of resources consumed by an extension over its lifetime. Disallow long-running background processes.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Based on these three key points, some Manifest fields such as background scripts, content scripts, and host permissions were updated. This update also changed important/popular APIs such as &lt;code&gt;webRequest,&lt;/code&gt; &lt;code&gt;declarativeNetRequest,&lt;/code&gt; and the &lt;code&gt;browserAction&lt;/code&gt;/&lt;code&gt;pageAction&lt;/code&gt; APIs&lt;/p&gt;
+&lt;h2 id=&quot;what-changes-in-manifest-v3%3F&quot; tabindex=&quot;-1&quot;&gt;&lt;a class=&quot;header-anchor&quot; href=&quot;https://cezaraugusto.com/posts/what-changes-in-chrome-extension-manifest-v3/#what-changes-in-manifest-v3%3F&quot;&gt;&lt;span&gt;What changes in Manifest V3?&lt;/span&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Changes in the background context&lt;/strong&gt;. A service worker replaces the background script, end of long-lived/DOM-supported backgrounds.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Changes in the Manifest host permission specification&lt;/strong&gt;. New field for &lt;code&gt;host_permissions&lt;/code&gt;, drop support for &lt;code&gt;&amp;lt;all_urls&amp;gt;&lt;/code&gt;, &lt;code&gt;activeTab&lt;/code&gt;-style host permissions.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Changes in the Manifest Content Security Policy&lt;/strong&gt;. Split CSP per context, disallow &lt;code&gt;script-src&lt;/code&gt;, &lt;code&gt;worker-src&lt;/code&gt;, &lt;code&gt;object-src&lt;/code&gt;, and &lt;code&gt;style-src&lt;/code&gt; with non-local values.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Changes in content scripts cross-origin capabilities&lt;/strong&gt;. Content scripts will be allowed to execute cross-origin requests only where the host page is allowed.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Deprecate NaCl/PNaCl&lt;/strong&gt;. Extension authors should finish their native code to WebAssembly as NaCl/PNaCl (already deprecated) will stop working.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Promise-based APIs&lt;/strong&gt;. Instead of callbacks, authors can take advantage of Promises. The current callback version will still be supported.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;API changes&lt;/strong&gt; Changes in &lt;code&gt;webRequest&lt;/code&gt;, addition of &lt;code&gt;declarativeNetRequest&lt;/code&gt;, merge of &lt;code&gt;browserAction&lt;/code&gt; and &lt;code&gt;pageAction&lt;/code&gt;, &lt;code&gt;chrome.favicon&lt;/code&gt; namespace instead of &lt;code&gt;chrome://favicon&lt;/code&gt;. Maybe more.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;More restrictions for Web-Accessible resources&lt;/strong&gt;. All resources to be loaded should be declared. Resources URL will be exposed using a unique identifier, instead of through their path.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Dynamic Content Scripts&lt;/strong&gt;. Support the ability to add/remove and enable/disable content scripts permissions dynamically.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Changes in the background context&lt;/h3&gt;
+&lt;p&gt;In the extension context, “background” pages/scripts refer to the code that runs in the background process, invisible to the user, and allows extensions to execute (and listen) for code outside any tab or window.&lt;/p&gt;
+&lt;p&gt;With Manifest V2, you have two types of background processes: persistent pages (in theory, if you need to use the &lt;a href=&quot;https://developer.chrome.com/webRequest&quot;&gt;&lt;code&gt;webRequest&lt;/code&gt;&lt;/a&gt; API) and lazy (event) pages.&lt;/p&gt;
+&lt;p&gt;In Manifest V3, &lt;strong&gt;the only background option will be using a service worker&lt;/strong&gt;.&lt;/p&gt;
+&lt;pre class=&quot;language-diff&quot;&gt;&lt;code class=&quot;language-diff&quot;&gt;&quot;background&quot;: [{
+&lt;span class=&quot;token deleted-sign deleted&quot;&gt;&lt;span class=&quot;token prefix deleted&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;token line&quot;&gt;  &quot;scripts&quot;: [&quot;background.js&quot;]
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token inserted-sign inserted&quot;&gt;&lt;span class=&quot;token prefix inserted&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;token line&quot;&gt;  &quot;service_worker&quot;: [&quot;background.js&quot;]
+&lt;/span&gt;&lt;/span&gt;}],&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Since &lt;a href=&quot;https://developer.chrome.com/extensions/migrating_to_service_workers&quot;&gt;Service workers were inspired by background pages&lt;/a&gt;, we should not have any problems updating an extension using event pages for background processes. In their execution context, both can listen and terminate events when they are no longer needed.&lt;/p&gt;
+&lt;p&gt;Unlike background pages (which inherits from the &lt;code&gt;Window&lt;/code&gt; scope), The service workers’ scope is limited. It inherits its interface from &lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/API/WorkerGlobalScope&quot;&gt;WorkerGlobalScope&lt;/a&gt;, a child of &lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/API/EventTarget&quot;&gt;EventTarget&lt;/a&gt;, so it has no means to access the DOM. Another change is for extensions that use the long-lived background to store a global state. Since &lt;strong&gt;service workers are event-based&lt;/strong&gt;, there is no way to save a permanent state in long-lived backgrounds anymore.&lt;/p&gt;
+&lt;p&gt;If your extension falls into one of these cases, take a look at &lt;a href=&quot;https://developer.chrome.com/extensions/background_migration&quot;&gt;Migrate to Event-Driven Background Scripts&lt;/a&gt;. If the above situations do not apply to you, but still concerns, Chrome has a &lt;a href=&quot;https://developer.chrome.com/extensions/migrating_to_service_workers&quot;&gt;Service Worker migration guide&lt;/a&gt; to help you through the migration process.&lt;/p&gt;
+&lt;h3&gt;Changes in the Manifest host permission specification&lt;/h3&gt;
+&lt;p&gt;The host permission allows extensions to inject scripts on and intercept network requests from the host. In Manifest V2, extensions can request hosts by:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Specificity&lt;/strong&gt;, like, &lt;code&gt;https://cezaraugusto.com.&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Patterns&lt;/strong&gt;, like &lt;code&gt;https://*.cezaraugusto.com.&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Special keys&lt;/strong&gt;, like &lt;code&gt;&amp;lt;all_urls&amp;gt;.&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre class=&quot;language-diff&quot;&gt;&lt;code class=&quot;language-diff&quot;&gt;&lt;span class=&quot;token inserted-sign inserted&quot;&gt;&lt;span class=&quot;token prefix inserted&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;token line&quot;&gt; &quot;host_permissions&quot;: [
+&lt;/span&gt;&lt;span class=&quot;token prefix inserted&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;token line&quot;&gt;  &quot;*://*.twitter.com/*&quot;,
+&lt;/span&gt;&lt;span class=&quot;token prefix inserted&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;token line&quot;&gt;  &quot;*://*.instagram.com/*&quot;,
+&lt;/span&gt;&lt;span class=&quot;token prefix inserted&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;token line&quot;&gt; ],
+&lt;/span&gt;&lt;/span&gt;&quot;permissions&quot;: [
+&lt;span class=&quot;token deleted-sign deleted&quot;&gt;&lt;span class=&quot;token prefix deleted&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;token line&quot;&gt;  &quot;*://*.twitter.com/*&quot;,
+&lt;/span&gt;&lt;span class=&quot;token prefix deleted&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;token line&quot;&gt;  &quot;*://*.instagram.com/*&quot;,
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token unchanged&quot;&gt;&lt;span class=&quot;token prefix unchanged&quot;&gt; &lt;/span&gt;&lt;span class=&quot;token line&quot;&gt; &quot;webRequest&quot;,
+&lt;/span&gt;&lt;span class=&quot;token prefix unchanged&quot;&gt; &lt;/span&gt;&lt;span class=&quot;token line&quot;&gt; &quot;webRequestBlocking&quot;,
+&lt;/span&gt;&lt;/span&gt;],&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;In Manifest V3, a new manifest key &lt;code&gt;&amp;quot;host_permissions&amp;quot;&lt;/code&gt; was added to host permissions and will be used only for API permissions. What is also new is that &lt;strong&gt;host permissions will require runtime approval by the use&lt;/strong&gt;. This change plans to give users more control over permissions.&lt;/p&gt;
+&lt;p&gt;Exceptional cases in extensions that require broad permissions such as &lt;code&gt;*://*/*&lt;/code&gt; and &lt;code&gt;&amp;lt;all_urls&amp;gt;&lt;/code&gt; are rare, but often abused by developers. With Manifest V3, Chrome plans to prevent it by dropping support for &lt;code&gt;&amp;lt;all_urls&amp;gt;&lt;/code&gt; and start asking permissions at runtime, using an &lt;a href=&quot;https://developer.chrome.com/extensions/activeTab&quot;&gt;activeTab&lt;/a&gt;-style host permission by default, with extra options such as to always run on a specific site. In Manifest V3 public design document, using the &lt;a href=&quot;https://developer.chrome.com/apps/permissions&quot;&gt;&lt;code&gt;chrome.permission&lt;/code&gt;&lt;/a&gt; API is also under consideration.&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;activeTab&lt;/code&gt; allows temporary access to an extension in the active tab after user invocation (such as clicking a browser action). If a user clicks an extension on a website, there is an implicit understanding that they are allowing the extension to see its contents.&lt;/p&gt;
+&lt;p&gt;It’s recommended that while developing your extension, try to target interactions around temporary host permissions (see &lt;code&gt;activeTab&lt;/code&gt; itself).&lt;/p&gt;
+&lt;h3&gt;Changes on the Manifest Content Security Policy&lt;/h3&gt;
+&lt;p&gt;With the Manifest V3 update, &lt;strong&gt;Chrome will disallow extensions from using remotely-hosted JavaScript, CSS, and WebAssembly code&lt;/strong&gt;. Extensions will still be able to make server communication to request data, such as loading JSON, requesting media access, and remote API calls.&lt;/p&gt;
+&lt;p&gt;Chrome plans to make this change by changing how CSP works in the Manifest file (along with undisclosed policy changes). The &lt;code&gt;content_security_policy&lt;/code&gt; property is now split into three main categories:&lt;/p&gt;
+&lt;pre class=&quot;language-diff&quot;&gt;&lt;code class=&quot;language-diff&quot;&gt;&lt;span class=&quot;token deleted-sign deleted&quot;&gt;&lt;span class=&quot;token prefix deleted&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;token line&quot;&gt;  &quot;content_security_policy&quot;: &quot;font-src &#39;self&#39; data:; script-src &#39;self&#39;;&quot;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token inserted-sign inserted&quot;&gt;&lt;span class=&quot;token prefix inserted&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;token line&quot;&gt;  &quot;content_security_policy&quot;: {
+&lt;/span&gt;&lt;span class=&quot;token prefix inserted&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;token line&quot;&gt;  &quot;extension_pages&quot;: &quot;font-src &#39;self&#39; data:; img-src &#39;self&#39;&quot;,
+&lt;/span&gt;&lt;span class=&quot;token prefix inserted&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;token line&quot;&gt;  &quot;isolated_world&quot;: &quot;script-src &#39;self&#39;&quot;,
+&lt;/span&gt;&lt;span class=&quot;token prefix inserted&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;token line&quot;&gt;  &quot;sandbox&quot;: &quot;worker-src: &#39;self&#39;&quot;
+&lt;/span&gt;&lt;span class=&quot;token prefix inserted&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;token line&quot;&gt; }
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;extension_pages&lt;/code&gt;. Directives for the service worker and extension pages.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;isolated_world &lt;/code&gt;. Used by content scripts to protects you against attacker’s attempts against your extension.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;sandbox&lt;/code&gt;. Used for sandboxed pages.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Another change is with the directives &lt;code&gt;script-src,&lt;/code&gt; &lt;code&gt;worker-src,&lt;/code&gt; &lt;code&gt;object-src&lt;/code&gt;, and &lt;code&gt;style-src&lt;/code&gt; with that will be disallowed from using non-local values.&lt;/p&gt;
+&lt;p&gt;The official migration guide has a &lt;a href=&quot;https://developers.chrome.com/extensions/migrating_to_manifest_v3#csp_changes&quot;&gt;dedicated section&lt;/a&gt; about all the CSP field changes.&lt;/p&gt;
+&lt;h3&gt;Changes in the content scripts cross-origin capabilities&lt;/h3&gt;
+&lt;p&gt;Right now, extensions can make cross-origin requests via extension pages and content scripts. As long as Manifest’s host permissions are defined, extensions can make cross-origin requests to any domain.&lt;/p&gt;
+&lt;p&gt;In Manifest V3, will stop content scripts will stop having special request privileges by allowing exclusive access only through its background page, using extension messaging. &lt;strong&gt;Content scripts will only be allowed to make cross-origin requests that the host page is capable of doing&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;If a cross-origin request needs to perform where there’s no permission, requests should be made from the background context and pass the response to a content script. See &lt;a href=&quot;https://www.chromium.org/Home/chromium-security/extension-content-script-fetches&quot;&gt;Changes to Cross-Origin Requests in Chrome Extension Content Scripts&lt;/a&gt; for proper guidance on how to execute cross-origin requests safely in an extension.&lt;/p&gt;
+&lt;h3&gt;Deprecate NaCl/PNaCl&lt;/h3&gt;
+&lt;p&gt;NaCl (Native Client) and PNaCI (Portable Native Client) allow developers to run native compiled C and C++ code as part of their extension.&lt;/p&gt;
+&lt;p&gt;PNaCl support was dropped everywhere already, except inside Chrome Apps and Extensions. &lt;strong&gt;Starting with Manifest V3, &lt;a href=&quot;https://developer.chrome.com/native-client/nacl-and-pnacl&quot;&gt;NaCl and PNaCl&lt;/a&gt; will no longer be supported&lt;/strong&gt;. Instead of PNaCI, extension authors should use WebAssembly. There is a specific &lt;a href=&quot;https://developer.chrome.com/native-client/migration&quot;&gt;set of recommendations&lt;/a&gt; to help developers and authors through the migration process.&lt;/p&gt;
+&lt;h3&gt;All APIs will be promise-based&lt;/h3&gt;
+&lt;p&gt;The current callback version will still be supported. Providing a callback to an API method will prevent the promise from being returned. This backward compatibility allows developers to have more time migrating all the changes required in Manifest V3.&lt;/p&gt;
+&lt;p&gt;Worth noting that Firefox has been using a promise-based API for a while, and since Chromium represents all other major browsers, this change makes it easier for extension developers to create cross-browser extensions.&lt;/p&gt;
+&lt;h3&gt;API changes&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;&lt;code&gt;webRequest&lt;/code&gt;&lt;/strong&gt; allows extensions to intercept network requests to modify, redirect, or using its blocking version, block them. In this change, &lt;strong&gt;the blocking version will be limited&lt;/strong&gt;, possibly making blocking options observational for most events.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;code&gt;declarativeNetRequest&lt;/code&gt;&lt;/strong&gt; allows extensions to synchronously tell Chrome what to do with a request, rather than have Chrome forward the request to the extension. &lt;strong&gt;It will be created as the primary way to modify network requests&lt;/strong&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;code&gt;browserAction&lt;/code&gt; and &lt;code&gt;pageAction&lt;/code&gt;&lt;/strong&gt; allow extensions to create a toolbar icon. They &lt;strong&gt;will be merged into a single &lt;code&gt;action&lt;/code&gt; API&lt;/strong&gt;. Since their difference is not well defined and both APIs have the same UI surface in the toolbar (&lt;code&gt;pageAction&lt;/code&gt; used to appear ephemerally inside the Omnibox).&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;code&gt;chrome://favicon&lt;/code&gt;&lt;/strong&gt; &lt;strong&gt;will move to a new API under &lt;code&gt;chrome.favicon.&lt;/code&gt; namespace&lt;/strong&gt;. This API would be available with either new favicon permission, or with granted host permission for the requested favicon.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;code&gt;chrome.capture&lt;/code&gt;&lt;/strong&gt; the namespace will &lt;strong&gt;allow extensions to capture the content of a user’s screen&lt;/strong&gt;. The APIs &lt;code&gt;tabs.captureVisibleTab()&lt;/code&gt;, &lt;code&gt;tabCapture.capture()&lt;/code&gt;, &lt;code&gt;tabCapture.getMediaStreamId()&lt;/code&gt;, &lt;code&gt;pageCapture.saveAsMHTML()&lt;/code&gt;, and &lt;code&gt;desktopCapture.chooseDesktopMedia()&lt;/code&gt; will be moved under it.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;code&gt;chrome.notifications&lt;/code&gt;&lt;/strong&gt; &lt;strong&gt;will be replaced by&lt;/strong&gt; its native web counterpart, &lt;strong&gt;the &lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/API/notification&quot;&gt;Web Notifications API&lt;/a&gt;&lt;/strong&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Update or remove APIs that returns &lt;code&gt;DOMWindow&lt;/code&gt; or &lt;code&gt;HTMLElement&lt;/code&gt;&lt;/strong&gt; since Service Workers runs on a different thread in the renderer without DOM access.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Deprecate APIs&lt;/strong&gt;. Discontinue APIs described &lt;a href=&quot;https://docs.google.com/document/d/1nPu6Wy4LWR66EFLeYInl3NzzhHzc-qnk4w4PX-0XMw8/edit#heading=h.32kivo9w2uy1&quot;&gt;in this list&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Unused, unpopular and limbo APIs&lt;/strong&gt; are going to be removed too, such as &lt;code&gt;declarativeWebRequest&lt;/code&gt; (obsolete with &lt;code&gt;declarativeNetRequest&lt;/code&gt;).&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Miscellaneous API changes&lt;/strong&gt; &lt;code&gt;i18n.getMessage&lt;/code&gt; is considered to be changed, but the design document mentions the alternative for this method is TBD.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Note that the &lt;a href=&quot;https://docs.google.com/document/d/1nPu6Wy4LWR66EFLeYInl3NzzhHzc-qnk4w4PX-0XMw8/edit#heading=h.xe5njuo7voeb&quot;&gt;API changes section&lt;/a&gt; in Manifest V3 is not finished at the moment of this writing and thus prone to changes. If you are unsure about changes described here, use the linked material as the definitive reference.&lt;/p&gt;
+&lt;h3&gt;More restrictions for Web-Accessible resources&lt;/h3&gt;
+&lt;p&gt;Web-Accessible resources are resources used in the context of a web page. An extension that modifies the interface of a page must specify the modifying resources in the Manifest file under the &lt;code&gt;web_accessible_resources&lt;/code&gt; field.&lt;/p&gt;
+&lt;p&gt;In Manifest V3, resources restrictions will be stricter by requiring that any resource that will be loaded in an untrusted frame to be also specified.&lt;/p&gt;
+&lt;pre class=&quot;language-diff&quot;&gt;&lt;code class=&quot;language-diff&quot;&gt;{
+&lt;span class=&quot;token unchanged&quot;&gt;&lt;span class=&quot;token prefix unchanged&quot;&gt; &lt;/span&gt;&lt;span class=&quot;token line&quot;&gt; &quot;web_accessible_resources&quot;: [
+&lt;/span&gt;&lt;span class=&quot;token prefix unchanged&quot;&gt; &lt;/span&gt;&lt;span class=&quot;token line&quot;&gt;   &quot;images/*.png&quot;
+&lt;/span&gt;&lt;span class=&quot;token prefix unchanged&quot;&gt; &lt;/span&gt;&lt;span class=&quot;token line&quot;&gt; ]
+&lt;/span&gt;&lt;/span&gt;}&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Another change refers to the resources URL. Resources are identified as &lt;code&gt;chrome-extension://&amp;lt;extension-id&amp;gt;/&amp;lt;resource-path&amp;gt;&lt;/code&gt;. This schema allows websites to fingerprint extensions. According to the &lt;a href=&quot;https://docs.google.com/document/d/1nPu6Wy4LWR66EFLeYInl3NzzhHzc-qnk4w4PX-0XMw8/edit#heading=h.46mbslraf4b6&quot;&gt;Manifest V3 design document&lt;/a&gt;, Chrome plans to improve this by (optionally) allowing resources to only be exposed through a unique identifier, rather than through their path.&lt;/p&gt;
+&lt;h3&gt;Dynamic Content Scripts&lt;/h3&gt;
+&lt;p&gt;Extensions will be able to dynamically add, remove, enable, and disable content scripts. This dynamic feature will allow extensions to add scripts only once they have such permission.&lt;/p&gt;
+&lt;h2 id=&quot;conclusions&quot; tabindex=&quot;-1&quot;&gt;&lt;a class=&quot;header-anchor&quot; href=&quot;https://cezaraugusto.com/posts/what-changes-in-chrome-extension-manifest-v3/#conclusions&quot;&gt;&lt;span&gt;Conclusions&lt;/span&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;There are many changes. Moving background scripts to a Service Worker is a big move, both for the platform and for authors. Another high point is the API moving to be promise-based, making the development of WebExtensions similar to Firefox’s Add-On API. Considering there are no standards for Extensions, this is great for authors looking to ease the process of writing cross-platform extensions, considering that in theory, other Chromium-based browsers will not object in following changes that don’t affect the output (such as API &lt;em&gt;promisification&lt;/em&gt;).&lt;/p&gt;
+&lt;p&gt;Still talking about the code standardization, my bet is that other browsers will follow most of the Manifest V3 changes, despite some divergences. See &lt;a href=&quot;https://blog.mozilla.org/addons/2019/09/03/mozillas-manifest-v3-faq/&quot;&gt;Firefox’s Manifest V3 FAQ&lt;/a&gt; and &lt;a href=&quot;https://www.zdnet.com/article/opera-brave-vivaldi-to-ignore-chromes-anti-ad-blocker-changes-despite-shared-codebase/&quot;&gt;Opera, Brave, and Vivaldi’s opinions&lt;/a&gt; for more.&lt;/p&gt;
+&lt;p&gt;Call me an optimist, but I hope this update also gives traction to the &lt;a href=&quot;https://www.w3.org/community/browserext/&quot;&gt;browser extension community group&lt;/a&gt;.&lt;/p&gt;
+</content>
+  </entry>
+  
+  <entry>
+    <title>The benefits of working in public</title>
+    
+      <link href="https://cezaraugusto.com/posts/the-benefits-of-working-in-public/"/>
+    
+    <updated>2019-06-03T00:00:00Z</updated>
+    <id>https://cezaraugusto.com/posts/the-benefits-of-working-in-public/</id>
+    <content type="html">&lt;p&gt;In a few months, I turn 3 years working full time with open-source. Or, as I like to think, work in public. It was a great move in my career. It’s not easy, but it’s worth it.&lt;/p&gt;
+&lt;p&gt;I have good and bad ideas. I have thoughts my team agree and disagree. My code makes me proud and anxious. Sometimes, they do both. Sometimes my code needs to be reverted, and sometimes I revert other people’s code. In the end, nothing of it matters.&lt;/p&gt;
+&lt;p&gt;You know what really matters?&lt;/p&gt;
+&lt;h2 id=&quot;i%E2%80%99m-working-in-public&quot; tabindex=&quot;-1&quot;&gt;&lt;a class=&quot;header-anchor&quot; href=&quot;https://cezaraugusto.com/posts/the-benefits-of-working-in-public/#i%E2%80%99m-working-in-public&quot;&gt;&lt;span&gt;I’m working in public&lt;/span&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;Being publicly available for feedback (good and bad) makes me wake up every day and get things done. Makes me want to do more, and better. Makes me wish to receive feedback as fast it can and improve over time, every day.&lt;/p&gt;
+&lt;p&gt;The idea that someone can potentially be watching you, because you inspire them or because they think your work has a value worth watching, makes you automatically get more productive, increase your attention to detail, your grammar improves, your tone softs, and there’s a proud motivational feeling that you can never get enough. You just keep moving and hoping you’re doing your best. I don’t think there are a bigger joy in my profession than being able to be publicly available for everything I do.&lt;/p&gt;
+&lt;h2 id=&quot;but-i-haven%E2%80%99t-always-been-working-in-public&quot; tabindex=&quot;-1&quot;&gt;&lt;a class=&quot;header-anchor&quot; href=&quot;https://cezaraugusto.com/posts/the-benefits-of-working-in-public/#but-i-haven%E2%80%99t-always-been-working-in-public&quot;&gt;&lt;span&gt;But I haven’t always been working in public&lt;/span&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;I effectively started working in public because that was the &lt;em&gt;modus operandi&lt;/em&gt; of the company I work for – which is something I love, and a great excuse to start doing something I always felt was for me. But no personal credit here, I did what I had to do. We work on a public repository, so it is all my patches. Public.&lt;/p&gt;
+&lt;p&gt;Before joining &lt;a href=&quot;https://brave.com/&quot;&gt;Brave&lt;/a&gt;, I did a couple libs and started contributing to projects such as &lt;a href=&quot;https://developer.mozilla.org/pt-BR/&quot;&gt;MDN&lt;/a&gt;, but was still too afraid to show off my work or share somewhere else. I just did stuff and was happy that I was giving back to the community somehow. But was I, really, giving back the way I’d like to give?&lt;/p&gt;
+&lt;h2 id=&quot;working-in-public-can-be-terrifying&quot; tabindex=&quot;-1&quot;&gt;&lt;a class=&quot;header-anchor&quot; href=&quot;https://cezaraugusto.com/posts/the-benefits-of-working-in-public/#working-in-public-can-be-terrifying&quot;&gt;&lt;span&gt;Working in public can be terrifying&lt;/span&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;You can still work in public and remain almost invisible. Unless you promote your work or someone else does it for you, you’re public only for the people that know you or at least that know your work.&lt;/p&gt;
+&lt;p&gt;I have been a long time fan of public figures’ work. Renowned artists, musicians, architects. All the people that take time to do something they find worth doing that find the courage to say “hey, here’s my thing publicly, what do you think?.” When I pass by some &lt;em&gt;in-progress&lt;/em&gt; construction, I always look up the engineer/architect names. It has something beautiful about being responsible for something. Those people represent all other people’s work. If something goes wrong, even without direct input from them, it’s their fault. If something goes right, they also take their share of the credit.&lt;/p&gt;
+&lt;p&gt;Having your name attached to work can be terrifying. I’m a software engineer. I work on a public repository, and I have my name attached on every change I send. It makes me think twice about the revisions I request. I take three times to do a self-review of anything I ask. It makes half a day to review every interaction I do with the public watching my changes – including my peers. I take great care to ensure I’m being accessible, kind, a good co-worker, and that my code is in the best shape I can deliver.&lt;/p&gt;
+&lt;p&gt;It’s terrifying, but it’s worth it.&lt;/p&gt;
+&lt;h2 id=&quot;i-like-how-it-works%2C-and-i%E2%80%99d-like-to-do-more&quot; tabindex=&quot;-1&quot;&gt;&lt;a class=&quot;header-anchor&quot; href=&quot;https://cezaraugusto.com/posts/the-benefits-of-working-in-public/#i-like-how-it-works%2C-and-i%E2%80%99d-like-to-do-more&quot;&gt;&lt;span&gt;I like how it works, and I’d like to do more&lt;/span&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;I like the way it works. I love the way it makes me feel about my work. But as someone who claims to be open-minded and interested in open-source, looking to help others to accomplish what I did, and hopefully influences others for good, it is still a small part of me. Then I think: &lt;em&gt;I wish I could expand this to other areas…&lt;/em&gt;&lt;/p&gt;
+&lt;h2 id=&quot;it-doesn%E2%80%99t-take-willingness.-it-takes-action&quot; tabindex=&quot;-1&quot;&gt;&lt;a class=&quot;header-anchor&quot; href=&quot;https://cezaraugusto.com/posts/the-benefits-of-working-in-public/#it-doesn%E2%80%99t-take-willingness.-it-takes-action&quot;&gt;&lt;span&gt;It doesn’t take willingness. It takes action&lt;/span&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;We all make mistakes. As developers, we all write good and bad code. As humans, we are always looking for the best time, the best scenario, the best excuse to procrastinate. As aspiring &lt;em&gt;public workers&lt;/em&gt;, we are always looking for the best idea, the best topic to share. We are always worried about what people will think about us. Yet, we often take no action or are continuously not happy with our results. In fact, we are the worst judges of our efforts.&lt;/p&gt;
+&lt;p&gt;All it takes is a start. We tend to overthink things.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Is my code good enough? (spends two hours on a worthless refactoring)&lt;/li&gt;
+&lt;li&gt;Is my writing good enough?&lt;/li&gt;
+&lt;li&gt;Is my blog clean enough?&lt;/li&gt;
+&lt;li&gt;Is it the right time?&lt;/li&gt;
+&lt;li&gt;Am I delivering the right message?&lt;/li&gt;
+&lt;li&gt;Are others perceiving me as who I really am?&lt;/li&gt;
+&lt;li&gt;What is my audience?&lt;/li&gt;
+&lt;li&gt;I’m presenting myself as X, but I guess that’s not me&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;All those questions are valid if you have a plan. Turns out if you do have one, they are probably answered. You and I, we are wasting time. Done is better than perfect. It doesn’t mean you are forbidden to review everything countless times, but it means you should ship your work. You have to ship your work.&lt;/p&gt;
+&lt;h2 id=&quot;just-ship-it%C2%AE&quot; tabindex=&quot;-1&quot;&gt;&lt;a class=&quot;header-anchor&quot; href=&quot;https://cezaraugusto.com/posts/the-benefits-of-working-in-public/#just-ship-it%C2%AE&quot;&gt;&lt;span&gt;Just Ship it®&lt;/span&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;I wrote &lt;a href=&quot;https://cezaraugusto.com/&quot;&gt;my blog&lt;/a&gt; on one weekend. It took me months to publish it online, and a few other months to get to write my first “real” blog post. This one, actually. The first blog I created is probably 15 years old. Never got any post written. Around 2 years ago, I started a blog, and the only blog post was an “about me” post. I just couldn’t make it.&lt;/p&gt;
+&lt;p&gt;Until now.&lt;/p&gt;
+&lt;h2 id=&quot;expanding-my-work-in-the-public-way-of-work&quot; tabindex=&quot;-1&quot;&gt;&lt;a class=&quot;header-anchor&quot; href=&quot;https://cezaraugusto.com/posts/the-benefits-of-working-in-public/#expanding-my-work-in-the-public-way-of-work&quot;&gt;&lt;span&gt;Expanding my work in the public way of work&lt;/span&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Your time is limited, so don’t waste it living someone else’s life. Don’t be trapped by dogma - which is living with the results of other people’s thinking. Don’t let the noise of others’ opinions drown out your own inner voice. And most important, dare to follow your heart and intuition. - Steve Jobs&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;After working in public for a long enough time, I found many delightful excuses to keep being public.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;You get to know new people, having the chance to read and learn new perspectives.&lt;/li&gt;
+&lt;li&gt;You see other people passionate about the same technology you are, and you feel encouraged to keep digging more.&lt;/li&gt;
+&lt;li&gt;You find new passions.&lt;/li&gt;
+&lt;li&gt;You get more motivated because you believe someone is watching you for good.&lt;/li&gt;
+&lt;li&gt;Your code suddenly becomes better, after all, you’re now a “public person.”&lt;/li&gt;
+&lt;li&gt;Your writing feels more natural.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;not-only-work-in-public.-be-public-about-your-work&quot; tabindex=&quot;-1&quot;&gt;&lt;a class=&quot;header-anchor&quot; href=&quot;https://cezaraugusto.com/posts/the-benefits-of-working-in-public/#not-only-work-in-public.-be-public-about-your-work&quot;&gt;&lt;span&gt;Not only work in public. Be public about your work&lt;/span&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;I made a commitment. As of today, I’m not only working in public. I’m being public about my work. Every idea, every piece of code, every resource produced by me, will be open. Right or wrong, as my code is, all my resources will be available for the public to judge. Good or bad, the feedback I receive will be taken into consideration, so next time, it can be even better. I’m letting my work and my thoughts about work, remain forever in this big space called the internet.&lt;/p&gt;
+&lt;p&gt;I’m Cezar Augusto, the public face of my mind and output.&lt;/p&gt;
+&lt;p&gt;This is day 1.&lt;/p&gt;
+</content>
+  </entry>
+  
+  <entry>
+    <title>Just like starting over</title>
+    
+      <link href="https://cezaraugusto.com/posts/just-like-starting-over/"/>
+    
+    <updated>2018-10-06T00:00:00Z</updated>
+    <id>https://cezaraugusto.com/posts/just-like-starting-over/</id>
+    <content type="html">&lt;p&gt;There it is, a blog. This task is likely the oldest one in my to-do list. On average took me ~18 years – it was my first task when I started developing bad sites with XHTML – to make it. Now it is done.&lt;/p&gt;
+&lt;p&gt;Countless unfished articles, infinite tweaks on different static sites, a frustrated plan to have one hosted on Medium and sleepless nights searching and tweaking the interface I wanted. Feels good to have one to call mine :)&lt;/p&gt;
+&lt;p&gt;The plans for this is to write about the lots of readings and the little I know about random web development, producing software, random ideas, and opinionated best practices.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;“The best time to plant a tree was 20 years ago. The second best time is now.” – Chinese Proverb&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Way to go!&lt;/p&gt;
+</content>
+  </entry>
+</feed>
