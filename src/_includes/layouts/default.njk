@@ -1,109 +1,94 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>{% if title and page.fileSlug != '' %}{{ title }} • {% endif %}{{ site.title }}</title>
-  <meta name="description" content="{% if description %}{{ description | markdownify_inline | strip_html }}{% else %}{{ site.description }}{% endif %}">
-  <meta name="keywords" content="{{ site.keywords }}">
-  <meta name="author" content="{{ site.title }}">
-  <meta name="application-name" content="{{ site.title }}">
-  <meta name="theme-color" content="#3454D1">
-  <!-- facebook/open graph -->
-  <meta property="og:title" content="{% if title and page.fileSlug != '' %}{{ title }} • {% endif %}{{ site.title }}">
-  <meta property="og:description" content="{% if description %}{{ description }}{% else %}{{ site.description }}{% endif %}">
-  <meta property="og:url" content="{{ site.url }}{{ page.url | permalink }}">
-  <meta property="og:site_name" content="{{ site.title }}">
-  <meta property="og:image" content="{{ site.url }}/assets/images/og-image.png">
-  <meta property="og:type" content="website">
-  <meta property="og:locale" content="{{site.language}}">
-  <!-- twitter -->
-  <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="{% if title and page.fileSlug != '' %}{{ title }} • {% endif %}{{ site.title }}">
-  <meta name="twitter:description" content="{% if description %}{{ description }}{% else %}{{ site.bottomHeadline }}{% endif %}">
-  <meta name="twitter:site" content="@{{ site.twitter }}">
-  <meta name="twitter:image" content="{{ site.url }}/assets/images/og-image.png">
-  <meta name="twitter:creator" content="@{{ site.twitter }}">
-  <!-- icons -->
-  <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/apple-touch-icon.png" type="image/png">
-  <link rel="icon" sizes="96x96" href="/assets/images/favicon-96x96.png" type="image/png">
-  <link rel="icon" sizes="32x32" href="/assets/images/favicon-32x32.png" type="image/png">
-  <link rel="icon" sizes="16x16" href="/assets/images/favicon-16x16.png" type="image/png">
-  <link rel="mask-icon" href="/assets/images/favicon-96x96.png" color="#181818" type="image/png">
-  <!-- prefetch fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Arvo:ital,wght@1,700&display=swap" rel="stylesheet">
-  <!-- robots -->
-  <meta name="robots" content="{% GenerateRobotsTXTRules %}">
-  <!-- social media -->
-  <link rel="me" href="https://github.com/cezaraugusto" type="text/html">
-  <link rel="me" href="https://twitter.com/cezaraugusto" type="text/html">
-  <link rel="me" href="https://https://www.quora.com/profile/Cezar-Augusto-1" type="text/html">
-  <!-- rss -->
-  <link rel="alternate" href="/feed.xml" type="application/rss+xml" title="RSS">
-  <!-- license -->
-  <link rel="license" href="https://creativecommons.org/licenses/by/4.0/">
-  <!-- website ownership -->
-  <meta name="google-site-verification" content="1fnKj4QPudeZ0eb7vkdW8zbc1PwwMocSKpQRGcxREgY">
-  <meta name="msvalidate.01" content="E718A8AA0D4E3ED605BFF1BA1C0E46A7">
-  <meta name="yandex-verification" content="0dd50ab9279c1413">
-  <!-- inlined css -->
-  {% set css %}
-    {% include "assets/css/abbr.css" %}
-    {% include "assets/css/base.css" %}
-    {% include "assets/css/blockquote.css" %}
-    {% include "assets/css/button.css" %}
-    {% include "assets/css/code.css" %}
-    {% include "assets/css/footer.css" %}
-    {% include "assets/css/header.css" %}
-    {% include "assets/css/headings.css" %}
-    {% include "assets/css/list.css" %}
-    {% include "assets/css/mark.css" %}
-    {% include "assets/css/media.css" %}
-    {% include "assets/css/navigation.css" %}
-    {% include "assets/css/page-body.css" %}
-    {% include "assets/css/post-body.css" %}
-    {% include "assets/css/share.css" %}
-    {% include "assets/css/text.css" %}
-  {% endset %}
-  <style>{{ css | cssmin | safe }}</style>
-  <link rel="preload stylesheet" href="/assets/css/prism.css" type="text/css" as="style">
-  <!-- Global site tag (gtag.js) - Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-141381934-1"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'UA-141381934-1');
-  </script>
-</head>
-<body>
-  <nav class="navigation">
-    {% if page.url != '/' %}
-    <a class="back" href="/">
-      <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 20 20">
-        <g fill="none" fill-rule="evenodd" stroke="#000000" stroke-linecap="round" stroke-linejoin="round">
-          <path d="M7.5 6.497l-4 4.002 4 4M16.5 10.5h-13"/>
-        </g>
-      </svg>
-    </a>
-    {% endif %}
-  </nav>
-  {% block pageTop %}{% endblock %}
-  {% block main %}{% endblock %}
-  {% include "components/footer.njk" %}
-  <script>
-    {% set corejs %}{% include "assets/js/app.js" %}{% endset %}
-    {{ corejs | jsmin | safe }}
-  </script>
-  <script src="/sw.js"></script>
-  <script>
-    {% set projectjs %}{% include "assets/js/projects.js" %}{% endset %}
-    {{ projectjs | jsmin | safe }}
-  </script>
-  <script type="application/ld+json">
-    {% include "assets/js/schema.json" %}
-  </script>
-</body>
+<html lang="en" data-theme="lofi">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>
+      {% if title and page.fileSlug != '' %}{{ title }} • {% endif %}{{ site.title }}</title>
+    <meta name="description" content="{% if description %}{{ description | markdownify_inline | strip_html }}{% else %}{{ site.description }}{% endif %}">
+    <meta name="keywords" content="{{ site.keywords }}">
+    <meta name="author" content="{{ site.title }}">
+    <meta name="application-name" content="{{ site.title }}">
+    <meta name="theme-color" content="#3454D1">
+    <!-- facebook/open graph -->
+    <meta property="og:title" content="{% if title and page.fileSlug != '' %}{{ title }} • {% endif %}{{ site.title }}">
+    <meta property="og:description" content="{% if description %}{{ description }}{% else %}{{ site.description }}{% endif %}">
+    <meta property="og:url" content="{{ site.url }}{{ page.url | permalink }}">
+    <meta property="og:site_name" content="{{ site.title }}">
+    <meta property="og:image" content="{{ site.url }}/static/images/og-image.png">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="{{site.language}}">
+    <!-- twitter -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="{% if title and page.fileSlug != '' %}{{ title }} • {% endif %}{{ site.title }}">
+    <meta name="twitter:description" content="{% if description %}{{ description }}{% else %}{{ site.bottomHeadline }}{% endif %}">
+    <meta name="twitter:site" content="@{{ site.twitter }}">
+    <meta name="twitter:image" content="{{ site.url }}/static/images/og-image.png">
+    <meta name="twitter:creator" content="@{{ site.twitter }}">
+    <!-- icons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/static/images/apple-touch-icon.png" type="image/png">
+    <link rel="icon" sizes="96x96" href="/static/images/favicon-96x96.png" type="image/png">
+    <link rel="icon" sizes="32x32" href="/static/images/favicon-32x32.png" type="image/png">
+    <link rel="icon" sizes="16x16" href="/static/images/favicon-16x16.png" type="image/png">
+    <link rel="mask-icon" href="/static/images/favicon-96x96.png" color="#181818" type="image/png">
+    <!-- prefetch fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Arvo:ital,wght@1,700&display=swap" rel="stylesheet">
+    <!-- robots -->
+    <meta name="robots" content="{% GenerateRobotsTXTRules %}">
+    <!-- social media -->
+    <link rel="me" href="https://github.com/cezaraugusto" type="text/html">
+    <link rel="me" href="https://twitter.com/cezaraugusto" type="text/html">
+    <link rel="me" href="https://https://www.quora.com/profile/Cezar-Augusto-1" type="text/html">
+    <!-- rss -->
+    <link rel="alternate" href="/feed.xml" type="application/rss+xml" title="RSS">
+    <!-- license -->
+    <link rel="license" href="https://creativecommons.org/licenses/by/4.0/">
+    <!-- website ownership -->
+    <meta name="google-site-verification" content="1fnKj4QPudeZ0eb7vkdW8zbc1PwwMocSKpQRGcxREgY">
+    <meta name="msvalidate.01" content="E718A8AA0D4E3ED605BFF1BA1C0E46A7">
+    <meta name="yandex-verification" content="0dd50ab9279c1413">
+
+    <!-- tailwind css -->
+    <link rel="preload stylesheet" href="/static/css/prism.css" type="text/css" as="style">
+
+    <!-- inlined css -->
+    {% set css %}
+    {% include "css/global.css" %}
+    {% include "css/share.css" %}
+    {% endset %}
+    <style>
+      {{css | postcss | cssmin | safe}}
+    </style>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-141381934-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag('js', new Date());
+      gtag('config', 'UA-141381934-1');
+    </script>
+  </head>
+  <body class="flex flex-col items-center h-screen h-[100svh]">
+    <div class="w-full max-w-3xl flex-grow">
+      {% include "components/navbar.njk" %}
+      {% block pageTop %}{% endblock %}
+      {% block main %}{% endblock %}
+      {% include "components/footer.njk" %}
+    </div>
+    <script>
+      {% set corejs %}{% include "js/app.js" %}{% endset %}
+      {{ corejs | jsmin | safe }}
+    </script>
+    <script>
+      {% set projectjs %}{% include "js/projects.js" %}{% endset %}
+      {{ projectjs | jsmin | safe }}
+    </script>
+    <script type="application/ld+json">
+      {% include "js/schema.json" %}
+    </script>
+  </body>
 </html>

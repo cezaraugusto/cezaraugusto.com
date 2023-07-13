@@ -35,10 +35,7 @@ $ npm start
 
 ## Deploying
 
-```sh
-# generate static resources under <root>/_site
-npm run deploy
-```
+Command `npm build` will generate a `_site` folder, which is the blog output.
 
 ## Contributing
 
