@@ -1,5 +1,5 @@
 node_modules
-# _site
+_site
 .DS_Store
 robots.txt
 robots_production.txt

@@ -3,12 +3,12 @@
   "version": "1.0.0",
   "description": "Interwebs presence of Cezar Augusto",
   "scripts": {
-    "11ty": "eleventy --config=config/eleventy.config.js",
-    "start": "cross-env NODE_ENV=staging eleventy --config=config/eleventy.config.js --serve",
+    "dev": "cross-env NODE_ENV=staging eleventy --config=config/eleventy.config.js --serve",
+    "build": "cross-env NODE_ENV=production eleventy --config=config/eleventy.config.js",
+    "deploy": "npm run build:production && gh-pages -d _site",
     "lint:js": "standard",
     "lint:css": "stylelint --config='config/.stylelintrc.json' 'src/_includes/assets/css/*.css'",
-    "build:staging": "cross-env NODE_ENV=staging npm run 11ty",
-    "build:production": "cross-env NODE_ENV=production npm run 11ty"
+    "lint": "npm run lint:js && npm run lint:css"
   },
   "repository": {
     "type": "git",
