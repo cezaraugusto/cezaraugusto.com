@@ -53,7 +53,7 @@ function renderProjects (projects) {
 
     a.href = repo.url
     a.innerText = repo.name
-    span.innerText = repo.description
+    span.innerText = ` - ${repo.description}`
 
     ol.appendChild(li)
     li.appendChild(a)

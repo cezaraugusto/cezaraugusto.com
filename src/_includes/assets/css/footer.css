@@ -1,9 +1,0 @@
-.footer {
-  margin: var(--margin-clamp-3x) 0;
-  line-height: 150%;
-  font-size: 0.9rem;
-}
-
-.footer p {
-  text-align: center;
-}
