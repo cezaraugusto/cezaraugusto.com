@@ -1,0 +1,75 @@
+==================================================================
+https://keybase.io/cezaraugusto
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://cezaraugusto.com
+  * I am cezaraugusto (https://keybase.io/cezaraugusto) on keybase.
+  * I have a public key with fingerprint 684F C83A 5EDD 5FD2 3741  A4D0 6104 DCBB 0892 716B
+
+To do so, I am signing this object:
+
+{
+    "body": {
+        "key": {
+            "eldest_kid": "010177ab9e09d96f3e20aae5c53c3686e9dec2a534fbf2e93a16e8c66ed441531faa0a",
+            "fingerprint": "684fc83a5edd5fd23741a4d06104dcbb0892716b",
+            "host": "keybase.io",
+            "key_id": "6104dcbb0892716b",
+            "kid": "010177ab9e09d96f3e20aae5c53c3686e9dec2a534fbf2e93a16e8c66ed441531faa0a",
+            "uid": "3c66a723afadf125e42a85f73895e519",
+            "username": "cezaraugusto"
+        },
+        "revoke": {
+            "sig_ids": [
+                "3255067c8ca5246f4e43d6f9188b646c83b6c4e24700e9ceb020d5083e1b02960f"
+            ]
+        },
+        "service": {
+            "hostname": "cezaraugusto.com",
+            "protocol": "https:"
+        },
+        "type": "web_service_binding",
+        "version": 1
+    },
+    "ctime": 1493563575,
+    "expire_in": 157680000,
+    "prev": "15dc2a6ded4f0c35bd39eb94e1aec778840ea7257e16faa317c8ed113d5dbfe7",
+    "seqno": 5,
+    "tag": "signature"
+}
+
+which yields the signature:
+
+-----BEGIN PGP MESSAGE-----
+Version: Keybase OpenPGP v2.0.68
+Comment: https://keybase.io/crypto
+
+yMJ1AnicrZJdbBVFGIZPKVV6rApEQakBHE2wUJuZnZ/dPRcaFWskJFpz0EpbD7Mz
+355uTtk93d1zam0aE0I0KgnGECOGCwxGbBS4kQAJWKtoxNYEYtDEhPpH4r+SphdK
+0+Bso3dcujezM/N+7/fOM3P6+sZcvmFV8+TF0uBt8w2TE3O13JNNfx0bQV6kh1Fh
+BFVgYYABDUlaqgQaFRAmmNi29FzArnaFT8HCUgJXnCoqHAGuBmVJTpnv+Ra4VBIB
+jhICNGOEU+JLiSVqR34QliGuxkGYGlvhMF85VHLQmvvaojYjkmksCGZaeR52XMsm
+wjOF/VGSVZhwnkygI4jMmpmUFuJdRf8/564t2FGzI22LSl9qn1gcmCUd7tvUcTlw
+4mbCBOJQbgejVvCMjGWtXEvSCI22oxjqUQUytklQNsETVOhB1OIcC1s5SnKLCZ8B
+o1r4LnEcTzBh6HhCMbCYjTG4CjxsYc2xQ4GYX1dgH/UZb9O1HqgF84zUVRJ0hJCa
+fNU4SiMVDZjd/jStJoUsWTpczeRD4JX+NSp5QajNXZmKOsRJEIWoQIxSpUHmTJhL
+uaDc5u0Inq4GMZSCTMFt4WDzZX2gbiwJ14av0IanjxXlnqYueC4DIkHZtuMwDIYo
+t4EIw5oSQwI0IVRz7flgo+xog2GECqZTKsvG0sALZVqLAY1++EHv4lxDPndN06Ls
+DefyzUv/e9mPbbt2fvXpwuIr0/nukVMvL78yu2/t5fvbmsfP/aA23NBd/Hrb56/8
+/eADRz7qbLl46cWjs6O3nmxafu7nN9Zb+SXTt585vKdNbu/ov7xn142NrccrYz9N
+Tr269+yF6bmtU0d/abzzptH3WgbKL+zgc4eSfXhiydBbj+zsXHa++pW1u7334KWl
+b898uXH9cw8fXjPz/CfLusc2ovOnBl6/0Dgz8e5dO99/9L5PXxq/5dl3Dg3v/bGl
+8t3x2ae2nBg6ck/XgV2rpvavWTk3Fqz8vWvDoomO8YNt3xZ3bKVf/FpsvaO25c/P
+7t3cN7X7GK739K1rvbn0+GvXfTOvnmg5e3fx+9+63hxcsXZ1Z3jmj8GH1q3o+XhT
+sXfzP5zOXog=
+=o3qb
+-----END PGP MESSAGE-----
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/cezaraugusto
+
+==================================================================
