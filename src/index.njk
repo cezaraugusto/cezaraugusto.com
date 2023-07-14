@@ -10,8 +10,8 @@ permalink: /index.html
       <img src="/static/images/avatar.jpg" width="200" alt="ok" className="max-w-sm rounded-lg shadow-2xl" style="border-radius:100%;"/>
       <div>
         <h1 class="text-5xl font-bold">{{ site.headline | markdownify_inline | safe }}</h1>
-        <p class="py-6">
-          {{ site.intro | markdownify_inline | safe }}<br>
+        <p class="py-6 prose">
+          {{ site.intro | markdownify_inline | safe }}
           {{ site.social | markdownify_inline | safe }}
         </p>
       </div>
