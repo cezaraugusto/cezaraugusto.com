@@ -36,7 +36,7 @@ async function loadProjects () {
 }
 
 function cacheProjects (projects) {
-  window.localStorage.setItem('projects', JSON.stringify(projects))
+  window.localStorage.setItem("new-projects", JSON.stringify(projects));
 }
 
 function renderProjects (projects) {
@@ -62,7 +62,7 @@ function renderProjects (projects) {
 }
 
 async function renderToPage () {
-  const cachedData = window.localStorage.getItem('projects')
+  const cachedData = window.localStorage.getItem('new-projects')
 
   if (cachedData) {
     renderProjects(JSON.parse(cachedData))

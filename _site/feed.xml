@@ -4,12 +4,22 @@
   <subtitle>Personal Blog</subtitle>
   <link href="https://cezaraugusto.com/feed.xml" rel="self"/>
   <link href="https://cezaraugusto.com/"/>
-  <updated>2021-10-05T00:00:00Z</updated>
+  <updated>2024-03-28T00:00:00Z</updated>
   <id>https://cezaraugusto.com/</id>
   <author>
     <name>Cezar Augusto</name>
     <email>boss@cezaraugusto.com</email>
   </author>
+  
+  <entry>
+    <title>Releasing extension-create</title>
+    
+      <link href="https://cezaraugusto.com/posts/releasing-extension-create/"/>
+    
+    <updated>2024-03-28T00:00:00Z</updated>
+    <id>https://cezaraugusto.com/posts/releasing-extension-create/</id>
+    <content type="html"></content>
+  </entry>
   
   <entry>
     <title>Web3 technology explained</title>
@@ -152,31 +162,6 @@
 &lt;li&gt;&lt;a href=&quot;https://gadgets.ndtv.com/cryptocurrency/news/cryptocurrency-crypto-token-difference-meaning-explained-bitcoin-ethereum-ether-dai-link-comp-digital-asset-blockchain-2502146&quot;&gt;Cryptocurrency and Crypto Tokens: What’s the difference?&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://docs.soliditylang.org/en/v0.8.7/introduction-to-smart-contracts.html&quot;&gt;Introduction to Smart Contracts&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-</content>
-  </entry>
-  
-  <entry>
-    <title>Holding myself accountable through blogging</title>
-    
-      <link href="https://cezaraugusto.com/posts/holding-myself-accountable-through-blogging/"/>
-    
-    <updated>2020-09-14T00:00:00Z</updated>
-    <id>https://cezaraugusto.com/posts/holding-myself-accountable-through-blogging/</id>
-    <content type="html">&lt;p&gt;Hey there! Long time since the last post. I have many life and work updates to share but will skip them for now. This is a (re)introductory post. Want to keep it short.&lt;/p&gt;
-&lt;h2 id=&quot;did-you-see-the-new-blog-interface%3F&quot; tabindex=&quot;-1&quot;&gt;&lt;a class=&quot;header-anchor&quot; href=&quot;https://cezaraugusto.com/posts/holding-myself-accountable-through-blogging/#did-you-see-the-new-blog-interface%3F&quot;&gt;&lt;span&gt;Did you see the new blog interface?&lt;/span&gt;&lt;/a&gt;&lt;/h2&gt;
-&lt;p&gt;I’ve been planning a new interface for ~1 year, using that as an excuse for not blogging, but now it’s done. I’m loving it. Thanks to &lt;a href=&quot;https://twitter.com/EdgardKozlowski&quot;&gt;Ed&lt;/a&gt; for the looks.&lt;/p&gt;
-&lt;h2 id=&quot;ok%2C-what-developers-do-after-creating-their-blogs%3F&quot; tabindex=&quot;-1&quot;&gt;&lt;a class=&quot;header-anchor&quot; href=&quot;https://cezaraugusto.com/posts/holding-myself-accountable-through-blogging/#ok%2C-what-developers-do-after-creating-their-blogs%3F&quot;&gt;&lt;span&gt;OK, what developers do after creating their blogs?&lt;/span&gt;&lt;/a&gt;&lt;/h2&gt;
-&lt;p&gt;Per experience, I don’t think it’s blogging :P, but hey, here I am writing a post.&lt;/p&gt;
-&lt;p&gt;The (new) goal of this blog space is to use it as a system to hold myself accountable regarding plans, ideas, side-projects. Ideas are great while inside your head, and planning seems obvious when you read success stories. I’ve been having thoughts and creating plans in my mind (and paper) for a while. But how about execution?&lt;/p&gt;
-&lt;h2 id=&quot;i-needed-a-system&quot; tabindex=&quot;-1&quot;&gt;&lt;a class=&quot;header-anchor&quot; href=&quot;https://cezaraugusto.com/posts/holding-myself-accountable-through-blogging/#i-needed-a-system&quot;&gt;&lt;span&gt;I needed a system&lt;/span&gt;&lt;/a&gt;&lt;/h2&gt;
-&lt;p&gt;A system where I can share plans, strategies, projects, dreams. A system where I can look back and find what worked and whatnot—a system like this blog.&lt;/p&gt;
-&lt;h2 id=&quot;the-plan&quot; tabindex=&quot;-1&quot;&gt;&lt;a class=&quot;header-anchor&quot; href=&quot;https://cezaraugusto.com/posts/holding-myself-accountable-through-blogging/#the-plan&quot;&gt;&lt;span&gt;The plan&lt;/span&gt;&lt;/a&gt;&lt;/h2&gt;
-&lt;p&gt;The plan is to use this blog as a hub for all projects and ideas I have. Here is where experimentation starts. If the idea sounds good or the project is worth it, it will be referenced here. &lt;code&gt;Idea -&amp;gt; Plan -&amp;gt; Post -&amp;gt; Execution&lt;/code&gt;. Ideas and projects can be anything, as long as I find them valuable, they will be typed down. I also plan to have fun during this journey ;)&lt;/p&gt;
-&lt;h2 id=&quot;will-it-work%3F&quot; tabindex=&quot;-1&quot;&gt;&lt;a class=&quot;header-anchor&quot; href=&quot;https://cezaraugusto.com/posts/holding-myself-accountable-through-blogging/#will-it-work%3F&quot;&gt;&lt;span&gt;Will it work?&lt;/span&gt;&lt;/a&gt;&lt;/h2&gt;
-&lt;p&gt;Posts here are meant to share thoughts, reminders, and ideas. The whole plan is around experimentation, planning, and execution.&lt;/p&gt;
-&lt;p&gt;By the way, did you see the new blog interface?&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;Idea -&amp;gt; Plan -&amp;gt; Post -&amp;gt; Execution&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;Hello again!&lt;/p&gt;
 </content>
   </entry>
   
@@ -426,83 +411,6 @@
 &lt;p&gt;There are many changes. Moving background scripts to a Service Worker is a big move, both for the platform and for authors. Another high point is the API moving to be promise-based, making the development of WebExtensions similar to Firefox’s Add-On API. Considering there are no standards for Extensions, this is great for authors looking to ease the process of writing cross-platform extensions, considering that in theory, other Chromium-based browsers will not object in following changes that don’t affect the output (such as API &lt;em&gt;promisification&lt;/em&gt;).&lt;/p&gt;
 &lt;p&gt;Still talking about the code standardization, my bet is that other browsers will follow most of the Manifest V3 changes, despite some divergences. See &lt;a href=&quot;https://blog.mozilla.org/addons/2019/09/03/mozillas-manifest-v3-faq/&quot;&gt;Firefox’s Manifest V3 FAQ&lt;/a&gt; and &lt;a href=&quot;https://www.zdnet.com/article/opera-brave-vivaldi-to-ignore-chromes-anti-ad-blocker-changes-despite-shared-codebase/&quot;&gt;Opera, Brave, and Vivaldi’s opinions&lt;/a&gt; for more.&lt;/p&gt;
 &lt;p&gt;Call me an optimist, but I hope this update also gives traction to the &lt;a href=&quot;https://www.w3.org/community/browserext/&quot;&gt;browser extension community group&lt;/a&gt;.&lt;/p&gt;
-</content>
-  </entry>
-  
-  <entry>
-    <title>The benefits of working in public</title>
-    
-      <link href="https://cezaraugusto.com/posts/the-benefits-of-working-in-public/"/>
-    
-    <updated>2019-06-03T00:00:00Z</updated>
-    <id>https://cezaraugusto.com/posts/the-benefits-of-working-in-public/</id>
-    <content type="html">&lt;p&gt;In a few months, I turn 3 years working full time with open-source. Or, as I like to think, work in public. It was a great move in my career. It’s not easy, but it’s worth it.&lt;/p&gt;
-&lt;p&gt;I have good and bad ideas. I have thoughts my team agree and disagree. My code makes me proud and anxious. Sometimes, they do both. Sometimes my code needs to be reverted, and sometimes I revert other people’s code. In the end, nothing of it matters.&lt;/p&gt;
-&lt;p&gt;You know what really matters?&lt;/p&gt;
-&lt;h2 id=&quot;i%E2%80%99m-working-in-public&quot; tabindex=&quot;-1&quot;&gt;&lt;a class=&quot;header-anchor&quot; href=&quot;https://cezaraugusto.com/posts/the-benefits-of-working-in-public/#i%E2%80%99m-working-in-public&quot;&gt;&lt;span&gt;I’m working in public&lt;/span&gt;&lt;/a&gt;&lt;/h2&gt;
-&lt;p&gt;Being publicly available for feedback (good and bad) makes me wake up every day and get things done. Makes me want to do more, and better. Makes me wish to receive feedback as fast it can and improve over time, every day.&lt;/p&gt;
-&lt;p&gt;The idea that someone can potentially be watching you, because you inspire them or because they think your work has a value worth watching, makes you automatically get more productive, increase your attention to detail, your grammar improves, your tone softs, and there’s a proud motivational feeling that you can never get enough. You just keep moving and hoping you’re doing your best. I don’t think there are a bigger joy in my profession than being able to be publicly available for everything I do.&lt;/p&gt;
-&lt;h2 id=&quot;but-i-haven%E2%80%99t-always-been-working-in-public&quot; tabindex=&quot;-1&quot;&gt;&lt;a class=&quot;header-anchor&quot; href=&quot;https://cezaraugusto.com/posts/the-benefits-of-working-in-public/#but-i-haven%E2%80%99t-always-been-working-in-public&quot;&gt;&lt;span&gt;But I haven’t always been working in public&lt;/span&gt;&lt;/a&gt;&lt;/h2&gt;
-&lt;p&gt;I effectively started working in public because that was the &lt;em&gt;modus operandi&lt;/em&gt; of the company I work for – which is something I love, and a great excuse to start doing something I always felt was for me. But no personal credit here, I did what I had to do. We work on a public repository, so it is all my patches. Public.&lt;/p&gt;
-&lt;p&gt;Before joining &lt;a href=&quot;https://brave.com/&quot;&gt;Brave&lt;/a&gt;, I did a couple libs and started contributing to projects such as &lt;a href=&quot;https://developer.mozilla.org/pt-BR/&quot;&gt;MDN&lt;/a&gt;, but was still too afraid to show off my work or share somewhere else. I just did stuff and was happy that I was giving back to the community somehow. But was I, really, giving back the way I’d like to give?&lt;/p&gt;
-&lt;h2 id=&quot;working-in-public-can-be-terrifying&quot; tabindex=&quot;-1&quot;&gt;&lt;a class=&quot;header-anchor&quot; href=&quot;https://cezaraugusto.com/posts/the-benefits-of-working-in-public/#working-in-public-can-be-terrifying&quot;&gt;&lt;span&gt;Working in public can be terrifying&lt;/span&gt;&lt;/a&gt;&lt;/h2&gt;
-&lt;p&gt;You can still work in public and remain almost invisible. Unless you promote your work or someone else does it for you, you’re public only for the people that know you or at least that know your work.&lt;/p&gt;
-&lt;p&gt;I have been a long time fan of public figures’ work. Renowned artists, musicians, architects. All the people that take time to do something they find worth doing that find the courage to say “hey, here’s my thing publicly, what do you think?.” When I pass by some &lt;em&gt;in-progress&lt;/em&gt; construction, I always look up the engineer/architect names. It has something beautiful about being responsible for something. Those people represent all other people’s work. If something goes wrong, even without direct input from them, it’s their fault. If something goes right, they also take their share of the credit.&lt;/p&gt;
-&lt;p&gt;Having your name attached to work can be terrifying. I’m a software engineer. I work on a public repository, and I have my name attached on every change I send. It makes me think twice about the revisions I request. I take three times to do a self-review of anything I ask. It makes half a day to review every interaction I do with the public watching my changes – including my peers. I take great care to ensure I’m being accessible, kind, a good co-worker, and that my code is in the best shape I can deliver.&lt;/p&gt;
-&lt;p&gt;It’s terrifying, but it’s worth it.&lt;/p&gt;
-&lt;h2 id=&quot;i-like-how-it-works%2C-and-i%E2%80%99d-like-to-do-more&quot; tabindex=&quot;-1&quot;&gt;&lt;a class=&quot;header-anchor&quot; href=&quot;https://cezaraugusto.com/posts/the-benefits-of-working-in-public/#i-like-how-it-works%2C-and-i%E2%80%99d-like-to-do-more&quot;&gt;&lt;span&gt;I like how it works, and I’d like to do more&lt;/span&gt;&lt;/a&gt;&lt;/h2&gt;
-&lt;p&gt;I like the way it works. I love the way it makes me feel about my work. But as someone who claims to be open-minded and interested in open-source, looking to help others to accomplish what I did, and hopefully influences others for good, it is still a small part of me. Then I think: &lt;em&gt;I wish I could expand this to other areas…&lt;/em&gt;&lt;/p&gt;
-&lt;h2 id=&quot;it-doesn%E2%80%99t-take-willingness.-it-takes-action&quot; tabindex=&quot;-1&quot;&gt;&lt;a class=&quot;header-anchor&quot; href=&quot;https://cezaraugusto.com/posts/the-benefits-of-working-in-public/#it-doesn%E2%80%99t-take-willingness.-it-takes-action&quot;&gt;&lt;span&gt;It doesn’t take willingness. It takes action&lt;/span&gt;&lt;/a&gt;&lt;/h2&gt;
-&lt;p&gt;We all make mistakes. As developers, we all write good and bad code. As humans, we are always looking for the best time, the best scenario, the best excuse to procrastinate. As aspiring &lt;em&gt;public workers&lt;/em&gt;, we are always looking for the best idea, the best topic to share. We are always worried about what people will think about us. Yet, we often take no action or are continuously not happy with our results. In fact, we are the worst judges of our efforts.&lt;/p&gt;
-&lt;p&gt;All it takes is a start. We tend to overthink things.&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Is my code good enough? (spends two hours on a worthless refactoring)&lt;/li&gt;
-&lt;li&gt;Is my writing good enough?&lt;/li&gt;
-&lt;li&gt;Is my blog clean enough?&lt;/li&gt;
-&lt;li&gt;Is it the right time?&lt;/li&gt;
-&lt;li&gt;Am I delivering the right message?&lt;/li&gt;
-&lt;li&gt;Are others perceiving me as who I really am?&lt;/li&gt;
-&lt;li&gt;What is my audience?&lt;/li&gt;
-&lt;li&gt;I’m presenting myself as X, but I guess that’s not me&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;All those questions are valid if you have a plan. Turns out if you do have one, they are probably answered. You and I, we are wasting time. Done is better than perfect. It doesn’t mean you are forbidden to review everything countless times, but it means you should ship your work. You have to ship your work.&lt;/p&gt;
-&lt;h2 id=&quot;just-ship-it%C2%AE&quot; tabindex=&quot;-1&quot;&gt;&lt;a class=&quot;header-anchor&quot; href=&quot;https://cezaraugusto.com/posts/the-benefits-of-working-in-public/#just-ship-it%C2%AE&quot;&gt;&lt;span&gt;Just Ship it®&lt;/span&gt;&lt;/a&gt;&lt;/h2&gt;
-&lt;p&gt;I wrote &lt;a href=&quot;https://cezaraugusto.com/&quot;&gt;my blog&lt;/a&gt; on one weekend. It took me months to publish it online, and a few other months to get to write my first “real” blog post. This one, actually. The first blog I created is probably 15 years old. Never got any post written. Around 2 years ago, I started a blog, and the only blog post was an “about me” post. I just couldn’t make it.&lt;/p&gt;
-&lt;p&gt;Until now.&lt;/p&gt;
-&lt;h2 id=&quot;expanding-my-work-in-the-public-way-of-work&quot; tabindex=&quot;-1&quot;&gt;&lt;a class=&quot;header-anchor&quot; href=&quot;https://cezaraugusto.com/posts/the-benefits-of-working-in-public/#expanding-my-work-in-the-public-way-of-work&quot;&gt;&lt;span&gt;Expanding my work in the public way of work&lt;/span&gt;&lt;/a&gt;&lt;/h2&gt;
-&lt;blockquote&gt;
-&lt;p&gt;Your time is limited, so don’t waste it living someone else’s life. Don’t be trapped by dogma - which is living with the results of other people’s thinking. Don’t let the noise of others’ opinions drown out your own inner voice. And most important, dare to follow your heart and intuition. - Steve Jobs&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;After working in public for a long enough time, I found many delightful excuses to keep being public.&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;You get to know new people, having the chance to read and learn new perspectives.&lt;/li&gt;
-&lt;li&gt;You see other people passionate about the same technology you are, and you feel encouraged to keep digging more.&lt;/li&gt;
-&lt;li&gt;You find new passions.&lt;/li&gt;
-&lt;li&gt;You get more motivated because you believe someone is watching you for good.&lt;/li&gt;
-&lt;li&gt;Your code suddenly becomes better, after all, you’re now a “public person.”&lt;/li&gt;
-&lt;li&gt;Your writing feels more natural.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&quot;not-only-work-in-public.-be-public-about-your-work&quot; tabindex=&quot;-1&quot;&gt;&lt;a class=&quot;header-anchor&quot; href=&quot;https://cezaraugusto.com/posts/the-benefits-of-working-in-public/#not-only-work-in-public.-be-public-about-your-work&quot;&gt;&lt;span&gt;Not only work in public. Be public about your work&lt;/span&gt;&lt;/a&gt;&lt;/h2&gt;
-&lt;p&gt;I made a commitment. As of today, I’m not only working in public. I’m being public about my work. Every idea, every piece of code, every resource produced by me, will be open. Right or wrong, as my code is, all my resources will be available for the public to judge. Good or bad, the feedback I receive will be taken into consideration, so next time, it can be even better. I’m letting my work and my thoughts about work, remain forever in this big space called the internet.&lt;/p&gt;
-&lt;p&gt;I’m Cezar Augusto, the public face of my mind and output.&lt;/p&gt;
-&lt;p&gt;This is day 1.&lt;/p&gt;
-</content>
-  </entry>
-  
-  <entry>
-    <title>Just like starting over</title>
-    
-      <link href="https://cezaraugusto.com/posts/just-like-starting-over/"/>
-    
-    <updated>2018-10-06T00:00:00Z</updated>
-    <id>https://cezaraugusto.com/posts/just-like-starting-over/</id>
-    <content type="html">&lt;p&gt;There it is, a blog. This task is likely the oldest one in my to-do list. On average took me ~18 years – it was my first task when I started developing bad sites with XHTML – to make it. Now it is done.&lt;/p&gt;
-&lt;p&gt;Countless unfished articles, infinite tweaks on different static sites, a frustrated plan to have one hosted on Medium and sleepless nights searching and tweaking the interface I wanted. Feels good to have one to call mine :)&lt;/p&gt;
-&lt;p&gt;The plans for this is to write about the lots of readings and the little I know about random web development, producing software, random ideas, and opinionated best practices.&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;“The best time to plant a tree was 20 years ago. The second best time is now.” – Chinese Proverb&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;Way to go!&lt;/p&gt;
 </content>
   </entry>
 </feed>
