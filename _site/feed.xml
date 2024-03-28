@@ -4,22 +4,12 @@
   <subtitle>Personal Blog</subtitle>
   <link href="https://cezaraugusto.com/feed.xml" rel="self"/>
   <link href="https://cezaraugusto.com/"/>
-  <updated>2024-03-28T00:00:00Z</updated>
+  <updated>2021-10-05T00:00:00Z</updated>
   <id>https://cezaraugusto.com/</id>
   <author>
     <name>Cezar Augusto</name>
     <email>boss@cezaraugusto.com</email>
   </author>
-  
-  <entry>
-    <title>Releasing extension-create</title>
-    
-      <link href="https://cezaraugusto.com/posts/releasing-extension-create/"/>
-    
-    <updated>2024-03-28T00:00:00Z</updated>
-    <id>https://cezaraugusto.com/posts/releasing-extension-create/</id>
-    <content type="html"></content>
-  </entry>
   
   <entry>
     <title>Web3 technology explained</title>
