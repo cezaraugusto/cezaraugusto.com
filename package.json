@@ -29,23 +29,23 @@
     ]
   },
   "devDependencies": {
-    "@11ty/eleventy": "^2.0.1",
-    "@11ty/eleventy-plugin-rss": "^1.2.0",
+    "@11ty/eleventy": "^3.0.0",
+    "@11ty/eleventy-plugin-rss": "^2.0.3",
     "@11ty/eleventy-plugin-syntaxhighlight": "^5.0.0",
-    "@tailwindcss/typography": "^0.5.9",
-    "autoprefixer": "^10.4.14",
-    "clean-css": "^5.3.2",
+    "@tailwindcss/typography": "^0.5.16",
+    "autoprefixer": "^10.4.20",
+    "clean-css": "^5.3.3",
     "cross-env": "^7.0.3",
-    "daisyui": "^3.1.10",
+    "daisyui": "^4.12.23",
     "html-minifier": "^4.0.0",
-    "luxon": "^3.3.0",
-    "markdown-it": "^13.0.1",
-    "markdown-it-anchor": "^8.6.7",
-    "postcss": "^8.4.25",
-    "standard": "^17.1.0",
-    "stylelint": "^15.10.1",
-    "tailwindcss": "^3.3.2",
+    "luxon": "^3.5.0",
+    "markdown-it": "^14.1.0",
+    "markdown-it-anchor": "^9.2.0",
+    "postcss": "^8.5.1",
+    "standard": "^17.1.2",
+    "stylelint": "^16.14.1",
+    "tailwindcss": "^4.0.0",
     "uglify-es": "^3.3.9",
-    "vite": "^4.4.1"
+    "vite": "^6.0.11"
   }
 }
