@@ -1,0 +1,604 @@
+<!doctype html>
+<html lang="en" data-theme="lofi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>About • Cezar Augusto™</title>
+    <meta
+      name="description"
+      content="I like to learn and work on tools to improve human development, being them writings, software, or thoughts. When I’m not coding, I enjoy running, swimming, and playing snooker."
+    />
+    <meta
+      name="keywords"
+      content="cezar augusto, developer, engineer, builder, web, software, blog, performance, standards, tooling, browser, front-end, back-end, fullstack, youtube, github, X"
+    />
+    <meta name="author" content="Cezar Augusto™" />
+    <meta name="application-name" content="Cezar Augusto™" />
+    <meta name="theme-color" content="#3454D1" />
+    <!-- facebook/open graph -->
+    <meta property="og:title" content="About • Cezar Augusto™" />
+    <meta
+      property="og:description"
+      content="I like to learn and work on tools to improve human development, being them writings, software, or thoughts. When I&#39;m not coding, I enjoy running, swimming, and playing snooker."
+    />
+    <meta property="og:url" content="https://cezaraugusto.com/about/" />
+    <meta property="og:site_name" content="Cezar Augusto™" />
+    <meta
+      property="og:image"
+      content="https://cezaraugusto.com/static/images/og-image.png"
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="en_US" />
+    <!-- twitter -->
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="About • Cezar Augusto™" />
+    <meta
+      name="twitter:description"
+      content="I like to learn and work on tools to improve human development, being them writings, software, or thoughts. When I&#39;m not coding, I enjoy running, swimming, and playing snooker."
+    />
+    <meta name="twitter:site" content="@cezaraugusto" />
+    <meta
+      name="twitter:image"
+      content="https://cezaraugusto.com/static/images/og-image.png"
+    />
+    <meta name="twitter:creator" content="@cezaraugusto" />
+    <!-- icons -->
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/static/images/apple-touch-icon.png"
+      type="image/png"
+    />
+    <link
+      rel="icon"
+      sizes="96x96"
+      href="/static/images/favicon-96x96.png"
+      type="image/png"
+    />
+    <link
+      rel="icon"
+      sizes="32x32"
+      href="/static/images/favicon-32x32.png"
+      type="image/png"
+    />
+    <link
+      rel="icon"
+      sizes="16x16"
+      href="/static/images/favicon-16x16.png"
+      type="image/png"
+    />
+    <link
+      rel="mask-icon"
+      href="/static/images/favicon-96x96.png"
+      color="#181818"
+      type="image/png"
+    />
+    <!-- prefetch fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Arvo:ital,wght@1,700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- robots -->
+    <meta name="robots" content="index, follow" />
+    <!-- social media -->
+    <link rel="me" href="https://github.com/cezaraugusto" type="text/html" />
+    <link rel="me" href="https://twitter.com/cezaraugusto" type="text/html" />
+    <link
+      rel="me"
+      href="https://https://www.quora.com/profile/Cezar-Augusto-1"
+      type="text/html"
+    />
+    <!-- rss -->
+    <link
+      rel="alternate"
+      href="/feed.xml"
+      type="application/rss+xml"
+      title="RSS"
+    />
+    <!-- license -->
+    <link rel="license" href="https://creativecommons.org/licenses/by/4.0/" />
+    <!-- website ownership -->
+    <meta
+      name="google-site-verification"
+      content="1fnKj4QPudeZ0eb7vkdW8zbc1PwwMocSKpQRGcxREgY"
+    />
+    <meta name="msvalidate.01" content="E718A8AA0D4E3ED605BFF1BA1C0E46A7" />
+    <meta name="yandex-verification" content="0dd50ab9279c1413" />
+
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/gh/ekmas/cs16.css@main/css/cs16.min.css"
+    />
+    <link
+      rel="preload stylesheet"
+      href="/static/css/prism.css"
+      type="text/css"
+      as="style"
+    />
+
+    <!-- inlined css -->
+
+    <style>
+      body {
+        padding: 40px;
+        max-width: 800px;
+        margin: auto;
+      }
+      ::selection {
+        background-color: #958831;
+        color: #fff;
+      }
+      img {
+        max-width: 100%;
+        height: auto;
+      }
+      a {
+        color: var(--text);
+      }
+      .hidden {
+        display: none;
+      }
+      header {
+        margin-bottom: 30px;
+      }
+      header .top {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+      header .top h1 {
+        font-size: 50px;
+        line-height: 50px;
+      }
+      header .top .links {
+        display: flex;
+        gap: 10px;
+      }
+      header .top .links a {
+        display: inline-block;
+        width: 40px;
+        height: 40px;
+        background-size: 25px;
+        background-repeat: no-repeat;
+        background-position: center;
+      }
+      header .top .links .gh {
+        background-image: url(/static/svg/github.svg);
+      }
+      header .top .links .x {
+        background-image: url(/static/svg/x.svg);
+      }
+      header p {
+        font-size: 22px;
+        line-height: 25px;
+        margin-top: 10px;
+      }
+      header .meta {
+        margin: 20px 0;
+      }
+      header .page-title {
+        font-size: 50px;
+      }
+      main > section {
+        margin-bottom: 30px;
+      }
+      main > section h2 {
+        user-select: none;
+        margin-bottom: 5px;
+      }
+      main > section article {
+        font-size: 18px;
+        line-height: 32px;
+        display: flex;
+        gap: 6px;
+      }
+      ol {
+        font-size: 18px;
+        line-height: 32px;
+      }
+      .post-link {
+        font-size: 20px;
+        line-height: 38px;
+      }
+      .code-block {
+        margin-top: 15px;
+        overflow-x: hidden;
+      }
+      .code-block .inner {
+        position: relative;
+      }
+      .code-block .inner .cs-btn {
+        position: absolute;
+        right: 1px;
+        top: 1px;
+        z-index: 5;
+      }
+      .code-block .inner pre {
+        background-color: #3e4637;
+        border: 1px solid;
+        border-color: #292c21 #8c9284 #8c9284 #292c21;
+        margin-top: 5px;
+        position: relative;
+        font-family: 'Courier New', Courier, monospace;
+        padding: 5px;
+      }
+      .code-block .inner pre code {
+        white-space: pre-wrap;
+      }
+      .code-block .inner pre code::selection {
+        background-color: #958831;
+        color: #fff;
+      }
+      footer {
+        text-align: center;
+        margin-top: 40px;
+      }
+      footer a {
+        color: #dedfd6;
+      }
+      hr {
+        margin-bottom: 20px;
+      }
+      @media (max-width: 400px) {
+        body {
+          padding: 20px;
+        }
+      }
+      .prose {
+        font-size: 20px;
+      }
+      .prose h1 {
+        scroll-margin: 20px;
+        font-size: 2.25rem;
+        font-weight: 800;
+        letter-spacing: -0.02em;
+      }
+      @media (min-width: 1024px) {
+        .prose h1 {
+          font-size: 3rem;
+        }
+      }
+      .prose h2 {
+        margin-top: 2rem;
+        scroll-margin: 20px;
+        padding-bottom: 0.5rem;
+        font-size: 1.875rem;
+        font-weight: 600;
+        letter-spacing: -0.015em;
+        transition: color 0.2s ease-in-out;
+      }
+      .prose h2:first-child {
+        margin-top: 0;
+      }
+      .prose h3 {
+        margin-top: 2rem;
+        scroll-margin: 20px;
+        font-size: 1.5rem;
+        font-weight: 600;
+        letter-spacing: -0.01em;
+      }
+      .prose p {
+        line-height: 1.25;
+      }
+      .prose p:not(:first-child) {
+        margin-top: 1.1rem;
+      }
+      .prose a {
+        font-weight: 500;
+        color: var(--primary);
+        text-decoration: underline;
+        text-underline-offset: 4px;
+      }
+      .prose blockquote {
+        margin-top: 1.5rem;
+        border-left: 2px solid currentColor;
+        padding-left: 1.5rem;
+        font-style: italic;
+      }
+      .prose ul {
+        margin: 1.5rem 0;
+        margin-left: 1.5rem;
+        list-style-type: disc;
+      }
+      .prose li {
+        margin-top: 0.5rem;
+      }
+      .prose table {
+        width: 100%;
+      }
+      .prose td,
+      .prose th {
+        border: 1px solid currentColor;
+        padding: 0.5rem 1rem;
+        text-align: left;
+      }
+      .prose td[align='center'],
+      .prose th[align='center'] {
+        text-align: center;
+      }
+      .prose td[align='right'],
+      .prose th[align='right'] {
+        text-align: right;
+      }
+      .prose tr {
+        margin: 0;
+        border-top: 1px solid currentColor;
+        padding: 0;
+      }
+      .prose tr:nth-child(2n) {
+        background-color: var(--muted);
+      }
+      .prose figure {
+        margin-top: 1.25rem;
+      }
+      .twitter-tweet {
+        margin-top: 1.25rem !important;
+      }
+      @media (max-width: 580px) {
+        .share-actions {
+          margin-top: var(--margin-clamp-1x);
+          display: block;
+        }
+      }
+    </style>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-141381934-1"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || []
+      function gtag() {
+        dataLayer.push(arguments)
+      }
+      gtag('js', new Date())
+      gtag('config', 'UA-141381934-1')
+    </script>
+  </head>
+  <body>
+    <header>
+      <div class="top" bis_skin_checked="1">
+        <h1>@<a href="/">cezaraugusto</a></h1>
+
+        <div class="links" bis_skin_checked="1">
+          <button
+            type="button"
+            class="cs-btn"
+            onclick="document.querySelector('.cs-dialog').showModal();"
+          >
+            Subscribe
+          </button>
+          <a
+            href="https://github.com/cezaraugusto"
+            target="_blank"
+            class="cs-btn gh"
+          ></a>
+          <a
+            href="https://x.com/cezaraugusto"
+            target="_blank"
+            class="cs-btn x"
+          ></a>
+        </div>
+      </div>
+      <p>
+        Software developer, creator of
+        <a href="https://extension.js.org">Extension.js</a>.<br />
+        Writings about software, open-source, and entrepreneurship.
+        <a href="/about">About me</a>.
+      </p>
+    </header>
+
+    <dialog class="cs-dialog">
+      <form method="dialog">
+        <div class="heading">
+          <div class="wrapper">
+            <div class="icon"></div>
+            <p class="text">Options</p>
+          </div>
+          <button class="cs-btn close"></button>
+        </div>
+        <div class="content">
+          <h3 class="font-bold text-xl">Get updates from me via email</h3>
+          <iframe
+            src="https://cezaraugusto.substack.com/embed"
+            height="320"
+            style="border-radius: 4px; width: 100%"
+            frameborder="0"
+            scrolling="no"
+          ></iframe>
+        </div>
+        <menu class="footer-btns">
+          <button class="cs-btn">OK</button>
+        </menu>
+      </form>
+    </dialog>
+
+    <main id="main-content" tabindex="-1">
+      <article>
+        <header>
+          <h1>About</h1>
+
+          <p>
+            I like to learn and work on tools to improve human development,
+            being them writings, software, or thoughts. When I’m not coding, I
+            enjoy running, swimming, and playing snooker.
+          </p>
+          <figure>
+            <img src="/static/images/about.png" alt="" />
+            <figcaption>
+              That&#39;s me, the owner of this piece of internet software
+            </figcaption>
+          </figure>
+        </header>
+        <hr class="cs-hr" />
+        <div class="prose">
+          <h2 id="where-it-all-started" tabindex="-1">
+            <a class="header-anchor" href="#where-it-all-started"
+              ><span>Where it all started</span></a
+            >
+          </h2>
+          <p>
+            My interest in programming started back in 2001 when I saw a friend
+            playing with Visual Basic inside MSExcel. A few moons later, I
+            discovered web development and started making blog templates. A
+            decade went by before I could start making any money out of it.
+          </p>
+          <p>
+            Nowadays, I don’t make blog templates anymore, but the passion for
+            web development got me involved in browsers and drives most of the
+            content I create. During my career, I’ve worked with a wide range of
+            applications, web apps, mobile apps, dApps, desktop apps, and
+            contributed to open-source libraries and apps used by millions of
+            developers such as <a href="http://react.dev">React.js</a>,
+            <a href="https://nodejs.org">Node.js</a>, and
+            <a href="https://brave.com">Brave</a>.
+          </p>
+          <h2 id="this-blog" tabindex="-1">
+            <a class="header-anchor" href="#this-blog"
+              ><span>This blog</span></a
+            >
+          </h2>
+          <p>
+            Here I share my thoughts on development and my views on everything.
+            I used to write about software development on Quora, where I earned
+            the
+            <a href="https://pt.quora.com/Cezar-Augusto"
+              >Quora Top Writer award in 2021</a
+            >, but as things move and the world turns, this blog is a
+            centralized platform I can control.
+          </p>
+          <h2 id="fun-facts-about-me" tabindex="-1">
+            <a class="header-anchor" href="#fun-facts-about-me"
+              ><span>Fun facts about me</span></a
+            >
+          </h2>
+          <p>
+            I’m a retired
+            <a href="https://en.wikipedia.org/wiki/Paratrooper"
+              >Brazilian Army Paratrooper</a
+            >
+            and used to be an
+            <a href="https://en.wikipedia.org/wiki/Intelligence_analysis"
+              >Intelligence Analyst</a
+            >, working during events such as the 2014 FIFA World Cup and the
+            2016 Summer Olympics.
+          </p>
+          <h2 id="location" tabindex="-1">
+            <a class="header-anchor" href="#location"><span>Location</span></a>
+          </h2>
+          <p>
+            I’m based in the southeast of 🇧🇷 Brazil, born and raised in Rio de
+            Janeiro.
+          </p>
+          <h2 id="speaking" tabindex="-1">
+            <a class="header-anchor" href="#speaking"><span>Speaking</span></a>
+          </h2>
+          <p>
+            If you want me to present or speak at your event send me a message
+            via
+            <code class="email"
+              >window.atob(&quot;Ym9zc0BjZXphcmF1Z3VzdG8ubmV0&quot;)</code
+            >
+            (mind the quotes). You can also reach me over
+            <a href="https://twitter.com/cezaraugusto">Twitter</a> though I’m
+            not as responsive as the email option.
+          </p>
+        </div>
+      </article>
+    </main>
+
+    <footer>
+      © 2018-Present <a href="/about/">Cezar Augusto</a>.<br />
+      Content in this blog is licensed under
+      <a
+        class="link"
+        href="https://creativecommons.org/licenses/by/4.0/"
+        rel="noopener noreferrer"
+        target="_blank"
+        >CC BY 4.0</a
+      >.
+    </footer>
+
+    <script></script>
+    <script>
+      async function fetchGitHubData() {
+        return (
+          await window.fetch(
+            'https://api.github.com/users/cezaraugusto/repos?page=1&per_page=100'
+          )
+        ).json()
+      }
+      function sortByPopularity(e) {
+        return e.sort((e, t) => t.stargazers_count - e.stargazers_count)
+      }
+      async function loadProjects() {
+        const e = sortByPopularity(await fetchGitHubData()),
+          t = []
+        for (const n of e)
+          n.fork ||
+            n.archived ||
+            ('cezaraugusto.com' !== n.name &&
+              '.github' !== n.name &&
+              t.push({
+                name: n.name,
+                url: n.html_url,
+                description: n.description
+              }))
+        return t
+      }
+      function cacheProjects(e) {
+        window.localStorage.setItem('github-projects', JSON.stringify(e))
+      }
+      function renderProjects(e) {
+        const t = document.getElementById('projects')
+        t &&
+          e.forEach((e) => {
+            const n = document.createElement('li'),
+              r = document.createElement('a'),
+              o = document.createElement('span')
+            ;(r.href = e.url),
+              (r.innerText = e.name),
+              (o.innerText = ` - ${e.description}`),
+              t.appendChild(n),
+              n.appendChild(r),
+              n.appendChild(o)
+          })
+      }
+      async function renderToPage() {
+        const e = window.localStorage.getItem('github-projects')
+        if (e) renderProjects(JSON.parse(e))
+        else {
+          const e = await loadProjects()
+          renderProjects(e), cacheProjects(e)
+        }
+      }
+      renderToPage()
+    </script>
+    <script type="application/ld+json">
+      {
+        "@context": "http://schema.org/",
+        "@type": "Person",
+        "name": "Cezar Augusto",
+        "url": "https://cezaraugusto.com/",
+        "image": "https://cezaraugusto.com/static/images/me.png",
+        "birthDate": "1988-05-06",
+        "nationality": "Brazil",
+        "address": "Rio de Janeiro",
+        "sameAs": [
+          "https://twitter.com/cezaraugusto",
+          "https://linkedin.com/in/cezar-augusto",
+          "https://github.com/cezaraugusto/",
+          "https://www.youtube.com/channel/UCjwnVRxoPilVaicoxktqVjg"
+        ],
+        "jobTitle": "Software Engineer",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "Atlantico Software"
+        }
+      }
+    </script>
+  </body>
+</html>

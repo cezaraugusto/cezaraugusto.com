@@ -1,0 +1,1070 @@
+<!doctype html>
+<html lang="en" data-theme="lofi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>The years at Brave • Cezar Augusto™</title>
+    <meta
+      name="description"
+      content="Personal blog of Cezar Augusto, an application engineer, book author, and content creator. Blogs about software development, entrepreneurship, and open-source initiatives."
+    />
+    <meta
+      name="keywords"
+      content="cezar augusto, developer, engineer, builder, web, software, blog, performance, standards, tooling, browser, front-end, back-end, fullstack, youtube, github, X"
+    />
+    <meta name="author" content="Cezar Augusto™" />
+    <meta name="application-name" content="Cezar Augusto™" />
+    <meta name="theme-color" content="#3454D1" />
+    <!-- facebook/open graph -->
+    <meta property="og:title" content="The years at Brave • Cezar Augusto™" />
+    <meta
+      property="og:description"
+      content="Personal blog of Cezar Augusto, an application engineer, book author, and content creator. Blogs about software development, entrepreneurship, and open-source initiatives."
+    />
+    <meta
+      property="og:url"
+      content="https://cezaraugusto.com/posts/the-years-at-brave/"
+    />
+    <meta property="og:site_name" content="Cezar Augusto™" />
+    <meta
+      property="og:image"
+      content="https://cezaraugusto.com/static/images/og-image.png"
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="en_US" />
+    <!-- twitter -->
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="The years at Brave • Cezar Augusto™" />
+    <meta name="twitter:description" content="" />
+    <meta name="twitter:site" content="@cezaraugusto" />
+    <meta
+      name="twitter:image"
+      content="https://cezaraugusto.com/static/images/og-image.png"
+    />
+    <meta name="twitter:creator" content="@cezaraugusto" />
+    <!-- icons -->
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/static/images/apple-touch-icon.png"
+      type="image/png"
+    />
+    <link
+      rel="icon"
+      sizes="96x96"
+      href="/static/images/favicon-96x96.png"
+      type="image/png"
+    />
+    <link
+      rel="icon"
+      sizes="32x32"
+      href="/static/images/favicon-32x32.png"
+      type="image/png"
+    />
+    <link
+      rel="icon"
+      sizes="16x16"
+      href="/static/images/favicon-16x16.png"
+      type="image/png"
+    />
+    <link
+      rel="mask-icon"
+      href="/static/images/favicon-96x96.png"
+      color="#181818"
+      type="image/png"
+    />
+    <!-- prefetch fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Arvo:ital,wght@1,700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- robots -->
+    <meta name="robots" content="index, follow" />
+    <!-- social media -->
+    <link rel="me" href="https://github.com/cezaraugusto" type="text/html" />
+    <link rel="me" href="https://twitter.com/cezaraugusto" type="text/html" />
+    <link
+      rel="me"
+      href="https://https://www.quora.com/profile/Cezar-Augusto-1"
+      type="text/html"
+    />
+    <!-- rss -->
+    <link
+      rel="alternate"
+      href="/feed.xml"
+      type="application/rss+xml"
+      title="RSS"
+    />
+    <!-- license -->
+    <link rel="license" href="https://creativecommons.org/licenses/by/4.0/" />
+    <!-- website ownership -->
+    <meta
+      name="google-site-verification"
+      content="1fnKj4QPudeZ0eb7vkdW8zbc1PwwMocSKpQRGcxREgY"
+    />
+    <meta name="msvalidate.01" content="E718A8AA0D4E3ED605BFF1BA1C0E46A7" />
+    <meta name="yandex-verification" content="0dd50ab9279c1413" />
+
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/gh/ekmas/cs16.css@main/css/cs16.min.css"
+    />
+    <link
+      rel="preload stylesheet"
+      href="/static/css/prism.css"
+      type="text/css"
+      as="style"
+    />
+
+    <!-- inlined css -->
+
+    <style>
+      body {
+        padding: 40px;
+        max-width: 800px;
+        margin: auto;
+      }
+      ::selection {
+        background-color: #958831;
+        color: #fff;
+      }
+      img {
+        max-width: 100%;
+        height: auto;
+      }
+      a {
+        color: var(--text);
+      }
+      .hidden {
+        display: none;
+      }
+      header {
+        margin-bottom: 30px;
+      }
+      header .top {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+      header .top h1 {
+        font-size: 50px;
+        line-height: 50px;
+      }
+      header .top .links {
+        display: flex;
+        gap: 10px;
+      }
+      header .top .links a {
+        display: inline-block;
+        width: 40px;
+        height: 40px;
+        background-size: 25px;
+        background-repeat: no-repeat;
+        background-position: center;
+      }
+      header .top .links .gh {
+        background-image: url(/static/svg/github.svg);
+      }
+      header .top .links .x {
+        background-image: url(/static/svg/x.svg);
+      }
+      header p {
+        font-size: 22px;
+        line-height: 25px;
+        margin-top: 10px;
+      }
+      header .meta {
+        margin: 20px 0;
+      }
+      header .page-title {
+        font-size: 50px;
+      }
+      main > section {
+        margin-bottom: 30px;
+      }
+      main > section h2 {
+        user-select: none;
+        margin-bottom: 5px;
+      }
+      main > section article {
+        font-size: 18px;
+        line-height: 32px;
+        display: flex;
+        gap: 6px;
+      }
+      ol {
+        font-size: 18px;
+        line-height: 32px;
+      }
+      .post-link {
+        font-size: 20px;
+        line-height: 38px;
+      }
+      .code-block {
+        margin-top: 15px;
+        overflow-x: hidden;
+      }
+      .code-block .inner {
+        position: relative;
+      }
+      .code-block .inner .cs-btn {
+        position: absolute;
+        right: 1px;
+        top: 1px;
+        z-index: 5;
+      }
+      .code-block .inner pre {
+        background-color: #3e4637;
+        border: 1px solid;
+        border-color: #292c21 #8c9284 #8c9284 #292c21;
+        margin-top: 5px;
+        position: relative;
+        font-family: 'Courier New', Courier, monospace;
+        padding: 5px;
+      }
+      .code-block .inner pre code {
+        white-space: pre-wrap;
+      }
+      .code-block .inner pre code::selection {
+        background-color: #958831;
+        color: #fff;
+      }
+      footer {
+        text-align: center;
+        margin-top: 40px;
+      }
+      footer a {
+        color: #dedfd6;
+      }
+      hr {
+        margin-bottom: 20px;
+      }
+      @media (max-width: 400px) {
+        body {
+          padding: 20px;
+        }
+      }
+      .prose {
+        font-size: 20px;
+      }
+      .prose h1 {
+        scroll-margin: 20px;
+        font-size: 2.25rem;
+        font-weight: 800;
+        letter-spacing: -0.02em;
+      }
+      @media (min-width: 1024px) {
+        .prose h1 {
+          font-size: 3rem;
+        }
+      }
+      .prose h2 {
+        margin-top: 2rem;
+        scroll-margin: 20px;
+        padding-bottom: 0.5rem;
+        font-size: 1.875rem;
+        font-weight: 600;
+        letter-spacing: -0.015em;
+        transition: color 0.2s ease-in-out;
+      }
+      .prose h2:first-child {
+        margin-top: 0;
+      }
+      .prose h3 {
+        margin-top: 2rem;
+        scroll-margin: 20px;
+        font-size: 1.5rem;
+        font-weight: 600;
+        letter-spacing: -0.01em;
+      }
+      .prose p {
+        line-height: 1.25;
+      }
+      .prose p:not(:first-child) {
+        margin-top: 1.1rem;
+      }
+      .prose a {
+        font-weight: 500;
+        color: var(--primary);
+        text-decoration: underline;
+        text-underline-offset: 4px;
+      }
+      .prose blockquote {
+        margin-top: 1.5rem;
+        border-left: 2px solid currentColor;
+        padding-left: 1.5rem;
+        font-style: italic;
+      }
+      .prose ul {
+        margin: 1.5rem 0;
+        margin-left: 1.5rem;
+        list-style-type: disc;
+      }
+      .prose li {
+        margin-top: 0.5rem;
+      }
+      .prose table {
+        width: 100%;
+      }
+      .prose td,
+      .prose th {
+        border: 1px solid currentColor;
+        padding: 0.5rem 1rem;
+        text-align: left;
+      }
+      .prose td[align='center'],
+      .prose th[align='center'] {
+        text-align: center;
+      }
+      .prose td[align='right'],
+      .prose th[align='right'] {
+        text-align: right;
+      }
+      .prose tr {
+        margin: 0;
+        border-top: 1px solid currentColor;
+        padding: 0;
+      }
+      .prose tr:nth-child(2n) {
+        background-color: var(--muted);
+      }
+      .prose figure {
+        margin-top: 1.25rem;
+      }
+      .twitter-tweet {
+        margin-top: 1.25rem !important;
+      }
+      @media (max-width: 580px) {
+        .share-actions {
+          margin-top: var(--margin-clamp-1x);
+          display: block;
+        }
+      }
+    </style>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-141381934-1"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || []
+      function gtag() {
+        dataLayer.push(arguments)
+      }
+      gtag('js', new Date())
+      gtag('config', 'UA-141381934-1')
+    </script>
+  </head>
+  <body>
+    <header>
+      <div class="top" bis_skin_checked="1">
+        <h1>@<a href="/">cezaraugusto</a></h1>
+
+        <div class="links" bis_skin_checked="1">
+          <button
+            type="button"
+            class="cs-btn"
+            onclick="document.querySelector('.cs-dialog').showModal();"
+          >
+            Subscribe
+          </button>
+          <a
+            href="https://github.com/cezaraugusto"
+            target="_blank"
+            class="cs-btn gh"
+          ></a>
+          <a
+            href="https://x.com/cezaraugusto"
+            target="_blank"
+            class="cs-btn x"
+          ></a>
+        </div>
+      </div>
+      <p>
+        Software developer, creator of
+        <a href="https://extension.js.org">Extension.js</a>.<br />
+        Writings about software, open-source, and entrepreneurship.
+        <a href="/about">About me</a>.
+      </p>
+    </header>
+
+    <dialog class="cs-dialog">
+      <form method="dialog">
+        <div class="heading">
+          <div class="wrapper">
+            <div class="icon"></div>
+            <p class="text">Options</p>
+          </div>
+          <button class="cs-btn close"></button>
+        </div>
+        <div class="content">
+          <h3 class="font-bold text-xl">Get updates from me via email</h3>
+          <iframe
+            src="https://cezaraugusto.substack.com/embed"
+            height="320"
+            style="border-radius: 4px; width: 100%"
+            frameborder="0"
+            scrolling="no"
+          ></iframe>
+        </div>
+        <menu class="footer-btns">
+          <button class="cs-btn">OK</button>
+        </menu>
+      </form>
+    </dialog>
+
+    <main tabindex="-1">
+      <header>
+        <!-- Show dates only for posts -->
+        <h1 class="page-title">The years at Brave</h1>
+
+        <figure>
+          <img src="/static/images/posts/post-004/thumbnail.webp" alt="" />
+          <figcaption>The Brave logo</figcaption>
+        </figure>
+
+        <div class="meta">
+          <time class="date">May 27 2020</time>
+
+          <i>&#9642;</i>
+          <span>
+            Share on
+            <a
+              href="https://twitter.com/intent/tweet?text=The%20years%20at%20Brave&amp;url=https://cezaraugusto.com/posts/the-years-at-brave&amp;via=cezaraugusto"
+              target="_blank"
+              class="twitter"
+              >Twitter</a
+            >
+          </span>
+        </div>
+
+        <hr class="cs-hr" />
+      </header>
+
+      <div class="prose">
+        <script
+          async
+          src="https://platform.twitter.com/widgets.js"
+          charset="utf-8"
+        ></script>
+        <p>
+          The first moment I saw Brave, I wanted to be associated with it. They
+          were a small team with a vision working on an open-source project
+          <a href="https://github.com/brave/browser-laptop"
+            >written in JavaScript</a
+          >. It was 2016.
+        </p>
+        <p>On May 15th, 2020, it was my last day working for Brave.</p>
+        <p>
+          I took my time to reflect on what happened in these last four years. A
+          relationship of four years is something. You can’t hide me from your
+          mother for that long.
+        </p>
+        <p>This blog post is about me, and Brave, and the last four years.</p>
+        <h2 id="2016" tabindex="-1">
+          <a class="header-anchor" href="#2016"><span>2016</span></a>
+        </h2>
+        <p>
+          It all started in 2016. I liked Brave from the start. I saw a tweet,
+          tried it, liked it. The desktop browser was still raw, but I liked the
+          initiative and wanted to help somehow. I thought it would be cool to
+          start by retweeting their updates.
+        </p>
+        <p>I think it started with this tweet.</p>
+        <blockquote class="twitter-tweet">
+          <p lang="en" dir="ltr">
+            Windows friends: Looking for a fast, safe, beautiful and way cool
+            browser? Switch to
+            <a href="https://twitter.com/brave?ref_src=twsrc%5Etfw">@brave</a>
+            🦁👌 <a href="https://t.co/hiAYYZTjmZ">https://t.co/hiAYYZTjmZ</a>
+          </p>
+          &mdash; Cezar Augusto (@cezaraugusto)
+          <a
+            href="https://twitter.com/cezaraugusto/status/723541059268173826?ref_src=twsrc%5Etfw"
+            >April 22, 2016</a
+          >
+        </blockquote>
+        <p>Which Brave later retweeted:</p>
+        <blockquote class="twitter-tweet">
+          <p lang="en" dir="ltr">
+            Time to switch!
+            <a href="https://t.co/GhlmA8tz96">https://t.co/GhlmA8tz96</a>
+          </p>
+          &mdash; Brave (@brave)
+          <a
+            href="https://twitter.com/brave/status/723542469862805506?ref_src=twsrc%5Etfw"
+            >April 22, 2016</a
+          >
+        </blockquote>
+        <p>
+          Social media has this magic power. This retweet made me feel good and
+          validated, and that action motivated me to keep helping their product
+          somehow.
+        </p>
+        <p>
+          At the time, Brave had less than 10 engineers working on their desktop
+          browser, but their pile of issues was increasing fast. To this day,
+          <strong
+            >I’ve never seemed a project with so many issues reported</strong
+          >
+          (massive 11,978 issues, of which
+          <a
+            href="https://github.com/brave/browser-laptop/issues?q=is%3Aissue+is%3Aclosed+%40cezaraugusto"
+            >11,310 somehow tag my username</a
+          >). So I thought it would be wise to start with bug triaging until I
+          could figure out how the project works.
+        </p>
+        <p>
+          After a few weeks reporting bugs and hacking around, on June 2, 2016,
+          I
+          <a href="https://github.com/brave/browser-laptop/pull/1907"
+            >sent my first pull-request</a
+          >. I still remember the feeling of opening the packaged software,
+          installing it, and seeing the feature I added live in the release
+          channel, for everybody to download. I think I asked around five people
+          to download BRave too, so they could try out my proud contribution.
+        </p>
+        <figure>
+          <div>
+            <img
+              class="m-auto"
+              src="/static/images/posts/post-004/001.jpg"
+              alt=""
+            />
+          </div>
+        </figure>
+        <p>You could now print a web page from the context menu.</p>
+        <p>
+          Eight days later,
+          <a href="https://github.com/brave/browser-laptop/pull/2038"
+            >another pull-request</a
+          >.
+        </p>
+        <figure>
+          <div>
+            <img
+              class="m-auto"
+              src="/static/images/posts/post-004/002.jpg"
+              alt=""
+            />
+          </div>
+        </figure>
+        <p>
+          <strong>I got engaged.</strong> I kept contributing. There is this
+          magical feeling of working on open-source initiatives where your code
+          ends up serving several (I guess tens of thousands, at the time)
+          people.
+        </p>
+        <p>
+          Can you believe that
+          <a href="https://github.com/brave/browser-laptop/pull/2644"
+            >one of my pull-requests</a
+          >
+          ended up featured in a tweet from Brave’s CTO,
+          <a href="https://twitter.com/brianbondy">Brian R. Bondy</a>? I was
+          just another contributor (Brave had many at the time), but hey, I was
+          being noticed!
+        </p>
+        <blockquote class="twitter-tweet">
+          <p lang="en" dir="ltr">
+            Some nice animation polish done by a
+            <a href="https://twitter.com/cezaraugusto?ref_src=twsrc%5Etfw"
+              >@cezaraugusto</a
+            >
+            in
+            <a href="https://twitter.com/brave?ref_src=twsrc%5Etfw">@brave</a>
+            0.11.2 :D Thanks for the contributions!
+            <a href="https://t.co/XSWvXOxL2f">pic.twitter.com/XSWvXOxL2f</a>
+          </p>
+          &mdash; Brian R. Bondy (@brianbondy)
+          <a
+            href="https://twitter.com/brianbondy/status/761281701742014464?ref_src=twsrc%5Etfw"
+            >August 4, 2016</a
+          >
+        </blockquote>
+        <script
+          async
+          src="https://platform.twitter.com/widgets.js"
+          charset="utf-8"
+        ></script>
+        <p>
+          I was lucky that Brian found value in my contributions, questionings,
+          and genuine willingness to make the browser software better. After a
+          few months contributing code as an outside collaborator, this
+          happened:
+        </p>
+        <blockquote class="twitter-tweet">
+          <p lang="en" dir="ltr">
+            Happiest tweet ever: Starting today, I&#39;m joining the awesome
+            <a href="https://twitter.com/brave?ref_src=twsrc%5Etfw">@brave</a>
+            team. 🦁 🏆
+          </p>
+          &mdash; Cezar Augusto (@cezaraugusto)
+          <a
+            href="https://twitter.com/cezaraugusto/status/771351046853627904?ref_src=twsrc%5Etfw"
+            >September 1, 2016</a
+          >
+        </blockquote>
+        <script
+          async
+          src="https://platform.twitter.com/widgets.js"
+          charset="utf-8"
+        ></script>
+        <p>
+          My most significant contribution to Brave at the time also came in
+          around the same time. I was the lucky person responsible for
+          implementing the most visited and iconic page on Brave, the
+          <strong>new tab page</strong>.
+        </p>
+        <figure>
+          <div>
+            <img
+              class="m-auto"
+              src="/static/images/posts/post-004/003.gif"
+              alt=""
+            />
+          </div>
+          <figcaption>
+            This is what NTP looked like at the time in the prototype I built.
+            Brave used to have 3 rows of top sites.
+          </figcaption>
+        </figure>
+        <p>
+          And that’s all for 2016. There I was, a proud new member of the Brave
+          crew. Feeling proud, shipping the most visited page a browser has,
+          doing open-source for a living, living the dream. This year was 2016.
+        </p>
+        <h2 id="2017" tabindex="-1">
+          <a class="header-anchor" href="#2017"><span>2017</span></a>
+        </h2>
+        <figure>
+          <div>
+            <img
+              class="m-auto"
+              src="/static/images/posts/post-004/004.jpg"
+              alt=""
+            />
+          </div>
+          <figcaption>
+            This is me at Chicago, where the gathering happened.
+          </figcaption>
+        </figure>
+        <p>
+          At the time, the desktop browser was having several performance
+          issues, so the team decided to gather together to fix them (we did) in
+          Chicago. There I also had the chance to help to interview a candidate
+          for Brave for the first time. I find job interviews fascinating (still
+          do, at least the principles I try to apply to them) — a positive
+          experience. I would later help with other interviews a few more times.
+        </p>
+        <p>
+          There, I also had the chance to be featured live, representing Brave,
+          for the first time. It was a chat we had with the fine folks of
+          <a href="https://twitter.com/IndoBrave/">Brave Indonesia</a>.
+        </p>
+        <figure>
+          <img src="/static/images/posts/post-004/005.jpeg" />
+          <figcaption>
+            I’m the person sitting in the middle inside the video, along with
+            <a href="twitter.com/brianbondy">Brian R. Bondy</a> and
+            <a href="https://twitter.com/_brianclifton">Brian Clifton</a>.<br />
+            Photo extracted from
+            <a href="https://twitter.com/IndoBrave/status/893320436397645824"
+              >@IndoBrave</a
+            >
+          </figcaption>
+        </figure>
+        <p>
+          Speaking of representing Brave, and still speaking about first-times,
+          this year I had the chance to
+          <a href="https://twitter.com/brave/status/903761397154160640"
+            >speak at a conference</a
+          >
+          to talk about Brave. It was at
+          <a
+            href="https://web.archive.org/web/20171004170021/https://braziljs.org/conf/"
+            >BrazilJS in 2017</a
+          >.
+        </p>
+        <blockquote class="twitter-tweet">
+          <p lang="pt" dir="ltr">
+            O que a brave pode melhorar a web.
+            <a href="https://twitter.com/brave?ref_src=twsrc%5Etfw">@brave</a>
+            <a href="https://twitter.com/cezaraugusto?ref_src=twsrc%5Etfw"
+              >@cezaraugusto</a
+            >
+            <a
+              href="https://twitter.com/hashtag/braziljs2017?src=hash&amp;ref_src=twsrc%5Etfw"
+              >#braziljs2017</a
+            >
+            <a
+              href="https://twitter.com/hashtag/braziljs?src=hash&amp;ref_src=twsrc%5Etfw"
+              >#braziljs</a
+            >
+            <a href="https://t.co/hx88o1tc8e">pic.twitter.com/hx88o1tc8e</a>
+          </p>
+          &mdash; Daniel Bastos 🇧🇷 (@danielbastos)
+          <a
+            href="https://twitter.com/danielbastos/status/904062303875846144?ref_src=twsrc%5Etfw"
+            >September 2, 2017</a
+          >
+        </blockquote>
+        <script
+          async
+          src="https://platform.twitter.com/widgets.js"
+          charset="utf-8"
+        ></script>
+        <p>
+          This year had me working mostly on tab features. Brave used to have
+          tab pages, a set of visible tabs you could accumulate. At the time,
+          you could add up to 20 tabs per tab group. We take tabs in browsers
+          for granted, but tabs are a real complex mechanism.
+          <em>Have you ever thought that tabs need to be responsive?</em>
+          <a href="https://github.com/brave/browser-laptop/pull/6900">I did</a>,
+          and literally, added support for
+          <a href="https://github.com/brave/browser-laptop/pull/7695"
+            >a hundred of tabs</a
+          >.
+        </p>
+        <p>
+          I was also lucky to be the person to implement two new, important
+          pages. The
+          <a href="https://github.com/brave/browser-laptop/pull/8074"
+            >private new tab</a
+          >, and
+          <a href="https://github.com/brave/browser-laptop/pull/8097d"
+            >the welcome page</a
+          >.
+        </p>
+        <p>
+          The year also had me started working in parallel on the desktop
+          browser migration from
+          <a href="https://github.com/brave/muon">Muon</a> (a fork of Electron)
+          to <a href="https://github.com/brave/brave-browser">Chromium</a>.
+          Mainly on the
+          <a href="https://github.com/brave/brave-extension/">Brave Shields</a>
+          port, my favorite part of Brave.
+        </p>
+        <p>
+          During the migration process, I realized this was the ideal time to
+          create a component library that could be reused across products. I
+          wanted to make something new and somehow make the refactoring more
+          fun. Over one weekend, I created a proof-of-concept work and shared it
+          with a few peers who thought it was a good idea. One week later, I
+          <a
+            href="https://github.com/brave/brave-ui/commit/b1b71393d429349243916e13b34e35edc238161"
+            >pushed the first commit</a
+          >
+          of what would be called
+          <a href="https://github.com/brave/brave-ui">brave-ui</a>. A set of
+          reusable React components that accomplished the goal of having a
+          shareable interface across Brave products. The project would later
+          inspire the formation of a design system (months before
+          <em>design systems</em> were cool and somewhat common).
+        </p>
+        <p>
+          Doing performance work, help conducting a job interview, speaking in a
+          great conference about Brave, several fixes for browser tabs, two new
+          browser pages, a component library shared across the company’s
+          product. The year of 2017 was full of accomplishments. I was ready for
+          the next.
+        </p>
+        <h2 id="2018" tabindex="-1">
+          <a class="header-anchor" href="#2018"><span>2018</span></a>
+        </h2>
+        <figure>
+          <div>
+            <img
+              class="m-auto"
+              src="/static/images/posts/post-004/006.jpg"
+              alt=""
+            />
+          </div>
+          <figcaption>The crew at the 2017 all hands event.</figcaption>
+        </figure>
+        <p>
+          This year I started working full-time on the port of the desktop
+          codebase. I was one of the first engineers to work on this initiative.
+          At the time, I was working on the
+          <a href="https://github.com/brave/browser-laptop/pull/13197"
+            >V2 version</a
+          >
+          of Sync, delayed in favor of the Chromium migration.
+        </p>
+        <p>
+          The new browser was great. I was excited to work on top of Chromium.
+          My work started with me
+          <a href="https://github.com/brave/brave-core/pull/105">porting</a> the
+          private new tab,
+          <a href="https://github.com/brave/brave-core/pull/256">and later</a>
+          the brand new welcome page. Later, Sync V2
+          <a href="https://github.com/brave/brave-core/pull/1019"
+            >eventually featured</a
+          >
+          in the Chromium version.
+        </p>
+        <figure>
+          <img src="/static/images/posts/post-004/007.jpg" />
+          <figcaption>
+            This is how the welcome page looked like back in the days.
+          </figcaption>
+        </figure>
+        <p>
+          Another speaking opportunity came in, and in October, I spoke at
+          <a href="https://www.conexaokinghost.com.br/">Conexão KingHost</a> to
+          talk about Brave, digital ads, and blockchain. The event happened
+          online. If I recall correctly, it had 5k+ subscribers for the edition.
+        </p>
+        <p>
+          The event was a great, funny, joyful experience, where I get the
+          chance to know the dedicated and talented people behind
+          <a href="https://twitter.com/kinghost">@kinghost</a>.
+        </p>
+        <p>
+          At this time, I also had the chance to help to mentor two talented
+          engineering interns. We talked a lot about bugs, tests, life, and I
+          was able to help and see them grow in confidence as they shipped
+          valuable code.
+        </p>
+        <p>
+          Mentoring is one of my favorite things about programming, and I’m
+          happy I had this chance many times at Brave, with both juniors and
+          seniors from other teams. Who in this world never bargained Polymer
+          skills for some C++ guidance?
+        </p>
+        <p>
+          Working full-time on the new desktop version was exciting. Sync V2
+          took a huge amount of time and effort to land for several reasons, and
+          I felt relieved
+          <a href="https://github.com/brave/brave-core/pull/1019"
+            >when it landed</a
+          >. Sync was one of the most wanted features in the new Brave version.
+        </p>
+        <p>
+          Speaking at a conference again gave me a confidence boost that
+          positively reflected in my daily work. The new browser felt great.
+          Users were happy. Could I ask for more?
+        </p>
+        <p>It was 2018.</p>
+        <h2 id="2019" tabindex="-1">
+          <a class="header-anchor" href="#2019"><span>2019</span></a>
+        </h2>
+        <blockquote class="twitter-tweet">
+          <p lang="en" dir="ltr">
+            merged yesterday in our nightly channel the new interface for
+            Shields in Brave desktop browser. Great stuff is coming up for all
+            of you fighting for a better web!
+            <a href="https://t.co/IGRIO2yxTK">pic.twitter.com/IGRIO2yxTK</a>
+          </p>
+          &mdash; Cezar Augusto (@cezaraugusto)
+          <a
+            href="https://twitter.com/cezaraugusto/status/1105975164704116736?ref_src=twsrc%5Etfw"
+            >March 13, 2019</a
+          >
+        </blockquote>
+        <script
+          async
+          src="https://platform.twitter.com/widgets.js"
+          charset="utf-8"
+        ></script>
+        <p>
+          The year started with me working on some Sync bugs. I
+          <a href="https://github.com/brave/brave-core/pull/2874"
+            >pushed a change</a
+          >
+          that got Shields a brand new interface. Shields and Sync dictated the
+          rest of the year.
+        </p>
+        <p>
+          This year I got another chance to help interns at Brave, but now
+          taking full ownership of the whole interview process (up to where I’m
+          legally allowed). From picking up a candidate from the list, passing
+          through technical and social interviewing, to job offer. An incredible
+          experience. I was lucky to pick up a talented front-end engineer to
+          mentor. We had fun times and shipped quality software. Mentoring is
+          fun.
+        </p>
+        <p>
+          My only regret is not having a picture to share. I went to San
+          Francisco again to meet them and got to know the new company office.
+          SF is great. I got to eat at the famous Fogo de Chao, took a daily
+          city walk, got lost a couple of times. Fun!
+        </p>
+        <p>
+          In October, I got the chance to work on a cool feature that would ask
+          if you want to load an archived version of an error page — using the
+          Wayback Machine API (where I coined the name
+          <em>Braveback</em> Machine).
+          <a href="https://github.com/brave/brave-core/pull/3561">The work</a>
+          started as a browser extension, and eventually, my peer
+          <a href="https://twitter.com/simonhong33">@simonhong33</a> ported it
+          to C++, for maximum performance.
+        </p>
+        <blockquote class="twitter-tweet">
+          <p lang="en" dir="ltr">
+            Available on
+            <a href="https://twitter.com/brave?ref_src=twsrc%5Etfw">@brave</a>
+            nightly: check if a missing website has an archived version
+            available in
+            <a href="https://t.co/JQMrtsJ5KA">https://t.co/JQMrtsJ5KA</a>. Solid
+            work I got the chance to do with my talented peers
+            <a href="https://twitter.com/simonhong33?ref_src=twsrc%5Etfw"
+              >@simonhong33</a
+            >, Karen, and
+            <a href="https://twitter.com/rebron?ref_src=twsrc%5Etfw">@rebron</a
+            >. <a href="https://t.co/BM5r9aoTxx">pic.twitter.com/BM5r9aoTxx</a>
+          </p>
+          &mdash; Cezar Augusto (@cezaraugusto)
+          <a
+            href="https://twitter.com/cezaraugusto/status/1207701750960050177?ref_src=twsrc%5Etfw"
+            >December 19, 2019</a
+          >
+        </blockquote>
+        <script
+          async
+          src="https://platform.twitter.com/widgets.js"
+          charset="utf-8"
+        ></script>
+        <p>
+          Sync, Shields, interviewing, management, mentoring, Wayback Machine.
+        </p>
+        <p>Bye 2019.</p>
+        <h2 id="2020" tabindex="-1">
+          <a class="header-anchor" href="#2020"><span>2020</span></a>
+        </h2>
+        <p>
+          The year started with me finally managing to work on my dream issue,
+          <a href="https://github.com/brave/brave-core/pull/4325"
+            >a long-needed refactor of new tab page’s top sites</a
+          >, along with some other features and bugs. This task was my short
+          movie version of
+          <a
+            href="https://en.wikipedia.org/wiki/The_Last_Dance_(2020_TV_series)"
+            ><em>The Last Dance</em></a
+          >. Me and Brave shaked hands formally for the last time a few months
+          after this change landed.
+        </p>
+        <p>
+          At Brave, I got to know a lot of talented people, helped shape the
+          desktop software as it is known today, spoke the good news about the
+          company for a large audience, mentored peers, interviewed people,
+          managed people, had fun.
+        </p>
+        <p>
+          Saying goodbye is never easy, but as I finish this blog post, I’m
+          thankful to say that the only memories I have at my time on Brave are
+          happy.
+        </p>
+        <p>
+          Some people like to work for big companies. Some people like to work
+          to make companies big. I feel rewarded seeing Brave growing strong
+          every year. With about
+          <a href="https://brave.com/brave-passes-10m-mau/">ten million</a>
+          monthly active users, Brave is not small anymore, by any means. I
+          can’t help but smile and feel thankful that ten million people are
+          every month, seeing, interacting, and using features made with a code
+          I co-created.
+        </p>
+        <p>Brave is making history, and I’m proud to say I’m part of it.</p>
+        <p>Onwards!</p>
+        <p>Dear Brave Software, thank you!</p>
+      </div>
+    </main>
+    <!-- this resource is cached with SW -->
+    <script async src="/assets/js/twitter-widget.js" charset="utf-8"></script>
+
+    <footer>
+      © 2018-Present <a href="/about/">Cezar Augusto</a>.<br />
+      Content in this blog is licensed under
+      <a
+        class="link"
+        href="https://creativecommons.org/licenses/by/4.0/"
+        rel="noopener noreferrer"
+        target="_blank"
+        >CC BY 4.0</a
+      >.
+    </footer>
+
+    <script></script>
+    <script>
+      async function fetchGitHubData() {
+        return (
+          await window.fetch(
+            'https://api.github.com/users/cezaraugusto/repos?page=1&per_page=100'
+          )
+        ).json()
+      }
+      function sortByPopularity(e) {
+        return e.sort((e, t) => t.stargazers_count - e.stargazers_count)
+      }
+      async function loadProjects() {
+        const e = sortByPopularity(await fetchGitHubData()),
+          t = []
+        for (const n of e)
+          n.fork ||
+            n.archived ||
+            ('cezaraugusto.com' !== n.name &&
+              '.github' !== n.name &&
+              t.push({
+                name: n.name,
+                url: n.html_url,
+                description: n.description
+              }))
+        return t
+      }
+      function cacheProjects(e) {
+        window.localStorage.setItem('github-projects', JSON.stringify(e))
+      }
+      function renderProjects(e) {
+        const t = document.getElementById('projects')
+        t &&
+          e.forEach((e) => {
+            const n = document.createElement('li'),
+              r = document.createElement('a'),
+              o = document.createElement('span')
+            ;(r.href = e.url),
+              (r.innerText = e.name),
+              (o.innerText = ` - ${e.description}`),
+              t.appendChild(n),
+              n.appendChild(r),
+              n.appendChild(o)
+          })
+      }
+      async function renderToPage() {
+        const e = window.localStorage.getItem('github-projects')
+        if (e) renderProjects(JSON.parse(e))
+        else {
+          const e = await loadProjects()
+          renderProjects(e), cacheProjects(e)
+        }
+      }
+      renderToPage()
+    </script>
+    <script type="application/ld+json">
+      {
+        "@context": "http://schema.org/",
+        "@type": "Person",
+        "name": "Cezar Augusto",
+        "url": "https://cezaraugusto.com/",
+        "image": "https://cezaraugusto.com/static/images/me.png",
+        "birthDate": "1988-05-06",
+        "nationality": "Brazil",
+        "address": "Rio de Janeiro",
+        "sameAs": [
+          "https://twitter.com/cezaraugusto",
+          "https://linkedin.com/in/cezar-augusto",
+          "https://github.com/cezaraugusto/",
+          "https://www.youtube.com/channel/UCjwnVRxoPilVaicoxktqVjg"
+        ],
+        "jobTitle": "Software Engineer",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "Atlantico Software"
+        }
+      }
+    </script>
+  </body>
+</html>

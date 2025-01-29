@@ -1,0 +1,1021 @@
+<!doctype html>
+<html lang="en" data-theme="lofi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Web3 technology explained • Cezar Augusto™</title>
+    <meta
+      name="description"
+      content="Blockchains, nodes, contracts, transactions, addresses, blocks, protocols, dApps, cryptocurrencies, crypto tokens, NFTs. Welcome to the web3, friends."
+    />
+    <meta
+      name="keywords"
+      content="cezar augusto, developer, engineer, builder, web, software, blog, performance, standards, tooling, browser, front-end, back-end, fullstack, youtube, github, X"
+    />
+    <meta name="author" content="Cezar Augusto™" />
+    <meta name="application-name" content="Cezar Augusto™" />
+    <meta name="theme-color" content="#3454D1" />
+    <!-- facebook/open graph -->
+    <meta
+      property="og:title"
+      content="Web3 technology explained • Cezar Augusto™"
+    />
+    <meta
+      property="og:description"
+      content="Blockchains, nodes, contracts, transactions, addresses, blocks, protocols, dApps, cryptocurrencies, crypto tokens, NFTs. Welcome to the web3, friends."
+    />
+    <meta
+      property="og:url"
+      content="https://cezaraugusto.com/posts/web3-technology-explained/"
+    />
+    <meta property="og:site_name" content="Cezar Augusto™" />
+    <meta
+      property="og:image"
+      content="https://cezaraugusto.com/static/images/og-image.png"
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="en_US" />
+    <!-- twitter -->
+    <meta name="twitter:card" content="summary" />
+    <meta
+      name="twitter:title"
+      content="Web3 technology explained • Cezar Augusto™"
+    />
+    <meta
+      name="twitter:description"
+      content="Blockchains, nodes, contracts, transactions, addresses, blocks, protocols, dApps, cryptocurrencies, crypto tokens, NFTs. Welcome to the web3, friends."
+    />
+    <meta name="twitter:site" content="@cezaraugusto" />
+    <meta
+      name="twitter:image"
+      content="https://cezaraugusto.com/static/images/og-image.png"
+    />
+    <meta name="twitter:creator" content="@cezaraugusto" />
+    <!-- icons -->
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/static/images/apple-touch-icon.png"
+      type="image/png"
+    />
+    <link
+      rel="icon"
+      sizes="96x96"
+      href="/static/images/favicon-96x96.png"
+      type="image/png"
+    />
+    <link
+      rel="icon"
+      sizes="32x32"
+      href="/static/images/favicon-32x32.png"
+      type="image/png"
+    />
+    <link
+      rel="icon"
+      sizes="16x16"
+      href="/static/images/favicon-16x16.png"
+      type="image/png"
+    />
+    <link
+      rel="mask-icon"
+      href="/static/images/favicon-96x96.png"
+      color="#181818"
+      type="image/png"
+    />
+    <!-- prefetch fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Arvo:ital,wght@1,700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- robots -->
+    <meta name="robots" content="index, follow" />
+    <!-- social media -->
+    <link rel="me" href="https://github.com/cezaraugusto" type="text/html" />
+    <link rel="me" href="https://twitter.com/cezaraugusto" type="text/html" />
+    <link
+      rel="me"
+      href="https://https://www.quora.com/profile/Cezar-Augusto-1"
+      type="text/html"
+    />
+    <!-- rss -->
+    <link
+      rel="alternate"
+      href="/feed.xml"
+      type="application/rss+xml"
+      title="RSS"
+    />
+    <!-- license -->
+    <link rel="license" href="https://creativecommons.org/licenses/by/4.0/" />
+    <!-- website ownership -->
+    <meta
+      name="google-site-verification"
+      content="1fnKj4QPudeZ0eb7vkdW8zbc1PwwMocSKpQRGcxREgY"
+    />
+    <meta name="msvalidate.01" content="E718A8AA0D4E3ED605BFF1BA1C0E46A7" />
+    <meta name="yandex-verification" content="0dd50ab9279c1413" />
+
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/gh/ekmas/cs16.css@main/css/cs16.min.css"
+    />
+    <link
+      rel="preload stylesheet"
+      href="/static/css/prism.css"
+      type="text/css"
+      as="style"
+    />
+
+    <!-- inlined css -->
+
+    <style>
+      body {
+        padding: 40px;
+        max-width: 800px;
+        margin: auto;
+      }
+      ::selection {
+        background-color: #958831;
+        color: #fff;
+      }
+      img {
+        max-width: 100%;
+        height: auto;
+      }
+      a {
+        color: var(--text);
+      }
+      .hidden {
+        display: none;
+      }
+      header {
+        margin-bottom: 30px;
+      }
+      header .top {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+      header .top h1 {
+        font-size: 50px;
+        line-height: 50px;
+      }
+      header .top .links {
+        display: flex;
+        gap: 10px;
+      }
+      header .top .links a {
+        display: inline-block;
+        width: 40px;
+        height: 40px;
+        background-size: 25px;
+        background-repeat: no-repeat;
+        background-position: center;
+      }
+      header .top .links .gh {
+        background-image: url(/static/svg/github.svg);
+      }
+      header .top .links .x {
+        background-image: url(/static/svg/x.svg);
+      }
+      header p {
+        font-size: 22px;
+        line-height: 25px;
+        margin-top: 10px;
+      }
+      header .meta {
+        margin: 20px 0;
+      }
+      header .page-title {
+        font-size: 50px;
+      }
+      main > section {
+        margin-bottom: 30px;
+      }
+      main > section h2 {
+        user-select: none;
+        margin-bottom: 5px;
+      }
+      main > section article {
+        font-size: 18px;
+        line-height: 32px;
+        display: flex;
+        gap: 6px;
+      }
+      ol {
+        font-size: 18px;
+        line-height: 32px;
+      }
+      .post-link {
+        font-size: 20px;
+        line-height: 38px;
+      }
+      .code-block {
+        margin-top: 15px;
+        overflow-x: hidden;
+      }
+      .code-block .inner {
+        position: relative;
+      }
+      .code-block .inner .cs-btn {
+        position: absolute;
+        right: 1px;
+        top: 1px;
+        z-index: 5;
+      }
+      .code-block .inner pre {
+        background-color: #3e4637;
+        border: 1px solid;
+        border-color: #292c21 #8c9284 #8c9284 #292c21;
+        margin-top: 5px;
+        position: relative;
+        font-family: 'Courier New', Courier, monospace;
+        padding: 5px;
+      }
+      .code-block .inner pre code {
+        white-space: pre-wrap;
+      }
+      .code-block .inner pre code::selection {
+        background-color: #958831;
+        color: #fff;
+      }
+      footer {
+        text-align: center;
+        margin-top: 40px;
+      }
+      footer a {
+        color: #dedfd6;
+      }
+      hr {
+        margin-bottom: 20px;
+      }
+      @media (max-width: 400px) {
+        body {
+          padding: 20px;
+        }
+      }
+      .prose {
+        font-size: 20px;
+      }
+      .prose h1 {
+        scroll-margin: 20px;
+        font-size: 2.25rem;
+        font-weight: 800;
+        letter-spacing: -0.02em;
+      }
+      @media (min-width: 1024px) {
+        .prose h1 {
+          font-size: 3rem;
+        }
+      }
+      .prose h2 {
+        margin-top: 2rem;
+        scroll-margin: 20px;
+        padding-bottom: 0.5rem;
+        font-size: 1.875rem;
+        font-weight: 600;
+        letter-spacing: -0.015em;
+        transition: color 0.2s ease-in-out;
+      }
+      .prose h2:first-child {
+        margin-top: 0;
+      }
+      .prose h3 {
+        margin-top: 2rem;
+        scroll-margin: 20px;
+        font-size: 1.5rem;
+        font-weight: 600;
+        letter-spacing: -0.01em;
+      }
+      .prose p {
+        line-height: 1.25;
+      }
+      .prose p:not(:first-child) {
+        margin-top: 1.1rem;
+      }
+      .prose a {
+        font-weight: 500;
+        color: var(--primary);
+        text-decoration: underline;
+        text-underline-offset: 4px;
+      }
+      .prose blockquote {
+        margin-top: 1.5rem;
+        border-left: 2px solid currentColor;
+        padding-left: 1.5rem;
+        font-style: italic;
+      }
+      .prose ul {
+        margin: 1.5rem 0;
+        margin-left: 1.5rem;
+        list-style-type: disc;
+      }
+      .prose li {
+        margin-top: 0.5rem;
+      }
+      .prose table {
+        width: 100%;
+      }
+      .prose td,
+      .prose th {
+        border: 1px solid currentColor;
+        padding: 0.5rem 1rem;
+        text-align: left;
+      }
+      .prose td[align='center'],
+      .prose th[align='center'] {
+        text-align: center;
+      }
+      .prose td[align='right'],
+      .prose th[align='right'] {
+        text-align: right;
+      }
+      .prose tr {
+        margin: 0;
+        border-top: 1px solid currentColor;
+        padding: 0;
+      }
+      .prose tr:nth-child(2n) {
+        background-color: var(--muted);
+      }
+      .prose figure {
+        margin-top: 1.25rem;
+      }
+      .twitter-tweet {
+        margin-top: 1.25rem !important;
+      }
+      @media (max-width: 580px) {
+        .share-actions {
+          margin-top: var(--margin-clamp-1x);
+          display: block;
+        }
+      }
+    </style>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-141381934-1"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || []
+      function gtag() {
+        dataLayer.push(arguments)
+      }
+      gtag('js', new Date())
+      gtag('config', 'UA-141381934-1')
+    </script>
+  </head>
+  <body>
+    <header>
+      <div class="top" bis_skin_checked="1">
+        <h1>@<a href="/">cezaraugusto</a></h1>
+
+        <div class="links" bis_skin_checked="1">
+          <button
+            type="button"
+            class="cs-btn"
+            onclick="document.querySelector('.cs-dialog').showModal();"
+          >
+            Subscribe
+          </button>
+          <a
+            href="https://github.com/cezaraugusto"
+            target="_blank"
+            class="cs-btn gh"
+          ></a>
+          <a
+            href="https://x.com/cezaraugusto"
+            target="_blank"
+            class="cs-btn x"
+          ></a>
+        </div>
+      </div>
+      <p>
+        Software developer, creator of
+        <a href="https://extension.js.org">Extension.js</a>.<br />
+        Writings about software, open-source, and entrepreneurship.
+        <a href="/about">About me</a>.
+      </p>
+    </header>
+
+    <dialog class="cs-dialog">
+      <form method="dialog">
+        <div class="heading">
+          <div class="wrapper">
+            <div class="icon"></div>
+            <p class="text">Options</p>
+          </div>
+          <button class="cs-btn close"></button>
+        </div>
+        <div class="content">
+          <h3 class="font-bold text-xl">Get updates from me via email</h3>
+          <iframe
+            src="https://cezaraugusto.substack.com/embed"
+            height="320"
+            style="border-radius: 4px; width: 100%"
+            frameborder="0"
+            scrolling="no"
+          ></iframe>
+        </div>
+        <menu class="footer-btns">
+          <button class="cs-btn">OK</button>
+        </menu>
+      </form>
+    </dialog>
+
+    <main tabindex="-1">
+      <header>
+        <!-- Show dates only for posts -->
+        <h1 class="page-title">Web3 technology explained</h1>
+
+        <p>
+          Blockchains, nodes, contracts, transactions, addresses, blocks,
+          protocols, dApps, cryptocurrencies, crypto tokens, NFTs. Welcome to
+          the web3, friends.
+        </p>
+
+        <div class="meta">
+          <time class="date">Oct 04 2021</time>
+
+          <i>&#9642;</i>
+          <span>
+            Share on
+            <a
+              href="https://twitter.com/intent/tweet?text=Web3%20technology%20explained&amp;url=https://cezaraugusto.com/posts/web3-technology-explained&amp;via=cezaraugusto"
+              target="_blank"
+              class="twitter"
+              >Twitter</a
+            >
+          </span>
+        </div>
+
+        <hr class="cs-hr" />
+      </header>
+
+      <div class="prose">
+        <p>
+          At first, websites were just a bunch of static pages linking each
+          other, like a physical document copy but with an option to jump
+          between documents. The internet 1.0 was about information.
+        </p>
+        <p>
+          Once websites got dynamic enough to interact with, they started being
+          called web apps. Web 2.0 arrived and thrived full of dynamic HTML
+          pages (because JavaScript got better?), social media apps, online
+          services, and e-commerces. All sorts of web conveniences.
+        </p>
+        <p>
+          Now we have Web 3.0. Possible thanks to “the blockchain.” A
+          decentralized database model stores information in a single chain of
+          blocks in a permanent, verifiable way. Records can be any piece of
+          information you find interesting.
+        </p>
+        <p>
+          Web 3.0 is about distributed control, and this post is an explanation
+          of the tech behind it.
+        </p>
+        <p>
+          Technically speaking, the web3 allows better governance of
+          institutions, a new option to distribute assets between company
+          working members, auditable public data for governments, the list goes
+          on.
+        </p>
+        <p>
+          You still see a bunch of useless jpegs worth millions, but it’s more
+          than that. That’s because of how the concept of blockchain works.
+        </p>
+        <h2 id="the-blockchain" tabindex="-1">
+          <a class="header-anchor" href="#the-blockchain"
+            ><span>The Blockchain</span></a
+          >
+        </h2>
+        <p>The blockchain is a shared database.</p>
+        <p>
+          For everything to work correctly, the database (the blockchain) is
+          shared by a group of computers running the same software to read and
+          update data. The blockchain is a network of computers (servers)
+          running the same software and interacting with it.
+        </p>
+        <p>
+          <a href="https://www.ibm.com/topics/what-is-blockchain"
+            >IBM explains it well:</a
+          >
+        </p>
+        <ol>
+          <li>
+            As each transaction occurs, it is recorded as a “block” of data
+          </li>
+          <li>Each block is connected to the ones before and after it</li>
+          <li>
+            Transactions are blocked together in an irreversible chain: a
+            blockchain
+          </li>
+        </ol>
+        <p>
+          You say blockchains are decentralized because, for public blockchains,
+          anyone can put their computer to work on it and do not depend on a
+          single server/service.
+        </p>
+        <p>
+          There is no single cloud provider like AWS or GCP. People volunteer to
+          put their machines at work in exchange for some benefit.
+        </p>
+        <p>Let’s talk about these computers.</p>
+        <h2 id="nodes" tabindex="-1">
+          <a class="header-anchor" href="#nodes"><span>Nodes</span></a>
+        </h2>
+        <p>A node is a computer running the <em>blockchain software</em>.</p>
+        <p>
+          The blockchain need computers running their software and responding to
+          requests on the network to work. Nodes talk to each other to validate
+          the current state of the blockchain. A computer serving blockchain
+          software is called a <em>server node</em> or just a <em>node</em>.
+        </p>
+        <p>
+          Their function is to validate the data being transacted, and they do
+          so by achieving consensus about the current blockchain state via a
+          consensus protocol, a core mechanism of the blockchain that helps
+          nodes in the network verify the transactions.
+        </p>
+        <p>
+          Once computers involved in the transaction agree with the data update,
+          the new data is pushed on top of the last data block.
+        </p>
+        <p>But what function do these node computers do?</p>
+        <h2 id="contracts" tabindex="-1">
+          <a class="header-anchor" href="#contracts"><span>Contracts</span></a>
+        </h2>
+        <p>
+          Nodes need a program to set and retrieve the current data state.
+          <em
+            >At which block are we right now? Is the current processing block
+            valid?</em
+          >
+        </p>
+        <p>
+          Blockchain data is auditable by all, but for inserting new data (you
+          can’t change them once it’s published), you need a computer program to
+          do so. In most cases, the program is called a <em>contract</em>.
+        </p>
+        <p>
+          Contract names can vary. The Ethereum blockchain calls it a
+          <em>smart contract</em>. Solana calls it <em>program</em>. On other
+          blockchains <em>contract</em> seems to be the default name convention.
+        </p>
+        <p>A contract is made of functions and data (its state):</p>
+        <ul>
+          <li>
+            Functions are used to perform all sorts of data operations related
+            to the contract. It’s the piece of code that will run every time
+            someone requests the contract.
+          </li>
+          <li>
+            State refers to the data after being processed by a contract. The
+            value will be sent to the blockchain once it’s approved by other
+            computers doing the same task.
+          </li>
+        </ul>
+        <pre
+          class="language-sol"
+        ><code class="language-sol"><span class="token comment">// SPDX-License-Identifier: GPL-3.0</span>
+<span class="token keyword">pragma</span> <span class="token keyword">solidity</span> <span class="token operator">>=</span><span class="token version number">0.4.16</span> <span class="token operator">&lt;</span><span class="token version number">0.9.0</span><span class="token punctuation">;</span>
+
+<span class="token comment">// A contract is similar to an OOP class</span>
+<span class="token keyword">contract</span> <span class="token class-name">SimpleStorage</span> <span class="token punctuation">{</span>
+    <span class="token comment">// Stores our data state</span>
+    <span class="token builtin">uint</span> storedData<span class="token punctuation">;</span>
+
+    <span class="token comment">// Set function that will update</span>
+    <span class="token comment">// the contract state every time</span>
+    <span class="token comment">// the contract is read by the computer</span>
+    <span class="token keyword">function</span> <span class="token function">set</span><span class="token punctuation">(</span><span class="token builtin">uint</span> x<span class="token punctuation">)</span> <span class="token keyword">public</span> <span class="token punctuation">{</span>
+        storedData <span class="token operator">=</span> x<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token comment">// Retrieve values</span>
+    <span class="token keyword">function</span> <span class="token function">get</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">public</span> <span class="token keyword">view</span> <span class="token keyword">returns</span> <span class="token punctuation">(</span><span class="token builtin">uint</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> storedData<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span></code></pre>
+        <p>
+          <em
+            >In this example, the contract defines the functions set and get
+            that can be used to modify or retrieve the variable’s value. Adapted
+            from
+            <a
+              href="https://docs.soliditylang.org/en/v0.8.7/introduction-to-smart-contracts.html#simple-smart-contracts"
+              >Solidity docs</a
+            >.</em
+          >
+        </p>
+        <h3>A contract is</h3>
+        <p>
+          Take a group of nodes selected randomly by the blockchain to validate
+          the current transaction, and if its valid, update the blockchain with
+          this new block of data. Do it by having a contract to make the updates
+          for each transaction.
+        </p>
+        <p>But what is a transaction?</p>
+        <h2 id="transactions" tabindex="-1">
+          <a class="header-anchor" href="#transactions"
+            ><span>Transactions</span></a
+          >
+        </h2>
+        <p>
+          When we want to make a change to the blockchain, we call it a
+          transaction.
+        </p>
+        <p>
+          When a node reads a contract, it needs to talk to another node looking
+          for consensus about whether or not the operation was valid. All
+          operations changing the blockchain happen through transactions.
+          Exchanging currencies, minting an NFT, deploying a contract,
+          everything.
+        </p>
+        <p>
+          Transactions are nothing more than data transfers that get permanently
+          recorded and can be accessed for future references at any given point
+          due to the blockchain’s immutable nature, which allows you to read,
+          write, but not delete or update data.
+        </p>
+        <p>
+          You either fully make a transaction or don’t make it at all. For
+          cryptocurrencies, consensus checks ensure only the person holding the
+          keys to the account can transfer money from it.
+        </p>
+        <p>
+          At least to me, consensus is a new word. What is a consensus protocol?
+        </p>
+        <h2 id="consensus-protocols" tabindex="-1">
+          <a class="header-anchor" href="#consensus-protocols"
+            ><span>Consensus protocols</span></a
+          >
+        </h2>
+        <p>
+          Nodes need to agree on whether the transaction is valid for a block to
+          be validated. This agreement is made once all nodes make the same
+          transaction and get the same result. Blockchains rely on mechanisms
+          called “proofs” to validate data changes.
+        </p>
+        <h3>Proof of Work</h3>
+        <p>
+          Bitcoin uses the proof of work (PoW) protocol. The protocol computes
+          the hash values to validate transactions until a given condition is
+          reached. This operation relies heavily on computer performance, which
+          makes the validation time-intensive and costly and doesn’t make
+          Bitcoin a great candidate to develop applications on top of it.
+        </p>
+        <h3>Proof of Stake</h3>
+        <p>
+          Another famous consensus protocol is the proof of stake (PoS), used by
+          Ethereum. It works by assigning a block of data to the node,
+          allocating some of its cryptocurrency resources to start validating
+          the data update and receiving a stake of the data transaction in
+          exchange. This task isn’t as costly and time-intensive as the Proof of
+          Work and allows the development of decentralized applications (dApps)
+          in practical terms.
+        </p>
+        <h2 id="addresses" tabindex="-1">
+          <a class="header-anchor" href="#addresses"><span>Addresses</span></a>
+        </h2>
+        <p>
+          A blockchain address is a unique identifier used to set a virtual
+          location where the cryptocurrency can be sent. People can send
+          cryptocurrency to addresses similar to the way banks transfer fiat
+          currencies through bank accounts. Addresses can host both wallets and
+          contracts.
+        </p>
+        <p>
+          For the sake of knowledge, let’s leverage the addresses of the two
+          most famous blockchain implementations:
+        </p>
+        <h3>Types of Bitcoin Addresses</h3>
+        <p>
+          Bitcoin has three types of addresses. The
+          <strong>P2PKH</strong> format called Legacy Address Format (addresses
+          starting with “1”), the <strong>P2SH</strong> format called
+          Compatibility Address Format (addresses starting with “3”), and the
+          <strong>Bech32</strong> format, also called the Segwit Address Format
+          (addresses starting with “bc1”).
+        </p>
+        <h3>Types of Ethereum Addresses</h3>
+        <p>
+          Ethereum has two types of addresses: the
+          <strong>Externally Owned Address (EOAs)</strong>, an account of public
+          and private key pair to hold your funds, and the
+          <strong>Contract Address</strong>, which is the address used by
+          contracts to execute functions.
+        </p>
+        <h3>Addresses are like</h3>
+        <p>
+          Addresses work like email. You have an email address and a password
+          that access your email account with email. Like emails, blockchain
+          addresses also have their private keys. Knowing that gives you access
+          to the data stored in that address, such as cryptocurrencies.
+        </p>
+        <h2 id="blocks" tabindex="-1">
+          <a class="header-anchor" href="#blocks"><span>Blocks</span></a>
+        </h2>
+        <p>
+          The code (contract) that is read by the computer (node) can be sent by
+          any other computer (let’ call them nodes forever) in the network
+          (blockchain). Once the contract is run, multiple nodes execute the
+          function within the program, and once they agree about the result, a
+          transaction happens, and the data resulting from this transaction
+          (block) is sent.
+        </p>
+        <p>
+          The data within the block can be anything. A block consists of its
+          data and a unique hash to identify itself. Since blocks are chained,
+          it also includes the previous block’s hash.
+        </p>
+        <figure>
+          <div>
+            <img
+              class="m-auto"
+              src="/static/images/posts/post-006/001.png"
+              alt=""
+            />
+          </div>
+          <figcaption>
+            A block of bitcoin data consists of "from," "to," and "amount."
+          </figcaption>
+        </figure>
+        <p>
+          These blocks form a linear sequence in time, where the word
+          “blockchain” derives. Blocks are added to the chain in rather regular
+          intervals.
+          <a
+            href="https://coinmarketcap.com/alexandria/article/how-long-does-a-bitcoin-transaction-take"
+            >Bitcoin takes about 10 minutes</a
+          >
+          to confirm a block transaction, and for Ethereum, this time is
+          <a
+            href="https://docs.soliditylang.org/en/v0.8.7/introduction-to-smart-contracts.html#blocks"
+            >around 17 seconds</a
+          >.
+        </p>
+        <p>
+          <a
+            href="https://support.kraken.com/hc/en-us/articles/203325283-Cryptocurrency-deposit-processing-times"
+            >Kraken has an interesting table</a
+          >
+          about how long a transaction takes on their platform depending on the
+          blockchain you use.
+        </p>
+        <h2 id="dapps" tabindex="-1">
+          <a class="header-anchor" href="#dapps"><span>dApps</span></a>
+        </h2>
+        <p>
+          dApps (decentralized applications) are web applications enabled to
+          access blockchain data. They do so by communicating with contacts to
+          communicate with the blockchain and execute transactions.
+        </p>
+        <figure>
+          <div>
+            <img
+              class="m-auto"
+              src="/static/images/posts/post-006/002.png"
+              alt=""
+            />
+          </div>
+          <figcaption>Sample Ethereum dApps</figcaption>
+        </figure>
+        <p>
+          A common web app relies on front-end technology (HTML, CSS,
+          JavaScript). It performs database checks, some API (if needed) to
+          connect with it.
+        </p>
+        <p>
+          <strong>dApps don’t need APIs to connect to databases</strong> because
+          it uses the blockchain. They use contracts as a middle layer instead
+          of connecting to the blockchain directly.
+        </p>
+        <figure>
+          <div>
+            <img
+              class="m-auto"
+              src="/static/images/posts/post-006/004.png"
+              alt=""
+            />
+          </div>
+          <figcaption>dApp flow to hit the blockchain</figcaption>
+        </figure>
+        <p>
+          Crypto wallets manage your blockchain address and the keys necessary
+          to identify and authenticate yourself. dApps take advantage of that to
+          build their “back-end” service. The wallet acts as a middle layer
+          between your app and the blockchain. It allows you to perform
+          operations via their API, providing web app developers (dApp
+          developers now) access to the blockchain network.
+        </p>
+        <h2 id="cryptocurrencies-and-(crypto)-tokens" tabindex="-1">
+          <a class="header-anchor" href="#cryptocurrencies-and-(crypto)-tokens"
+            ><span>Cryptocurrencies and (Crypto) Tokens</span></a
+          >
+        </h2>
+        <p>
+          A cryptocurrency is the native currency of a blockchain. They are
+          often used to pay other people or transaction costs. Popular
+          cryptocurrencies are Bitcoin and Ether.
+        </p>
+        <p>
+          A crypto token is built on top of cryptocurrencies. The native token
+          for the Ethereum blockchain is Ether, but other tokens also depend on
+          the Ethereum Blockchain, such as $BNB or $BAT.
+        </p>
+        <p>
+          Tokens can hold values and be exchanged like any other cryptocurrency
+          but also offers a way to represent other sorts of assets. For example,
+          some tokens represent art in the form of NFTs.
+        </p>
+        <p>
+          The process of creating tokens and assigning them value is called
+          tokenization. One prominent kind of token is the NFT.
+        </p>
+        <h2 id="nfts" tabindex="-1">
+          <a class="header-anchor" href="#nfts"><span>NFTs</span></a>
+        </h2>
+        <figure>
+          <div>
+            <img
+              class="m-auto"
+              src="/static/images/posts/post-006/003.png"
+              alt=""
+            />
+          </div>
+          <figcaption>
+            CryptoPunks (https://www.larvalabs.com/cryptopunks) are a unique
+            cllective of 10,000 unique characters.
+          </figcaption>
+        </figure>
+        <p>
+          NFTs are a special token used to represent ownership of unique items.
+          By design, only one owner is allowed to own the token. Due to the
+          immutable nature of blockchains, no one can modify the record of that
+          ownership.
+        </p>
+        <p>
+          The key difference between your usual (fungible) token and NFTs is
+          that NFTs aren’t fungible (NFT stands for Non-Fungible Tokens). You
+          can exchange 1 ETH for $1 because their value defines them.
+        </p>
+        <p>
+          Their unique properties define NFTs. They are helpful to describe
+          unique things such as game characters and represent authorial work
+          such as digital art, namely jpegs worth millions of dollars and music.
+        </p>
+        <h2 id="welcome-to-the-web3%2C-friends!" tabindex="-1">
+          <a class="header-anchor" href="#welcome-to-the-web3%2C-friends!"
+            ><span>Welcome to the web3, friends!</span></a
+          >
+        </h2>
+        <p>
+          I hope this post helped you figure out how the web3 works and
+          <strong>welcome to the web3, friends!</strong>
+        </p>
+        <p><strong>References and further reading:</strong></p>
+        <ul>
+          <li>
+            <a href="https://www.youtube.com/watch?v=JU3r4WM0-6g"
+              >Chatham House Primer: Blockchain</a
+            >
+          </li>
+          <li>
+            <a href="https://www.ibm.com/topics/what-is-blockchain"
+              >IBM - What is Blockchain</a
+            >
+          </li>
+          <li>
+            <a href="https://www.youtube.com/watch?v=SSo_EIwHSd4"
+              >How does a blockchain work - Simply Explained</a
+            >
+          </li>
+          <li>
+            <a href="https://cryptocurrencyfacts.com/bitcoin-address-formats/"
+              >How the Three Formats of Bitcoin Addresses Work</a
+            >
+          </li>
+          <li>
+            <a href="https://info.etherscan.com/what-is-an-ethereum-address/"
+              >What is an Ethereum Address?</a
+            >
+          </li>
+          <li>
+            <a
+              href="https://www.section.io/engineering-education/blockchain-consensus-protocols/"
+              >An Overview of Consensus Protocols in Blockchain</a
+            >
+          </li>
+          <li>
+            <a
+              href="https://gadgets.ndtv.com/cryptocurrency/news/cryptocurrency-crypto-token-difference-meaning-explained-bitcoin-ethereum-ether-dai-link-comp-digital-asset-blockchain-2502146"
+              >Cryptocurrency and Crypto Tokens: What’s the difference?</a
+            >
+          </li>
+          <li>
+            <a
+              href="https://docs.soliditylang.org/en/v0.8.7/introduction-to-smart-contracts.html"
+              >Introduction to Smart Contracts</a
+            >
+          </li>
+        </ul>
+      </div>
+    </main>
+    <!-- this resource is cached with SW -->
+    <script async src="/assets/js/twitter-widget.js" charset="utf-8"></script>
+
+    <footer>
+      © 2018-Present <a href="/about/">Cezar Augusto</a>.<br />
+      Content in this blog is licensed under
+      <a
+        class="link"
+        href="https://creativecommons.org/licenses/by/4.0/"
+        rel="noopener noreferrer"
+        target="_blank"
+        >CC BY 4.0</a
+      >.
+    </footer>
+
+    <script></script>
+    <script>
+      async function fetchGitHubData() {
+        return (
+          await window.fetch(
+            'https://api.github.com/users/cezaraugusto/repos?page=1&per_page=100'
+          )
+        ).json()
+      }
+      function sortByPopularity(e) {
+        return e.sort((e, t) => t.stargazers_count - e.stargazers_count)
+      }
+      async function loadProjects() {
+        const e = sortByPopularity(await fetchGitHubData()),
+          t = []
+        for (const n of e)
+          n.fork ||
+            n.archived ||
+            ('cezaraugusto.com' !== n.name &&
+              '.github' !== n.name &&
+              t.push({
+                name: n.name,
+                url: n.html_url,
+                description: n.description
+              }))
+        return t
+      }
+      function cacheProjects(e) {
+        window.localStorage.setItem('github-projects', JSON.stringify(e))
+      }
+      function renderProjects(e) {
+        const t = document.getElementById('projects')
+        t &&
+          e.forEach((e) => {
+            const n = document.createElement('li'),
+              r = document.createElement('a'),
+              o = document.createElement('span')
+            ;(r.href = e.url),
+              (r.innerText = e.name),
+              (o.innerText = ` - ${e.description}`),
+              t.appendChild(n),
+              n.appendChild(r),
+              n.appendChild(o)
+          })
+      }
+      async function renderToPage() {
+        const e = window.localStorage.getItem('github-projects')
+        if (e) renderProjects(JSON.parse(e))
+        else {
+          const e = await loadProjects()
+          renderProjects(e), cacheProjects(e)
+        }
+      }
+      renderToPage()
+    </script>
+    <script type="application/ld+json">
+      {
+        "@context": "http://schema.org/",
+        "@type": "Person",
+        "name": "Cezar Augusto",
+        "url": "https://cezaraugusto.com/",
+        "image": "https://cezaraugusto.com/static/images/me.png",
+        "birthDate": "1988-05-06",
+        "nationality": "Brazil",
+        "address": "Rio de Janeiro",
+        "sameAs": [
+          "https://twitter.com/cezaraugusto",
+          "https://linkedin.com/in/cezar-augusto",
+          "https://github.com/cezaraugusto/",
+          "https://www.youtube.com/channel/UCjwnVRxoPilVaicoxktqVjg"
+        ],
+        "jobTitle": "Software Engineer",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "Atlantico Software"
+        }
+      }
+    </script>
+  </body>
+</html>
