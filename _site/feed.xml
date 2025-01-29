@@ -4,7 +4,7 @@
   <subtitle>Personal Blog</subtitle>
   <link href="https://cezaraugusto.com/feed.xml" rel="self"/>
   <link href="https://cezaraugusto.com/"/>
-  <updated>2021-10-05T00:00:00Z</updated>
+  <updated>Mon, 04 Oct 2021 21:00:00 GMT</updated>
   <id>https://cezaraugusto.com/</id>
   <author>
     <name>Cezar Augusto</name>
@@ -16,7 +16,7 @@
     
       <link href="https://cezaraugusto.com/posts/web3-technology-explained/"/>
     
-    <updated>2021-10-05T00:00:00Z</updated>
+    <updated>Mon, 04 Oct 2021 21:00:00 GMT</updated>
     <id>https://cezaraugusto.com/posts/web3-technology-explained/</id>
     <content type="html">&lt;p&gt;At first, websites were just a bunch of static pages linking each other, like a physical document copy but with an option to jump between documents. The internet 1.0 was about information.&lt;/p&gt;
 &lt;p&gt;Once websites got dynamic enough to interact with, they started being called web apps. Web 2.0 arrived and thrived full of dynamic HTML pages (because JavaScript got better?), social media apps, online services, and e-commerces. All sorts of web conveniences.&lt;/p&gt;
@@ -101,7 +101,7 @@
 &lt;p&gt;The data within the block can be anything. A block consists of its data and a unique hash to identify itself. Since blocks are chained, it also includes the previous block’s hash.&lt;/p&gt;
   &lt;figure&gt;
     &lt;div&gt;
-      &lt;img class=&quot;m-auto&quot; src=&quot;https://cezaraugusto.com/assets/images/posts/post-006/001.png&quot; alt=&quot;&quot; /&gt;
+      &lt;img class=&quot;m-auto&quot; src=&quot;https://cezaraugusto.com/static/images/posts/post-006/001.png&quot; alt=&quot;&quot; /&gt;
     &lt;/div&gt;
     &lt;figcaption&gt;A block of bitcoin data consists of &quot;from,&quot; &quot;to,&quot; and &quot;amount.&quot;&lt;/figcaption&gt;
   &lt;/figure&gt;
@@ -111,7 +111,7 @@
 &lt;p&gt;dApps (decentralized applications) are web applications enabled to access blockchain data. They do so by communicating with contacts to communicate with the blockchain and execute transactions.&lt;/p&gt;
   &lt;figure&gt;
     &lt;div&gt;
-      &lt;img class=&quot;m-auto&quot; src=&quot;https://cezaraugusto.com/assets/images/posts/post-006/002.png&quot; alt=&quot;&quot; /&gt;
+      &lt;img class=&quot;m-auto&quot; src=&quot;https://cezaraugusto.com/static/images/posts/post-006/002.png&quot; alt=&quot;&quot; /&gt;
     &lt;/div&gt;
     &lt;figcaption&gt;Sample Ethereum dApps&lt;/figcaption&gt;
   &lt;/figure&gt;
@@ -119,7 +119,7 @@
 &lt;p&gt;&lt;strong&gt;dApps don’t need APIs to connect to databases&lt;/strong&gt; because it uses the blockchain. They use contracts as a middle layer instead of connecting to the blockchain directly.&lt;/p&gt;
   &lt;figure&gt;
     &lt;div&gt;
-      &lt;img class=&quot;m-auto&quot; src=&quot;https://cezaraugusto.com/assets/images/posts/post-006/004.png&quot; alt=&quot;&quot; /&gt;
+      &lt;img class=&quot;m-auto&quot; src=&quot;https://cezaraugusto.com/static/images/posts/post-006/004.png&quot; alt=&quot;&quot; /&gt;
     &lt;/div&gt;
     &lt;figcaption&gt;dApp flow to hit the blockchain&lt;/figcaption&gt;
   &lt;/figure&gt;
@@ -132,7 +132,7 @@
 &lt;h2 id=&quot;nfts&quot; tabindex=&quot;-1&quot;&gt;&lt;a class=&quot;header-anchor&quot; href=&quot;https://cezaraugusto.com/posts/web3-technology-explained/#nfts&quot;&gt;&lt;span&gt;NFTs&lt;/span&gt;&lt;/a&gt;&lt;/h2&gt;
   &lt;figure&gt;
     &lt;div&gt;
-      &lt;img class=&quot;m-auto&quot; src=&quot;https://cezaraugusto.com/assets/images/posts/post-006/003.png&quot; alt=&quot;&quot; /&gt;
+      &lt;img class=&quot;m-auto&quot; src=&quot;https://cezaraugusto.com/static/images/posts/post-006/003.png&quot; alt=&quot;&quot; /&gt;
     &lt;/div&gt;
     &lt;figcaption&gt;CryptoPunks (https://www.larvalabs.com/cryptopunks) are a unique cllective of 10,000 unique characters.&lt;/figcaption&gt;
   &lt;/figure&gt;
@@ -160,9 +160,10 @@
     
       <link href="https://cezaraugusto.com/posts/the-years-at-brave/"/>
     
-    <updated>2020-05-28T00:00:00Z</updated>
+    <updated>Wed, 27 May 2020 21:00:00 GMT</updated>
     <id>https://cezaraugusto.com/posts/the-years-at-brave/</id>
-    <content type="html">&lt;p&gt;The first moment I saw Brave, I wanted to be associated with it. They were a small team with a vision working on an open-source project &lt;a href=&quot;https://github.com/brave/browser-laptop&quot;&gt;written in JavaScript&lt;/a&gt;. It was 2016.&lt;/p&gt;
+    <content type="html">&lt;script async=&quot;&quot; src=&quot;https://platform.twitter.com/widgets.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;
+&lt;p&gt;The first moment I saw Brave, I wanted to be associated with it. They were a small team with a vision working on an open-source project &lt;a href=&quot;https://github.com/brave/browser-laptop&quot;&gt;written in JavaScript&lt;/a&gt;. It was 2016.&lt;/p&gt;
 &lt;p&gt;On May 15th, 2020, it was my last day working for Brave.&lt;/p&gt;
 &lt;p&gt;I took my time to reflect on what happened in these last four years. A relationship of four years is something. You can’t hide me from your mother for that long.&lt;/p&gt;
 &lt;p&gt;This blog post is about me, and Brave, and the last four years.&lt;/p&gt;
@@ -171,31 +172,31 @@
 &lt;p&gt;I think it started with this tweet.&lt;/p&gt;
 &lt;blockquote class=&quot;twitter-tweet&quot;&gt;&lt;p lang=&quot;en&quot; dir=&quot;ltr&quot;&gt;Windows friends: Looking for a fast, safe, beautiful and way cool browser? Switch to &lt;a href=&quot;https://twitter.com/brave?ref_src=twsrc%5Etfw&quot;&gt;@brave&lt;/a&gt; 🦁👌 &lt;a href=&quot;https://t.co/hiAYYZTjmZ&quot;&gt;https://t.co/hiAYYZTjmZ&lt;/a&gt;&lt;/p&gt;&amp;mdash; Cezar Augusto (@cezaraugusto) &lt;a href=&quot;https://twitter.com/cezaraugusto/status/723541059268173826?ref_src=twsrc%5Etfw&quot;&gt;April 22, 2016&lt;/a&gt;&lt;/blockquote&gt;
 &lt;p&gt;Which Brave later retweeted:&lt;/p&gt;
-&lt;blockquote class=&quot;twitter-tweet&quot;&gt;&lt;p lang=&quot;en&quot; dir=&quot;ltr&quot;&gt;Time to switch! &lt;a href=&quot;https://t.co/GhlmA8tz96&quot;&gt;https://t.co/GhlmA8tz96&lt;/a&gt;&lt;/p&gt;&amp;mdash; Brave Software (@brave) &lt;a href=&quot;https://twitter.com/brave/status/723542469862805506?ref_src=twsrc%5Etfw&quot;&gt;April 22, 2016&lt;/a&gt;&lt;/blockquote&gt;
+&lt;blockquote class=&quot;twitter-tweet&quot;&gt;&lt;p lang=&quot;en&quot; dir=&quot;ltr&quot;&gt;Time to switch! &lt;a href=&quot;https://t.co/GhlmA8tz96&quot;&gt;https://t.co/GhlmA8tz96&lt;/a&gt;&lt;/p&gt;&amp;mdash; Brave (@brave) &lt;a href=&quot;https://twitter.com/brave/status/723542469862805506?ref_src=twsrc%5Etfw&quot;&gt;April 22, 2016&lt;/a&gt;&lt;/blockquote&gt; 
 &lt;p&gt;Social media has this magic power. This retweet made me feel good and validated, and that action motivated me to keep helping their product somehow.&lt;/p&gt;
 &lt;p&gt;At the time, Brave had less than 10 engineers working on their desktop browser, but their pile of issues was increasing fast. To this day, &lt;strong&gt;I’ve never seemed a project with so many issues reported&lt;/strong&gt; (massive 11,978 issues, of which &lt;a href=&quot;https://github.com/brave/browser-laptop/issues?q=is%3Aissue+is%3Aclosed+%40cezaraugusto&quot;&gt;11,310 somehow tag my username&lt;/a&gt;). So I thought it would be wise to start with bug triaging until I could figure out how the project works.&lt;/p&gt;
 &lt;p&gt;After a few weeks reporting bugs and hacking around, on June 2, 2016, I &lt;a href=&quot;https://github.com/brave/browser-laptop/pull/1907&quot;&gt;sent my first pull-request&lt;/a&gt;. I still remember the feeling of opening the packaged software, installing it, and seeing the feature I added live in the release channel, for everybody to download. I think I asked around five people to download BRave too, so they could try out my proud contribution.&lt;/p&gt;
   &lt;figure&gt;
     &lt;div&gt;
-      &lt;img class=&quot;m-auto&quot; src=&quot;https://cezaraugusto.com/assets/images/posts/post-004/001.jpg&quot; alt=&quot;&quot; /&gt;
+      &lt;img class=&quot;m-auto&quot; src=&quot;https://cezaraugusto.com/static/images/posts/post-004/001.jpg&quot; alt=&quot;&quot; /&gt;
     &lt;/div&gt;
   &lt;/figure&gt;
 &lt;p&gt;You could now print a web page from the context menu.&lt;/p&gt;
 &lt;p&gt;Eight days later, &lt;a href=&quot;https://github.com/brave/browser-laptop/pull/2038&quot;&gt;another pull-request&lt;/a&gt;.&lt;/p&gt;
   &lt;figure&gt;
     &lt;div&gt;
-      &lt;img class=&quot;m-auto&quot; src=&quot;https://cezaraugusto.com/assets/images/posts/post-004/002.jpg&quot; alt=&quot;&quot; /&gt;
+      &lt;img class=&quot;m-auto&quot; src=&quot;https://cezaraugusto.com/static/images/posts/post-004/002.jpg&quot; alt=&quot;&quot; /&gt;
     &lt;/div&gt;
   &lt;/figure&gt;
 &lt;p&gt;&lt;strong&gt;I got engaged.&lt;/strong&gt; I kept contributing. There is this magical feeling of working on open-source initiatives where your code ends up serving several (I guess tens of thousands, at the time) people.&lt;/p&gt;
 &lt;p&gt;Can you believe that &lt;a href=&quot;https://github.com/brave/browser-laptop/pull/2644&quot;&gt;one of my pull-requests&lt;/a&gt; ended up featured in a tweet from Brave’s CTO, &lt;a href=&quot;https://twitter.com/brianbondy&quot;&gt;Brian R. Bondy&lt;/a&gt;? I was just another contributor (Brave had many at the time), but hey, I was being noticed!&lt;/p&gt;
-&lt;blockquote class=&quot;twitter-tweet&quot;&gt;&lt;p lang=&quot;en&quot; dir=&quot;ltr&quot;&gt;Some nice animation polish done by a &lt;a href=&quot;https://twitter.com/cezaraugusto?ref_src=twsrc%5Etfw&quot;&gt;@cezaraugusto&lt;/a&gt; in &lt;a href=&quot;https://twitter.com/brave?ref_src=twsrc%5Etfw&quot;&gt;@brave&lt;/a&gt; 0.11.2 :D Thanks for the contributions! &lt;a href=&quot;https://t.co/XSWvXOxL2f&quot;&gt;pic.twitter.com/XSWvXOxL2f&lt;/a&gt;&lt;/p&gt;&amp;mdash; Brian R. Bondy (@brianbondy) &lt;a href=&quot;https://twitter.com/brianbondy/status/761281701742014464?ref_src=twsrc%5Etfw&quot;&gt;August 4, 2016&lt;/a&gt;&lt;/blockquote&gt;
+&lt;blockquote class=&quot;twitter-tweet&quot;&gt;&lt;p lang=&quot;en&quot; dir=&quot;ltr&quot;&gt;Some nice animation polish done by a &lt;a href=&quot;https://twitter.com/cezaraugusto?ref_src=twsrc%5Etfw&quot;&gt;@cezaraugusto&lt;/a&gt; in &lt;a href=&quot;https://twitter.com/brave?ref_src=twsrc%5Etfw&quot;&gt;@brave&lt;/a&gt; 0.11.2 :D Thanks for the contributions! &lt;a href=&quot;https://t.co/XSWvXOxL2f&quot;&gt;pic.twitter.com/XSWvXOxL2f&lt;/a&gt;&lt;/p&gt;&amp;mdash; Brian R. Bondy (@brianbondy) &lt;a href=&quot;https://twitter.com/brianbondy/status/761281701742014464?ref_src=twsrc%5Etfw&quot;&gt;August 4, 2016&lt;/a&gt;&lt;/blockquote&gt; &lt;script async=&quot;&quot; src=&quot;https://platform.twitter.com/widgets.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;
 &lt;p&gt;I was lucky that Brian found value in my contributions, questionings, and genuine willingness to make the browser software better. After a few months contributing code as an outside collaborator, this happened:&lt;/p&gt;
-&lt;blockquote class=&quot;twitter-tweet&quot;&gt;&lt;p lang=&quot;en&quot; dir=&quot;ltr&quot;&gt;Happiest tweet ever: Starting today, I&amp;#39;m joining the awesome &lt;a href=&quot;https://twitter.com/brave?ref_src=twsrc%5Etfw&quot;&gt;@brave&lt;/a&gt; team. 🦁 🏆&lt;/p&gt;&amp;mdash; Cezar Augusto (@cezaraugusto) &lt;a href=&quot;https://twitter.com/cezaraugusto/status/771351046853627904?ref_src=twsrc%5Etfw&quot;&gt;September 1, 2016&lt;/a&gt;&lt;/blockquote&gt;
+&lt;blockquote class=&quot;twitter-tweet&quot;&gt;&lt;p lang=&quot;en&quot; dir=&quot;ltr&quot;&gt;Happiest tweet ever: Starting today, I&amp;#39;m joining the awesome &lt;a href=&quot;https://twitter.com/brave?ref_src=twsrc%5Etfw&quot;&gt;@brave&lt;/a&gt; team. 🦁 🏆&lt;/p&gt;&amp;mdash; Cezar Augusto (@cezaraugusto) &lt;a href=&quot;https://twitter.com/cezaraugusto/status/771351046853627904?ref_src=twsrc%5Etfw&quot;&gt;September 1, 2016&lt;/a&gt;&lt;/blockquote&gt; &lt;script async=&quot;&quot; src=&quot;https://platform.twitter.com/widgets.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;
 &lt;p&gt;My most significant contribution to Brave at the time also came in around the same time. I was the lucky person responsible for implementing the most visited and iconic page on Brave, the &lt;strong&gt;new tab page&lt;/strong&gt;.&lt;/p&gt;
   &lt;figure&gt;
     &lt;div&gt;
-      &lt;img class=&quot;m-auto&quot; src=&quot;https://cezaraugusto.com/assets/images/posts/post-004/003.gif&quot; alt=&quot;&quot; /&gt;
+      &lt;img class=&quot;m-auto&quot; src=&quot;https://cezaraugusto.com/static/images/posts/post-004/003.gif&quot; alt=&quot;&quot; /&gt;
     &lt;/div&gt;
     &lt;figcaption&gt;This is what NTP looked like at the time in the prototype I built. Brave used to have 3 rows of top sites.&lt;/figcaption&gt;
   &lt;/figure&gt;
@@ -203,20 +204,20 @@
 &lt;h2 id=&quot;2017&quot; tabindex=&quot;-1&quot;&gt;&lt;a class=&quot;header-anchor&quot; href=&quot;https://cezaraugusto.com/posts/the-years-at-brave/#2017&quot;&gt;&lt;span&gt;2017&lt;/span&gt;&lt;/a&gt;&lt;/h2&gt;
   &lt;figure&gt;
     &lt;div&gt;
-      &lt;img class=&quot;m-auto&quot; src=&quot;https://cezaraugusto.com/assets/images/posts/post-004/004.jpg&quot; alt=&quot;&quot; /&gt;
+      &lt;img class=&quot;m-auto&quot; src=&quot;https://cezaraugusto.com/static/images/posts/post-004/004.jpg&quot; alt=&quot;&quot; /&gt;
     &lt;/div&gt;
     &lt;figcaption&gt;This is me at Chicago, where the gathering happened.&lt;/figcaption&gt;
   &lt;/figure&gt;
 &lt;p&gt;At the time, the desktop browser was having several performance issues, so the team decided to gather together to fix them (we did) in Chicago. There I also had the chance to help to interview a candidate for Brave for the first time. I find job interviews fascinating (still do, at least the principles I try to apply to them) — a positive experience. I would later help with other interviews a few more times.&lt;/p&gt;
 &lt;p&gt;There, I also had the chance to be featured live, representing Brave, for the first time. It was a chat we had with the fine folks of &lt;a href=&quot;https://twitter.com/IndoBrave/&quot;&gt;Brave Indonesia&lt;/a&gt;.&lt;/p&gt;
 &lt;figure&gt;
-  &lt;img src=&quot;https://cezaraugusto.com/assets/images/posts/post-004/005.jpeg&quot; /&gt;
+  &lt;img src=&quot;https://cezaraugusto.com/static/images/posts/post-004/005.jpeg&quot; /&gt;
   &lt;figcaption&gt;
   I’m the person sitting in the middle inside the video, along with &lt;a href=&quot;https://cezaraugusto.com/posts/the-years-at-brave/twitter.com/brianbondy&quot;&gt;Brian R. Bondy&lt;/a&gt; and &lt;a href=&quot;https://twitter.com/_brianclifton&quot;&gt;Brian Clifton&lt;/a&gt;.&lt;br /&gt;  Photo extracted from &lt;a href=&quot;https://twitter.com/IndoBrave/status/893320436397645824&quot;&gt;@IndoBrave&lt;/a&gt;
 &lt;/figcaption&gt;
 &lt;/figure&gt;
 &lt;p&gt;Speaking of representing Brave, and still speaking about first-times, this year I had the chance to &lt;a href=&quot;https://twitter.com/brave/status/903761397154160640&quot;&gt;speak at a conference&lt;/a&gt; to talk about Brave. It was at &lt;a href=&quot;https://web.archive.org/web/20171004170021/https://braziljs.org/conf/&quot;&gt;BrazilJS in 2017&lt;/a&gt;.&lt;/p&gt;
-&lt;blockquote class=&quot;twitter-tweet&quot;&gt;&lt;p lang=&quot;pt&quot; dir=&quot;ltr&quot;&gt;O que a brave pode melhorar a web. &lt;a href=&quot;https://twitter.com/brave?ref_src=twsrc%5Etfw&quot;&gt;@brave&lt;/a&gt; &lt;a href=&quot;https://twitter.com/cezaraugusto?ref_src=twsrc%5Etfw&quot;&gt;@cezaraugusto&lt;/a&gt; &lt;a href=&quot;https://twitter.com/hashtag/braziljs2017?src=hash&amp;amp;ref_src=twsrc%5Etfw&quot;&gt;#braziljs2017&lt;/a&gt; &lt;a href=&quot;https://twitter.com/hashtag/braziljs?src=hash&amp;amp;ref_src=twsrc%5Etfw&quot;&gt;#braziljs&lt;/a&gt; &lt;a href=&quot;https://t.co/hx88o1tc8e&quot;&gt;pic.twitter.com/hx88o1tc8e&lt;/a&gt;&lt;/p&gt;&amp;mdash; Daniel Bastos 🇧🇷 (@danielbastos) &lt;a href=&quot;https://twitter.com/danielbastos/status/904062303875846144?ref_src=twsrc%5Etfw&quot;&gt;September 2, 2017&lt;/a&gt;&lt;/blockquote&gt;
+&lt;blockquote class=&quot;twitter-tweet&quot;&gt;&lt;p lang=&quot;pt&quot; dir=&quot;ltr&quot;&gt;O que a brave pode melhorar a web. &lt;a href=&quot;https://twitter.com/brave?ref_src=twsrc%5Etfw&quot;&gt;@brave&lt;/a&gt; &lt;a href=&quot;https://twitter.com/cezaraugusto?ref_src=twsrc%5Etfw&quot;&gt;@cezaraugusto&lt;/a&gt; &lt;a href=&quot;https://twitter.com/hashtag/braziljs2017?src=hash&amp;amp;ref_src=twsrc%5Etfw&quot;&gt;#braziljs2017&lt;/a&gt; &lt;a href=&quot;https://twitter.com/hashtag/braziljs?src=hash&amp;amp;ref_src=twsrc%5Etfw&quot;&gt;#braziljs&lt;/a&gt; &lt;a href=&quot;https://t.co/hx88o1tc8e&quot;&gt;pic.twitter.com/hx88o1tc8e&lt;/a&gt;&lt;/p&gt;&amp;mdash; Daniel Bastos 🇧🇷 (@danielbastos) &lt;a href=&quot;https://twitter.com/danielbastos/status/904062303875846144?ref_src=twsrc%5Etfw&quot;&gt;September 2, 2017&lt;/a&gt;&lt;/blockquote&gt; &lt;script async=&quot;&quot; src=&quot;https://platform.twitter.com/widgets.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;
 &lt;p&gt;This year had me working mostly on tab features. Brave used to have tab pages, a set of visible tabs you could accumulate. At the time, you could add up to 20 tabs per tab group. We take tabs in browsers for granted, but tabs are a real complex mechanism. &lt;em&gt;Have you ever thought that tabs need to be responsive?&lt;/em&gt; &lt;a href=&quot;https://github.com/brave/browser-laptop/pull/6900&quot;&gt;I did&lt;/a&gt;, and literally, added support for &lt;a href=&quot;https://github.com/brave/browser-laptop/pull/7695&quot;&gt;a hundred of tabs&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;I was also lucky to be the person to implement two new, important pages. The &lt;a href=&quot;https://github.com/brave/browser-laptop/pull/8074&quot;&gt;private new tab&lt;/a&gt;, and &lt;a href=&quot;https://github.com/brave/browser-laptop/pull/8097d&quot;&gt;the welcome page&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;The year also had me started working in parallel on the desktop browser migration from &lt;a href=&quot;https://github.com/brave/muon&quot;&gt;Muon&lt;/a&gt; (a fork of Electron) to &lt;a href=&quot;https://github.com/brave/brave-browser&quot;&gt;Chromium&lt;/a&gt;. Mainly on the &lt;a href=&quot;https://github.com/brave/brave-extension/&quot;&gt;Brave Shields&lt;/a&gt; port, my favorite part of Brave.&lt;/p&gt;
@@ -225,55 +226,42 @@
 &lt;h2 id=&quot;2018&quot; tabindex=&quot;-1&quot;&gt;&lt;a class=&quot;header-anchor&quot; href=&quot;https://cezaraugusto.com/posts/the-years-at-brave/#2018&quot;&gt;&lt;span&gt;2018&lt;/span&gt;&lt;/a&gt;&lt;/h2&gt;
   &lt;figure&gt;
     &lt;div&gt;
-      &lt;img class=&quot;m-auto&quot; src=&quot;https://cezaraugusto.com/assets/images/posts/post-004/006.jpg&quot; alt=&quot;&quot; /&gt;
+      &lt;img class=&quot;m-auto&quot; src=&quot;https://cezaraugusto.com/static/images/posts/post-004/006.jpg&quot; alt=&quot;&quot; /&gt;
     &lt;/div&gt;
     &lt;figcaption&gt;The crew at the 2017 all hands event.&lt;/figcaption&gt;
   &lt;/figure&gt;
 &lt;p&gt;This year I started working full-time on the port of the desktop codebase. I was one of the first engineers to work on this initiative. At the time, I was working on the &lt;a href=&quot;https://github.com/brave/browser-laptop/pull/13197&quot;&gt;V2 version&lt;/a&gt; of Sync, delayed in favor of the Chromium migration.&lt;/p&gt;
 &lt;p&gt;The new browser was great. I was excited to work on top of Chromium. My work started with me &lt;a href=&quot;https://github.com/brave/brave-core/pull/105&quot;&gt;porting&lt;/a&gt; the private new tab, &lt;a href=&quot;https://github.com/brave/brave-core/pull/256&quot;&gt;and later&lt;/a&gt; the brand new welcome page. Later, Sync V2 &lt;a href=&quot;https://github.com/brave/brave-core/pull/1019&quot;&gt;eventually featured&lt;/a&gt; in the Chromium version.&lt;/p&gt;
 &lt;figure&gt;
-  &lt;img src=&quot;https://cezaraugusto.com/assets/images/posts/post-004/007.jpg&quot; /&gt;
+  &lt;img src=&quot;https://cezaraugusto.com/static/images/posts/post-004/007.jpg&quot; /&gt;
   &lt;figcaption&gt;
     This is how the welcome page looked like back in the days.
   &lt;/figcaption&gt;
 &lt;/figure&gt;
 &lt;p&gt;Another speaking opportunity came in, and in October, I spoke at &lt;a href=&quot;https://www.conexaokinghost.com.br/&quot;&gt;Conexão KingHost&lt;/a&gt; to talk about Brave, digital ads, and blockchain. The event happened online. If I recall correctly, it had 5k+ subscribers for the edition.&lt;/p&gt;
 &lt;p&gt;The event was a great, funny, joyful experience, where I get the chance to know the dedicated and talented people behind &lt;a href=&quot;https://twitter.com/kinghost&quot;&gt;@kinghost&lt;/a&gt;.&lt;/p&gt;
-&lt;blockquote class=&quot;twitter-tweet&quot;&gt;&lt;p lang=&quot;pt&quot; dir=&quot;ltr&quot;&gt;Ligadaço na &lt;a href=&quot;https://twitter.com/hashtag/ConexaoKingHost?src=hash&amp;amp;ref_src=twsrc%5Etfw&quot;&gt;#ConexaoKingHost&lt;/a&gt; com &lt;a href=&quot;https://twitter.com/cezaraugusto?ref_src=twsrc%5Etfw&quot;&gt;@cezaraugusto&lt;/a&gt; - Resolvendo o problema com serviços e propaganda digital através do blockchain!! &lt;a href=&quot;https://t.co/VqCX2X9L79&quot;&gt;pic.twitter.com/VqCX2X9L79&lt;/a&gt;&lt;/p&gt;&amp;mdash; Wesley Mendes (@wesgtox) &lt;a href=&quot;https://twitter.com/wesgtox/status/1052642641400262665?ref_src=twsrc%5Etfw&quot;&gt;October 17, 2018&lt;/a&gt;&lt;/blockquote&gt;
 &lt;p&gt;At this time, I also had the chance to help to mentor two talented engineering interns. We talked a lot about bugs, tests, life, and I was able to help and see them grow in confidence as they shipped valuable code.&lt;/p&gt;
 &lt;p&gt;Mentoring is one of my favorite things about programming, and I’m happy I had this chance many times at Brave, with both juniors and seniors from other teams. Who in this world never bargained Polymer skills for some C++ guidance?&lt;/p&gt;
 &lt;p&gt;Working full-time on the new desktop version was exciting. Sync V2 took a huge amount of time and effort to land for several reasons, and I felt relieved &lt;a href=&quot;https://github.com/brave/brave-core/pull/1019&quot;&gt;when it landed&lt;/a&gt;. Sync was one of the most wanted features in the new Brave version.&lt;/p&gt;
 &lt;p&gt;Speaking at a conference again gave me a confidence boost that positively reflected in my daily work. The new browser felt great. Users were happy. Could I ask for more?&lt;/p&gt;
 &lt;p&gt;It was 2018.&lt;/p&gt;
 &lt;h2 id=&quot;2019&quot; tabindex=&quot;-1&quot;&gt;&lt;a class=&quot;header-anchor&quot; href=&quot;https://cezaraugusto.com/posts/the-years-at-brave/#2019&quot;&gt;&lt;span&gt;2019&lt;/span&gt;&lt;/a&gt;&lt;/h2&gt;
-&lt;blockquote class=&quot;twitter-tweet&quot;&gt;&lt;p lang=&quot;en&quot; dir=&quot;ltr&quot;&gt;merged yesterday in our nightly channel the new interface for Shields in Brave desktop browser. Great stuff is coming up for all of you fighting for a better web! &lt;a href=&quot;https://t.co/IGRIO2yxTK&quot;&gt;pic.twitter.com/IGRIO2yxTK&lt;/a&gt;&lt;/p&gt;&amp;mdash; Cezar Augusto (@cezaraugusto) &lt;a href=&quot;https://twitter.com/cezaraugusto/status/1105975164704116736?ref_src=twsrc%5Etfw&quot;&gt;March 13, 2019&lt;/a&gt;&lt;/blockquote&gt;
+&lt;blockquote class=&quot;twitter-tweet&quot;&gt;&lt;p lang=&quot;en&quot; dir=&quot;ltr&quot;&gt;merged yesterday in our nightly channel the new interface for Shields in Brave desktop browser. Great stuff is coming up for all of you fighting for a better web! &lt;a href=&quot;https://t.co/IGRIO2yxTK&quot;&gt;pic.twitter.com/IGRIO2yxTK&lt;/a&gt;&lt;/p&gt;&amp;mdash; Cezar Augusto (@cezaraugusto) &lt;a href=&quot;https://twitter.com/cezaraugusto/status/1105975164704116736?ref_src=twsrc%5Etfw&quot;&gt;March 13, 2019&lt;/a&gt;&lt;/blockquote&gt; &lt;script async=&quot;&quot; src=&quot;https://platform.twitter.com/widgets.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;
 &lt;p&gt;The year started with me working on some Sync bugs. I &lt;a href=&quot;https://github.com/brave/brave-core/pull/2874&quot;&gt;pushed a change&lt;/a&gt; that got Shields a brand new interface. Shields and Sync dictated the rest of the year.&lt;/p&gt;
 &lt;p&gt;This year I got another chance to help interns at Brave, but now taking full ownership of the whole interview process (up to where I’m legally allowed). From picking up a candidate from the list, passing through technical and social interviewing, to job offer. An incredible experience. I was lucky to pick up a talented front-end engineer to mentor. We had fun times and shipped quality software. Mentoring is fun.&lt;/p&gt;
 &lt;p&gt;My only regret is not having a picture to share. I went to San Francisco again to meet them and got to know the new company office. SF is great. I got to eat at the famous Fogo de Chao, took a daily city walk, got lost a couple of times. Fun!&lt;/p&gt;
 &lt;p&gt;In October, I got the chance to work on a cool feature that would ask if you want to load an archived version of an error page — using the Wayback Machine API (where I coined the name &lt;em&gt;Braveback&lt;/em&gt; Machine). &lt;a href=&quot;https://github.com/brave/brave-core/pull/3561&quot;&gt;The work&lt;/a&gt; started as a browser extension, and eventually, my peer &lt;a href=&quot;https://twitter.com/simonhong33&quot;&gt;@simonhong33&lt;/a&gt; ported it to C++, for maximum performance.&lt;/p&gt;
-&lt;blockquote class=&quot;twitter-tweet&quot;&gt;&lt;p lang=&quot;en&quot; dir=&quot;ltr&quot;&gt;Available on &lt;a href=&quot;https://twitter.com/brave?ref_src=twsrc%5Etfw&quot;&gt;@brave&lt;/a&gt; nightly: check if a missing website has an archived version available in &lt;a href=&quot;https://t.co/JQMrtsJ5KA&quot;&gt;https://t.co/JQMrtsJ5KA&lt;/a&gt;. Solid work I got the chance to do with my talented peers &lt;a href=&quot;https://twitter.com/simonhong33?ref_src=twsrc%5Etfw&quot;&gt;@simonhong33&lt;/a&gt;, Karen, and &lt;a href=&quot;https://twitter.com/rebron?ref_src=twsrc%5Etfw&quot;&gt;@rebron&lt;/a&gt;. &lt;a href=&quot;https://t.co/BM5r9aoTxx&quot;&gt;pic.twitter.com/BM5r9aoTxx&lt;/a&gt;&lt;/p&gt;&amp;mdash; Cezar Augusto (@cezaraugusto) &lt;a href=&quot;https://twitter.com/cezaraugusto/status/1207701750960050177?ref_src=twsrc%5Etfw&quot;&gt;December 19, 2019&lt;/a&gt;&lt;/blockquote&gt;
+&lt;blockquote class=&quot;twitter-tweet&quot;&gt;&lt;p lang=&quot;en&quot; dir=&quot;ltr&quot;&gt;Available on &lt;a href=&quot;https://twitter.com/brave?ref_src=twsrc%5Etfw&quot;&gt;@brave&lt;/a&gt; nightly: check if a missing website has an archived version available in &lt;a href=&quot;https://t.co/JQMrtsJ5KA&quot;&gt;https://t.co/JQMrtsJ5KA&lt;/a&gt;. Solid work I got the chance to do with my talented peers &lt;a href=&quot;https://twitter.com/simonhong33?ref_src=twsrc%5Etfw&quot;&gt;@simonhong33&lt;/a&gt;, Karen, and &lt;a href=&quot;https://twitter.com/rebron?ref_src=twsrc%5Etfw&quot;&gt;@rebron&lt;/a&gt;. &lt;a href=&quot;https://t.co/BM5r9aoTxx&quot;&gt;pic.twitter.com/BM5r9aoTxx&lt;/a&gt;&lt;/p&gt;&amp;mdash; Cezar Augusto (@cezaraugusto) &lt;a href=&quot;https://twitter.com/cezaraugusto/status/1207701750960050177?ref_src=twsrc%5Etfw&quot;&gt;December 19, 2019&lt;/a&gt;&lt;/blockquote&gt; &lt;script async=&quot;&quot; src=&quot;https://platform.twitter.com/widgets.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;
 &lt;p&gt;Sync, Shields, interviewing, management, mentoring, Wayback Machine.&lt;/p&gt;
 &lt;p&gt;Bye 2019.&lt;/p&gt;
 &lt;h2 id=&quot;2020&quot; tabindex=&quot;-1&quot;&gt;&lt;a class=&quot;header-anchor&quot; href=&quot;https://cezaraugusto.com/posts/the-years-at-brave/#2020&quot;&gt;&lt;span&gt;2020&lt;/span&gt;&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;The year started with me finally managing to work on my dream issue, &lt;a href=&quot;https://github.com/brave/brave-core/pull/4325&quot;&gt;a long-needed refactor of new tab page’s top sites&lt;/a&gt;, along with some other features and bugs. This task was my short movie version of &lt;a href=&quot;https://en.wikipedia.org/wiki/The_Last_Dance_(2020_TV_series)&quot;&gt;&lt;em&gt;The Last Dance&lt;/em&gt;&lt;/a&gt;. Me and Brave shaked hands formally for the last time a few months after this change landed.&lt;/p&gt;
 &lt;p&gt;At Brave, I got to know a lot of talented people, helped shape the desktop software as it is known today, spoke the good news about the company for a large audience, mentored peers, interviewed people, managed people, had fun.&lt;/p&gt;
-  &lt;div class=&quot;fluid-text&quot; style=&quot;font-size: clamp(57px, 17vw, 141px&quot;&gt;
-    I HAD A LOT
-  &lt;/div&gt;
-  &lt;div class=&quot;fluid-text&quot; style=&quot;font-size: clamp(68px, 28vw, 236px&quot;&gt;
-    OF FUN
-  &lt;/div&gt;
 &lt;p&gt;Saying goodbye is never easy, but as I finish this blog post, I’m thankful to say that the only memories I have at my time on Brave are happy.&lt;/p&gt;
 &lt;p&gt;Some people like to work for big companies. Some people like to work to make companies big. I feel rewarded seeing Brave growing strong every year. With about &lt;a href=&quot;https://brave.com/brave-passes-10m-mau/&quot;&gt;ten million&lt;/a&gt; monthly active users, Brave is not small anymore, by any means. I can’t help but smile and feel thankful that ten million people are every month, seeing, interacting, and using features made with a code I co-created.&lt;/p&gt;
 &lt;p&gt;Brave is making history, and I’m proud to say I’m part of it.&lt;/p&gt;
 &lt;p&gt;Onwards!&lt;/p&gt;
-&lt;p&gt;Dear Brave Software,&lt;/p&gt;
-  &lt;div class=&quot;fluid-text&quot; style=&quot;font-size: clamp(93px, 28vw, 224px&quot;&gt;
-    THANK
-  &lt;/div&gt;
-  &lt;div class=&quot;fluid-text&quot; style=&quot;font-size: clamp(152px, 47vw, 390px&quot;&gt;
-    YOU
-  &lt;/div&gt;
+&lt;p&gt;Dear Brave Software, thank you!&lt;/p&gt;
 </content>
   </entry>
   
@@ -282,7 +270,7 @@
     
       <link href="https://cezaraugusto.com/posts/what-changes-in-chrome-extension-manifest-v3/"/>
     
-    <updated>2020-03-17T00:00:00Z</updated>
+    <updated>Mon, 16 Mar 2020 21:00:00 GMT</updated>
     <id>https://cezaraugusto.com/posts/what-changes-in-chrome-extension-manifest-v3/</id>
     <content type="html">&lt;p&gt;A few months ago, I announced (a personally ambitious move) on Twitter that I &lt;a href=&quot;https://twitter.com/cezaraugusto/status/1210275097774379009&quot;&gt;started writing&lt;/a&gt; a &lt;a href=&quot;https://github.com/cezaraugusto/web-extensions-for-the-builders&quot;&gt;book about WebExtensions&lt;/a&gt;. It was just about the same time I saw a talk about &lt;a href=&quot;https://www.youtube.com/watch?v=7-ALJiZCI6w&quot;&gt;Chrome extensions and the world of tomorrow&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;Being Chrome the browser that championed the Extensions concept, I got interested to know the changes behind &lt;a href=&quot;https://security.googleblog.com/2018/10/trustworthy-chrome-extensions-by-default.html&quot;&gt;their decision&lt;/a&gt; to &lt;a href=&quot;https://bugs.chromium.org/p/chromium/issues/detail?id=896897&amp;amp;desc=2&quot;&gt;roll out&lt;/a&gt; the update. How does it affect the ecosystem? What changes in real-terms? What do extension developers need to know?&lt;/p&gt;

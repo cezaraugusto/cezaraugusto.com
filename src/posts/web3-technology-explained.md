@@ -18,6 +18,7 @@ Web 3.0 is about distributed control, and this post is an explanation of the tec
 Technically speaking, the web3 allows better governance of institutions, a new option to distribute assets between company working members, auditable public data for governments, the list goes on.
 
 You still see a bunch of useless jpegs worth millions, but it's more than that. That's because of how the concept of blockchain works.
+
 ## The Blockchain
 
 The blockchain is a shared database.
@@ -58,8 +59,8 @@ Contract names can vary. The Ethereum blockchain calls it a _smart contract_. So
 
 A contract is made of functions and data (its state):
 
-* Functions are used to perform all sorts of data operations related to the contract. It's the piece of code that will run every time someone requests the contract.
-* State refers to the data after being processed by a contract. The value will be sent to the blockchain once it's approved by other computers doing the same task.
+- Functions are used to perform all sorts of data operations related to the contract. It's the piece of code that will run every time someone requests the contract.
+- State refers to the data after being processed by a contract. The value will be sent to the blockchain once it's approved by other computers doing the same task.
 
 ```sol
 // SPDX-License-Identifier: GPL-3.0
@@ -85,7 +86,6 @@ contract SimpleStorage {
 ```
 
 _In this example, the contract defines the functions set and get that can be used to modify or retrieve the variable's value. Adapted from [Solidity docs](https://docs.soliditylang.org/en/v0.8.7/introduction-to-smart-contracts.html#simple-smart-contracts)._
-
 
 ### A contract is
 
@@ -142,10 +142,9 @@ The code (contract) that is read by the computer (node) can be sent by any other
 The data within the block can be anything. A block consists of its data and a unique hash to identify itself. Since blocks are chained, it also includes the previous block's hash.
 
 {% Figure {
-  src: '/assets/images/posts/post-006/001.png',
+  src: '/static/images/posts/post-006/001.png',
   caption: 'A block of bitcoin data consists of "from," "to," and "amount."'
 } %}
-
 
 These blocks form a linear sequence in time, where the word "blockchain" derives. Blocks are added to the chain in rather regular intervals. [Bitcoin takes about 10 minutes](https://coinmarketcap.com/alexandria/article/how-long-does-a-bitcoin-transaction-take) to confirm a block transaction, and for Ethereum, this time is [around 17 seconds](https://docs.soliditylang.org/en/v0.8.7/introduction-to-smart-contracts.html#blocks).
 
@@ -156,7 +155,7 @@ These blocks form a linear sequence in time, where the word "blockchain" derives
 dApps (decentralized applications) are web applications enabled to access blockchain data. They do so by communicating with contacts to communicate with the blockchain and execute transactions.
 
 {% Figure {
-  src: '/assets/images/posts/post-006/002.png',
+  src: '/static/images/posts/post-006/002.png',
   caption: 'Sample Ethereum dApps'
 } %}
 
@@ -165,7 +164,7 @@ A common web app relies on front-end technology (HTML, CSS, JavaScript). It perf
 **dApps don't need APIs to connect to databases** because it uses the blockchain. They use contracts as a middle layer instead of connecting to the blockchain directly.
 
 {% Figure {
-  src: '/assets/images/posts/post-006/004.png',
+  src: '/static/images/posts/post-006/004.png',
   caption: 'dApp flow to hit the blockchain'
 } %}
 
@@ -184,7 +183,7 @@ The process of creating tokens and assigning them value is called tokenization. 
 ## NFTs
 
 {% Figure {
-  src: '/assets/images/posts/post-006/003.png',
+  src: '/static/images/posts/post-006/003.png',
   caption: 'CryptoPunks (https://www.larvalabs.com/cryptopunks) are a unique cllective of 10,000 unique characters.'
 } %}
 
@@ -200,11 +199,11 @@ I hope this post helped you figure out how the web3 works and **welcome to the w
 
 **References and further reading:**
 
-* [Chatham House Primer: Blockchain](https://www.youtube.com/watch?v=JU3r4WM0-6g)
-* [IBM - What is Blockchain](https://www.ibm.com/topics/what-is-blockchain)
-* [How does a blockchain work - Simply Explained](https://www.youtube.com/watch?v=SSo_EIwHSd4)
-* [How the Three Formats of Bitcoin Addresses Work](https://cryptocurrencyfacts.com/bitcoin-address-formats/)
-* [What is an Ethereum Address?](https://info.etherscan.com/what-is-an-ethereum-address/)
-* [An Overview of Consensus Protocols in Blockchain](https://www.section.io/engineering-education/blockchain-consensus-protocols/)
-* [Cryptocurrency and Crypto Tokens: What's the difference?](https://gadgets.ndtv.com/cryptocurrency/news/cryptocurrency-crypto-token-difference-meaning-explained-bitcoin-ethereum-ether-dai-link-comp-digital-asset-blockchain-2502146)
-* [Introduction to Smart Contracts](https://docs.soliditylang.org/en/v0.8.7/introduction-to-smart-contracts.html)
+- [Chatham House Primer: Blockchain](https://www.youtube.com/watch?v=JU3r4WM0-6g)
+- [IBM - What is Blockchain](https://www.ibm.com/topics/what-is-blockchain)
+- [How does a blockchain work - Simply Explained](https://www.youtube.com/watch?v=SSo_EIwHSd4)
+- [How the Three Formats of Bitcoin Addresses Work](https://cryptocurrencyfacts.com/bitcoin-address-formats/)
+- [What is an Ethereum Address?](https://info.etherscan.com/what-is-an-ethereum-address/)
+- [An Overview of Consensus Protocols in Blockchain](https://www.section.io/engineering-education/blockchain-consensus-protocols/)
+- [Cryptocurrency and Crypto Tokens: What's the difference?](https://gadgets.ndtv.com/cryptocurrency/news/cryptocurrency-crypto-token-difference-meaning-explained-bitcoin-ethereum-ether-dai-link-comp-digital-asset-blockchain-2502146)
+- [Introduction to Smart Contracts](https://docs.soliditylang.org/en/v0.8.7/introduction-to-smart-contracts.html)

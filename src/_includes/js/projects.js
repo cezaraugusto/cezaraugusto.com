@@ -1,15 +1,16 @@
-async function fetchGitHubData () {
-  const url = 'https://api.github.com/users/cezaraugusto/repos?page=1&per_page=100'
+async function fetchGitHubData() {
+  const url =
+    'https://api.github.com/users/cezaraugusto/repos?page=1&per_page=100'
   const response = await window.fetch(url)
 
   return response.json()
 }
 
-function sortByPopularity (repos) {
+function sortByPopularity(repos) {
   return repos.sort((a, b) => b.stargazers_count - a.stargazers_count)
 }
 
-async function loadProjects () {
+async function loadProjects() {
   const data = await fetchGitHubData()
   const repos = sortByPopularity(data)
 
@@ -35,16 +36,16 @@ async function loadProjects () {
   return ownPublicRepos
 }
 
-function cacheProjects (projects) {
-  window.localStorage.setItem("new-projects", JSON.stringify(projects));
+function cacheProjects(projects) {
+  window.localStorage.setItem('github-projects', JSON.stringify(projects))
 }
 
-function renderProjects (projects) {
+function renderProjects(projects) {
   const ol = document.getElementById('projects')
 
   if (!ol) return
 
-  ol.removeChild(ol.firstElementChild)
+  // ol.removeChild(ol.firstElementChild)
 
   projects.forEach((repo) => {
     const li = document.createElement('li')
@@ -61,8 +62,8 @@ function renderProjects (projects) {
   })
 }
 
-async function renderToPage () {
-  const cachedData = window.localStorage.getItem('new-projects')
+async function renderToPage() {
+  const cachedData = window.localStorage.getItem('github-projects')
 
   if (cachedData) {
     renderProjects(JSON.parse(cachedData))

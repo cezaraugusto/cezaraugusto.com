@@ -1,4 +1,3 @@
-
 {
   "title": "Cezar Augusto™",
   "description": "Personal blog of Cezar Augusto, an application engineer, book author, and content creator. Blogs about software development, entrepreneurship, and open-source initiatives.",
@@ -6,8 +5,8 @@
   "url": "https://cezaraugusto.com",
   "headline": "@cezaraugusto",
   "keywords": "cezar augusto, developer, engineer, builder, web, software, blog, performance, standards, tooling, browser, front-end, back-end, fullstack, youtube, github, X",
-  "intro": "Lead developer, creator of [Extension.js](https://extension.js.org).",
-  "social": "Writings about software, open-source, and entrepreneurship. &nbsp;More on [Projects](/projects) • Also [GitHub](https://github.com/cezaraugusto) • [X](https://x.com/cezaraugusto)",
+  "intro": "Software developer, creator of [Extension.js](https://extension.js.org).<br>",
+  "social": "Writings about software, open-source, and entrepreneurship. [About me](/about).",
   "bio": "Cezar Augusto is an application engineer, and open-source contributor.",
   "language": "en_US",
   "github": "cezaraugusto",

@@ -5,10 +5,13 @@
     "declaration-colon-space-after": "always",
     "indentation": 2,
     "max-empty-lines": 1,
-    "rule-empty-line-before": [ "always", {
-      "except": ["first-nested"],
-      "ignore": ["after-comment"]
-    } ],
+    "rule-empty-line-before": [
+      "always",
+      {
+        "except": ["first-nested"],
+        "ignore": ["after-comment"]
+      }
+    ],
     "font-family-no-missing-generic-family-keyword": true,
     "declaration-block-no-duplicate-properties": true,
     "declaration-block-no-shorthand-property-overrides": true,

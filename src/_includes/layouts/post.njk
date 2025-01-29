@@ -1,43 +1,43 @@
 {% extends 'layouts/default.njk' %}
 
 {% block main %}
-  <main id="main-content" class="p-4 pb-10" tabindex="-1">
-    <article class="flex justify-center">
-      <div class="py-6 prose lg:prose-lg">
-        <header>
-          <!-- Show dates only for posts -->
-          <h1 id="title">
-            {{ title }}
-          </h1>
-          {% if description %}
-            <p>{{ description | markdownify_inline | safe }}</p>
-          {% endif %}
-          {% if image -%}
-            <figure class="flex flex-col justify-center">
-              <img
-            src="{{ image }}"
-            alt="{{ alt }}"
-/>
-              {% if caption -%}
-                <figcaption>{{caption}}</figcaption>
-              {%- endif %}
-            </figure>
-          {%- endif %}
-          <time class="date">{{ date | date_formatted }}</time>
-          <i>&#9642;</i>
-          {% if title %}
-            <span class="share-actions">
+  <main tabindex="-1">
+    <header>
+      <!-- Show dates only for posts -->
+      <h1 class="page-title">{{ title }}</h1>
+
+      {% if description %}
+        <p>{{ description | markdownify_inline | safe }}</p>
+      {% endif %}
+
+      {% if image -%}
+      <figure>
+        <img src="{{ image }}" alt="{{ alt }}" />
+        {% if caption -%}
+          <figcaption>{{caption}}</figcaption>
+        {%- endif %}
+      </figure>
+      {%- endif %}
+
+      <div class="meta">
+        <time class="date">{{ date | date_formatted }}</time>
+
+        {% if title %}
+        <i>&#9642;</i>
+        <span>
           Share on 
           <a href="https://twitter.com/intent/tweet?text={{ title | space_safe }}&amp;url={{ site.url }}/posts/{{ page.fileSlug }}&amp;via={{ site.owner | space_safe }}" target="_blank" class="twitter">Twitter</a>
-            </span>
-          {%- endif %}
-          <div class="divider"></div>
-        </header>
-        <div class="content">
-          {{ content | safe }}
-        </div>
-      </article>
-    </main>
-    <!-- this resource is cached with SW -->
-    <script async src="/assets/js/twitter-widget.js" charset="utf-8"></script>
-  {% endblock %}
+        </span>
+        {%- endif %}
+      </div>
+
+      <hr class="cs-hr" />
+    </header>
+
+    <div class="prose">
+      {{ content | safe }}
+    </div>
+  </main>
+  <!-- this resource is cached with SW -->
+  <script async src="/assets/js/twitter-widget.js" charset="utf-8"></script>
+{% endblock %}

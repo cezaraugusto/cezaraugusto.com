@@ -1,3 +1,289 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+body {
+  padding: 40px;
+  max-width: 800px;
+  margin: auto;
+}
+
+::selection {
+  background-color: #958831;
+  color: white;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  color: var(--text);
+}
+
+.hidden {
+  display: none;
+}
+
+header {
+  margin-bottom: 30px;
+}
+
+header .top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+header .top h1 {
+  font-size: 50px;
+  line-height: 50px;
+}
+
+header .top .links {
+  display: flex;
+  gap: 10px;
+}
+
+header .top .links a {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  background-size: 25px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+header .top .links .gh {
+  background-image: url(/static/svg/github.svg);
+}
+
+header .top .links .x {
+  background-image: url(/static/svg/x.svg);
+}
+
+header p {
+  font-size: 22px;
+  line-height: 25px;
+  margin-top: 10px;
+}
+
+header .meta {
+  margin: 20px 0;
+}
+
+header .page-title {
+  font-size: 50px;
+}
+
+main > section {
+  margin-bottom: 30px;
+}
+
+main > section h2 {
+  user-select: none;
+  margin-bottom: 5px;
+}
+
+main > section article {
+  font-size: 18px;
+  line-height: 32px;
+  display: flex;
+  gap: 6px;
+}
+
+ol {
+  font-size: 18px;
+  line-height: 32px;
+}
+
+.post-link {
+  font-size: 20px;
+  line-height: 38px;
+}
+
+.code-block {
+  margin-top: 15px;
+  overflow-x: hidden;
+}
+
+.code-block .inner {
+  position: relative;
+}
+
+.code-block .inner .cs-btn {
+  position: absolute;
+  right: 1px;
+  top: 1px;
+  z-index: 5;
+}
+
+.code-block .inner pre {
+  background-color: #3e4637;
+  border: 1px solid;
+  border-color: #292c21 #8c9284 #8c9284 #292c21;
+  margin-top: 5px;
+  position: relative;
+  font-family: 'Courier New', Courier, monospace;
+  padding: 5px;
+}
+
+.code-block .inner pre code {
+  white-space: pre-wrap;
+}
+
+.code-block .inner pre code::selection {
+  background-color: #958831;
+  color: white;
+}
+
+footer {
+  text-align: center;
+  margin-top: 40px;
+}
+
+footer a {
+  color: #dedfd6;
+}
+
+hr {
+  margin-bottom: 20px;
+}
+
+@media (max-width: 400px) {
+  body {
+    padding: 20px;
+  }
+}
+
+.prose {
+  font-size: 20px;
+}
+
+/* Typography styles for headings */
+.prose h1 {
+  scroll-margin: 20px;
+  font-size: 2.25rem;
+  font-weight: 800; /* extrabold */
+  letter-spacing: -0.02em;
+}
+
+@media (min-width: 1024px) {
+  .prose h1 {
+    font-size: 3rem;
+  }
+}
+
+.prose h2 {
+  margin-top: 2rem;
+  scroll-margin: 20px;
+  padding-bottom: 0.5rem;
+  font-size: 1.875rem;
+  font-weight: 600; /* semibold */
+  letter-spacing: -0.015em;
+  transition: color 0.2s ease-in-out;
+}
+
+.prose h2:first-child {
+  margin-top: 0;
+}
+
+.prose h3 {
+  margin-top: 2rem;
+  scroll-margin: 20px;
+  font-size: 1.5rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+
+/* Paragraph styles */
+.prose p {
+  line-height: 1.25;
+}
+
+.prose p:not(:first-child) {
+  margin-top: 1.1rem;
+}
+
+/* Anchor styles */
+.prose a {
+  font-weight: 500; /* medium */
+  color: var(--primary);
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+/* Blockquote styles */
+.prose blockquote {
+  margin-top: 1.5rem;
+  border-left: 2px solid currentColor;
+  padding-left: 1.5rem;
+  font-style: italic;
+}
+
+/* List styles */
+.prose ul {
+  margin: 1.5rem 0;
+  margin-left: 1.5rem;
+  list-style-type: disc;
+}
+
+.prose li {
+  margin-top: 0.5rem;
+}
+
+/* Table styles */
+.prose table {
+  width: 100%;
+}
+
+.prose th,
+.prose td {
+  border: 1px solid currentColor;
+  padding: 0.5rem 1rem;
+  text-align: left;
+}
+
+.prose th[align='center'],
+.prose td[align='center'] {
+  text-align: center;
+}
+
+.prose th[align='right'],
+.prose td[align='right'] {
+  text-align: right;
+}
+
+/* Table row styles */
+.prose tr {
+  margin: 0;
+  border-top: 1px solid currentColor;
+  padding: 0;
+}
+
+.prose tr:nth-child(even) {
+  background-color: var(--muted);
+}
+
+.prose figure {
+  margin-top: 1.25rem;
+}
+
+.twitter-tweet {
+  margin-top: 1.25rem !important;
+}
+
+/* :root {
+  --bg: #424c59;
+  --secondary-bg: #373f46;
+  --accent: #5069c4;
+  --secondary-accent: #315795;
+  --text: #d6dade;
+  --secondary-text: #d3dade;
+  --text-3: #95a0aa;
+  --border-light: #8492a0;
+  --border-dark: #212429;
+  --disabled-text: #212429;
+  --disabled-text-shadow: #6f7580;
+  --outline: #000000;
+  --slider: #7f8f9c;
+  --slider-bg: #1f1f1f;
+  --scrollbar-track: #505a6a;
+} */

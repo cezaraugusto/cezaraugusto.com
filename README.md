@@ -10,15 +10,15 @@ Hey there! This is my personal website and blog. It's super fast and built with 
 
 ## Blog includes
 
-* Assets caching with Service Worker
-* Syntax highlighting
-* RSS feed
-* Sitemap
+- Assets caching with Service Worker
+- Syntax highlighting
+- RSS feed
+- Sitemap
 
 ## Code includes
 
-* Standard for JS linting
-* Stylelint for CSS linting
+- Standard for JS linting
+- Stylelint for CSS linting
 
 ## Installing
 

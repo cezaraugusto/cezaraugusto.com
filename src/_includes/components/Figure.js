@@ -1,4 +1,4 @@
-module.exports = ({ src, alt = '', caption = '' }) => `
+module.exports = ({src, alt = '', caption = ''}) => `
   <figure>
     <div>
       <img class="m-auto" src="${src}" alt="${alt}" />

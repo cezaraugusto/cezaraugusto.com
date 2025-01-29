@@ -50,6 +50,7 @@
     <meta name="msvalidate.01" content="E718A8AA0D4E3ED605BFF1BA1C0E46A7">
     <meta name="yandex-verification" content="0dd50ab9279c1413">
 
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/ekmas/cs16.css@main/css/cs16.min.css">
     <link rel="preload stylesheet" href="/static/css/prism.css" type="text/css" as="style">
 
     <!-- inlined css -->
@@ -58,7 +59,7 @@
     {% include "css/share.css" %}
     {% endset %}
     <style>
-      {{css | postcss | cssmin | safe}}
+      {{css | cssmin | safe}}
     </style>
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-141381934-1"></script>
@@ -71,13 +72,11 @@
       gtag('config', 'UA-141381934-1');
     </script>
   </head>
-  <body class="flex flex-col items-center h-screen h-[100svh]">
-    <div class="w-full max-w-3xl flex-grow">
-      {% include "components/navbar.njk" %}
-      {% block pageTop %}{% endblock %}
-      {% block main %}{% endblock %}
-      {% include "components/footer.njk" %}
-    </div>
+  <body>
+    {% include "components/navbar.njk" %}
+    {% block pageTop %}{% endblock %}
+    {% block main %}{% endblock %}
+    {% include "components/footer.njk" %}
     <script>
       {% set corejs %}{% include "js/app.js" %}{% endset %}
       {{ corejs | jsmin | safe }}

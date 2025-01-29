@@ -1,16 +1,12 @@
-const { DateTime } = require('luxon')
+const {DateTime} = require('luxon')
 const CleanCSS = require('clean-css')
 const UglifyJS = require('uglify-es')
-const htmlmin = require('html-minifier')
 const pluginRss = require('@11ty/eleventy-plugin-rss')
 const syntaxHighlight = require('@11ty/eleventy-plugin-syntaxhighlight')
 const Figure = require('../src/_includes/components/Figure.js')
 const Youtube = require('../src/_includes/components/Youtube.js')
 const FluidText = require('../src/_includes/components/FluidText.js')
 const GenerateRobotsTXTRules = require('../src/_includes/components/GenerateRobotsTXTRules.js')
-const postcss = require('postcss');
-const tailwindcss = require('tailwindcss');
-const autoprefixer = require('autoprefixer');
 const anchor = require('markdown-it-anchor')
 const md = require('markdown-it')({
   html: true,
@@ -20,17 +16,17 @@ const md = require('markdown-it')({
 })
 const markdown = md.use(anchor, {
   level: [2],
-  permalink: anchor.permalink.headerLink({ safariReaderFix: true }),
+  permalink: anchor.permalink.headerLink({safariReaderFix: true}),
   permalinkBefore: true,
   permalinkSymbol: ''
 })
 
-module.exports = eleventyConfig => {
-  const parseDate = str => {
+module.exports = (eleventyConfig) => {
+  const parseDate = (str) => {
     if (str instanceof Date) {
       return str
     }
-    const date = DateTime.fromISO(str, { zone: 'utc' })
+    const date = DateTime.fromISO(str, {zone: 'utc'})
     return date.toJSDate()
   }
 
@@ -43,7 +39,7 @@ module.exports = eleventyConfig => {
   // Filters
   eleventyConfig.addFilter(
     'cssmin',
-    code => new CleanCSS({}).minify(code).styles
+    (code) => new CleanCSS({}).minify(code).styles
   )
 
   eleventyConfig.addFilter('jsmin', (code) => {
@@ -55,64 +51,48 @@ module.exports = eleventyConfig => {
     return minified.code
   })
 
-  // Minify HTML output
-  eleventyConfig.addTransform('htmlmin', function (content, outputPath) {
-    if (outputPath.indexOf('.html') > -1) {
-      const minified = htmlmin.minify(content, {
-        useShortDoctype: true,
-        removeComments: true,
-        collapseWhitespace: true
-      })
-      return minified
-    }
-    return content
-  })
+  eleventyConfig.addFilter('markdownify', (str) => markdown.render(str))
 
-  eleventyConfig.addFilter('markdownify', str => markdown.render(str))
-
-  eleventyConfig.addFilter('markdownify_inline', str =>
+  eleventyConfig.addFilter('markdownify_inline', (str) =>
     markdown.renderInline(str)
   )
 
-  eleventyConfig.addFilter('strip_html', str => {
+  eleventyConfig.addFilter('strip_html', (str) => {
     return str.replace(
       /<script.*?<\/script>|<!--.*?-->|<style.*?<\/style>|<.*?>/g,
       ''
     )
   })
 
-  eleventyConfig.addFilter('html_date_string', dateObj => {
+  eleventyConfig.addFilter('html_date_string', (dateObj) => {
     return DateTime.fromJSDate(dateObj).toFormat('yyyy-LL-dd')
   })
 
-  eleventyConfig.addFilter('date_to_permalink', obj => {
+  eleventyConfig.addFilter('date_to_permalink', (obj) => {
     const date = parseDate(obj)
     return DateTime.fromJSDate(date).toFormat('yyyy/MM')
   })
 
-  eleventyConfig.addFilter('date_formatted', obj => {
+  eleventyConfig.addFilter('date_formatted', (obj) => {
     const date = parseDate(obj)
     return DateTime.fromJSDate(date).toFormat('LLL dd yyyy')
   })
 
-  eleventyConfig.addFilter('permalink', str => {
+  eleventyConfig.addFilter('permalink', (str) => {
     return str.replace(/\.html/g, '')
   })
 
-  eleventyConfig.addFilter('space_safe', str => {
+  eleventyConfig.addFilter('space_safe', (str) => {
     return str.replace(/\s+/g, '%20')
   })
 
   // Collections
-  eleventyConfig.addCollection('posts', collection => {
+  eleventyConfig.addCollection('posts', (collection) => {
     return collection.getFilteredByGlob('**/posts/*.md').reverse()
   })
 
-  eleventyConfig.addCollection('latestPosts', collection => {
-    return collection
-      .getFilteredByGlob('**/posts/*.md')
-      .slice(-5)
-      .reverse()
+  eleventyConfig.addCollection('latestPosts', (collection) => {
+    return collection.getFilteredByGlob('**/posts/*.md').slice(-5).reverse()
   })
 
   // Shortcodes
@@ -123,26 +103,18 @@ module.exports = eleventyConfig => {
 
   // Copy all content we want published
   // that are not part of the build process
-  const generateRobotsTXTFile = process.env.NODE_ENV === 'staging'
-    ? 'src/robots_staging.txt'
-    : 'src/robots_production.txt'
+  const generateRobotsTXTFile =
+    process.env.NODE_ENV === 'staging'
+      ? 'src/robots_staging.txt'
+      : 'src/robots_production.txt'
 
   eleventyConfig
     .addPassthroughCopy('src/static')
-    .addPassthroughCopy({ [generateRobotsTXTFile]: 'robots.txt' })
+    .addPassthroughCopy({[generateRobotsTXTFile]: 'robots.txt'})
     .addPassthroughCopy('src/keybase.txt')
     .addPassthroughCopy('src/crossdomain.xml')
 
-  eleventyConfig.addNunjucksAsyncFilter('postcss', (cssCode, done) => {
-    postcss([tailwindcss(require('../tailwind.config.js')), autoprefixer()])
-      .process(cssCode)
-      .then(
-        (r) => done(null, r.css),
-        (e) => done(e, null)
-      );
-  });
-
-  eleventyConfig.addWatchTarget('src/**/*.css');
+  eleventyConfig.addWatchTarget('src/**/*.css')
 
   return {
     templateFormats: ['njk', 'md', 'html'],

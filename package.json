@@ -7,7 +7,8 @@
     "build": "cross-env NODE_ENV=production eleventy --config=config/eleventy.config.js",
     "lint:js": "standard",
     "lint:css": "stylelint --config='config/.stylelintrc.json' 'src/_includes/assets/css/*.css'",
-    "lint": "npm run lint:js && npm run lint:css"
+    "lint": "npm run lint:js && npm run lint:css",
+    "format": "prettier --write \"**/*.{md,js,json,css,njk,html}\""
   },
   "repository": {
     "type": "git",
@@ -15,7 +16,7 @@
   },
   "author": {
     "name": "Cezar Augusto",
-    "email": "boss@cezaraugusto.com",
+    "email": "boss@cezaraugusto.net",
     "url": "https://cezaraugusto.com/"
   },
   "license": "MIT",
@@ -32,19 +33,14 @@
     "@11ty/eleventy": "^3.0.0",
     "@11ty/eleventy-plugin-rss": "^2.0.3",
     "@11ty/eleventy-plugin-syntaxhighlight": "^5.0.0",
-    "@tailwindcss/typography": "^0.5.16",
-    "autoprefixer": "^10.4.20",
     "clean-css": "^5.3.3",
     "cross-env": "^7.0.3",
-    "daisyui": "^4.12.23",
-    "html-minifier": "^4.0.0",
     "luxon": "^3.5.0",
     "markdown-it": "^14.1.0",
     "markdown-it-anchor": "^9.2.0",
-    "postcss": "^8.5.1",
+    "prettier": "^3.3.2",
     "standard": "^17.1.2",
     "stylelint": "^16.14.1",
-    "tailwindcss": "^4.0.0",
     "uglify-es": "^3.3.9",
     "vite": "^6.0.11"
   }
