@@ -79,11 +79,11 @@
     {% include "components/footer.njk" %}
     <script>
       {% set corejs %}{% include "js/app.js" %}{% endset %}
-      {{ corejs | jsmin | safe }}
+      {{ corejs | safe }}
     </script>
     <script>
       {% set projectjs %}{% include "js/projects.js" %}{% endset %}
-      {{ projectjs | jsmin | safe }}
+      {{ projectjs | safe }}
     </script>
     <script type="application/ld+json">
       {% include "js/schema.json" %}

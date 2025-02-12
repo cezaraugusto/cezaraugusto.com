@@ -40,8 +40,6 @@
     "markdown-it-anchor": "^9.2.0",
     "prettier": "^3.3.2",
     "standard": "^17.1.2",
-    "stylelint": "^16.14.1",
-    "uglify-es": "^3.3.9",
-    "vite": "^6.0.11"
+    "stylelint": "^16.14.1"
   }
 }

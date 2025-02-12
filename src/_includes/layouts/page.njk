@@ -6,6 +6,7 @@
       {% if description %}
       <p>{{ description | markdownify_inline | safe }}</p>
       {% endif %} {% if image -%}
+      <br />
       <figure>
         {% if image -%}<img src="{{ image }}" alt="{{ alt }}" />{%- endif %} {%
         if caption -%}

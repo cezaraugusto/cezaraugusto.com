@@ -1,6 +1,5 @@
 const {DateTime} = require('luxon')
 const CleanCSS = require('clean-css')
-const UglifyJS = require('uglify-es')
 const pluginRss = require('@11ty/eleventy-plugin-rss')
 const syntaxHighlight = require('@11ty/eleventy-plugin-syntaxhighlight')
 const Figure = require('../src/_includes/components/Figure.js')
@@ -41,15 +40,6 @@ module.exports = (eleventyConfig) => {
     'cssmin',
     (code) => new CleanCSS({}).minify(code).styles
   )
-
-  eleventyConfig.addFilter('jsmin', (code) => {
-    const minified = UglifyJS.minify(code)
-    if (minified.error) {
-      console.error('UglifyJS error: ', minified.error)
-      return code
-    }
-    return minified.code
-  })
 
   eleventyConfig.addFilter('markdownify', (str) => markdown.render(str))
 
