@@ -11,8 +11,9 @@ updated: 2026-11-25
     <p>{{ site.now.text | markdownify_inline | safe }} <small>Updated <time datetime="{{ site.now.date }}">{{ site.now.date | date_month_year }}</time></small></p>
   </section>
   <section>
-    {% set posts = collections.latestPosts %}
-    <h2>Posts{% if collections.posts.length > posts.length %} <small>(<a href="/blog/" aria-label="{{ collections.posts.length | thousands }} · view all posts">{{ collections.posts.length | thousands }} · view all</a>)</small>{% endif %}</h2>
+    {% set allPosts = collections.posts | with_substack(substack) %}
+    {% set posts = allPosts.slice(0, 10) %}
+    <h2>Posts{% if allPosts.length > posts.length %} <small>(<a href="/blog/" aria-label="{{ allPosts.length | thousands }} · view all posts">{{ allPosts.length | thousands }} · view all</a>)</small>{% endif %}</h2>
     {% include "components/post-list.njk" %}
   </section>
   <section>

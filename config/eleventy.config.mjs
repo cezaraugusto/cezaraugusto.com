@@ -259,10 +259,6 @@ export default (eleventyConfig) => {
     return collection.getFilteredByGlob('**/posts/*.md').reverse()
   })
 
-  eleventyConfig.addCollection('latestPosts', (collection) => {
-    return collection.getFilteredByGlob('**/posts/*.md').slice(-10).reverse()
-  })
-
   // Shortcodes
   eleventyConfig.addShortcode('Figure', Figure)
   eleventyConfig.addShortcode('GenerateRobotsTXTRules', GenerateRobotsTXTRules)
