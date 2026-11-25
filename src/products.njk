@@ -1,0 +1,17 @@
+---
+title: Software by me
+description: Software I’ve designed and built on my own, from shipped products to the ideas I’m researching.
+updated: 2026-11-25
+permalink: /products/index.html
+---
+
+{% extends 'layouts/default.njk' %} {% block main %}
+<main id="main-content" tabindex="-1">
+  <nav aria-label="Back"><a href="/" aria-label="Back to Home">← Home</a></nav>
+  <h1>Software by me</h1>
+  <p>{{ description }}</p>
+  {% set showStats = false %}
+  {% set projects = apps %}
+  {% include "components/project-list.njk" %}
+</main>
+{% endblock %}

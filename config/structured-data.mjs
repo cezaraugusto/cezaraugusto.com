@@ -31,13 +31,13 @@ const website = (site) => ({
 })
 
 const extensionDev = (site) => ({
-  '@type': 'Organization',
+  '@type': 'WebApplication',
   '@id': extensionDevId(site),
   name: 'extension.dev',
   url: 'https://extension.dev',
   description: definitions.extensionDev,
-  foundingDate: '2026-05',
-  founder: { '@id': personId(site) },
+  applicationCategory: 'DeveloperApplication',
+  creator: { '@id': personId(site) },
   sameAs: ['https://github.com/extensiondev', 'https://www.npmjs.com/org/extension.dev']
 })
 
@@ -60,8 +60,7 @@ const person = (site) => ({
   alternateName: '@cezaraugusto',
   image: absolute(site, site.avatar.src),
   description: site.bio,
-  jobTitle: 'Founder of extension.dev',
-  worksFor: { '@id': extensionDevId(site) },
+  jobTitle: 'Software developer',
   alumniOf: {
     '@type': 'Organization',
     name: 'Brave',

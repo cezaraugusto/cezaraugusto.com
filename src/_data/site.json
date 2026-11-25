@@ -14,9 +14,9 @@
     "https://bsky.app/intent/": { "src": "/static/images/favicons/bluesky.png", "width": 32, "height": 32 },
     "https://cezaraugusto.substack.com/subscribe": { "src": "/static/images/favicons/substack.svg", "width": 64, "height": 64 }
   },
-  "intro": "Software developer. Creator of [Extension.js](https://extension.js.org) and founder of [extension.dev](https://extension.dev), where developers build, preview, and publish browser extensions for every major browser. [About me](/about/) · [Subscribe on Substack](https://cezaraugusto.substack.com/subscribe).",
+  "intro": "Software developer. Creator of [Extension.js](https://extension.js.org) and founder of [extension.dev](https://extension.dev), where developers and their AI agents build, preview, and publish browser extensions for every major browser. [About me](/about/) · [Subscribe on Substack](https://cezaraugusto.substack.com/subscribe).",
   "now": {
-    "text": "Currently building [extension.dev](https://extension.dev).",
+    "text": "Building [extension.dev](https://extension.dev), and building with it. The platform gets better every time I ship something real on it, and what I ship gets better because of the platform.",
     "date": "2026-11"
   },
   "bio": "Cezar Augusto is the creator of Extension.js and the founder of extension.dev. Before that, he spent nearly four years on the Brave browser team as a Senior Software Engineer.",
@@ -30,18 +30,17 @@
     "x": "https://x.com/cezaraugusto",
     "linkedin": "https://www.linkedin.com/in/cezar-augusto",
     "substack": "https://cezaraugusto.substack.com",
-    "npm": "https://www.npmjs.com/~cezaraugusto",
-    "quora": "https://www.quora.com/profile/Cezar-Augusto-1"
+    "npm": "https://www.npmjs.com/~cezaraugusto"
   },
   "brave": {
     "start": "2016-09-01",
     "end": "2020-05-15"
   },
   "avatar": {
-    "src": "/static/images/cezaraugusto.png",
-    "alt": "Avatar of Cezar Augusto: a drawn character in a red cap",
-    "width": 240,
-    "height": 240
+    "src": "/static/images/cezaraugusto-photo.jpg",
+    "alt": "Photo of Cezar Augusto smiling",
+    "width": 400,
+    "height": 400
   },
   "homeProjects": [
     "extension-js/extension.js",

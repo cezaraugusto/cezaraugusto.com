@@ -22,5 +22,11 @@ updated: 2026-11-25
     <h2>Open-Source Projects{% if allProjects.length > projects.length %} <small>(<a href="/open-source/" aria-label="{{ allProjects.length | thousands }} · view all open-source projects">{{ allProjects.length | thousands }} · view all</a>)</small>{% endif %}</h2>
     {% include "components/project-list.njk" %}
   </section>
+  <section>
+    {% set allApps = apps %}
+    {% set projects = allApps %}
+    <h2>Software by Me{% if allApps.length > projects.length %} <small>(<a href="/products/" aria-label="{{ allApps.length | thousands }} · view all software">{{ allApps.length | thousands }} · view all</a>)</small>{% endif %}</h2>
+    {% include "components/project-list.njk" %}
+  </section>
 </main>
 {% endblock %}

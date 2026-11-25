@@ -1,0 +1,53 @@
+[
+  {
+    "name": "Lance",
+    "url": "https://lance.cezaraugusto.com",
+    "description": "Stats and answers for any soccer match you watch on YouTube, computed on your device.",
+    "icon": {
+      "src": "/static/images/favicons/lance.svg",
+      "width": 24,
+      "height": 24
+    },
+    "research": true
+  },
+  {
+    "name": "Rebeccat",
+    "url": "https://rebeccat.cezaraugusto.com",
+    "description": "Hide personal info on every tab in one click, with nothing you see ever leaving your device.",
+    "icon": {
+      "src": "/static/images/favicons/rebeccat.png",
+      "width": 180,
+      "height": 180
+    }
+  },
+  {
+    "name": "Mr. Anonymous",
+    "url": "https://mr-anonymous.cezaraugusto.com",
+    "description": "A browser extension for Chrome, Firefox and Safari that blurs faces in images, screenshots and videos on your device.",
+    "icon": {
+      "src": "/static/images/favicons/mr-anonymous.png",
+      "width": 128,
+      "height": 128
+    }
+  },
+  {
+    "name": "Visionario",
+    "url": "https://visionario.cezaraugusto.com",
+    "description": "Browse the web without a mouse: your head moves the pointer and a wink, a smile or a raised eyebrow clicks, with the camera staying on your device.",
+    "icon": {
+      "src": "/static/images/favicons/visionario.png",
+      "width": 128,
+      "height": 128
+    }
+  },
+  {
+    "name": "White Cat Against Idle Time",
+    "url": "https://white-cat.cezaraugusto.com",
+    "description": "A browser extension that turns your pointer into a cartoon cat that keeps moving on its own, so pages that time your idle minutes still see activity.",
+    "icon": {
+      "src": "/static/images/favicons/white-cat.png",
+      "width": 128,
+      "height": 128
+    }
+  }
+]

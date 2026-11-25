@@ -1,6 +1,6 @@
 ---
 title: Agents will ship the next browser extensions
-description: For years, browser extensions were a craft for a few stubborn developers. AI agents are about to change who builds them, and the part that still hurts is shipping.
+description: Browser extensions used to be a craft for a few stubborn developers. AI agents are about to open it up to everyone, and shipping is the next thing to make easy.
 date: 2026-11-25
 image: /static/images/posts/post-007/thumbnail.png
 alt: Extension.js logo, a handshake, and the extension.dev logo
@@ -12,7 +12,7 @@ tags:
   - ai
 ---
 
-This year I completed a decade of building extensions for the browser. I started contributing to Brave in 2016, triaging bugs on a browser [written in JavaScript](https://github.com/brave/browser-laptop). In 2020 I wrote about [what changes in Manifest V3](/posts/what-changes-in-chrome-extension-manifest-v3/). The same year, I started [Extension.js](https://github.com/extension-js/extension.js).
+This year I completed a decade of building for the browser. I started contributing to Brave in 2016, triaging bugs on a browser [written in JavaScript](https://github.com/brave/browser-laptop). Four years later, I started [Extension.js](https://github.com/extension-js/extension.js).
 
 The reason was simple. I wanted to build one extension and run it everywhere, and no browser vendor was ever going to build that tool for me. Each vendor cares about its own browser first. Developers care about their users, and their users are spread across Chrome, Edge, Firefox and Safari.
 
@@ -62,7 +62,7 @@ extension.dev is the platform I am building around that last mile. Its homepage 
 
 It ships an [MCP server](https://docs.extension.dev/tools/mcp), `@extension.dev/mcp`, that gives an agent tools to create, build, preview and submit to the Chrome, Firefox, Edge and Safari stores. It also ships an [agent skill](https://docs.extension.dev/tools/skill) that teaches the agent the cross-browser rules before it writes a line. In our own graded evals, an agent with the skill passed 15 of 15 checks, against 10 of 15 without it.
 
-The split between the two is on purpose. Extension.js is the framework you run on your own machine, and it ends at packaging. extension.dev is where it ships. Sponsorship funds the framework, and paid plans fund the platform. extension.dev is a sponsor of Extension.js, and the framework doesn't depend on it.
+The split between the two is on purpose. Extension.js is the framework you run on your own machine, and it ends at packaging. extension.dev is where it ships. The framework doesn't depend on the platform.
 
 The platform is still in private alpha, but the MCP server and the skill are public. Send an email to hello@extension.dev if you want an invite when the platform is stable enough.
 

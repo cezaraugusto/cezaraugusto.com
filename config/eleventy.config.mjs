@@ -21,6 +21,10 @@ const md = markdownIt({
   linkify: true,
   typographer: true
 })
+md.renderer.rules.table_open = (tokens, idx, options, env, self) => {
+  tokens[idx].attrSet('tabindex', '0')
+  return self.renderToken(tokens, idx, options)
+}
 const dropClass = (node) => {
   delete node.properties.class
 }

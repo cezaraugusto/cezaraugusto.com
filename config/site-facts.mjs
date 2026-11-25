@@ -10,7 +10,7 @@ const monthly = (project) => (project && typeof project.downloads === 'number' ?
 
 export const definitions = {
   extensionJs: 'Extension.js is an open-source, MIT-licensed framework for building browser extensions for Chrome, Edge, Firefox and Safari from one codebase.',
-  extensionDev: 'extension.dev is a platform where developers build, preview, and publish browser extensions for every major browser.'
+  extensionDev: 'extension.dev is a platform where developers and their AI agents build, preview, and publish browser extensions for every major browser.'
 }
 
 export function projectStats (projects, site) {
@@ -52,11 +52,5 @@ export function aboutFaq (projects, site) {
       answer: `${definitions.extensionDev} Cezar Augusto is its founder.`
     }
   ]
-  if (stats.downloads && stats.launcher) {
-    faq.push({
-      question: `Where does the figure of ${stats.downloadsLabel} npm downloads a month come from?`,
-      answer: `It is the sum of last month's npm downloads across the ${stats.packages} packages Cezar Augusto publishes. One package, chromium-edge-launcher, a Node.js module that launches Microsoft Edge, accounts for about ${stats.launcherLabel} of them.`
-    })
-  }
   return faq
 }

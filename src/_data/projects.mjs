@@ -40,6 +40,11 @@ const fetchOptional = (requestId, url) =>
     { duration: DURATION, type: 'json', requestId }
   )
 
+const compact = (value) =>
+  typeof value === 'number'
+    ? new Intl.NumberFormat('en-US', { notation: 'compact', maximumFractionDigits: 1 }).format(value)
+    : undefined
+
 const warn = (message) => console.warn(`[projects] ${message}`)
 
 async function fetchOwnRepos () {
@@ -161,7 +166,13 @@ export default async function () {
       url: repo.html_url,
       description: repo.description || '',
       npm: packages[index],
-      downloads: packages[index] ? downloads[packages[index]] : undefined
+      downloads: packages[index] ? downloads[packages[index]] : undefined,
+      stars: typeof repo.stargazers_count === 'number' ? repo.stargazers_count : undefined
+    }))
+    .map((project) => ({
+      ...project,
+      downloadsLabel: compact(project.downloads),
+      starsLabel: compact(project.stars)
     }))
     .sort((a, b) => {
       const aHas = typeof a.downloads === 'number'
