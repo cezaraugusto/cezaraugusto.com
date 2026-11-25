@@ -1,14 +1,52 @@
 ---
 title: About
-description: I like to learn and work on tools to improve human development, being them writings, software, or thoughts. When I'm not coding, I enjoy running, swimming, and playing snooker.
+description: Cezar Augusto is a software developer from Rio de Janeiro, Brazil, the creator of Extension.js and the founder of extension.dev.
+updated: 2026-11-25
 image: /static/images/about.png
+alt: Cezar Augusto smiling, sitting sideways on a wide window ledge in jeans and a dotted T-shirt
+imageWidth: 730
+imageHeight: 664
 caption: That's me, the owner of this piece of internet software
 permalink: /about/index.html
 ---
 {% extends 'layouts/page.njk' %}
 
+{% block lead %}
+{%- set stats = projects | project_stats(site) %}
+<p>{{ definitions.extensionJs | replace("Extension.js", '<a href="https://extension.js.org">Extension.js</a>') | safe }} {{ definitions.extensionDev | replace("extension.dev", '<a href="https://extension.dev">extension.dev</a>') | safe }}</p>
+<ul>
+  {%- if stats.downloads %}
+  <li><strong>{{ stats.downloadsLabel }}</strong> npm downloads a month across my {{ stats.packages }} published packages{% if stats.launcher %}, about {{ stats.launcherLabel }} of them from <a href="https://github.com/cezaraugusto/chromium-edge-launcher">chromium-edge-launcher</a>{% endif %}</li>
+  {%- endif %}
+  {%- if stats.count %}
+  <li><strong>{{ stats.count }}</strong> active <a href="/open-source/">open-source projects</a></li>
+  {%- endif %}
+  {%- if stats.braveYears %}
+  <li>{% if stats.braveNearly %}Nearly {% endif %}<strong>{{ stats.braveYears }}</strong> years at Brave</li>
+  {%- endif %}
+</ul>
+{% endblock %}
+
 {% set content %}
 
+I like to learn and work on tools to improve human development, being them writings, software, or thoughts. When I'm not coding, I enjoy running, swimming, and playing snooker.
+
+## Track record
+
+- <time datetime="2016-06-02">Jun 2016</time>: First pull request to the Brave browser ([brave/browser-laptop#1907](https://github.com/brave/browser-laptop/pull/1907)).
+- <time datetime="2016-09-01">Sep 2016</time>: Joined the Brave team as a Senior Software Engineer ([the years at Brave](/posts/the-years-at-brave/)).
+- <time datetime="2017-09-02">Sep 2017</time>: Spoke about Brave at BrazilJS.
+- <time datetime="2017-10-29">Oct 2017</time>: Started [brave-ui](https://github.com/brave/brave-ui), a set of reusable React components shared across Brave products.
+- <time datetime="2018">2018</time>: Worked on porting the desktop browser to Chromium, including Sync V2, the welcome page, and the private new tab.
+- <time datetime="2020-05-15">May 2020</time>: Last day at Brave, after nearly four years as a Senior Software Engineer.
+- <time datetime="2020-10-22">Oct 2020</time>: Created [Extension.js](https://github.com/extension-js/extension.js), the cross-browser extension framework.{% set p = projects | project_by('extension-js/extension.js') %}{% if p and p.downloads is number %} Today it gets {{ p.downloads | thousands }} npm downloads a month.{% endif %}
+- <time datetime="2021-02-12">Feb 2021</time>: Published [chromium-edge-launcher](https://github.com/cezaraugusto/chromium-edge-launcher) to launch Microsoft Edge from Node.js.{% set p = projects | project_by('cezaraugusto/chromium-edge-launcher') %}{% if p and p.downloads is number %} It now gets {{ p.downloads | thousands }} npm downloads a month.{% endif %}
+- <time datetime="2021">2021</time>: Quora Top Writer.
+- <time datetime="2021-10">Oct 2021</time>: Joined everwave as Lead Developer, its founding engineer, building a Solana music collaboration platform until Jul 2023.
+- <time datetime="2024-12">Dec 2024</time>: Joined Maro as Senior Front-End Developer, owning the browser side of its enterprise AI security product, an MV3 extension built on Extension.js, until Jul 2026.
+- <time datetime="2026-05">May 2026</time>: Founded [extension.dev](https://extension.dev).
+- <time datetime="2026-05-27">May 2026</time>: Published the [extension.dev MCP server](https://www.npmjs.com/package/@extension.dev/mcp) to npm, its first shipped product, followed by the [agent skill](https://www.npmjs.com/package/@extension.dev/skill) in June.
+- <time datetime="{{ site.now.date }}">{{ site.now.date | date_month_year }}</time>: {{ site.now.text | markdownify_inline | safe }}
 
 ## Where it all started
 
@@ -30,6 +68,12 @@ I'm based in the southeast of 🇧🇷 Brazil, born and raised in Rio de Janeiro
 
 ## Speaking
 
-If you want me to present or speak at your event send me a message via <code class="email">window.atob(&quot;Ym9zc0BjZXphcmF1Z3VzdG8ubmV0&quot;)</code> (mind the quotes). You can also reach me over [Twitter](https://twitter.com/cezaraugusto) though I'm not as responsive as the email option.
+If you want me to present or speak at your event, email me at [{{ site.email }}](mailto:{{ site.email }}). You can also reach me on [X](https://x.com/cezaraugusto), though I'm not as responsive there as by email.
+
+## Common questions
+{% for entry in projects | about_faq(site) %}
+<h3>{{ entry.question | escape }}</h3>
+<p>{{ entry.answer | escape }}</p>
+{% endfor %}
 
 {% endset %}

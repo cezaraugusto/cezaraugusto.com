@@ -143,6 +143,9 @@ The data within the block can be anything. A block consists of its data and a un
 
 {% Figure {
   src: '/static/images/posts/post-006/001.png',
+  alt: 'Sketch of a block as a cube with arrows to its hash, the hash of the previous block, and its data: from, to and amount',
+  width: 1446,
+  height: 1026,
   caption: 'A block of bitcoin data consists of "from," "to," and "amount."'
 } %}
 
@@ -156,6 +159,9 @@ dApps (decentralized applications) are web applications enabled to access blockc
 
 {% Figure {
   src: '/static/images/posts/post-006/002.png',
+  alt: 'A list of Ethereum dApps in two columns, lending and borrowing (Aave, Compound, Oasis) and token swaps (Uniswap, Matcha, 1inch), each with a Go button',
+  width: 2298,
+  height: 966,
   caption: 'Sample Ethereum dApps'
 } %}
 
@@ -165,6 +171,9 @@ A common web app relies on front-end technology (HTML, CSS, JavaScript). It perf
 
 {% Figure {
   src: '/static/images/posts/post-006/004.png',
+  alt: 'Sketch of a dApp flow: a web3 site asks to connect a wallet, the wallet approves, and the wallet then authorizes requests that reach the blockchain',
+  width: 1446,
+  height: 1136,
   caption: 'dApp flow to hit the blockchain'
 } %}
 
@@ -184,6 +193,9 @@ The process of creating tokens and assigning them value is called tokenization. 
 
 {% Figure {
   src: '/static/images/posts/post-006/003.png',
+  alt: 'Two rows of pixel art CryptoPunk characters on a gray background',
+  width: 1900,
+  height: 542,
   caption: 'CryptoPunks (https://www.larvalabs.com/cryptopunks) are a unique cllective of 10,000 unique characters.'
 } %}
 

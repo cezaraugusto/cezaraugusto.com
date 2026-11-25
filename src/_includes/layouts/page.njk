@@ -2,21 +2,22 @@
 <main id="main-content" tabindex="-1">
   <article>
     <header>
+      <nav aria-label="Back"><a href="/" aria-label="Back to Home">← Home</a></nav>
       <h1>{{ title }}</h1>
-      {% if description %}
-      <p>{{ description | markdownify_inline | safe }}</p>
-      {% endif %} {% if image -%}
-      <br />
-      <figure>
-        {% if image -%}<img src="{{ image }}" alt="{{ alt }}" />{%- endif %} {%
-        if caption -%}
-        <figcaption>{{caption}}</figcaption>
-        {%- endif %}
-      </figure>
-      {%- endif %}
     </header>
-    <hr class="cs-hr" />
-    <div class="prose">{{ content | markdownify | safe }}</div>
+    {% if description %}
+    <p>{{ description | markdownify_inline | safe }}</p>
+    {% endif %}
+    {% block lead %}{% endblock %}
+    {% if image -%}
+    <figure>
+      <img src="{{ image }}" alt="{{ alt or '' }}"{% if imageWidth %} width="{{ imageWidth }}" height="{{ imageHeight }}"{% endif %} loading="eager">
+      {% if caption -%}
+      <figcaption>{{caption}}</figcaption>
+      {%- endif %}
+    </figure>
+    {%- endif %}
+    {% if page.inputPath.endsWith(".md") %}{{ content | safe }}{% else %}{{ content | markdownify | safe }}{% endif %}
   </article>
 </main>
 {% endblock %}

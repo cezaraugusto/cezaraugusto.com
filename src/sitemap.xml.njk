@@ -1,15 +1,16 @@
 ---
 permalink: /sitemap.xml
 excludeFromSitemap: true
+eleventyExcludeFromCollections: true
 ---
 <?xml version="1.0" encoding="utf-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 {%- for page in collections.all %}
-{%- if not page.data.excludeFromSitemap %}
+{%- if not page.data.excludeFromSitemap and not page.data.draft and page.url and page.url.endsWith("/") %}
   {% set absoluteUrl %}{{ site.url }}{{ page.url | url }}{% endset %}
   <url>
     <loc>{{ absoluteUrl }}</loc>
-    <lastmod>{{ page.date | html_date_string }}</lastmod>
+    <lastmod>{{ (page | lastmod(collections.posts)) | html_date_string }}</lastmod>
   </url>
 {%- endif %}
 {%- endfor %}

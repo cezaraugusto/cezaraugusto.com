@@ -1,14 +1,65 @@
 {
-  "title": "Cezar Augusto™",
-  "description": "Personal blog of Cezar Augusto about software development and open-source.",
-  "owner": "cezaraugusto",
+  "title": "Cezar Augusto",
+  "homeTitle": "Cezar Augusto · Browser extensions, Extension.js and extension.dev",
+  "description": "Cezar Augusto writes about building cross-browser extensions, Manifest V3 and extension tooling, from creating Extension.js to founding extension.dev.",
   "url": "https://cezaraugusto.com",
-  "headline": "@cezaraugusto",
-  "keywords": "cezar augusto, developer, engineer, builder, web, software, blog, performance, standards, tooling, browser, front-end, back-end, fullstack, youtube, github, X.com",
-  "intro": "Software developer, author, creator of [Extension.js](https://extension.js.org). [About me](/about).",
-  "social": "",
-  "bio": "Cezar Augusto is an application engineer, and open-source contributor.",
+  "headline": "Cezar Augusto",
+  "introIcons": {
+    "https://extension.js.org": { "src": "/static/images/favicons/extension-js.png", "width": 192, "height": 192 },
+    "https://extension.dev": { "src": "/static/images/favicons/extension-dev.png", "width": 32, "height": 32 }
+  },
+  "shareIcons": {
+    "https://x.com/intent/": { "src": "/static/images/favicons/x.png", "width": 32, "height": 32 },
+    "https://www.linkedin.com/sharing/": { "src": "/static/images/favicons/linkedin.png", "width": 64, "height": 64 },
+    "https://bsky.app/intent/": { "src": "/static/images/favicons/bluesky.png", "width": 32, "height": 32 },
+    "https://cezaraugusto.substack.com/subscribe": { "src": "/static/images/favicons/substack.svg", "width": 64, "height": 64 }
+  },
+  "intro": "Software developer. Creator of [Extension.js](https://extension.js.org) and founder of [extension.dev](https://extension.dev), where developers build, preview, and publish browser extensions for every major browser. [About me](/about/) · [Subscribe on Substack](https://cezaraugusto.substack.com/subscribe).",
+  "now": {
+    "text": "Currently building [extension.dev](https://extension.dev).",
+    "date": "2026-11"
+  },
+  "bio": "Cezar Augusto is the creator of Extension.js and the founder of extension.dev. Before that, he spent nearly four years on the Brave browser team as a Senior Software Engineer.",
   "language": "en_US",
   "github": "cezaraugusto",
-  "twitter": "cezaraugusto"
+  "twitter": "cezaraugusto",
+  "email": "boss@cezaraugusto.net",
+  "substack": "https://cezaraugusto.substack.com",
+  "profiles": {
+    "github": "https://github.com/cezaraugusto",
+    "x": "https://x.com/cezaraugusto",
+    "linkedin": "https://www.linkedin.com/in/cezar-augusto",
+    "substack": "https://cezaraugusto.substack.com",
+    "npm": "https://www.npmjs.com/~cezaraugusto",
+    "quora": "https://www.quora.com/profile/Cezar-Augusto-1"
+  },
+  "brave": {
+    "start": "2016-09-01",
+    "end": "2020-05-15"
+  },
+  "avatar": {
+    "src": "/static/images/cezaraugusto.png",
+    "alt": "Avatar of Cezar Augusto: a drawn character in a red cap",
+    "width": 240,
+    "height": 240
+  },
+  "homeProjects": [
+    "extension-js/extension.js",
+    "cezaraugusto/go-git-it",
+    "cezaraugusto/chromium-edge-launcher",
+    "cezaraugusto/parse5-utilities",
+    "extensiondev/mcp"
+  ],
+  "excludeProjectPattern": "(^|-)(repro|reproduction|examples?|demos?|samples?|templates?|tests?|playground|issue-\\d+)($|-)",
+  "excludeProjects": {
+    "cezaraugusto/cezaraugusto.com": "this website's own source",
+    "cezaraugusto/.github": "GitHub community health files, not a project",
+    "cezaraugusto/cezaraugusto": "GitHub profile README, not a project",
+    "cezaraugusto/browser-extensions-book": "the stale book, removed from the site",
+    "cezaraugusto/node-module-quick-start": "template for new Node modules",
+    "cezaraugusto/rspack-css-entry-startup": "bug reproduction for rspack",
+    "cezaraugusto/rspack-issue-14961": "bug reproduction for web-infra-dev/rspack#14961",
+    "cezaraugusto/rspack-prefer-absolute-repro": "bug reproduction for rspack",
+    "cezaraugusto/cezar.land": "personal links page, not a project"
+  }
 }

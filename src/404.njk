@@ -1,8 +1,9 @@
 ---
 title: You are lost
 permalink: /404.html
-description: <mark>This page doesn't exist.</mark> If you think this is a mistake, please send me a message via <code class="email">window.atob('Ym9zc0BjZXphcmF1Z3VzdG8ubmV0')</code> xox.
+description: <mark>This page doesn't exist.</mark> If you think this is a mistake, please send me a message via <code>window.atob('Ym9zc0BjZXphcmF1Z3VzdG8ubmV0')</code> xox.
 excludeFromSitemap: true
+noindex: true
 ---
 {% extends 'layouts/page.njk' %}
 
@@ -11,17 +12,17 @@ excludeFromSitemap: true
 
 
 {% block main %}
-<div class="hero">
-  <div class="hero-content text-center">
-    <div class="max-w-md">
-      <h1 class="text-5xl font-bold mb-6">This page is wrong</h1>
-      {% Figure {
-        src: '/static/images/uh.gif',
-        alt: 'Psychedelic picture of two astronauts',
-        caption: '<a class="link py-3 inline-block" href="/">Go back home</a>'
-      } %}
-      {{ content | markdownify | safe }}
-    </div>
-  </div>
-</div>
+<main id="main-content" tabindex="-1">
+  <nav aria-label="Back"><a href="/" aria-label="Back to Home">← Home</a></nav>
+  <h1>This page is wrong</h1>
+  {% Figure {
+    src: '/static/images/uh.gif',
+    alt: 'Psychedelic picture of two astronauts',
+    width: 500,
+    height: 430,
+    loading: 'eager',
+    caption: '<a href="/">Go back home</a>'
+  } %}
+  {{ content | markdownify | safe }}
+</main>
 {% endblock %}

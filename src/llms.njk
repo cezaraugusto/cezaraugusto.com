@@ -1,0 +1,48 @@
+---
+permalink: /llms.txt
+excludeFromSitemap: true
+eleventyExcludeFromCollections: true
+---
+{%- set stats = projects | project_stats(site) -%}
+# Cezar Augusto
+
+> {{ site.description }}
+
+{{ site.bio }}
+
+## Key facts
+
+- Cezar Augusto is a software developer from Rio de Janeiro, Brazil, the creator of Extension.js and the founder of extension.dev.
+- {{ definitions.extensionJs }} He created it in October 2020: https://extension.js.org
+- {{ definitions.extensionDev }} He is its founder: https://extension.dev
+{%- if stats.downloads %}
+- His {{ stats.packages }} published npm packages get about {{ stats.downloadsLabel }} downloads a month in total{% if stats.launcher %}; chromium-edge-launcher, a Node.js module that launches Microsoft Edge, accounts for about {{ stats.launcherLabel }} of them{% endif %}.
+{%- endif %}
+{%- if stats.extensionJsLabel %}
+- The Extension.js npm package, extension, gets {{ stats.extensionJsLabel }} downloads a month.
+{%- endif %}
+{%- if stats.count %}
+- He maintains {{ stats.count }} active open-source projects.
+{%- endif %}
+- He spent nearly four years on the Brave browser team as a Senior Software Engineer, from 2016 to 2020.
+
+## Key pages
+
+- [About]({{ site.url }}/about/): background, track record, numbers and common questions
+- [Blog]({{ site.url }}/blog/): every post, newest first
+- [Open source]({{ site.url }}/open-source/): every active open-source project, ranked by monthly npm downloads
+- [Extension.js](https://extension.js.org): the cross-browser extension framework he created
+- [extension.dev](https://extension.dev): the platform he founded to build, preview and publish browser extensions
+
+## Posts
+{% for post in collections.posts %}
+- [{{ post.data.title }}]({{ site.url }}{{ post.url }}){% if post.data.description or post.data.summary %}: {{ (post.data.description or post.data.summary) | markdownify_inline | strip_html | trim }}{% endif %}
+{%- endfor %}
+
+## Elsewhere
+
+- [GitHub]({{ site.profiles.github }})
+- [X]({{ site.profiles.x }})
+- [LinkedIn]({{ site.profiles.linkedin }})
+- [Substack]({{ site.profiles.substack }})
+- [npm]({{ site.profiles.npm }})

@@ -1,10 +1,15 @@
 {% extends 'layouts/default.njk' %}
 
 {% block main %}
-  <main tabindex="-1">
-    <header>
-      <!-- Show dates only for posts -->
-      <h1 class="page-title">{{ title }}</h1>
+  <main id="main-content" tabindex="-1">
+    <article>
+      <header>
+        <nav aria-label="Back"><a href="/blog/" aria-label="Back to Blog">← Blog</a></nav>
+        <h1>{{ title }}</h1>
+        <p>
+          <small><time datetime="{{ date | html_date_string }}">{{ date | date_formatted }}</time>{% if updated %} · Updated <time datetime="{{ updated | html_date_string }}">{{ updated | date_formatted }}</time>{% endif %}</small>
+        </p>
+      </header>
 
       {% if description %}
         <p>{{ description | markdownify_inline | safe }}</p>
@@ -12,32 +17,44 @@
 
       {% if image -%}
       <figure>
-        <img src="{{ image }}" alt="{{ alt }}" />
+        <img src="{{ image }}" alt="{{ alt or '' }}"{% if imageWidth %} width="{{ imageWidth }}" height="{{ imageHeight }}"{% endif %} loading="eager">
         {% if caption -%}
           <figcaption>{{caption}}</figcaption>
         {%- endif %}
       </figure>
       {%- endif %}
 
-      <div class="meta">
-        <time class="date">{{ date | date_formatted }}</time>
-
-        {% if title %}
-        <i>&#9642;</i>
-        <span>
-          Share on 
-          <a href="https://twitter.com/intent/tweet?text={{ title | space_safe }}&amp;url={{ site.url }}/posts/{{ page.fileSlug }}&amp;via={{ site.owner | space_safe }}" target="_blank" class="twitter">Twitter</a>
-        </span>
-        {%- endif %}
-      </div>
-
-      <hr class="cs-hr" />
-    </header>
-
-    <div class="prose">
       {{ content | safe }}
-    </div>
+
+      {% if title %}
+      {%- set shareUrl = site.url + (page.url | permalink) %}
+      <footer>
+        {%- set related = collections.posts | related_posts(page.url, tags) %}
+        {%- if related.length %}
+        <h2>Related reading</h2>
+        <ol>
+          {%- for entry in related %}
+          <li><a href="{{ entry.url | permalink }}">{{ entry.data.title }}</a> <small>· <time datetime="{{ entry.date | html_date_string }}">{{ entry.date | date_month_year }}</time></small></li>
+          {%- endfor %}
+        </ol>
+        {%- endif %}
+        {%- if substackUrl %}
+        <p>Also on <a href="{{ substackUrl }}">Substack</a>; this page is the original.</p>
+        {%- endif %}
+        {%- set shareLinks %}
+        <p>
+          <a href="https://x.com/intent/post?text={{ title | urlencode }}&amp;url={{ shareUrl | urlencode }}&amp;via={{ site.twitter | urlencode }}">Share on X</a> ·
+          <a href="https://www.linkedin.com/sharing/share-offsite/?url={{ shareUrl | urlencode }}">Share on LinkedIn</a> ·
+          <a href="https://bsky.app/intent/compose?text={{ (title + ' ' + shareUrl) | urlencode }}">Share on Bluesky</a>
+        </p>
+        <p><a href="{{ site.substack }}/subscribe">Subscribe on Substack</a> to get new posts by email.</p>
+        {%- endset %}
+        {{ shareLinks | link_icons(site.shareIcons) | safe }}
+      </footer>
+      {%- endif %}
+    </article>
   </main>
-  <!-- this resource is cached with SW -->
-  <script async src="/assets/js/twitter-widget.js" charset="utf-8"></script>
+  {%- if 'class="twitter-tweet"' in content %}
+  <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+  {%- endif %}
 {% endblock %}

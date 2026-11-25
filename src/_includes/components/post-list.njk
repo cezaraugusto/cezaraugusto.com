@@ -1,0 +1,8 @@
+<ol>
+  {% for entry in posts %}
+  <li>
+    <a href="{{ entry.url if entry.external else (entry.url | permalink) }}">{{ entry.data.title }}{% if entry.data.draft %} (draft){% endif %}</a>
+    <small>· <time datetime="{{ entry.date | html_date_string }}">{{ entry.date | date_month_year }}</time>{% if entry.external %} · on Substack{% endif %}</small>
+  </li>
+  {% endfor %}
+</ol>

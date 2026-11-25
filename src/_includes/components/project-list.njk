@@ -1,0 +1,7 @@
+<ol>
+  {%- for project in projects %}
+  <li><a href="{{ project.url }}">{{ project.name }}</a>{% if showStats !== false and project.downloads is number %} <small>{{ project.downloads | thousands }} downloads/month</small>{% endif %}{% if project.description %}<br>{{ project.description }}{% endif %}</li>
+  {%- else %}
+  <li><a href="https://github.com/{{ site.github }}?tab=repositories">All repositories on GitHub</a></li>
+  {%- endfor %}
+</ol>

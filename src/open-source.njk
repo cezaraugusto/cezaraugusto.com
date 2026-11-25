@@ -1,0 +1,25 @@
+---
+title: Open source
+description: Every original, active repository I keep on GitHub, ranked by monthly npm downloads.
+updated: 2026-11-25
+permalink: /open-source/index.html
+---
+
+{% extends 'layouts/default.njk' %} {% block main %}
+<main id="main-content" tabindex="-1">
+  <nav aria-label="Back"><a href="/" aria-label="Back to Home">← Home</a></nav>
+  <h1>{{ title }}</h1>
+  <p>{{ description }}</p>
+  {% set showStats = false %}
+  {% include "components/project-list.njk" %}
+  <section>
+    <h2>Engineering Extension.js</h2>
+    <details>
+      <summary>Watch the Engineering Extension.js video (Loom)</summary>
+      <iframe src="https://www.loom.com/embed/34fc48f3f7954bfa990e767c6a7172f0?sid=02b8febc-16f2-4b57-8fcf-248bbec692f4" title="Engineering Extension.js, a Loom video" height="400" loading="lazy" allowfullscreen></iframe>
+    </details>
+    <p>My main code project is <a href="https://github.com/extension-js/extension.js">Extension.js</a>, the cross-browser extension framework I created in October 2020 and the foundation of most of my work. Many of the projects above started as modules I needed for it.</p>
+    <p>If you or your company benefit from it, consider <a href="https://github.com/sponsors/cezaraugusto/">sponsoring me on GitHub</a>.</p>
+  </section>
+</main>
+{% endblock %}

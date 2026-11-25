@@ -1,6 +1,0 @@
-@media (max-width: 580px) {
-  .share-actions {
-    margin-top: var(--margin-clamp-1x);
-    display: block;
-  }
-}

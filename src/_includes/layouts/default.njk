@@ -1,92 +1,617 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="lofi">
+<html lang="en">
   <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>
-      {% if title and page.fileSlug != '' %}{{ title }} • {% endif %}{{ site.title }}</title>
-    <meta name="description" content="{% if description %}{{ description | markdownify_inline | strip_html }}{% else %}{{ site.description }}{% endif %}">
-    <meta name="keywords" content="{{ site.keywords }}">
-    <meta name="author" content="{{ site.title }}">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <meta name="color-scheme" content="light dark">
+    {%- set metaTitle %}{% if page.url == "/" %}{{ site.homeTitle }}{% elif title %}{{ title }} · {{ site.title }}{% else %}{{ site.title }}{% endif %}{% endset %}
+    {%- set metaDescription = (description or summary or site.description) | markdownify_inline | strip_html | trim %}
+    {%- set cardTitle = title if page.url != "/" else site.title %}
+    {%- set cardKicker = "Blog post" if layout == "layouts/post" else ("Browser extensions, Extension.js and extension.dev" if page.url == "/" else "cezaraugusto.com") %}
+    {%- set metaImage = site.url + (page.url | og_card(cardTitle, cardKicker)) %}
+    {%- set metaImageAlt %}Share card with the heading "{{ cardTitle }}" under the label "{{ cardKicker }}", and Cezar Augusto's avatar, name and cezaraugusto.com at the bottom{% endset %}
+    {%- set isArticle = layout == "layouts/post" %}
+    {%- set metaUrl = site.url + (page.url | permalink) %}
+    <title>{{ metaTitle }}</title>
+    <meta name="description" content="{{ metaDescription }}">
+    <meta name="author" content="Cezar Augusto">
     <meta name="application-name" content="{{ site.title }}">
-    <meta name="theme-color" content="#3454D1">
-    <!-- facebook/open graph -->
-    <meta property="og:title" content="{% if title and page.fileSlug != '' %}{{ title }} • {% endif %}{{ site.title }}">
-    <meta property="og:description" content="{% if description %}{{ description }}{% else %}{{ site.description }}{% endif %}">
-    <meta property="og:url" content="{{ site.url }}{{ page.url | permalink }}">
+    <meta name="theme-color" content="#f9f9f9" media="(prefers-color-scheme: light)">
+    <meta name="theme-color" content="#222222" media="(prefers-color-scheme: dark)">
+    {%- if not noindex %}
+    <link rel="canonical" href="{{ metaUrl }}">
+    {%- endif %}
+    <!-- open graph -->
+    <meta property="og:title" content="{{ metaTitle }}">
+    <meta property="og:description" content="{{ metaDescription }}">
+    {%- if not noindex %}
+    <meta property="og:url" content="{{ metaUrl }}">
+    {%- endif %}
     <meta property="og:site_name" content="{{ site.title }}">
-    <meta property="og:image" content="{{ site.url }}/static/images/og-image.png">
-    <meta property="og:type" content="website">
-    <meta property="og:locale" content="{{site.language}}">
-    <!-- twitter -->
-    <meta name="twitter:card" content="summary">
-    <meta name="twitter:title" content="{% if title and page.fileSlug != '' %}{{ title }} • {% endif %}{{ site.title }}">
-    <meta name="twitter:description" content="{% if description %}{{ description }}{% else %}{{ site.bottomHeadline }}{% endif %}">
+    <meta property="og:image" content="{{ metaImage }}">
+    <meta property="og:image:type" content="image/png">
+    <meta property="og:image:width" content="{{ ogCardSize.width }}">
+    <meta property="og:image:height" content="{{ ogCardSize.height }}">
+    <meta property="og:image:alt" content="{{ metaImageAlt }}">
+    <meta property="og:type" content="{% if isArticle %}article{% else %}website{% endif %}">
+    <meta property="og:locale" content="{{ site.language }}">
+    {%- if isArticle and date %}
+    <meta property="article:published_time" content="{{ page.date | html_date_string }}">
+    <meta property="article:modified_time" content="{{ (updated or page.date) | html_date_string }}">
+    <meta property="article:author" content="{{ site.url }}/about/">
+    {%- endif %}
+    <!-- x -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="{{ metaTitle }}">
+    <meta name="twitter:description" content="{{ metaDescription }}">
     <meta name="twitter:site" content="@{{ site.twitter }}">
-    <meta name="twitter:image" content="{{ site.url }}/static/images/og-image.png">
+    <meta name="twitter:image" content="{{ metaImage }}">
+    <meta name="twitter:image:alt" content="{{ metaImageAlt }}">
     <meta name="twitter:creator" content="@{{ site.twitter }}">
     <!-- icons -->
-    <link rel="apple-touch-icon" sizes="180x180" href="/static/images/apple-touch-icon.png" type="image/png">
-    <link rel="icon" sizes="96x96" href="/static/images/favicon-96x96.png" type="image/png">
-    <link rel="icon" sizes="32x32" href="/static/images/favicon-32x32.png" type="image/png">
-    <link rel="icon" sizes="16x16" href="/static/images/favicon-16x16.png" type="image/png">
-    <link rel="mask-icon" href="/static/images/favicon-96x96.png" color="#181818" type="image/png">
-    <!-- prefetch fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Arvo:ital,wght@1,700&display=swap" rel="stylesheet">
+    <link rel="icon" href="/favicon.ico" sizes="16x16 32x32 48x48">
+    <link rel="icon" href="/static/icons/favicon-32.png" sizes="32x32" type="image/png">
+    <link rel="icon" href="/static/icons/favicon-16.png" sizes="16x16" type="image/png">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180">
+    <link rel="manifest" href="/site.webmanifest">
     <!-- robots -->
-    <meta name="robots" content="{% GenerateRobotsTXTRules %}">
+    <meta name="robots" content="{% if noindex %}noindex, follow{% else %}{% GenerateRobotsTXTRules %}{% endif %}">
     <!-- social media -->
     <link rel="me" href="https://github.com/cezaraugusto" type="text/html">
-    <link rel="me" href="https://twitter.com/cezaraugusto" type="text/html">
-    <link rel="me" href="https://https://www.quora.com/profile/Cezar-Augusto-1" type="text/html">
+    <link rel="me" href="https://x.com/cezaraugusto" type="text/html">
+    <link rel="me" href="https://www.quora.com/profile/Cezar-Augusto-1" type="text/html">
+    <link rel="me" href="{{ site.profiles.linkedin }}" type="text/html">
+    <link rel="me" href="{{ site.profiles.substack }}" type="text/html">
+    <link rel="me" href="{{ site.profiles.npm }}" type="text/html">
     <!-- rss -->
-    <link rel="alternate" href="/feed.xml" type="application/rss+xml" title="RSS">
+    <link rel="alternate" href="/feed.xml" type="application/atom+xml" title="Cezar Augusto posts">
     <!-- license -->
     <link rel="license" href="https://creativecommons.org/licenses/by/4.0/">
     <!-- website ownership -->
     <meta name="google-site-verification" content="1fnKj4QPudeZ0eb7vkdW8zbc1PwwMocSKpQRGcxREgY">
     <meta name="msvalidate.01" content="E718A8AA0D4E3ED605BFF1BA1C0E46A7">
     <meta name="yandex-verification" content="0dd50ab9279c1413">
+    <link rel="preload" href="/static/fonts/manrope-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
 
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/ekmas/cs16.css@main/css/cs16.min.css">
-    <link rel="preload stylesheet" href="/static/css/prism.css" type="text/css" as="style">
-
-    <!-- inlined css -->
-    {% set css %}
-    {% include "css/global.css" %}
-    {% include "css/share.css" %}
-    {% endset %}
     <style>
-      {{css | cssmin | safe}}
+/*
+ * Forked from sakura.css v1.5.1 (https://github.com/oxalorg/sakura).
+ * This copy is owned and maintained by this website.
+ *
+ * MIT License
+ *
+ * Copyright (c) 2016 Mitesh Shah
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in all
+ * copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+ * SOFTWARE.
+ */
+/* Sakura.css v1.5.1
+ * ================
+ * Minimal css theme.
+ * Project: https://github.com/oxalorg/sakura/
+ */
+/* Body */
+html {
+  font-size: 62.5%;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+}
+
+body {
+  font-size: 1.8rem;
+  line-height: 1.618;
+  max-width: 38em;
+  margin: auto;
+  color: #4a4a4a;
+  background-color: #f9f9f9;
+  padding: 1.3rem;
+}
+
+@media (max-width: 684px) {
+  body {
+    font-size: 1.7rem;
+  }
+}
+h1, h2, h3 {
+  line-height: 1.25;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+  font-weight: 700;
+  margin-top: 3rem;
+  margin-bottom: 1.5rem;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  -ms-word-break: break-all;
+  word-break: break-word;
+}
+
+h1 {
+  font-size: 2.4rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+h3 {
+  font-size: 1.8rem;
+}
+
+p {
+  margin-top: 0px;
+  margin-bottom: 2.5rem;
+}
+
+small {
+  font-size: 75%;
+}
+
+a {
+  text-decoration: none;
+  color: #0065e6;
+}
+a:visited {
+  color: #0065e6;
+}
+a:hover {
+  color: #004fb4;
+  border-bottom: 2px solid #4a4a4a;
+}
+
+ul {
+  padding-left: 1.4em;
+  margin-top: 0px;
+  margin-bottom: 2.5rem;
+}
+
+li {
+  margin-bottom: 0.4em;
+}
+
+blockquote {
+  margin-left: 0px;
+  margin-right: 0px;
+  padding-left: 1em;
+  padding-top: 0.8em;
+  padding-bottom: 0.8em;
+  padding-right: 0.8em;
+  border-left: 5px solid #0065e6;
+  margin-bottom: 2.5rem;
+  background-color: #f1f1f1;
+}
+
+blockquote p {
+  margin-bottom: 0;
+}
+
+img, video {
+  height: auto;
+  max-width: 100%;
+  margin-top: 0px;
+  margin-bottom: 2.5rem;
+}
+
+/* Pre and Code */
+pre {
+  background-color: #f1f1f1;
+  display: block;
+  padding: 1em;
+  overflow-x: auto;
+  margin-top: 0px;
+  margin-bottom: 2.5rem;
+  font-size: 0.9em;
+}
+
+code {
+  font-size: 0.9em;
+  padding: 0 0.5em;
+  background-color: #f1f1f1;
+  white-space: pre-wrap;
+}
+
+pre > code {
+  padding: 0;
+  background-color: transparent;
+  white-space: pre;
+  font-size: 1em;
+}
+
+/* Buttons */
+button {
+  display: inline-block;
+  padding: 5px 10px;
+  text-align: center;
+  text-decoration: none;
+  white-space: nowrap;
+  background-color: #0065e6;
+  color: #f9f9f9;
+  border-radius: 1px;
+  border: 1px solid #0065e6;
+  cursor: pointer;
+  box-sizing: border-box;
+}
+
+button:hover {
+  background-color: #004fb4;
+  color: #f9f9f9;
+  outline: 0;
+}
+
+button:focus-visible {
+  outline-style: solid;
+  outline-width: 2px;
+}
+
+/* Titles and descriptions: Manrope from @fontsource/manrope 5.3.0 (SIL OFL 1.1) */
+@font-face {
+  font-family: "Manrope";
+  font-style: normal;
+  font-display: swap;
+  font-weight: 500;
+  src: url(/static/fonts/manrope-latin-500-normal.woff2) format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: "Manrope";
+  font-style: normal;
+  font-display: swap;
+  font-weight: 700;
+  src: url(/static/fonts/manrope-latin-700-normal.woff2) format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+h1, h2 {
+  font-family: "Manrope", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+body > header > :first-child {
+  position: relative;
+  font-family: "Manrope", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+  font-size: 2.8rem;
+  font-weight: 500;
+  line-height: 1.2;
+  letter-spacing: -0.035em;
+  margin-top: 3rem;
+  margin-bottom: 1.5rem;
+}
+
+body > header > :first-child a {
+  color: inherit;
+}
+
+body > header > :first-child + p,
+main > h1 + p,
+article > header + p {
+  font-family: "Manrope", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+  font-weight: 500;
+}
+
+/* Site arrangement */
+main section ol,
+main > ol {
+  list-style: none;
+  padding-left: 0;
+}
+
+body > footer {
+  margin-top: 6rem;
+}
+
+body > header > :first-child img {
+  display: block;
+  width: 4.8rem;
+  height: 4.8rem;
+  border-radius: 50%;
+  margin: 0 0 1.5rem;
+}
+
+@media (min-width: 53em) and (pointer: fine), (min-width: 60em) {
+  body > header > :first-child img {
+    position: absolute;
+    top: 50%;
+    right: 100%;
+    margin: -2.4rem 1.6rem 0 0;
+  }
+}
+
+body > header > :first-child + p img,
+article > footer p > a img {
+  display: inline;
+  width: 1em;
+  height: 1em;
+  margin: 0 0.3em 0 0;
+  vertical-align: -0.15em;
+}
+/* Accessibility */
+body > a[href="#main-content"] {
+  position: absolute;
+  left: -9999px;
+  top: 0;
+}
+
+body > a[href="#main-content"]:focus {
+  left: 13px;
+  top: 13px;
+  z-index: 1;
+  padding: 0.5em 1em;
+  background-color: #f9f9f9;
+}
+
+a {
+  text-decoration: underline;
+  text-decoration-color: #0065e6;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.15em;
+}
+
+a:hover {
+  border-bottom: 0;
+  text-decoration-color: #004fb4;
+  text-decoration-thickness: 2px;
+}
+
+:is(h1, h2, h3, h4, h5, h6) > a:only-child,
+body > header > :first-child a {
+  text-decoration: none;
+}
+
+:focus-visible {
+  outline: 2px solid #0065e6;
+  outline-offset: 2px;
+}
+
+[tabindex="-1"]:focus {
+  outline: 0;
+}
+
+iframe {
+  max-width: 100%;
+  border: 0;
+}
+
+iframe:not([width]) {
+  width: 100%;
+}
+
+dialog h2 {
+  font-size: 2rem;
+}
+
+/* Post media: centered images, captions and X embeds */
+article figure {
+  margin-left: 0;
+  margin-right: 0;
+  text-align: center;
+}
+
+article figure img,
+article figure video {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+article figcaption {
+  text-align: center;
+}
+
+article blockquote.twitter-tweet,
+article div.twitter-tweet {
+  max-width: 550px;
+  margin-left: auto;
+  margin-right: auto;
+  box-sizing: border-box;
+}
+
+/* Post footer lists */
+article > footer ol {
+  list-style: none;
+  padding-left: 0;
+}
+
+/* Site footer: one row of links, bullets drawn in CSS and kept off line starts */
+body > footer nav ul {
+  font-size: 0.9em;
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 1.5rem;
+}
+
+body > footer nav li {
+  display: inline;
+  white-space: nowrap;
+}
+
+body > footer nav li:not(:last-child)::after {
+  content: "\2022";
+  content: "\2022" / "";
+  margin-left: 0.3em;
+}
+
+body > footer p {
+  margin-bottom: 1rem;
+}
+
+/* Apple HIG: color scheme, safe areas, motion, contrast and hit targets */
+html {
+  color-scheme: light dark;
+  accent-color: #0065e6;
+}
+
+body {
+  padding-top: max(1.3rem, env(safe-area-inset-top));
+  padding-right: max(1.3rem, env(safe-area-inset-right));
+  padding-bottom: max(1.3rem, env(safe-area-inset-bottom));
+  padding-left: max(1.3rem, env(safe-area-inset-left));
+}
+
+/* Dark palette from sakura-dark.css v1.5.1; accent is the Extension.js docs
+   theme (docs.json colors: primary #0065e6, light #60a5fa) */
+@media (prefers-color-scheme: dark) {
+  html {
+    accent-color: #60a5fa;
+  }
+  body {
+    color: #c9c9c9;
+    background-color: #222222;
+  }
+  a, a:visited {
+    color: #60a5fa;
+    text-decoration-color: #60a5fa;
+  }
+  a:hover {
+    color: #93c5fd;
+    text-decoration-color: #93c5fd;
+  }
+  blockquote {
+    border-left-color: #60a5fa;
+    background-color: #4a4a4a;
+  }
+  blockquote a, blockquote a:visited {
+    color: #ffffff;
+    text-decoration-color: #ffffff;
+  }
+  a code {
+    color: #ffffff;
+  }
+  pre, code {
+    background-color: #4a4a4a;
+  }
+  pre, pre span {
+    color: var(--shiki-dark) !important;
+  }
+  button {
+    background-color: #60a5fa;
+    color: #222222;
+    border-color: #60a5fa;
+  }
+  button:hover {
+    background-color: #93c5fd;
+    border-color: #93c5fd;
+    color: #222222;
+  }
+  :focus-visible {
+    outline-color: #60a5fa;
+  }
+  body > a[href="#main-content"]:focus {
+    background-color: #222222;
+  }
+  body > header > :first-child + p img[src*="extension-dev"],
+  article > footer p > a img[src*="/x-"] {
+    border-radius: 0.2em;
+    box-shadow: 0 0 0 1px #4a4a4a;
+  }
+}
+
+@media (prefers-contrast: more) {
+  body {
+    color: #222222;
+  }
+  a {
+    color: #004fb4;
+    text-decoration-thickness: 2px;
+  }
+  button {
+    background-color: #004fb4;
+    border-color: #004fb4;
+  }
+  :focus-visible {
+    outline-width: 3px;
+  }
+}
+
+@media (prefers-contrast: more) and (prefers-color-scheme: dark) {
+  body {
+    color: #ffffff;
+  }
+  a, a:visited {
+    color: #ffffff;
+    text-decoration-color: #ffffff;
+  }
+  button {
+    background-color: #ffffff;
+    border-color: #ffffff;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+@media (pointer: coarse) {
+  button {
+    min-height: 4.4rem;
+    min-width: 4.4rem;
+  }
+  main li > a:first-child {
+    padding-block: 1.2rem;
+  }
+  main li {
+    margin-bottom: 0.8em;
+  }
+  body > footer nav a,
+  article > header nav a,
+  h2 a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 4.4rem;
+    min-width: 4.4rem;
+  }
+}
     </style>
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-141381934-1"></script>
+    {%- if eleventy.env.runMode == "build" %}
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-BGCEW25QFJ"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag() {
         dataLayer.push(arguments);
       }
       gtag('js', new Date());
-      gtag('config', 'UA-141381934-1');
+      gtag('config', 'G-BGCEW25QFJ');
     </script>
+    {%- endif %}
   </head>
   <body>
-    {% include "components/navbar.njk" %}
-    {% block pageTop %}{% endblock %}
+    <a href="#main-content">Skip to content</a>
+    <header>
+      {%- set avatar %}<img src="{{ site.avatar.src }}" alt="" width="{{ site.avatar.width }}" height="{{ site.avatar.height }}" eleventy:widths="96,144" sizes="48px" loading="eager">{% endset %}
+      {%- set nameLabel = site.headline if site.headline == "Cezar Augusto" else site.headline + ": Cezar Augusto" %}
+      {% if page.url == "/" %}<h1{% if nameLabel != site.headline %} aria-label="{{ nameLabel }}"{% endif %}>{{ avatar | safe }} {{ site.headline }}</h1>{% else %}<p><a href="/" rel="home" aria-label="{{ nameLabel }}, home">{{ avatar | safe }} {{ site.headline }}</a></p>{% endif %}
+      <p>{{ site.intro | markdownify_inline | link_icons(site.introIcons) | replace('<a href="/about/">', '<a href="/about/" rel="author">') | safe }}</p>
+    </header>
     {% block main %}{% endblock %}
     {% include "components/footer.njk" %}
     <script>
       {% set corejs %}{% include "js/app.js" %}{% endset %}
       {{ corejs | safe }}
     </script>
-    <script>
-      {% set projectjs %}{% include "js/projects.js" %}{% endset %}
-      {{ projectjs | safe }}
-    </script>
+    {%- set jsonLd = metaImage | structured_data %}
+    {%- if jsonLd %}
     <script type="application/ld+json">
-      {% include "js/schema.json" %}
+      {{ jsonLd | safe }}
     </script>
+    {%- endif %}
   </body>
 </html>

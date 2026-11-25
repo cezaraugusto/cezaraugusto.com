@@ -1,0 +1,16 @@
+---
+title: Blog
+description: Writing on browser extensions, Extension.js, extension.dev and open source, newest first. Entries marked "on Substack" open there.
+permalink: /blog/index.html
+updated: 2026-11-25
+---
+
+{% extends 'layouts/default.njk' %} {% block main %}
+<main id="main-content" tabindex="-1">
+  <nav aria-label="Back"><a href="/" aria-label="Back to Home">← Home</a></nav>
+  <h1>{{ title }}</h1>
+  <p>{{ description }}</p>
+  {% set posts = collections.posts | with_substack(substack) %}
+  {% include "components/post-list.njk" %}
+</main>
+{% endblock %}

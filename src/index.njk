@@ -1,33 +1,25 @@
 ---
 heading: true
 permalink: /index.html
+updated: 2026-11-25
 ---
 
 {% extends 'layouts/default.njk' %} {% block main %}
 <main id="main-content" tabindex="-1">
   <section>
-    {% for entry in collections.latestPosts %}
-    <article class="post-link">
-      <a href="{{ entry.url | permalink }}">
-        <h3>{{ entry.data.title }}</h3>
-      </a>
-      <p class="text-sm text-base-content/70">
-        on <time>{{ entry.date | date_formatted }}</time>
-      </p>
-    </article>
-    {% endfor %}
+    <h2>Now</h2>
+    <p>{{ site.now.text | markdownify_inline | safe }} <small>Updated <time datetime="{{ site.now.date }}">{{ site.now.date | date_month_year }}</time></small></p>
   </section>
-  <hr class="cs-hr" />
   <section>
-    <h2>Open-Source Projects</h2>
-    <ol id="projects">
-      <li>
-        <a href="https://github.com/extension-js/extension.js">
-          Extension.js
-        </a>
-        <span> - Make it very easy to create cross-browser extensions.</span>
-      </li>
-    </ol>
+    {% set posts = collections.latestPosts %}
+    <h2>Posts{% if collections.posts.length > posts.length %} <small>(<a href="/blog/" aria-label="{{ collections.posts.length | thousands }} · view all posts">{{ collections.posts.length | thousands }} · view all</a>)</small>{% endif %}</h2>
+    {% include "components/post-list.njk" %}
+  </section>
+  <section>
+    {% set allProjects = projects %}
+    {% set projects = allProjects | pick_projects(site.homeProjects) %}
+    <h2>Open-Source Projects{% if allProjects.length > projects.length %} <small>(<a href="/open-source/" aria-label="{{ allProjects.length | thousands }} · view all open-source projects">{{ allProjects.length | thousands }} · view all</a>)</small>{% endif %}</h2>
+    {% include "components/project-list.njk" %}
   </section>
 </main>
-{% endblock %} {% block footer %}{% endblock %}
+{% endblock %}

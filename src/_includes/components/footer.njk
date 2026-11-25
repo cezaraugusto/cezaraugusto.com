@@ -1,11 +1,38 @@
 <footer>
-  © 2018-Present <a href="/about/">Cezar Augusto</a>.<br />
-  Content in this blog is licensed under
-  <a
-    class="link"
-    href="https://creativecommons.org/licenses/by/4.0/"
-    rel="noopener noreferrer"
-    target="_blank"
-    >CC BY 4.0</a
-  >.
+  <nav aria-label="Site">
+    <ul>
+      <li><a href="/">Home</a></li>
+      <li><a href="/blog/">Blog</a></li>
+      <li><a href="/about/">About</a></li>
+      <li><a href="/open-source/">Open source</a></li>
+      <li><a href="https://github.com/cezaraugusto" rel="me" aria-label="GitHub profile">GitHub</a></li>
+      <li><a href="https://x.com/cezaraugusto" rel="me" aria-label="X profile">X</a></li>
+      <li><a href="{{ site.profiles.linkedin }}" rel="me" aria-label="LinkedIn profile">LinkedIn</a></li>
+      <li><a href="{{ site.profiles.substack }}" rel="me" aria-label="Substack newsletter">Substack</a></li>
+      <li><a href="mailto:{{ site.email }}" aria-label="Email Cezar Augusto">Email</a></li>
+      <li><a href="/feed.xml" type="application/atom+xml" aria-label="RSS feed">RSS</a></li>
+    </ul>
+  </nav>
+  <p>
+    <button type="button" aria-haspopup="dialog" onclick="document.getElementById('subscribe').showModal()">Subscribe</button>
+  </p>
+  <p>
+    <small>© 2018-Present Cezar Augusto.</small>
+  </p>
+  <p>
+    <small>
+      Content in this blog is licensed under
+      <a href="https://creativecommons.org/licenses/by/4.0/" rel="license">CC BY 4.0</a>.
+    </small>
+  </p>
 </footer>
+
+<dialog id="subscribe" aria-labelledby="subscribe-title">
+  <form method="dialog">
+    <h2 id="subscribe-title">Get updates from me via email</h2>
+    <iframe src="https://cezaraugusto.substack.com/embed" title="Subscribe to Cezar Augusto on Substack" height="320" loading="lazy"></iframe>
+    <p>
+      <button type="submit" autofocus>Close</button>
+    </p>
+  </form>
+</dialog>

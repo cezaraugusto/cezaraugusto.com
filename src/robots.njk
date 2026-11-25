@@ -1,0 +1,33 @@
+---
+permalink: /robots.txt
+excludeFromSitemap: true
+eleventyExcludeFromCollections: true
+aiCrawlers:
+  - GPTBot
+  - OAI-SearchBot
+  - ChatGPT-User
+  - ClaudeBot
+  - Claude-User
+  - Claude-SearchBot
+  - PerplexityBot
+  - Perplexity-User
+  - Google-Extended
+  - Applebot-Extended
+  - CCBot
+---
+{%- if env.staging -%}
+User-agent: *
+Disallow: /
+{%- else -%}
+User-agent: *
+Allow: /
+
+# AI search and answer engines are welcome to read and cite this site.
+{%- for bot in aiCrawlers %}
+
+User-agent: {{ bot }}
+Allow: /
+{%- endfor %}
+{%- endif %}
+
+Sitemap: {{ site.url }}/sitemap.xml

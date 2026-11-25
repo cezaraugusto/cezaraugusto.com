@@ -1,14 +1,17 @@
 ---
 title: What changes in Chrome Extension Manifest V3
-description: Major change includes changes in almost every field of the Manifest file, permissions updates, API changes, and more.
+description: Manifest V3 changes almost every field of the manifest file, along with permissions and extension APIs. This is what changed, as of March 2020.
 date: 2020-03-17
+updated: 2026-11-25
 tags:
   - webExtension
   - chrome
   - browser
 ---
 
-A few months ago, I announced (a personally ambitious move) on Twitter that I [started writing](https://twitter.com/cezaraugusto/status/1210275097774379009) a [book about WebExtensions](https://github.com/cezaraugusto/web-extensions-for-the-builders). It was just about the same time I saw a talk about [Chrome extensions and the world of tomorrow](https://www.youtube.com/watch?v=7-ALJiZCI6w).
+> **Update, <time datetime="2026-11-25">November 25, 2026</time>:** This post reflects Manifest V3 as it stood in March 2020, before it shipped. It is kept as written, so some details are out of date.
+
+A few months ago, I saw a talk about [Chrome extensions and the world of tomorrow](https://www.youtube.com/watch?v=7-ALJiZCI6w).
 
 Being Chrome the browser that championed the Extensions concept, I got interested to know the changes behind [their decision](https://security.googleblog.com/2018/10/trustworthy-chrome-extensions-by-default.html) to [roll out](https://bugs.chromium.org/p/chromium/issues/detail?id=896897&desc=2) the update. How does it affect the ecosystem? What changes in real-terms? What do extension developers need to know?
 

@@ -2,12 +2,14 @@
 title: The years at Brave
 date: 2020-05-28
 image: /static/images/posts/post-004/thumbnail.webp
+alt: The Brave lion logo beside the brave wordmark
+imageWidth: 750
+imageHeight: 300
 caption: The Brave logo
+summary: Four years at Brave, from my first pull request in 2016 to my last day on May 15th, 2020.
 tags:
   - work
 ---
-
-<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 The first moment I saw Brave, I wanted to be associated with it. They were a small team with a vision working on an open-source project [written in JavaScript](https://github.com/brave/browser-laptop). It was 2016.
 
@@ -36,7 +38,10 @@ At the time, Brave had less than 10 engineers working on their desktop browser, 
 After a few weeks reporting bugs and hacking around, on June 2, 2016, I [sent my first pull-request](https://github.com/brave/browser-laptop/pull/1907). I still remember the feeling of opening the packaged software, installing it, and seeing the feature I added live in the release channel, for everybody to download. I think I asked around five people to download BRave too, so they could try out my proud contribution.
 
 {% Figure {
-  src: '/static/images/posts/post-004/001.jpg'
+  src: '/static/images/posts/post-004/001.jpg',
+  alt: 'GitHub pull request #1907, "Add print to context menu. Fix #1270", merged by bbondy into brave:master on May 29, 2016',
+  width: 1692,
+  height: 386
 } %}
 
 You could now print a web page from the context menu.
@@ -44,25 +49,31 @@ You could now print a web page from the context menu.
 Eight days later, [another pull-request](https://github.com/brave/browser-laptop/pull/2038).
 
 {% Figure {
-  src: '/static/images/posts/post-004/002.jpg'
+  src: '/static/images/posts/post-004/002.jpg',
+  alt: 'GitHub pull request #2038, "Always show URL bar. closes #1984", merged by bbondy into brave:master on Jun 6, 2016',
+  width: 834,
+  height: 279
 } %}
 
 **I got engaged.** I kept contributing. There is this magical feeling of working on open-source initiatives where your code ends up serving several (I guess tens of thousands, at the time) people.
 
 Can you believe that [one of my pull-requests](https://github.com/brave/browser-laptop/pull/2644) ended up featured in a tweet from Brave's CTO, [Brian R. Bondy](https://twitter.com/brianbondy)? I was just another contributor (Brave had many at the time), but hey, I was being noticed!
 
-<blockquote class="twitter-tweet"><p lang="en" dir="ltr">Some nice animation polish done by a <a href="https://twitter.com/cezaraugusto?ref_src=twsrc%5Etfw">@cezaraugusto</a> in <a href="https://twitter.com/brave?ref_src=twsrc%5Etfw">@brave</a> 0.11.2 :D Thanks for the contributions! <a href="https://t.co/XSWvXOxL2f">pic.twitter.com/XSWvXOxL2f</a></p>&mdash; Brian R. Bondy (@brianbondy) <a href="https://twitter.com/brianbondy/status/761281701742014464?ref_src=twsrc%5Etfw">August 4, 2016</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">Some nice animation polish done by a <a href="https://twitter.com/cezaraugusto?ref_src=twsrc%5Etfw">@cezaraugusto</a> in <a href="https://twitter.com/brave?ref_src=twsrc%5Etfw">@brave</a> 0.11.2 :D Thanks for the contributions! <a href="https://t.co/XSWvXOxL2f">pic.twitter.com/XSWvXOxL2f</a></p>&mdash; Brian R. Bondy (@brianbondy) <a href="https://twitter.com/brianbondy/status/761281701742014464?ref_src=twsrc%5Etfw">August 4, 2016</a></blockquote>
 
 I was lucky that Brian found value in my contributions, questionings, and genuine willingness to make the browser software better. After a few months contributing code as an outside collaborator, this happened:
 
-<blockquote class="twitter-tweet"><p lang="en" dir="ltr">Happiest tweet ever: Starting today, I&#39;m joining the awesome <a href="https://twitter.com/brave?ref_src=twsrc%5Etfw">@brave</a> team. 🦁 🏆</p>&mdash; Cezar Augusto (@cezaraugusto) <a href="https://twitter.com/cezaraugusto/status/771351046853627904?ref_src=twsrc%5Etfw">September 1, 2016</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">Happiest tweet ever: Starting today, I&#39;m joining the awesome <a href="https://twitter.com/brave?ref_src=twsrc%5Etfw">@brave</a> team. 🦁 🏆</p>&mdash; Cezar Augusto (@cezaraugusto) <a href="https://twitter.com/cezaraugusto/status/771351046853627904?ref_src=twsrc%5Etfw">September 1, 2016</a></blockquote>
 
 My most significant contribution to Brave at the time also came in around the same time. I was the lucky person responsible for implementing the most visited and iconic page on Brave, the **new tab page**.
 
-{% Figure {
-  src: '/static/images/posts/post-004/003.gif',
-  caption: 'This is what NTP looked like at the time in the prototype I built. Brave used to have 3 rows of top sites.'
-} %}
+<figure>
+  <video autoplay muted loop playsinline controls width="480" height="258" poster="/static/images/posts/post-004/003-poster.jpg" aria-label="Animated prototype of the Brave new tab page: blocked tracker and ad counters, a large clock and a row of top site tiles over a photo of the Bay Bridge at dusk">
+    <source src="/static/images/posts/post-004/003.webm" type="video/webm">
+    <source src="/static/images/posts/post-004/003.mp4" type="video/mp4">
+  </video>
+  <figcaption>This is what NTP looked like at the time in the prototype I built. Brave used to have 3 rows of top sites.</figcaption>
+</figure>
 
 And that's all for 2016. There I was, a proud new member of the Brave crew. Feeling proud, shipping the most visited page a browser has, doing open-source for a living, living the dream. This year was 2016.
 
@@ -70,6 +81,9 @@ And that's all for 2016. There I was, a proud new member of the Brave crew. Feel
 
 {% Figure {
   src: '/static/images/posts/post-004/004.jpg',
+  alt: 'My face peeking in at the bottom corner of a photo of a Chicago street corner with a tall apartment tower, a black SUV and flower beds',
+  width: 1182,
+  height: 1184,
   caption: 'This is me at Chicago, where the gathering happened.'
 } %}
 
@@ -78,7 +92,7 @@ At the time, the desktop browser was having several performance issues, so the t
 There, I also had the chance to be featured live, representing Brave, for the first time. It was a chat we had with the fine folks of [Brave Indonesia](https://twitter.com/IndoBrave/).
 
 <figure>
-  <img src="/static/images/posts/post-004/005.jpeg">
+  <img src="/static/images/posts/post-004/005.jpeg" alt="A Brave Indonesia host filming a video call on a large monitor, with me in the middle of the call, next to a chalkboard reading #IndoBrave and @brave" width="1152" height="648">
   <figcaption>
   {{ "I'm the person sitting in the middle inside the video, along with [Brian R. Bondy](twitter.com/brianbondy) and [Brian Clifton](https://twitter.com/_brianclifton).<br>  Photo extracted from [@IndoBrave](https://twitter.com/IndoBrave/status/893320436397645824)" | markdownify_inline | safe }}
 </figcaption>
@@ -86,7 +100,7 @@ There, I also had the chance to be featured live, representing Brave, for the fi
 
 Speaking of representing Brave, and still speaking about first-times, this year I had the chance to [speak at a conference](https://twitter.com/brave/status/903761397154160640) to talk about Brave. It was at [BrazilJS in 2017](https://web.archive.org/web/20171004170021/https://braziljs.org/conf/).
 
-<blockquote class="twitter-tweet"><p lang="pt" dir="ltr">O que a brave pode melhorar a web. <a href="https://twitter.com/brave?ref_src=twsrc%5Etfw">@brave</a> <a href="https://twitter.com/cezaraugusto?ref_src=twsrc%5Etfw">@cezaraugusto</a> <a href="https://twitter.com/hashtag/braziljs2017?src=hash&amp;ref_src=twsrc%5Etfw">#braziljs2017</a> <a href="https://twitter.com/hashtag/braziljs?src=hash&amp;ref_src=twsrc%5Etfw">#braziljs</a> <a href="https://t.co/hx88o1tc8e">pic.twitter.com/hx88o1tc8e</a></p>&mdash; Daniel Bastos 🇧🇷 (@danielbastos) <a href="https://twitter.com/danielbastos/status/904062303875846144?ref_src=twsrc%5Etfw">September 2, 2017</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+<blockquote class="twitter-tweet"><p lang="pt" dir="ltr">O que a brave pode melhorar a web. <a href="https://twitter.com/brave?ref_src=twsrc%5Etfw">@brave</a> <a href="https://twitter.com/cezaraugusto?ref_src=twsrc%5Etfw">@cezaraugusto</a> <a href="https://twitter.com/hashtag/braziljs2017?src=hash&amp;ref_src=twsrc%5Etfw">#braziljs2017</a> <a href="https://twitter.com/hashtag/braziljs?src=hash&amp;ref_src=twsrc%5Etfw">#braziljs</a> <a href="https://t.co/hx88o1tc8e">pic.twitter.com/hx88o1tc8e</a></p>&mdash; Daniel Bastos 🇧🇷 (@danielbastos) <a href="https://twitter.com/danielbastos/status/904062303875846144?ref_src=twsrc%5Etfw">September 2, 2017</a></blockquote>
 
 This year had me working mostly on tab features. Brave used to have tab pages, a set of visible tabs you could accumulate. At the time, you could add up to 20 tabs per tab group. We take tabs in browsers for granted, but tabs are a real complex mechanism. _Have you ever thought that tabs need to be responsive?_ [I did](https://github.com/brave/browser-laptop/pull/6900), and literally, added support for [a hundred of tabs](https://github.com/brave/browser-laptop/pull/7695).
 
@@ -102,6 +116,9 @@ Doing performance work, help conducting a job interview, speaking in a great con
 
 {% Figure {
   src: '/static/images/posts/post-004/006.jpg',
+  alt: 'Group photo of about fifty Brave team members on a lawn in front of trees and tall palm trees',
+  width: 1200,
+  height: 779,
   caption: 'The crew at the 2017 all hands event.'
 } %}
 
@@ -110,7 +127,7 @@ This year I started working full-time on the port of the desktop codebase. I was
 The new browser was great. I was excited to work on top of Chromium. My work started with me [porting](https://github.com/brave/brave-core/pull/105) the private new tab, [and later](https://github.com/brave/brave-core/pull/256) the brand new welcome page. Later, Sync V2 [eventually featured](https://github.com/brave/brave-core/pull/1019) in the Chromium version.
 
 <figure>
-  <img src="/static/images/posts/post-004/007.jpg">
+  <img src="/static/images/posts/post-004/007.jpg" alt="The Brave welcome page at chrome://welcome: the Brave lion logo, the heading Welcome to Brave and a Let’s go button over an orange wave" width="3632" height="2110">
   <figcaption>
     This is how the welcome page looked like back in the days.
   </figcaption>
@@ -132,7 +149,7 @@ It was 2018.
 
 ## 2019
 
-<blockquote class="twitter-tweet"><p lang="en" dir="ltr">merged yesterday in our nightly channel the new interface for Shields in Brave desktop browser. Great stuff is coming up for all of you fighting for a better web! <a href="https://t.co/IGRIO2yxTK">pic.twitter.com/IGRIO2yxTK</a></p>&mdash; Cezar Augusto (@cezaraugusto) <a href="https://twitter.com/cezaraugusto/status/1105975164704116736?ref_src=twsrc%5Etfw">March 13, 2019</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">merged yesterday in our nightly channel the new interface for Shields in Brave desktop browser. Great stuff is coming up for all of you fighting for a better web! <a href="https://t.co/IGRIO2yxTK">pic.twitter.com/IGRIO2yxTK</a></p>&mdash; Cezar Augusto (@cezaraugusto) <a href="https://twitter.com/cezaraugusto/status/1105975164704116736?ref_src=twsrc%5Etfw">March 13, 2019</a></blockquote>
 
 The year started with me working on some Sync bugs. I [pushed a change](https://github.com/brave/brave-core/pull/2874) that got Shields a brand new interface. Shields and Sync dictated the rest of the year.
 
@@ -142,7 +159,7 @@ My only regret is not having a picture to share. I went to San Francisco again t
 
 In October, I got the chance to work on a cool feature that would ask if you want to load an archived version of an error page — using the Wayback Machine API (where I coined the name _Braveback_ Machine). [The work](https://github.com/brave/brave-core/pull/3561) started as a browser extension, and eventually, my peer [@simonhong33](https://twitter.com/simonhong33) ported it to C++, for maximum performance.
 
-<blockquote class="twitter-tweet"><p lang="en" dir="ltr">Available on <a href="https://twitter.com/brave?ref_src=twsrc%5Etfw">@brave</a> nightly: check if a missing website has an archived version available in <a href="https://t.co/JQMrtsJ5KA">https://t.co/JQMrtsJ5KA</a>. Solid work I got the chance to do with my talented peers <a href="https://twitter.com/simonhong33?ref_src=twsrc%5Etfw">@simonhong33</a>, Karen, and <a href="https://twitter.com/rebron?ref_src=twsrc%5Etfw">@rebron</a>. <a href="https://t.co/BM5r9aoTxx">pic.twitter.com/BM5r9aoTxx</a></p>&mdash; Cezar Augusto (@cezaraugusto) <a href="https://twitter.com/cezaraugusto/status/1207701750960050177?ref_src=twsrc%5Etfw">December 19, 2019</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">Available on <a href="https://twitter.com/brave?ref_src=twsrc%5Etfw">@brave</a> nightly: check if a missing website has an archived version available in <a href="https://t.co/JQMrtsJ5KA">https://t.co/JQMrtsJ5KA</a>. Solid work I got the chance to do with my talented peers <a href="https://twitter.com/simonhong33?ref_src=twsrc%5Etfw">@simonhong33</a>, Karen, and <a href="https://twitter.com/rebron?ref_src=twsrc%5Etfw">@rebron</a>. <a href="https://t.co/BM5r9aoTxx">pic.twitter.com/BM5r9aoTxx</a></p>&mdash; Cezar Augusto (@cezaraugusto) <a href="https://twitter.com/cezaraugusto/status/1207701750960050177?ref_src=twsrc%5Etfw">December 19, 2019</a></blockquote>
 
 Sync, Shields, interviewing, management, mentoring, Wayback Machine.
 

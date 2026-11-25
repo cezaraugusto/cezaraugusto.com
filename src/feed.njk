@@ -2,41 +2,41 @@
 permalink: feed.xml
 excludeFromSitemap: true
 metadata:
-  title: Articles - Cezar Augusto
+  title: Cezar Augusto
   url: https://cezaraugusto.com/
   author:
     name: Cezar Augusto
-    email: boss@cezaraugusto.com
+    uri: https://cezaraugusto.com/about/
   feed:
-    subtitle: Personal Blog
     filename: feed.xml
     path: feed/feed.xml
     url: https://cezaraugusto.com/feed.xml
     id: https://cezaraugusto.com/
 ---
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom">
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
   <title>{{ metadata.title }}</title>
-  <subtitle>{{ metadata.feed.subtitle }}</subtitle>
-  <link href="{{ metadata.feed.url }}" rel="self"/>
-  <link href="{{ metadata.url }}"/>
-  <updated>{{ collections.posts | getNewestCollectionItemDate | dateToRfc822 }}</updated>
+  <subtitle>{{ site.description }}</subtitle>
+  <link href="{{ metadata.feed.url }}" rel="self" type="application/atom+xml"/>
+  <link href="{{ metadata.url }}" rel="alternate" type="text/html"/>
+  <updated>{{ collections.posts | newest_update | dateToRfc3339 }}</updated>
   <id>{{ metadata.feed.id }}</id>
   <author>
     <name>{{ metadata.author.name }}</name>
-    <email>{{ metadata.author.email }}</email>
+    <uri>{{ metadata.author.uri }}</uri>
   </author>
   {%- for post in collections.posts %}
   {% set absolutePostUrl %}{{ post.url | url | absoluteUrl(metadata.url) }}{% endset %}
+  {%- set postSummary = post.data.description or post.data.summary %}
   <entry>
     <title>{{ post.data.title }}</title>
-    {% if post.data.link %}
-      <link href="{{ post.data.link }}"/>
-    {% else %}
-      <link href="{{ absolutePostUrl }}"/>
-    {% endif %}
-    <updated>{{ post.date | dateToRfc822 }}</updated>
+    <link href="{{ post.data.link or absolutePostUrl }}" rel="alternate" type="text/html"/>
+    <published>{{ post.date | dateToRfc3339 }}</published>
+    <updated>{{ (post | lastmod) | dateToRfc3339 }}</updated>
     <id>{{ absolutePostUrl }}</id>
+    {%- if postSummary %}
+    <summary>{{ postSummary | markdownify_inline | strip_html | trim }}</summary>
+    {%- endif %}
     <content type="html">{{ post.templateContent | htmlToAbsoluteUrls(absolutePostUrl) }}</content>
   </entry>
   {%- endfor %}
