@@ -8,7 +8,7 @@ import Shiki from '@shikijs/markdown-it'
 import Figure from '../src/_includes/components/Figure.js'
 import GenerateRobotsTXTRules from '../src/_includes/components/GenerateRobotsTXTRules.js'
 import structuredData from './structured-data.mjs'
-import { createOgCards } from './og-cards.mjs'
+import { createOgCards, shareImageFor } from './og-cards.mjs'
 import { createSiteIcons } from './site-icons.mjs'
 import { aboutFaq, definitions, projectStats } from './site-facts.mjs'
 
@@ -139,6 +139,7 @@ export default (eleventyConfig) => {
   eleventyConfig.on('eleventy.after', ({ directories, dir }) => ogCards.render((directories || dir).output))
   eleventyConfig.addFilter('og_card', (url, title, kicker) => ogCards.register(url, title, kicker))
   eleventyConfig.addGlobalData('ogCardSize', { width: ogCards.width, height: ogCards.height })
+  eleventyConfig.addFilter('share_image', (src) => shareImageFor(src, 'src'))
 
   const siteIcons = createSiteIcons({
     avatarPath: 'config/brand/avatar-460.png',

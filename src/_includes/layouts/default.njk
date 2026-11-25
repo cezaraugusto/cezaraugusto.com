@@ -8,8 +8,20 @@
     {%- set metaDescription = (description or summary or site.description) | markdownify_inline | strip_html | trim %}
     {%- set cardTitle = title if page.url != "/" else site.title %}
     {%- set cardKicker = "Blog post" if layout == "layouts/post" else ("Browser extensions, Extension.js and extension.dev" if page.url == "/" else "cezaraugusto.com") %}
+    {%- set shareImage = image | share_image %}
+    {%- if shareImage %}
+    {%- set metaImage = site.url + shareImage.url %}
+    {%- set metaImageType = shareImage.type %}
+    {%- set metaImageWidth = shareImage.width %}
+    {%- set metaImageHeight = shareImage.height %}
+    {%- set metaImageAlt = alt or cardTitle %}
+    {%- else %}
     {%- set metaImage = site.url + (page.url | og_card(cardTitle, cardKicker)) %}
+    {%- set metaImageType = "image/png" %}
+    {%- set metaImageWidth = ogCardSize.width %}
+    {%- set metaImageHeight = ogCardSize.height %}
     {%- set metaImageAlt %}Share card with the heading "{{ cardTitle }}" under the label "{{ cardKicker }}", and Cezar Augusto's avatar, name and cezaraugusto.com at the bottom{% endset %}
+    {%- endif %}
     {%- set isArticle = layout == "layouts/post" %}
     {%- set metaUrl = site.url + (page.url | permalink) %}
     <title>{{ metaTitle }}</title>
@@ -29,9 +41,9 @@
     {%- endif %}
     <meta property="og:site_name" content="{{ site.title }}">
     <meta property="og:image" content="{{ metaImage }}">
-    <meta property="og:image:type" content="image/png">
-    <meta property="og:image:width" content="{{ ogCardSize.width }}">
-    <meta property="og:image:height" content="{{ ogCardSize.height }}">
+    <meta property="og:image:type" content="{{ metaImageType }}">
+    <meta property="og:image:width" content="{{ metaImageWidth }}">
+    <meta property="og:image:height" content="{{ metaImageHeight }}">
     <meta property="og:image:alt" content="{{ metaImageAlt }}">
     <meta property="og:type" content="{% if isArticle %}article{% else %}website{% endif %}">
     <meta property="og:locale" content="{{ site.language }}">
